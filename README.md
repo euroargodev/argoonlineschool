@@ -25,5 +25,6 @@ First, I suggest to create a python enviroment to use these notebooks. To create
 conda env create -f environment.yml
 conda activate AOS
 ```
+This enviroment already includes argopy stable version
 
 As a very useful first aproach to python, heere, you can find [An Introduction to Earth and Environmental Data Science](https://earth-env-data-science.github.io/intro) developed by [Ryan Abernathey](https://ocean-transport.github.io/) and Kerry Key.
