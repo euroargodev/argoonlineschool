@@ -2,24 +2,24 @@
 
 In this repository you can find the python jupyter notebooks that are part of the Argo Online school. These notebooks are based on <img src="https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long.png" alt="argopy logo" width="100"/>, [the Argo data python library](https://github.com/euroargodev/argopy), and cover the following lessons:
 
-### Basics of netCDF.
+- ### Basics of netCDF.
 
 netCDF format description.
 Using netcdf data.
 
-### Data files organization
+- ### Argo Data system
 geographycal
 per dac
 
-### Real time data 
+- ### Real time data 
 
-### Delayed mode data.
+- ### Delayed mode data.
 
-### Using quality control flags.
+- ### Quality control flags.
 
-### How to take advantage of Argo data.
+- ### How to take advantage of Argo data.
 
-### Scientific examples. Product generation.
+- ### Scientific examples. Product generation.
 
 
 ## Usage
