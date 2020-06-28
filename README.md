@@ -1,6 +1,6 @@
 # Argo Online School
 
-<img src="https://raw.githubusercontent.com/PedroVelez/argoonlineschool/master/images/logo.png" alt="argopy logo" width="200"/>
+<img src="https://raw.githubusercontent.com/PedroVelez/argoonlineschool/master/images/logoAoS.png" alt="argopy logo" width="200"/>
 
 
 images/logo.png
