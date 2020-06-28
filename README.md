@@ -2,10 +2,6 @@
 
 <img src="https://raw.githubusercontent.com/PedroVelez/argoonlineschool/master/images/logoAoS.png" alt="argopy logo" width="200"/>
 
-
-images/logo.png
-
-
 In this repository you can find the python jupyter notebooks that are part of the Argo Online school. These notebooks use <img src="https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long.png" alt="argopy logo" width="100"/>, [the Argo data python library](https://github.com/euroargodev/argopy), and cover the following lessons:
 
 ## Usage
