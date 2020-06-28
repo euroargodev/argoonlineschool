@@ -1,0 +1,832 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Argo data by float &#8212; Argo Online School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Argo data by date" href="L03_ArgoDatabyDate.html" />
+    <link rel="prev" title="Argo Data System" href="L03_TheBasicsOfArgoDataSystem.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logoAoS.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Argo Online School</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="L02_BasicsOfnetCDF.html">1. Basics of netCDF</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">The basic of the Argo data system</p>
+</li>
+  <li class="active">
+    <a href="L03_TheBasicsOfArgoDataSystem.html">2. <img src="./images/logoArgo.png" alt="Argo status" width="150"/> Argo Data System</a>
+  <ul class="nav sidenav_l2">
+    <li class="active">
+      <a href="">2.1 <img src="./images/logoArgo.png" alt="Argo status" width="150"/> Argo data by float</a>
+    </li>
+    <li class="">
+      <a href="L03_ArgoDatabyDate.html">2.2 <img src="./images/logoArgo.png" alt="Argo status" width="150"/> Argo data by date</a>
+    </li>
+  </ul>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Data in real time and calibrated</p>
+</li>
+  <li class="">
+    <a href="L04_RTandDMQC.html">3. <img src="./images/logoArgo.png" alt="Argo status" width="150"/>  Real Time and Calibrated data</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/L03_ArgoDatabyFloat.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#data-files-organized-by-float" class="nav-link">Data files organized by float</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="img-src-images-logoargo-png-alt-argo-status-width-150-argo-data-by-float">
+<h1><img src="./images/logoArgo.png" alt="Argo status" width="150"/> Argo data by float<a class="headerlink" href="#img-src-images-logoargo-png-alt-argo-status-width-150-argo-data-by-float" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-files-organized-by-float">
+<h2>Data files organized by float<a class="headerlink" href="#data-files-organized-by-float" title="Permalink to this headline">¶</a></h2>
+<img src="https://github.com/PedroVelez/argoonlineschool/raw/master/images/dac.png" alt="xarray logo" width="650"/><p>Accessing the <em>dac</em> folder in any of the FTP or HTTP sites of andy of the GDAC you will find 11 folders, one for each of the DACs. As indicated in the figure, within each folder tehre is a folder for each one of the floatos. The number is knwon as the World Meteorological Organization (WMO) ID and it isunique for each float.</p>
+<p>Lets use data from the first profile of float 6900772. It is pre-downloaded in the <em>./Data</em> folder, but you can dowload it from the Coriolis GDAC:</p>
+<p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">wget</span> <span class="pre">ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6900772/profles/D6900772_001.nc</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">netCDF4</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;./Data/D6900772_001.nc&#39;</span><span class="p">)</span>
+<span class="n">xrDS</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<title>Show/Hide data repr</title>
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<title>Show/Hide attributes</title>
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+.xr-wrap {
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt, dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><div class='xr-wrap'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-154b8605-7e2c-419d-a617-0d0e2d7a81c2' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-154b8605-7e2c-419d-a617-0d0e2d7a81c2' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span>N_CALIB</span>: 1</li><li><span>N_HISTORY</span>: 11</li><li><span>N_LEVELS</span>: 71</li><li><span>N_PARAM</span>: 3</li><li><span>N_PROF</span>: 1</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-aec28e54-027f-4f32-867e-0a81ac96d573' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-aec28e54-027f-4f32-867e-0a81ac96d573' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-d919809b-b6d5-4055-b03d-058905e4e6a7' class='xr-section-summary-in' type='checkbox'  ><label for='section-d919809b-b6d5-4055-b03d-058905e4e6a7' class='xr-section-summary' >Data variables: <span>(64)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>DATA_TYPE</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1cfc1695-3fa8-4c76-9fbd-220cf7704501' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1cfc1695-3fa8-4c76-9fbd-220cf7704501' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-159ffa42-09f6-42b3-a653-eb2c78c05e14' class='xr-var-data-in' type='checkbox'><label for='data-159ffa42-09f6-42b3-a653-eb2c78c05e14' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Data type</dd><dt><span>conventions :</span></dt><dd>Argo reference table 1</dd></dl></div><pre class='xr-var-data'>array(b&#x27;Argo profile    &#x27;, dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>FORMAT_VERSION</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-65d33913-2cea-4b19-aaa5-217fe2f120d0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-65d33913-2cea-4b19-aaa5-217fe2f120d0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3f54d9b4-2c36-41ec-812e-c9951229a760' class='xr-var-data-in' type='checkbox'><label for='data-3f54d9b4-2c36-41ec-812e-c9951229a760' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>File format version</dd></dl></div><pre class='xr-var-data'>array(b&#x27;3.1 &#x27;, dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HANDBOOK_VERSION</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e638cf8e-96f0-4777-a339-616301191b0c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e638cf8e-96f0-4777-a339-616301191b0c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-309d74d7-f36e-4ffe-8765-039ce273ba0e' class='xr-var-data-in' type='checkbox'><label for='data-309d74d7-f36e-4ffe-8765-039ce273ba0e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Data handbook version</dd></dl></div><pre class='xr-var-data'>array(b&#x27;1.2 &#x27;, dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>REFERENCE_DATE_TIME</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-46948033-2fb5-4a01-abf4-151423abf5e4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-46948033-2fb5-4a01-abf4-151423abf5e4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-12de649d-4614-4f99-aab4-e5d24af6183f' class='xr-var-data-in' type='checkbox'><label for='data-12de649d-4614-4f99-aab4-e5d24af6183f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Date of reference for Julian days</dd><dt><span>conventions :</span></dt><dd>YYYYMMDDHHMISS</dd></dl></div><pre class='xr-var-data'>array(b&#x27;19500101000000&#x27;, dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>DATE_CREATION</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d2d3a900-c8a2-4fe7-bf69-daf0ff3c80cb' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d2d3a900-c8a2-4fe7-bf69-daf0ff3c80cb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8c9ed03b-9d9c-403e-8f6f-b8fb40a9b349' class='xr-var-data-in' type='checkbox'><label for='data-8c9ed03b-9d9c-403e-8f6f-b8fb40a9b349' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Date of file creation</dd><dt><span>conventions :</span></dt><dd>YYYYMMDDHHMISS</dd></dl></div><pre class='xr-var-data'>array(b&#x27;20101031084214&#x27;, dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>DATE_UPDATE</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9120f0e9-72e9-4845-add0-c517ca669308' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9120f0e9-72e9-4845-add0-c517ca669308' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-17a7ada9-4fe9-4a89-a9f1-dff6ac61819e' class='xr-var-data-in' type='checkbox'><label for='data-17a7ada9-4fe9-4a89-a9f1-dff6ac61819e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Date of update of this file</dd><dt><span>conventions :</span></dt><dd>YYYYMMDDHHMISS</dd></dl></div><pre class='xr-var-data'>array(b&#x27;20181119155347&#x27;, dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PLATFORM_NUMBER</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-0324ad3e-ff0d-4924-947a-98a21a5ffff3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0324ad3e-ff0d-4924-947a-98a21a5ffff3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0e612ca9-06b6-4d45-ab7a-45ba889cd0a4' class='xr-var-data-in' type='checkbox'><label for='data-0e612ca9-06b6-4d45-ab7a-45ba889cd0a4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Float unique identifier</dd><dt><span>conventions :</span></dt><dd>WMO float identifier : A9IIIII</dd></dl></div><pre class='xr-var-data'>array([b&#x27;6900772 &#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PROJECT_NAME</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-49b279f5-70cd-4753-8b72-fe930ae3f59e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-49b279f5-70cd-4753-8b72-fe930ae3f59e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4fd5331f-a108-495b-86be-3960195110b7' class='xr-var-data-in' type='checkbox'><label for='data-4fd5331f-a108-495b-86be-3960195110b7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Name of the project</dd></dl></div><pre class='xr-var-data'>array([b&#x27;ARGO_SPAIN                                                      &#x27;],
+      dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PI_NAME</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1d7f92a8-b2df-4cb8-8427-2852ba2d874e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1d7f92a8-b2df-4cb8-8427-2852ba2d874e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-42deb7b1-005d-4194-b7dd-2165b72d4700' class='xr-var-data-in' type='checkbox'><label for='data-42deb7b1-005d-4194-b7dd-2165b72d4700' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Name of the principal investigator</dd></dl></div><pre class='xr-var-data'>array([b&#x27;Pedro VELEZ BELCHI                                              &#x27;],
+      dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>STATION_PARAMETERS</span></div><div class='xr-var-dims'>(N_PROF, N_PARAM)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d0f342d8-51f6-4480-bb15-ce36b4428ad6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d0f342d8-51f6-4480-bb15-ce36b4428ad6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a2a6b23d-0524-4474-9719-a85af27d07b2' class='xr-var-data-in' type='checkbox'><label for='data-a2a6b23d-0524-4474-9719-a85af27d07b2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>List of available parameters for the station</dd><dt><span>conventions :</span></dt><dd>Argo reference table 3</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;PRES            &#x27;, b&#x27;TEMP            &#x27;, b&#x27;PSAL            &#x27;]],
+      dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>CYCLE_NUMBER</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-078af645-1dd4-4d30-9927-90f3f7e1c68a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-078af645-1dd4-4d30-9927-90f3f7e1c68a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-566a35da-20b9-43dd-947f-01f9acc7acc7' class='xr-var-data-in' type='checkbox'><label for='data-566a35da-20b9-43dd-947f-01f9acc7acc7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Float cycle number</dd><dt><span>conventions :</span></dt><dd>0...N, 0 : launch cycle (if exists), 1 : first complete cycle</dd></dl></div><pre class='xr-var-data'>array([1.])</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>DIRECTION</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c4042310-2b89-4c8a-841d-f06920df1218' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c4042310-2b89-4c8a-841d-f06920df1218' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-79d498a1-e444-44a9-b327-0a427bbaaf21' class='xr-var-data-in' type='checkbox'><label for='data-79d498a1-e444-44a9-b327-0a427bbaaf21' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Direction of the station profiles</dd><dt><span>conventions :</span></dt><dd>A: ascending profiles, D: descending profiles</dd></dl></div><pre class='xr-var-data'>array([b&#x27;A&#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>DATA_CENTRE</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-684f884d-8103-49f1-ae04-6b45fe0b08d7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-684f884d-8103-49f1-ae04-6b45fe0b08d7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fdaec9bf-a54d-4de9-a818-5db15929ea7a' class='xr-var-data-in' type='checkbox'><label for='data-fdaec9bf-a54d-4de9-a818-5db15929ea7a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Data centre in charge of float data processing</dd><dt><span>conventions :</span></dt><dd>Argo reference table 4</dd></dl></div><pre class='xr-var-data'>array([b&#x27;IF&#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>DC_REFERENCE</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-79b65171-de4c-41db-b899-976c47ecd7ec' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-79b65171-de4c-41db-b899-976c47ecd7ec' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fac0315f-0e4c-42ab-a4ba-74bba918839b' class='xr-var-data-in' type='checkbox'><label for='data-fac0315f-0e4c-42ab-a4ba-74bba918839b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Station unique identifier in data centre</dd><dt><span>conventions :</span></dt><dd>Data centre convention</dd></dl></div><pre class='xr-var-data'>array([b&#x27;14802360                        &#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>DATA_STATE_INDICATOR</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-871fc02d-f632-4812-8beb-4fc80c289ffb' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-871fc02d-f632-4812-8beb-4fc80c289ffb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-29df013e-9d0e-4ba5-96fa-7aa2ae990c16' class='xr-var-data-in' type='checkbox'><label for='data-29df013e-9d0e-4ba5-96fa-7aa2ae990c16' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Degree of processing the data have passed through</dd><dt><span>conventions :</span></dt><dd>Argo reference table 6</dd></dl></div><pre class='xr-var-data'>array([b&#x27;2C  &#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>DATA_MODE</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-13d19a5b-4112-4d21-98fc-e1d12589006a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-13d19a5b-4112-4d21-98fc-e1d12589006a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b6a25067-23f8-48cc-aa35-2a73425f662b' class='xr-var-data-in' type='checkbox'><label for='data-b6a25067-23f8-48cc-aa35-2a73425f662b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Delayed mode or real time data</dd><dt><span>conventions :</span></dt><dd>R : real time; D : delayed mode; A : real time with adjustment</dd></dl></div><pre class='xr-var-data'>array([b&#x27;D&#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PLATFORM_TYPE</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-61ef80c3-1b61-4d3e-abb0-bcf2abdea681' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-61ef80c3-1b61-4d3e-abb0-bcf2abdea681' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2fe69b0c-1b04-4b12-b5e5-451cbff21069' class='xr-var-data-in' type='checkbox'><label for='data-2fe69b0c-1b04-4b12-b5e5-451cbff21069' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Type of float</dd><dt><span>conventions :</span></dt><dd>Argo reference table 23</dd></dl></div><pre class='xr-var-data'>array([b&#x27;APEX                            &#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>FLOAT_SERIAL_NO</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-50277270-f077-4ec8-b1e1-9440199ae4ba' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-50277270-f077-4ec8-b1e1-9440199ae4ba' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b0f3289b-8942-44d6-a7d0-acf533d6f85d' class='xr-var-data-in' type='checkbox'><label for='data-b0f3289b-8942-44d6-a7d0-acf533d6f85d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Serial number of the float</dd></dl></div><pre class='xr-var-data'>array([b&#x27;4797                            &#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>FIRMWARE_VERSION</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e8ed4a02-269f-4e7c-96c8-3a6e44c7c5cf' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e8ed4a02-269f-4e7c-96c8-3a6e44c7c5cf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b26650ce-a40b-4754-8472-b6fe285005f2' class='xr-var-data-in' type='checkbox'><label for='data-b26650ce-a40b-4754-8472-b6fe285005f2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Instrument firmware version</dd></dl></div><pre class='xr-var-data'>array([b&#x27;062608                          &#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>WMO_INST_TYPE</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a9944e25-b59e-412d-b1d6-9826a60fc44f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a9944e25-b59e-412d-b1d6-9826a60fc44f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ffaf8854-82bd-4ff8-90ca-fdabba7c4b07' class='xr-var-data-in' type='checkbox'><label for='data-ffaf8854-82bd-4ff8-90ca-fdabba7c4b07' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Coded instrument type</dd><dt><span>conventions :</span></dt><dd>Argo reference table 8</dd></dl></div><pre class='xr-var-data'>array([b&#x27;846 &#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>JULD</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d3f67b0c-8438-4690-a782-770fc4d13c1d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d3f67b0c-8438-4690-a782-770fc4d13c1d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-84bb2104-0a3e-49d9-8116-d0e0339c988d' class='xr-var-data-in' type='checkbox'><label for='data-84bb2104-0a3e-49d9-8116-d0e0339c988d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Julian day (UTC) of the station relative to REFERENCE_DATE_TIME</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>conventions :</span></dt><dd>Relative julian days with decimal part (as parts of day)</dd><dt><span>resolution :</span></dt><dd>1.1574074074074073e-05</dd><dt><span>axis :</span></dt><dd>T</dd></dl></div><pre class='xr-var-data'>array([&#x27;2010-10-28T13:10:58.999997184&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>JULD_QC</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-49bc7b4b-8984-4982-9143-f2e05ad4b2dc' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-49bc7b4b-8984-4982-9143-f2e05ad4b2dc' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2a6d469d-2c4b-4c50-aee7-04d1d04c7ff5' class='xr-var-data-in' type='checkbox'><label for='data-2a6d469d-2c4b-4c50-aee7-04d1d04c7ff5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Quality on date and time</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2</dd></dl></div><pre class='xr-var-data'>array([b&#x27;1&#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>JULD_LOCATION</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-692f571d-4455-495d-8032-071bdacc9b31' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-692f571d-4455-495d-8032-071bdacc9b31' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0dfe78a4-c32e-4c80-8db0-1be31fa8424f' class='xr-var-data-in' type='checkbox'><label for='data-0dfe78a4-c32e-4c80-8db0-1be31fa8424f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Julian day (UTC) of the location relative to REFERENCE_DATE_TIME</dd><dt><span>conventions :</span></dt><dd>Relative julian days with decimal part (as parts of day)</dd><dt><span>resolution :</span></dt><dd>1.1574074074074073e-05</dd></dl></div><pre class='xr-var-data'>array([&#x27;2010-10-28T13:59:27.999995904&#x27;], dtype=&#x27;datetime64[ns]&#x27;)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>LATITUDE</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-069b9b67-8d90-482d-a555-648f47aa6631' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-069b9b67-8d90-482d-a555-648f47aa6631' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ff1ae80e-0d4e-4e14-9d2c-c7d249d8b376' class='xr-var-data-in' type='checkbox'><label for='data-ff1ae80e-0d4e-4e14-9d2c-c7d249d8b376' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude of the station, best estimate</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degree_north</dd><dt><span>valid_min :</span></dt><dd>-90.0</dd><dt><span>valid_max :</span></dt><dd>90.0</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><pre class='xr-var-data'>array([29.188])</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>LONGITUDE</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5b9fdfd6-5055-4f8b-a8f8-d50bdbef868a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5b9fdfd6-5055-4f8b-a8f8-d50bdbef868a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-61320993-df3d-4dfb-93bb-0c6419ac5034' class='xr-var-data-in' type='checkbox'><label for='data-61320993-df3d-4dfb-93bb-0c6419ac5034' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude of the station, best estimate</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degree_east</dd><dt><span>valid_min :</span></dt><dd>-180.0</dd><dt><span>valid_max :</span></dt><dd>180.0</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><pre class='xr-var-data'>array([-15.485])</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>POSITION_QC</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-8c0b8318-a2c4-4231-a66d-872f3de7800f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8c0b8318-a2c4-4231-a66d-872f3de7800f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-df918a22-cc70-462b-ad92-b6b4c828f9ee' class='xr-var-data-in' type='checkbox'><label for='data-df918a22-cc70-462b-ad92-b6b4c828f9ee' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Quality on position (latitude and longitude)</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2</dd></dl></div><pre class='xr-var-data'>array([b&#x27;1&#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>POSITIONING_SYSTEM</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-0116e1e4-08c0-4ff2-a28f-eee9bf2e7e43' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-0116e1e4-08c0-4ff2-a28f-eee9bf2e7e43' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-db48a525-750b-47bf-bb14-dc661333ff81' class='xr-var-data-in' type='checkbox'><label for='data-db48a525-750b-47bf-bb14-dc661333ff81' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Positioning system</dd></dl></div><pre class='xr-var-data'>array([b&#x27;ARGOS   &#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PROFILE_PRES_QC</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9aa9e94b-3282-4a67-a5e7-d8362f5194c7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9aa9e94b-3282-4a67-a5e7-d8362f5194c7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-362a6a66-a4cf-463a-9183-d82e2d63a1e8' class='xr-var-data-in' type='checkbox'><label for='data-362a6a66-a4cf-463a-9183-d82e2d63a1e8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Global quality flag of PRES profile</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2a</dd></dl></div><pre class='xr-var-data'>array([b&#x27;A&#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PROFILE_TEMP_QC</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a7407061-66c0-4f50-b35c-2e51435c7135' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a7407061-66c0-4f50-b35c-2e51435c7135' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e414412c-a944-4fc1-8c4c-96b05af6145d' class='xr-var-data-in' type='checkbox'><label for='data-e414412c-a944-4fc1-8c4c-96b05af6145d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Global quality flag of TEMP profile</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2a</dd></dl></div><pre class='xr-var-data'>array([b&#x27;A&#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PROFILE_PSAL_QC</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e9e59f4e-71a0-467d-8369-e95650508cd8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e9e59f4e-71a0-467d-8369-e95650508cd8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9ea2733d-cf7a-4480-9ef9-cac719174832' class='xr-var-data-in' type='checkbox'><label for='data-9ea2733d-cf7a-4480-9ef9-cac719174832' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Global quality flag of PSAL profile</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2a</dd></dl></div><pre class='xr-var-data'>array([b&#x27;A&#x27;], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>VERTICAL_SAMPLING_SCHEME</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9791a51a-c659-411c-bdff-fa806af8c027' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9791a51a-c659-411c-bdff-fa806af8c027' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b7f69ec1-8af9-4172-9d83-f3ec7d064b91' class='xr-var-data-in' type='checkbox'><label for='data-b7f69ec1-8af9-4172-9d83-f3ec7d064b91' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Vertical sampling scheme</dd><dt><span>conventions :</span></dt><dd>Argo reference table 16</dd></dl></div><pre class='xr-var-data'>array([b&#x27;Primary sampling: discrete []                                                                                                                                                                                                                                   &#x27;],
+      dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>CONFIG_MISSION_NUMBER</span></div><div class='xr-var-dims'>(N_PROF)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-91314f61-e953-4a15-a41d-05fbaa4c4254' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-91314f61-e953-4a15-a41d-05fbaa4c4254' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e4fa511f-dcc5-40b2-afe7-c7f75eae732a' class='xr-var-data-in' type='checkbox'><label for='data-e4fa511f-dcc5-40b2-afe7-c7f75eae732a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Unique number denoting the missions performed by the float</dd><dt><span>conventions :</span></dt><dd>1...N, 1 : first complete mission</dd></dl></div><pre class='xr-var-data'>array([1.])</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PRES</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-be998961-d4d9-4dad-a18d-dbcae12ba008' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-be998961-d4d9-4dad-a18d-dbcae12ba008' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-56f0f914-e652-41a6-ae45-ee1cffd8bac7' class='xr-var-data-in' type='checkbox'><label for='data-56f0f914-e652-41a6-ae45-ee1cffd8bac7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sea water pressure, equals 0 at sea-level</dd><dt><span>standard_name :</span></dt><dd>sea_water_pressure</dd><dt><span>units :</span></dt><dd>decibar</dd><dt><span>valid_min :</span></dt><dd>0.0</dd><dt><span>valid_max :</span></dt><dd>12000.0</dd><dt><span>C_format :</span></dt><dd>%7.1f</dd><dt><span>FORTRAN_format :</span></dt><dd>F7.1</dd><dt><span>resolution :</span></dt><dd>0.1</dd><dt><span>axis :</span></dt><dd>Z</dd></dl></div><pre class='xr-var-data'>array([[  10.3,   19.9,   29.9,   40.5,   50.8,   60.2,   70.4,   80.3,
+          89.9,  100. ,  109.9,  120.3,  129.7,  139.7,  149.8,  160. ,
+         170.2,  179.6,  189.5,  200.1,  210.2,  220.5,  229.9,  240.2,
+         250.3,  260. ,  269.9,  279.8,  289.9,  300. ,  310.4,  320. ,
+         330.1,  340.3,  349.4,  360.1,  380.3,  400.2,  450.5,  499.7,
+         549.7,  600.1,  647.9,  700.3,  749.6,  800.3,  850.4,  900. ,
+         950.2,  998.6, 1050.2, 1099.5, 1150.2, 1199.8, 1250.1, 1299.9,
+        1350. , 1400.3, 1449.9, 1500.5, 1549.8, 1600. , 1650.2, 1700.2,
+        1749.6, 1800.1, 1849.7, 1900.1, 1949.7, 2000.4, 2008. ]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PRES_QC</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-fb6ee648-84c4-4a82-bee5-9beeeb9e74b1' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-fb6ee648-84c4-4a82-bee5-9beeeb9e74b1' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-961d2146-e265-4973-846d-6ca5734a3182' class='xr-var-data-in' type='checkbox'><label for='data-961d2146-e265-4973-846d-6ca5734a3182' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>quality flag</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PRES_ADJUSTED</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-4c9d01eb-d8e8-4763-a68e-c78b638297a3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4c9d01eb-d8e8-4763-a68e-c78b638297a3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c5066daf-aaa2-49ca-a279-0522b2f0e1fe' class='xr-var-data-in' type='checkbox'><label for='data-c5066daf-aaa2-49ca-a279-0522b2f0e1fe' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sea water pressure, equals 0 at sea-level</dd><dt><span>standard_name :</span></dt><dd>sea_water_pressure</dd><dt><span>units :</span></dt><dd>decibar</dd><dt><span>valid_min :</span></dt><dd>0.0</dd><dt><span>valid_max :</span></dt><dd>12000.0</dd><dt><span>C_format :</span></dt><dd>%7.1f</dd><dt><span>FORTRAN_format :</span></dt><dd>F7.1</dd><dt><span>resolution :</span></dt><dd>0.1</dd><dt><span>axis :</span></dt><dd>Z</dd></dl></div><pre class='xr-var-data'>array([[  10.2     ,   19.8     ,   29.8     ,   40.4     ,   50.7     ,
+          60.100002,   70.3     ,   80.200005,   89.8     ,   99.9     ,
+         109.8     ,  120.200005,  129.59999 ,  139.59999 ,  149.7     ,
+         159.9     ,  170.09999 ,  179.5     ,  189.4     ,  200.      ,
+         210.09999 ,  220.4     ,  229.79999 ,  240.09999 ,  250.2     ,
+         259.9     ,  269.8     ,  279.69998 ,  289.8     ,  299.9     ,
+         310.3     ,  319.9     ,  330.      ,  340.19998 ,  349.3     ,
+         360.      ,  380.19998 ,  400.1     ,  450.4     ,  499.6     ,
+         549.60004 ,  600.      ,  647.80005 ,  700.2     ,  749.5     ,
+         800.2     ,  850.30005 ,  899.9     ,  950.10004 ,  998.5     ,
+        1050.1     , 1099.4     , 1150.1     , 1199.7001  , 1250.      ,
+        1299.8     , 1349.9     , 1400.2001  , 1449.8     , 1500.4     ,
+        1549.7001  , 1599.9     , 1650.1     , 1700.1     , 1749.5     ,
+        1800.      , 1849.6     , 1900.      , 1949.6     , 2000.3     ,
+        2007.9     ]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PRES_ADJUSTED_QC</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9bd52965-db25-4e4b-bdbe-d031c8124541' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9bd52965-db25-4e4b-bdbe-d031c8124541' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-13e19fc2-24ff-4917-a7d0-7dac1a7462b1' class='xr-var-data-in' type='checkbox'><label for='data-13e19fc2-24ff-4917-a7d0-7dac1a7462b1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>quality flag</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PRES_ADJUSTED_ERROR</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-1d8611a1-80c7-4dd9-93dc-df4aa3331c08' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1d8611a1-80c7-4dd9-93dc-df4aa3331c08' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-363b25c5-30b3-4e5e-b107-08f930e52147' class='xr-var-data-in' type='checkbox'><label for='data-363b25c5-30b3-4e5e-b107-08f930e52147' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Contains the error on the adjusted values as determined by the delayed mode QC process</dd><dt><span>units :</span></dt><dd>decibar</dd><dt><span>C_format :</span></dt><dd>%7.1f</dd><dt><span>FORTRAN_format :</span></dt><dd>F7.1</dd><dt><span>resolution :</span></dt><dd>0.1</dd></dl></div><pre class='xr-var-data'>array([[2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4,
+        2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4,
+        2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4,
+        2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4,
+        2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4, 2.4,
+        2.4]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>TEMP</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-c85ce09a-e445-43e3-b2ca-6c1af3018b30' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-c85ce09a-e445-43e3-b2ca-6c1af3018b30' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0a4b669c-1885-4a37-b434-ebe79ed07b1b' class='xr-var-data-in' type='checkbox'><label for='data-0a4b669c-1885-4a37-b434-ebe79ed07b1b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sea temperature in-situ ITS-90 scale</dd><dt><span>standard_name :</span></dt><dd>sea_water_temperature</dd><dt><span>units :</span></dt><dd>degree_Celsius</dd><dt><span>valid_min :</span></dt><dd>-2.5</dd><dt><span>valid_max :</span></dt><dd>40.0</dd><dt><span>C_format :</span></dt><dd>%9.3f</dd><dt><span>FORTRAN_format :</span></dt><dd>F9.3</dd><dt><span>resolution :</span></dt><dd>0.001</dd></dl></div><pre class='xr-var-data'>array([[23.493, 23.482, 23.475, 23.472, 23.458, 21.647, 20.46 , 19.717,
+        18.932, 18.453, 18.221, 17.854, 17.626, 17.45 , 17.204, 16.889,
+        16.696, 16.437, 16.232, 16.025, 16.007, 15.827, 15.594, 15.371,
+        15.221, 15.028, 14.892, 14.787, 14.602, 14.459, 14.216, 14.126,
+        13.956, 13.821, 13.791, 13.693, 13.447, 13.31 , 12.847, 12.314,
+        11.756, 10.997, 10.67 , 10.034,  9.928,  9.068,  9.079,  8.959,
+         8.542,  8.719,  8.478,  8.412,  8.313,  8.091,  7.653,  7.332,
+         6.901,  6.632,  6.672,  6.463,  6.214,  5.989,  5.721,  5.478,
+         5.211,  5.045,  4.891,  4.637,  4.559,  4.472,  4.452]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>TEMP_QC</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f27b8bc3-74d7-4516-b44e-aa9b0209c051' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f27b8bc3-74d7-4516-b44e-aa9b0209c051' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ce5c00a7-bcc0-4b09-9bb4-37aa3c4e9aaf' class='xr-var-data-in' type='checkbox'><label for='data-ce5c00a7-bcc0-4b09-9bb4-37aa3c4e9aaf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>quality flag</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>TEMP_ADJUSTED</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f0b85acf-339c-4229-b5ec-1a34f790fe07' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f0b85acf-339c-4229-b5ec-1a34f790fe07' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-874bc18a-2345-40ff-9e7f-44a23999feab' class='xr-var-data-in' type='checkbox'><label for='data-874bc18a-2345-40ff-9e7f-44a23999feab' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Sea temperature in-situ ITS-90 scale</dd><dt><span>standard_name :</span></dt><dd>sea_water_temperature</dd><dt><span>units :</span></dt><dd>degree_Celsius</dd><dt><span>valid_min :</span></dt><dd>-2.5</dd><dt><span>valid_max :</span></dt><dd>40.0</dd><dt><span>C_format :</span></dt><dd>%9.3f</dd><dt><span>FORTRAN_format :</span></dt><dd>F9.3</dd><dt><span>resolution :</span></dt><dd>0.001</dd></dl></div><pre class='xr-var-data'>array([[23.493, 23.482, 23.475, 23.472, 23.458, 21.647, 20.46 , 19.717,
+        18.932, 18.453, 18.221, 17.854, 17.626, 17.45 , 17.204, 16.889,
+        16.696, 16.437, 16.232, 16.025, 16.007, 15.827, 15.594, 15.371,
+        15.221, 15.028, 14.892, 14.787, 14.602, 14.459, 14.216, 14.126,
+        13.956, 13.821, 13.791, 13.693, 13.447, 13.31 , 12.847, 12.314,
+        11.756, 10.997, 10.67 , 10.034,  9.928,  9.068,  9.079,  8.959,
+         8.542,  8.719,  8.478,  8.412,  8.313,  8.091,  7.653,  7.332,
+         6.901,  6.632,  6.672,  6.463,  6.214,  5.989,  5.721,  5.478,
+         5.211,  5.045,  4.891,  4.637,  4.559,  4.472,  4.452]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>TEMP_ADJUSTED_QC</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-23bccb6b-7fba-40b8-9eca-5bc3ee5d9645' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-23bccb6b-7fba-40b8-9eca-5bc3ee5d9645' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-72a55ed8-8f43-4aee-b6ab-2e68db0dc0f8' class='xr-var-data-in' type='checkbox'><label for='data-72a55ed8-8f43-4aee-b6ab-2e68db0dc0f8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>quality flag</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>TEMP_ADJUSTED_ERROR</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-065cb460-9560-436c-89de-afb0b8d262b9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-065cb460-9560-436c-89de-afb0b8d262b9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f7fad8c5-6eec-4a86-91a4-5ac45f9e28a2' class='xr-var-data-in' type='checkbox'><label for='data-f7fad8c5-6eec-4a86-91a4-5ac45f9e28a2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Contains the error on the adjusted values as determined by the delayed mode QC process</dd><dt><span>units :</span></dt><dd>degree_Celsius</dd><dt><span>C_format :</span></dt><dd>%9.3f</dd><dt><span>FORTRAN_format :</span></dt><dd>F9.3</dd><dt><span>resolution :</span></dt><dd>0.001</dd></dl></div><pre class='xr-var-data'>array([[0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025,
+        0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025,
+        0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025,
+        0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025,
+        0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025,
+        0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025,
+        0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025,
+        0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025,
+        0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025, 0.0025]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PSAL</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e6e62c16-a09f-4035-8bd6-aa2d1a1ad8c3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e6e62c16-a09f-4035-8bd6-aa2d1a1ad8c3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ec973e78-0ef1-4258-ab8a-a18a2d69dbe2' class='xr-var-data-in' type='checkbox'><label for='data-ec973e78-0ef1-4258-ab8a-a18a2d69dbe2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Practical salinity</dd><dt><span>standard_name :</span></dt><dd>sea_water_salinity</dd><dt><span>units :</span></dt><dd>psu</dd><dt><span>valid_min :</span></dt><dd>2.0</dd><dt><span>valid_max :</span></dt><dd>41.0</dd><dt><span>C_format :</span></dt><dd>%9.3f</dd><dt><span>FORTRAN_format :</span></dt><dd>F9.3</dd><dt><span>resolution :</span></dt><dd>0.001</dd></dl></div><pre class='xr-var-data'>array([[36.954, 36.954, 36.954, 36.954, 36.944, 36.799, 36.732, 36.733,
+        36.672, 36.626, 36.595, 36.552, 36.518, 36.489, 36.452, 36.403,
+        36.373, 36.341, 36.31 , 36.278, 36.274, 36.243, 36.208, 36.171,
+        36.147, 36.115, 36.093, 36.074, 36.044, 36.019, 35.981, 35.965,
+        35.937, 35.915, 35.912, 35.894, 35.857, 35.835, 35.767, 35.696,
+        35.62 , 35.524, 35.509, 35.433, 35.464, 35.32 , 35.398, 35.435,
+        35.405, 35.491, 35.496, 35.527, 35.544, 35.545, 35.497, 35.457,
+        35.408, 35.378, 35.41 , 35.388, 35.356, 35.331, 35.297, 35.267,
+        35.228, 35.21 , 35.191, 35.157, 35.147, 35.136, 35.133]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PSAL_QC</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ac3e455e-f1dc-48fb-83b2-dbfb826836fe' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ac3e455e-f1dc-48fb-83b2-dbfb826836fe' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bf76b59a-9c26-4074-aa7d-67e2af691ee0' class='xr-var-data-in' type='checkbox'><label for='data-bf76b59a-9c26-4074-aa7d-67e2af691ee0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>quality flag</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PSAL_ADJUSTED</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-51a40272-9886-4cfc-bf67-ec21a81b6fdd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-51a40272-9886-4cfc-bf67-ec21a81b6fdd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1d3018c7-b3cb-4461-ad4b-74c595f56ca8' class='xr-var-data-in' type='checkbox'><label for='data-1d3018c7-b3cb-4461-ad4b-74c595f56ca8' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Practical salinity</dd><dt><span>standard_name :</span></dt><dd>sea_water_salinity</dd><dt><span>units :</span></dt><dd>psu</dd><dt><span>valid_min :</span></dt><dd>2.0</dd><dt><span>valid_max :</span></dt><dd>41.0</dd><dt><span>C_format :</span></dt><dd>%9.3f</dd><dt><span>FORTRAN_format :</span></dt><dd>F9.3</dd><dt><span>resolution :</span></dt><dd>0.001</dd></dl></div><pre class='xr-var-data'>array([[36.95408 , 36.95407 , 36.95404 , 36.95408 , 36.950306, 36.804016,
+        36.73501 , 36.736004, 36.67408 , 36.627007, 36.59649 , 36.552963,
+        36.5188  , 36.49001 , 36.45327 , 36.403824, 36.374065, 36.34194 ,
+        36.3109  , 36.27812 , 36.27471 , 36.243958, 36.208996, 36.17168 ,
+        36.147827, 36.11564 , 36.093475, 36.074802, 36.044632, 36.020027,
+        35.98147 , 35.965755, 35.937717, 35.91539 , 35.91264 , 35.89516 ,
+        35.85755 , 35.836163, 35.767635, 35.69663 , 35.620777, 35.524403,
+        35.50967 , 35.433193, 35.464783, 35.320126, 35.398182, 35.43543 ,
+        35.405006, 35.49129 , 35.496166, 35.527176, 35.54429 , 35.54548 ,
+        35.497406, 35.457478, 35.40834 , 35.37807 , 35.41026 , 35.38829 ,
+        35.35629 , 35.331303, 35.29731 , 35.267292, 35.228237, 35.210197,
+        35.191284, 35.157135, 35.147114, 35.136078, 35.133057]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PSAL_ADJUSTED_QC</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-9bb09309-490e-423b-9e43-86b239f9341d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9bb09309-490e-423b-9e43-86b239f9341d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a156c3c4-d05c-4e90-9d0d-3f7c9c18380c' class='xr-var-data-in' type='checkbox'><label for='data-a156c3c4-d05c-4e90-9d0d-3f7c9c18380c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>quality flag</dd><dt><span>conventions :</span></dt><dd>Argo reference table 2</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;,
+        b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;, b&#x27;1&#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PSAL_ADJUSTED_ERROR</span></div><div class='xr-var-dims'>(N_PROF, N_LEVELS)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6586ad26-c3d1-40c3-b322-b95402762dcd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6586ad26-c3d1-40c3-b322-b95402762dcd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-12491310-2d2b-45d2-85ed-af29e22d3c94' class='xr-var-data-in' type='checkbox'><label for='data-12491310-2d2b-45d2-85ed-af29e22d3c94' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Contains the error on the adjusted values as determined by the delayed mode QC process</dd><dt><span>units :</span></dt><dd>psu</dd><dt><span>C_format :</span></dt><dd>%9.3f</dd><dt><span>FORTRAN_format :</span></dt><dd>F9.3</dd><dt><span>resolution :</span></dt><dd>0.001</dd></dl></div><pre class='xr-var-data'>array([[0.010742, 0.010742, 0.010735, 0.010727, 0.01243 , 0.011776, 0.011056,
+        0.011052, 0.010818, 0.010648, 0.010691, 0.010622, 0.010586, 0.010596,
+        0.010612, 0.010548, 0.010567, 0.010547, 0.010522, 0.010487, 0.010501,
+        0.010508, 0.010499, 0.010471, 0.010466, 0.010435, 0.010427, 0.010442,
+        0.010428, 0.010433, 0.010396, 0.010401, 0.01038 , 0.01036 , 0.010369,
+        0.010388, 0.010347, 0.010382, 0.010321, 0.010295, 0.010269, 0.010225,
+        0.010233, 0.010186, 0.010217, 0.010132, 0.010167, 0.010177, 0.010163,
+        0.010192, 0.010201, 0.01019 , 0.010203, 0.01022 , 0.010187, 0.010167,
+        0.010158, 0.010136, 0.010141, 0.010142, 0.010127, 0.010123, 0.010112,
+        0.010097, 0.010088, 0.010064, 0.010066, 0.010048, 0.010044, 0.01004 ,
+        0.01004 ]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_INSTITUTION</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-04a66d10-9eee-48b2-9dd1-a1439d2ed09b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-04a66d10-9eee-48b2-9dd1-a1439d2ed09b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-77e6027d-f998-442e-9d7d-93f333b3887c' class='xr-var-data-in' type='checkbox'><label for='data-77e6027d-f998-442e-9d7d-93f333b3887c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Institution which performed action</dd><dt><span>conventions :</span></dt><dd>Argo reference table 4</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;IF  &#x27;],
+       [b&#x27;IF  &#x27;],
+       [b&#x27;IF  &#x27;],
+       [b&#x27;IF  &#x27;],
+       [b&#x27;IF  &#x27;],
+       [b&#x27;    &#x27;],
+       [b&#x27;IF  &#x27;],
+       [b&#x27;SP  &#x27;],
+       [b&#x27;SP  &#x27;],
+       [b&#x27;SP  &#x27;],
+       [b&#x27;IF  &#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_STEP</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-ddbe8e93-1b6b-4d6d-9825-a280cef15a35' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ddbe8e93-1b6b-4d6d-9825-a280cef15a35' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e492dcf4-6e7a-484e-845e-5871a7fa48ae' class='xr-var-data-in' type='checkbox'><label for='data-e492dcf4-6e7a-484e-845e-5871a7fa48ae' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Step in data processing</dd><dt><span>conventions :</span></dt><dd>Argo reference table 12</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;CORT&#x27;],
+       [b&#x27;CORT&#x27;],
+       [b&#x27;ARGQ&#x27;],
+       [b&#x27;ARGQ&#x27;],
+       [b&#x27;    &#x27;],
+       [b&#x27;    &#x27;],
+       [b&#x27;    &#x27;],
+       [b&#x27;ARSQ&#x27;],
+       [b&#x27;ARSQ&#x27;],
+       [b&#x27;ARSQ&#x27;],
+       [b&#x27;    &#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_SOFTWARE</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-95458512-6f37-43c3-907e-1b9575f66a7e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-95458512-6f37-43c3-907e-1b9575f66a7e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4047bf88-56d3-4d2d-a91c-c339c74121d4' class='xr-var-data-in' type='checkbox'><label for='data-4047bf88-56d3-4d2d-a91c-c339c74121d4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Name of software which performed action</dd><dt><span>conventions :</span></dt><dd>Institution dependent</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;COOA&#x27;],
+       [b&#x27;COOA&#x27;],
+       [b&#x27;COAR&#x27;],
+       [b&#x27;COAR&#x27;],
+       [b&#x27;SCOO&#x27;],
+       [b&#x27;CORA&#x27;],
+       [b&#x27;SCOO&#x27;],
+       [b&#x27;AIEO&#x27;],
+       [b&#x27;AIEO&#x27;],
+       [b&#x27;AIEO&#x27;],
+       [b&#x27;COFC&#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_SOFTWARE_RELEASE</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-48638876-9b90-4221-9f98-8a5f68384bed' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-48638876-9b90-4221-9f98-8a5f68384bed' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0618b461-a0f5-4419-b820-5a778653fcbb' class='xr-var-data-in' type='checkbox'><label for='data-0618b461-a0f5-4419-b820-5a778653fcbb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Version/release of software which performed action</dd><dt><span>conventions :</span></dt><dd>Institution dependent</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;5.2 &#x27;],
+       [b&#x27;5.2 &#x27;],
+       [b&#x27;1.0 &#x27;],
+       [b&#x27;1.0 &#x27;],
+       [b&#x27;1.3 &#x27;],
+       [b&#x27;    &#x27;],
+       [b&#x27;1.4 &#x27;],
+       [b&#x27;1   &#x27;],
+       [b&#x27;1   &#x27;],
+       [b&#x27;1   &#x27;],
+       [b&#x27;3.0 &#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_REFERENCE</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-64c088b0-66f2-4038-8c4b-d0e197373d06' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-64c088b0-66f2-4038-8c4b-d0e197373d06' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5c258308-fc82-4fd1-9c1c-b67f734c319e' class='xr-var-data-in' type='checkbox'><label for='data-5c258308-fc82-4fd1-9c1c-b67f734c319e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Reference of database</dd><dt><span>conventions :</span></dt><dd>Institution dependent</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;RTQCGL01                                                        &#x27;],
+       [b&#x27;RTQCGL01                                                        &#x27;],
+       [b&#x27;                                                                &#x27;],
+       [b&#x27;                                                                &#x27;],
+       [b&#x27;                                                                &#x27;],
+       [b&#x27;                                                                &#x27;],
+       [b&#x27;                                                                &#x27;],
+       [b&#x27;WOA05&#x27;],
+       [b&#x27;WOA05&#x27;],
+       [b&#x27;WOA05&#x27;],
+       [b&#x27;                                                                &#x27;]],
+      dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_DATE</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e6f51ef4-ad57-43eb-ab20-4c1e6a4caa41' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e6f51ef4-ad57-43eb-ab20-4c1e6a4caa41' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-02e01f90-6b83-433f-91dc-9a626c8c2f47' class='xr-var-data-in' type='checkbox'><label for='data-02e01f90-6b83-433f-91dc-9a626c8c2f47' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Date the history record was created</dd><dt><span>conventions :</span></dt><dd>YYYYMMDDHHMISS</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;20101101071942&#x27;],
+       [b&#x27;20101101071222&#x27;],
+       [b&#x27;20101031072150&#x27;],
+       [b&#x27;20101031072150&#x27;],
+       [b&#x27;20101102101511&#x27;],
+       [b&#x27;20110316191506&#x27;],
+       [b&#x27;20130312142542&#x27;],
+       [b&#x27;20170109130610&#x27;],
+       [b&#x27;20170109130649&#x27;],
+       [b&#x27;20170314125603&#x27;],
+       [b&#x27;20181119155347&#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_ACTION</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-98b10b0a-6eca-4ddd-b5d2-8864cbd54da9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-98b10b0a-6eca-4ddd-b5d2-8864cbd54da9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a6330ecc-1ffa-4516-a225-a11a83114225' class='xr-var-data-in' type='checkbox'><label for='data-a6330ecc-1ffa-4516-a225-a11a83114225' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Action performed on data</dd><dt><span>conventions :</span></dt><dd>Argo reference table 7</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;QCP$&#x27;],
+       [b&#x27;QCP$&#x27;],
+       [b&#x27;QCP$&#x27;],
+       [b&#x27;QCF$&#x27;],
+       [b&#x27;QC  &#x27;],
+       [b&#x27;SVP &#x27;],
+       [b&#x27;QC  &#x27;],
+       [b&#x27;QC  &#x27;],
+       [b&#x27;QC  &#x27;],
+       [b&#x27;QC  &#x27;],
+       [b&#x27;    &#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_PARAMETER</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-8021b0c3-3d98-4f9a-943d-61ddd9579027' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8021b0c3-3d98-4f9a-943d-61ddd9579027' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2ef0cff7-6c61-4a09-b554-d0ae0051d75c' class='xr-var-data-in' type='checkbox'><label for='data-2ef0cff7-6c61-4a09-b554-d0ae0051d75c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Station parameter action is performed on</dd><dt><span>conventions :</span></dt><dd>Argo reference table 3</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;PSAL            &#x27;],
+       [b&#x27;TEMP            &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;PRES            &#x27;],
+       [b&#x27;PSAL            &#x27;],
+       [b&#x27;PSAL            &#x27;],
+       [b&#x27;                &#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_START_PRES</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f29df25e-f75d-4003-b928-32d0265144b7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f29df25e-f75d-4003-b928-32d0265144b7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f356e364-79c8-4859-8618-ec610311f1b1' class='xr-var-data-in' type='checkbox'><label for='data-f356e364-79c8-4859-8618-ec610311f1b1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Start pressure action applied on</dd><dt><span>units :</span></dt><dd>decibar</dd></dl></div><pre class='xr-var-data'>array([[nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_STOP_PRES</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-e0637046-f4bb-40a3-bf96-60105daf1e2c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e0637046-f4bb-40a3-bf96-60105daf1e2c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e473141f-6dc9-4e01-bc77-6375f45fbaf9' class='xr-var-data-in' type='checkbox'><label for='data-e473141f-6dc9-4e01-bc77-6375f45fbaf9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Stop pressure action applied on</dd><dt><span>units :</span></dt><dd>decibar</dd></dl></div><pre class='xr-var-data'>array([[nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_PREVIOUS_VALUE</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-835074bd-7d2d-46ef-82f2-1c0c09b04645' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-835074bd-7d2d-46ef-82f2-1c0c09b04645' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-2a650532-a185-4886-a317-dc3a9ff25b9c' class='xr-var-data-in' type='checkbox'><label for='data-2a650532-a185-4886-a317-dc3a9ff25b9c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Parameter/Flag previous value before action</dd></dl></div><pre class='xr-var-data'>array([[nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan],
+       [nan]], dtype=float32)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_QCTEST</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-7fc05b81-a275-4558-bd7b-af1fb513ad50' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7fc05b81-a275-4558-bd7b-af1fb513ad50' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bb1a45c1-2ba4-44fa-8be8-517d4ef05ee9' class='xr-var-data-in' type='checkbox'><label for='data-bb1a45c1-2ba4-44fa-8be8-517d4ef05ee9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Documentation of tests performed, tests failed (in hex form)</dd><dt><span>conventions :</span></dt><dd>Write tests performed when ACTION=QCP$; tests failed when ACTION=QCF$</dd></dl></div><pre class='xr-var-data'>array([[b&#x27;                &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;DEBEC           &#x27;],
+       [b&#x27;02000           &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;                &#x27;],
+       [b&#x27;                &#x27;]], dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>PARAMETER</span></div><div class='xr-var-dims'>(N_PROF, N_CALIB, N_PARAM)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-8fd0660a-64b1-454b-aeba-b7d817d0304a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8fd0660a-64b1-454b-aeba-b7d817d0304a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bc26b3cf-961f-4968-8070-b44f816d11ab' class='xr-var-data-in' type='checkbox'><label for='data-bc26b3cf-961f-4968-8070-b44f816d11ab' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>List of parameters with calibration information</dd><dt><span>conventions :</span></dt><dd>Argo reference table 3</dd></dl></div><pre class='xr-var-data'>array([[[b&#x27;PRES            &#x27;, b&#x27;TEMP            &#x27;, b&#x27;PSAL            &#x27;]]],
+      dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>SCIENTIFIC_CALIB_EQUATION</span></div><div class='xr-var-dims'>(N_PROF, N_CALIB, N_PARAM)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-591e7f20-90d8-4d20-ac12-29a22ab7af06' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-591e7f20-90d8-4d20-ac12-29a22ab7af06' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-fa60b7f5-8fa6-4e42-b408-f49c489902e1' class='xr-var-data-in' type='checkbox'><label for='data-fa60b7f5-8fa6-4e42-b408-f49c489902e1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Calibration equation for this parameter</dd></dl></div><pre class='xr-var-data'>array([[[b&#x27;PRES_ADJUSTED(cycle i)=PRES (cycle i)-Surface Pressure(cycle i+1).                                                                                                                                                                                              &#x27;,
+         b&#x27;                                                                                                                                                                                                                                                                &#x27;,
+         b&#x27;PSAL re-calculated using PRES_ADJUSTED.PSAL Cell Thermal Mass celltm_sbe41.                                                                                                                                                                                     &#x27;]]],
+      dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>SCIENTIFIC_CALIB_COEFFICIENT</span></div><div class='xr-var-dims'>(N_PROF, N_CALIB, N_PARAM)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-a518d935-0ade-4b2f-84f8-f5476c7ddbf4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a518d935-0ade-4b2f-84f8-f5476c7ddbf4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a3fabad5-8ce1-47d9-b8d0-f3e5a6ead37c' class='xr-var-data-in' type='checkbox'><label for='data-a3fabad5-8ce1-47d9-b8d0-f3e5a6ead37c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Calibration coefficients for this equation</dd></dl></div><pre class='xr-var-data'>array([[[b&#x27;Surface pressure=0 dbar                                                                                                                                                                                                                                         &#x27;,
+         b&#x27;                                                                                                                                                                                                                                                                &#x27;,
+         b&#x27;alpha = 0.0267, tau = 18.6 and Ascend velocity = 0.09.                                                                                                                                                                                                          &#x27;]]],
+      dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>SCIENTIFIC_CALIB_COMMENT</span></div><div class='xr-var-dims'>(N_PROF, N_CALIB, N_PARAM)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5b6fd008-cb0f-42c0-b60e-a5c80b46c7b3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5b6fd008-cb0f-42c0-b60e-a5c80b46c7b3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3e075e27-74bc-49ca-8049-feaf09644371' class='xr-var-data-in' type='checkbox'><label for='data-3e075e27-74bc-49ca-8049-feaf09644371' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Comment applying to this parameter calibration</dd></dl></div><pre class='xr-var-data'>array([[[b&#x27;APEX float that not truncated negative pressure drift. Pressure adjusted by using pressure offset at the sea surface. Calibration error is manufacturer specified accuracy in dbar.                                                                             &#x27;,
+         b&#x27;none                                                                                                                                                                                                                                                            &#x27;,
+         b&#x27;Salinity recomputed for pressure offset.Salinity corrected for CTM.                                                                                                                                                                                             &#x27;]]],
+      dtype=object)</pre></li><li class='xr-var-item'><div class='xr-var-name'><span>SCIENTIFIC_CALIB_DATE</span></div><div class='xr-var-dims'>(N_PROF, N_CALIB, N_PARAM)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-40add2b6-6696-4f47-916b-6ddc627b181f' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-40add2b6-6696-4f47-916b-6ddc627b181f' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-5162d1b7-e56c-45f3-a9ca-43afc50c96a9' class='xr-var-data-in' type='checkbox'><label for='data-5162d1b7-e56c-45f3-a9ca-43afc50c96a9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Date of calibration</dd><dt><span>conventions :</span></dt><dd>YYYYMMDDHHMISS</dd></dl></div><pre class='xr-var-data'>array([[[b&#x27;20170109130610&#x27;, b&#x27;20170314125815&#x27;, b&#x27;20170109130649&#x27;]]],
+      dtype=object)</pre></li></ul></div></li><li class='xr-section-item'><input id='section-d55dd530-dc6e-47df-8fda-fad6f4d41708' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d55dd530-dc6e-47df-8fda-fad6f4d41708' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>Argo float vertical profile</dd><dt><span>institution :</span></dt><dd>CORIOLIS</dd><dt><span>source :</span></dt><dd>Argo float</dd><dt><span>history :</span></dt><dd>2010-10-31T08:42:14Z creation; 2018-11-19T15:53:47Z last update (coriolis COFC software)</dd><dt><span>references :</span></dt><dd>http://www.argodatamgt.org/Documentation</dd><dt><span>user_manual_version :</span></dt><dd>3.1</dd><dt><span>Conventions :</span></dt><dd>Argo-3.1 CF-1.6</dd><dt><span>featureType :</span></dt><dd>trajectoryProfile</dd><dt><span>decoder_version :</span></dt><dd>CODA_026a</dd></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xrDS</span><span class="o">.</span><span class="n">PSAL</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">TEMP</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/L03_ArgoDatabyFloat_6_0.png" src="_images/L03_ArgoDatabyFloat_6_0.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="L03_TheBasicsOfArgoDataSystem.html" title="previous page"><img src="./images/logoArgo.png" alt="Argo status" width="150"/> Argo Data System</a>
+    <a class='right-next' id="next-link" href="L03_ArgoDatabyDate.html" title="next page"><img src="./images/logoArgo.png" alt="Argo status" width="150"/> Argo data by date</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Euro Argo<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>

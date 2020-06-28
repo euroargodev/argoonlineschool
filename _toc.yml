@@ -5,8 +5,8 @@
 - header: The basic of the Argo data system
 - file: L03_TheBasicsOfArgoDataSystem
   sections:
-        - file: L03_ArgoDatabyDAC
-        - file: L03_ArgoDatabyGEO
+        - file: L03_ArgoDatabyFloat
+        - file: L03_ArgoDatabyDate
 
 - header: Data in real time and calibrated
 - file: L04_RTandDMQC
