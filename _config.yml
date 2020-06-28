@@ -3,8 +3,19 @@ title: Argo Online School
 author: Euro Argo
 logo: ./images/logo.png
 
+# Execution settings
 execute:
   execute_notebooks: force
+
+# Launch button settings
+launch_buttons:
+  notebook_interface        : classic  # The interface interactive links will activate
+repository:
+  url: https://github.com/PedroVelez/argoonlineschool
+  branch                    : master  # Which branch of the repository should be used when creating links
+
+html:
+    navbar_number_sections: true
 
 latex:
   latex_documents:
