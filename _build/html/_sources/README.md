@@ -1,12 +1,14 @@
-# Argo Online School
+# <img src="https://raw.githubusercontent.com/PedroVelez/argoonlineschool/master/images/logoAoS.png" alt="argopy logo" width="100"/> Argo Online School
 
-<img src="https://raw.githubusercontent.com/PedroVelez/argoonlineschool/master/images/logoAoS.png" alt="argopy logo" width="200"/>
-
-
-images/logo.png
+In this repository you can find the python jupyter notebooks that are part of the Argo Online school. These notebooks use [the Argo data python library](https://github.com/euroargodev/argopy), and cover the following lessons:
 
 
-In this repository you can find the python jupyter notebooks that are part of the Argo Online school. These notebooks use <img src="https://raw.githubusercontent.com/euroargodev/argopy/master/docs/_static/argopy_logo_long.png" alt="argopy logo" width="100"/>, [the Argo data python library](https://github.com/euroargodev/argopy), and cover the following lessons:
+1. Introduction
+2. Basics Of netCDF
+3. The Basics Of the Argo Data System
+  *Argo Data by flaot
+  *Argo Data by date
+4. Data in real time and calibrated
 
 ## Usage
 First, I suggest to create a python enviroment to use these notebooks. This enviroment already includes argopy stable version. To create, and activate, the enviroment AOS [Argo Online School]:

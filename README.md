@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/PedroVelez/argoonlineschool/master/images/logo.png" alt="argopy logo" width="100"/> Argo Online School
+# <img src="https://raw.githubusercontent.com/PedroVelez/argoonlineschool/master/images/logoAoS.png" alt="argopy logo" width="100"/> Argo Online School
 
 In this repository you can find the python jupyter notebooks that are part of the Argo Online school. These notebooks use [the Argo data python library](https://github.com/euroargodev/argopy), and cover the following lessons:
 
