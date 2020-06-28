@@ -1,0 +1,11 @@
+# Book settings
+title: Argo Online School
+author: Euro Argo
+logo: ./images/logo.png
+
+execute:
+  execute_notebooks: force
+
+latex:
+  latex_documents:
+    targetname: book.tex

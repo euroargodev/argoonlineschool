@@ -1,0 +1,4 @@
+- file: README
+  sections:
+    - file: L01_BasicsOfnetCDF
+    - file: L02_ArgoDataSystem
