@@ -24,31 +24,3 @@ When an Argo float surfaces, the data are sent to the Argo Data System where the
 
 At the early stage of the Argo program, and due to the huge ammount of data that it was foressen than Argo may crete it bas decided that netCDF would be the offical file format for the argo data. In the next lesson we give an introduction to the properties of this data format, and how to read files in netCDF.
 
-
-
-
-```{toctree}
-:hidden:
-:titlesonly:
-
-
-L02_BasicsOfnetCDF
-```
-
-
-```{toctree}
-:hidden:
-:titlesonly:
-:caption: The basic of the Argo data system
-
-L03_TheBasicsOfArgoDataSystem
-```
-
-
-```{toctree}
-:hidden:
-:titlesonly:
-:caption: Data in real time and calibrated
-
-L04_RTandDMQC
-```

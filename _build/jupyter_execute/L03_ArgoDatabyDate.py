@@ -1,6 +1,4 @@
-# <img src="./images/logoArgo.png" alt="Argo status" width="150"/> Argo data by date
-
-
+# Argo data by date
 
 ## Data files organized by date
 

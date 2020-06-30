@@ -1,4 +1,4 @@
-# <img src="./images/logoArgo.png" alt="Argo status" width="150"/> Argo data by float
+# Argo data by float
 
 ## Data files organized by float
 

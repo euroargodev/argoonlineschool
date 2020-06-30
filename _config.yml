@@ -5,17 +5,14 @@ logo: ./images/logoAoS.png
 
 # Execution settings
 execute:
-  execute_notebooks: force
+  execute_notebooks: auto
 
 # Launch button settings
 launch_buttons:
   notebook_interface        : classic  # The interface interactive links will activate
 repository:
   url: https://github.com/PedroVelez/argoonlineschool
-  branch                    : master  # Which branch of the repository should be used when creating links
-
-html:
-    navbar_number_sections: true
+  branch: master  # Which branch of the repository should be used when creating links
 
 latex:
   latex_documents:
