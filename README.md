@@ -12,7 +12,7 @@ The Argo Online school is a set of videos and hands-on jupyter notebooks to desc
 4. Data in real time and calibrated
 
 ## Usage
-You can access the content as a [JubyterBook](https://euroargodev.github.io/argoonlineschool/), or download them and use in your local machine. In that case, you should create a python enviroment to use these notebooks. To create, and activate, the enviroment AOS [Argo Online School]:
+You can access the content as a [JubyterBook](http://www.oceanografia.es/argoonlineschool), or download them and use in your local machine. In that case, you should create a python enviroment to use these notebooks. To create, and activate, the enviroment AOS [Argo Online School]:
 
 ```
 conda env create -f environment.yml
