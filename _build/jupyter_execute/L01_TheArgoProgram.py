@@ -22,5 +22,13 @@ More information in the web page of the [Argo Steering Team](http://www.argo.ucs
 ##  The netCF format
 When an Argo float surfaces, the data are sent to the Argo Data System where they are processed and made available for everyone, free of charge. Here we describe the minimum neccesary information to understand and be able to use these data.
 
-At the early stage of the Argo program, and due to the huge ammount of data that it was foressen than Argo may crete it bas decided that netCDF would be the offical file format for the argo data. In the next lesson we give an introduction to the properties of this data format, and how to read files in netCDF.
+At the early stage of the Argo program, and due to the huge ammount of data that was foressen  Argo would create, it was decided that netCDF would be the offical file format for the argo data. In the next lesson we give an introduction to the properties of this data format, and how to read files in netCDF.
 
+Before proceding, let's check if you really need this course, and try to answer the following questions:
+
+- what is a WMO number ?
+- what is the difference between Delayed and Real Time data mode ?
+- what is an adjusted parameter ?
+- what a QC flag of 3 means ?
+
+If you don’t answer to more than 1 questions, please keep reading (or watching). Even though if you answered all the questions but you ara not very familiar with python, netCDF, or argopy,  you may find interesting the content of this course
