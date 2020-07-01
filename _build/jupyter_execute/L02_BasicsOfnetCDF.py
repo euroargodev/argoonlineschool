@@ -28,7 +28,7 @@ Let's see most of these properties of a **netCDF** file by using actual data fro
 
 I have pre-downloaded the daily data from 2019. You can use this code for dowloading it:
 
-`! wget ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc `
+`! wget ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.mnmean.nc `
 
 Although there area several methods to read netCDF data in python, we will began with [netcdf4-python](https://unidata.github.io/netcdf4-python/netCDF4/), the unidata Python interface to the netCDF C library.
 
@@ -128,18 +128,19 @@ sst.sel(lat=(28),method='nearest').mean(dim=('time'))
 ## Using the data
 Let's actually use the data, firt to see the time series of SST near the, beatiful, Canary Islands, and after that the mean global SST
 
-#In the metadata there is not reference 
+#In the metadata there is not reference for the grid resolution
 sst.lon[0]-sst.lon[1]
 
 sst.sel(lon=(360-18), lat=28, method='nearest').plot()
 
 #28N 18W
-sst[:,(90+28)*4,(360-18)*4].plot()
+sst[:,(90+28),(360-18)].plot()
 
 fig, ax = plt.subplots(figsize=(14,8))
 sst.mean(dim='time').plot(vmin=-2, vmax=30)
 ax.grid()
 
+fig, ax = plt.subplots(figsize=(14,8))
 sst.mean(dim=('time', 'lon')).plot()
 
 ## Remote data access via openDAP

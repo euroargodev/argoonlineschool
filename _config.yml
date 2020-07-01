@@ -5,7 +5,7 @@ logo: ./images/logoAoS.png
 
 # Execution settings
 execute:
-  execute_notebooks: auto
+  execute_notebooks: off
 
 # Launch button settings
 launch_buttons:
