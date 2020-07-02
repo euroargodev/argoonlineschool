@@ -12,7 +12,7 @@ The Argo Online school is a set of videos and hands-on jupyter notebooks to desc
 4. Data in real time and calibrated
 
 ## Usage
-You can access the content as a [JubyterBook](http://www.oceanografia.es/argoonlineschool), or download them and use in your local machine. In that case, you should create a python enviroment to use these notebooks. To create, and activate, the enviroment AOS [Argo Online School]:
+You can access the content as a [JubyterBook](https://euroargodev.github.io/argoonlineschool), or download them and use in your local machine. In that case, you should create a python enviroment to use these notebooks. To create, and activate, the enviroment AOS [Argo Online School]:
 
 ```
 conda env create -f environment.yml
@@ -28,9 +28,9 @@ Daily NOAA OI SST V2 High Resolution Dataset for 2009:
 
 `! wget ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc`
 
-First profile of float 6900772
+Data from float 6900772
 
-`! wget ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6900772/profiles/D6900772_001.nc`
+`wget ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6901254/*`
 
 Data in the north Atlantic for the 11th November 2019
 
