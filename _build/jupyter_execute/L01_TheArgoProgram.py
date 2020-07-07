@@ -1,6 +1,6 @@
 #  Argo data
 
-<img src="https://raw.githubusercontent.com/PedroVelez/argoonlineschool/master/images/logoArgo.png" alt="Argo status" width="50"/> Argo is a  broad-scale global array of profiling floats that measure temperature and salinity versus pressure. Argo is the major component of the ocean observing system. This is the actual distribution o the Argo array
+<img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoArgo.png" alt="Argo status" width="50"/> Argo is a  broad-scale global array of profiling floats that measure temperature and salinity versus pressure. Argo is the major component of the ocean observing system. This is the actual distribution o the Argo array
 
 <img src="http://www-hrx.ucsd.edu/www-argo/status.gif" alt="Argo status" width="700"/>
 

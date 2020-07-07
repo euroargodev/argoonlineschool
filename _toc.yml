@@ -5,11 +5,9 @@
 - file: L02_BasicsOfnetCDF
 
 - file: L03_TheBasicsOfArgoDataSystem
-  sections:
-        - file: L03_ArgoDatabyFloat
-        - file: L03_ArgoDatabyDate
 
-- file: L04_RTandDMQC
-  sections:
-    - file: L04_RT
-    - file: L04_DMQC
+- file: L04_ArgoDatabyFloat
+
+- file: L05_ArgoDatabyDate
+
+- file: L06_AdjustedData
