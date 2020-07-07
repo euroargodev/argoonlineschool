@@ -30,7 +30,7 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Argo data by float" href="L03_ArgoDatabyFloat.html" />
+    <link rel="next" title="Argo data by float" href="L04_ArgoDatabyFloat.html" />
     <link rel="prev" title="Basics of netCDF" href="L02_BasicsOfnetCDF.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,17 +77,15 @@
   </li>
   <li class="active">
     <a href="">Argo Data System</a>
-  <ul class="nav sidenav_l2">
-    <li class="">
-      <a href="L03_ArgoDatabyFloat.html">Argo data by float</a>
-    </li>
-    <li class="">
-      <a href="L03_ArgoDatabyDate.html">Argo data by date</a>
-    </li>
-  </ul>
   </li>
   <li class="">
-    <a href="L04_RTandDMQC.html">Real Time and Calibrated data</a>
+    <a href="L04_ArgoDatabyFloat.html">Argo data by float</a>
+  </li>
+  <li class="">
+    <a href="L05_ArgoDatabyDate.html">Argo data by date</a>
+  </li>
+  <li class="">
+    <a href="L06_AdjustedData.html">Calibrated data</a>
   </li>
 </ul>
 </nav>
@@ -159,11 +157,15 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#a-unique-identifiers-for-each-float-the-wmo" class="nav-link">A unique identifiers for each float: the WMO</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
             <a href="#using-argo-data-from-the-gdacs" class="nav-link">Using Argo data from the GDACs</a>
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#core-parameters" class="nav-link">Core parameters</a>
+            <a href="#real-time-and-calibrated-data" class="nav-link">Real Time and Calibrated data</a>
         </li>
     
     </ul>
@@ -191,7 +193,11 @@
 <li><p>via monthly copies of the GDACs https://www.seanoe.org/data/00311/42182/</p></li>
 </ul>
 <p>See the <a class="reference external" href="http://www.argo.ucsd.edu/Argo_date_guide.html">A beginner’s guide to accessing Argo data</a> to read a full description, with links, to this other ways of accesing the data</p>
-<p><strong>However, in this secction we focus in the accesss to the primary source of the Argo data, the GDACs</strong></p>
+<p><strong>However, in this book we focus in the accesss to the primary source of the Argo data, the GDACs</strong></p>
+<div class="section" id="a-unique-identifiers-for-each-float-the-wmo">
+<h2>A unique identifiers for each float: the WMO<a class="headerlink" href="#a-unique-identifiers-for-each-float-the-wmo" title="Permalink to this headline">¶</a></h2>
+<p>Each one of the Argo floats have a unique indentifier, kwnon as the World Meteorological Organization (WMO).</p>
+</div>
 <div class="section" id="using-argo-data-from-the-gdacs">
 <h2>Using Argo data from the GDACs<a class="headerlink" href="#using-argo-data-from-the-gdacs" title="Permalink to this headline">¶</a></h2>
 <p>For users interested in manipulating the actual Argo NetCDF files, the GDACs should be the route to access Argo data. Both GDACs offer access to the complete Argo data collection, including float metadata, detailed trajectory data, profile data and technical data all in NetCDF</p>
@@ -208,13 +214,11 @@
 There are also several index files in the top directory containing a list of metadata on each type of Argo data file (meta, prof, tech and traj) contained in the “dac” and “geo” folders. It is possible to download these lists and search them for floats in specific regions, times, DACs, etc. There is also a grelist which contains a list of floats that likely have sensor problems. We will describe this files later.</p></li>
 </ul>
 <p>In the Argo <a class="reference external" href="http://www.argodatamgt.org/Documentation">User’s Manual and the Argo quality control manual</a> there is a full description of the naming system of the files as well as the variable names and quality control flags within each data file. <strong>In this lessons we do an overview of all of it.</strong></p>
-<p>Accessing the <em>dac</em> folder in any of the FTP or HTTP sites of andy of the GDAC you will find 11 folders, one for each of the DACs. As indicated in the figure, within each folder tehre is a folder for each one of the floatos. The number is knwon as the World Meteorological Organization (WMO) ID and it isunique for each float.</p>
 </div>
-<div class="section" id="core-parameters">
-<h2>Core parameters<a class="headerlink" href="#core-parameters" title="Permalink to this headline">¶</a></h2>
-<p>JULD, LATITUDE, LONGITUDE, PRES, TEMP, PSAL and CNDC.</p>
-<div class="toctree-wrapper compound">
-</div>
+<div class="section" id="real-time-and-calibrated-data">
+<h2>Real Time and Calibrated data<a class="headerlink" href="#real-time-and-calibrated-data" title="Permalink to this headline">¶</a></h2>
+<p>Since the target is to have the Argo data available within 24 hours of their transmission from the float, this data is called <em>Real Time</em> (RT) data.  One year after the data were observed it is, if necessary, adjusted and made public, this data is called <em>Delayed Mode</em> (DM).</p>
+<p><em>In the next section we describe to access the RT data generated by one float.</em></p>
 </div>
 </div>
 
@@ -228,7 +232,7 @@ There are also several index files in the top directory containing a list of met
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="L02_BasicsOfnetCDF.html" title="previous page">Basics of netCDF</a>
-    <a class='right-next' id="next-link" href="L03_ArgoDatabyFloat.html" title="next page">Argo data by float</a>
+    <a class='right-next' id="next-link" href="L04_ArgoDatabyFloat.html" title="next page">Argo data by float</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

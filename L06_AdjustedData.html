@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Argo Online School &#8212; Argo Online School</title>
+    <title>Calibrated data &#8212; Argo Online School</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -30,7 +30,7 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Argo data" href="L01_TheArgoProgram.html" />
+    <link rel="prev" title="Argo data by date" href="L05_ArgoDatabyDate.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -65,8 +65,8 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
   
   <ul class="nav sidenav_l1">
-  <li class="active">
-    <a href="#">Argo Online School</a>
+  <li class="">
+    <a href="README.html">Argo Online School</a>
   </li>
   <li class="">
     <a href="L01_TheArgoProgram.html">Argo data</a>
@@ -83,8 +83,8 @@
   <li class="">
     <a href="L05_ArgoDatabyDate.html">Argo data by date</a>
   </li>
-  <li class="">
-    <a href="L06_AdjustedData.html">Calibrated data</a>
+  <li class="active">
+    <a href="">Calibrated data</a>
   </li>
 </ul>
 </nav>
@@ -127,9 +127,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/L06_AdjustedData.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -148,24 +148,9 @@
 
     </div>
     <div class="d-none d-md-block col-md-2 bd-toc show">
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
 
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#usage" class="nav-link">Usage</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#data" class="nav-link">Data</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#further-reading" class="nav-link">Further reading</a>
-        </li>
     
     </ul>
 </nav>
@@ -178,49 +163,13 @@
         
               <div>
                 
-  <img src="https://raw.githubusercontent.com/PedroVelez/argoonlineschool/master/images/logoAoS.png" alt="argopy logo" width="100"/>
-<div class="section" id="argo-online-school">
-<h1>Argo Online School<a class="headerlink" href="#argo-online-school" title="Permalink to this headline">¶</a></h1>
-<p>The Argo Online school is a set of videos and hands-on jupyter notebooks to describe the minimum requiremets to use, and understand, the Argo data. Here you can find find the jupyter notebooks that are part of the Argo Online school. These notebooks use, mainly, <a class="reference external" href="https://github.com/euroargodev/argopy">the Argo data python library</a>, and cover the following lessons:</p>
-<ol class="simple">
-<li><p>Introduction to the Argo program</p></li>
-<li><p>Basics Of netCDF</p></li>
-<li><p>The Basics Of the Argo Data System</p></li>
-</ol>
-<ul class="simple">
-<li><p>Argo Data by float</p></li>
-<li><p>Argo Data by date</p></li>
-</ul>
-<ol class="simple">
-<li><p>Data in real time and calibrated</p></li>
-</ol>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>You can access the content as a <a class="reference external" href="https://euroargodev.github.io/argoonlineschool">JubyterBook</a>, or download them and use in your local machine. In that case, you should create a python enviroment to use these notebooks. To create, and activate, the enviroment AOS [Argo Online School]:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
-<span class="n">conda</span> <span class="n">activate</span> <span class="n">AOS</span>
-</pre></div>
-</div>
-<p>This enviroment already includes argopy stable version.</p>
-</div>
-<div class="section" id="data">
-<h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
-<p>The Data in the <em>./Data</em> folder is used for the examples. Alternatively you can download it from:</p>
-<p>Daily NOAA OI SST V2 High Resolution Dataset for 2009:</p>
-<p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">wget</span> <span class="pre">ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc</span></code></p>
-<p>Data from float 6900772</p>
-<p><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6901254/*</span></code></p>
-<p>Data in the north Atlantic for the 11th November 2019</p>
-<p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">wget</span> <span class="pre">ftp://ftp.ifremer.fr/ifremer/argo//geo/indian_ocean/2019/11/20191111_prof.nc</span></code></p>
-</div>
-<div class="section" id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
-<p>As a very useful first aproach to python, you can use <a class="reference external" href="https://earth-env-data-science.github.io/intro">An Introduction to Earth and Environmental Data Science</a> and <a class="reference external" href="https://rabernat.github.io/research_computing/">Research computing in earth Sciences</a> developed by <a class="reference external" href="https://ocean-transport.github.io/">Ryan Abernathey</a> and Kerry Key.</p>
-<p>For the full description of the formats and files produced by the Argo Data Assembly Centres (DACs), see the <a class="reference external" href="https://archimer.ifremer.fr/doc/00187/29825/">Argo user’s manual</a>, the <a class="reference external" href="https://archimer.ifremer.fr/doc/00228/33951/">Argo Quality Control Manual for CTD and Trajectory Data</a> or the <a class="reference external" href="http://www.argodatamgt.org/content/download/340/2645/file/argo_data_management_handbook.pdf">The Argo data management handbook</a></p>
-<p>More information can be found in the <a class="reference external" href="http://www.argo.ucsd.edu/">Argo Stereing Team web page</a> or the <a class="reference external" href="http://www.argodatamgt.org/Documentation">Argo Data Management team documentation</a></p>
-<div class="toctree-wrapper compound">
-</div>
-</div>
+  <div class="section" id="calibrated-data">
+<h1>Calibrated data<a class="headerlink" href="#calibrated-data" title="Permalink to this headline">¶</a></h1>
+<p>Delayed mode files
+Delayed mode profile files are the same as the real time profile files, except their file names on the GDACs all contain a “D” before the WMO number (e.g. D5900400_001.nc, BD5904179_001.nc). These profile files contain delayed mode adjusted data, which are recorded in the variable <PARAM>_ADJUSTED. The variable DATA_MODE will record ‘D’. Two other variables are also filled in delayed mode, which are <PARAM>_ADJUSTED_QC and <PARAM>_ADJUSTED_ERROR, which record the delayed mode quality control flags and the delayed mode adjustment uncertainty.</p>
+<p>Core Argo delayed mode files are available 1 – 2 years after a profile is taken; sometimes earlier. These have been subjected to detailed scrutiny by oceanographic experts and the adjusted salinity has been estimated by comparison with high quality ship-based CTD data and Argo climatologies using the process described by Wong et al, 2003; Böhme and Send, 2005; Owens and Wong, 2009; Cabanes et al, 2016.</p>
+<p>For BGC parameters, delayed mode files can be available within 5 – 6 cycles after deployment.  This is because the BGC sensors often return data that are out of calibration, but early adjustment methodologies exist that can significantly improve their accuracy.  Additional delayed mode quality control occurs when a longer record of float data is available.</p>
+<p>To learn more about delayed mode quality control, read the papers on the methods linked above or see the ADMT documentation page for core Argo and BGC-Argo quality control documentation.</p>
 </div>
 
 
@@ -232,7 +181,7 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="L01_TheArgoProgram.html" title="next page">Argo data</a>
+    <a class='left-prev' id="prev-link" href="L05_ArgoDatabyDate.html" title="previous page">Argo data by date</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
