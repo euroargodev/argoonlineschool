@@ -173,6 +173,82 @@
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cy0D</span>  <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/Volumes/OkapiBU/Data/Argo/dac/coriolis/6900944/profiles/D6900944_000D.nc&#39;</span><span class="p">)</span>
+<span class="n">cy0</span>  <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/Volumes/OkapiBU/Data/Argo/dac/coriolis/6900944/profiles/D6900944_000.nc&#39;</span><span class="p">)</span>
+<span class="n">cy1</span>  <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/Volumes/OkapiBU/Data/Argo/dac/coriolis/6900944/profiles/D6900944_001.nc&#39;</span><span class="p">)</span>
+<span class="n">cy2</span>  <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;/Volumes/OkapiBU/Data/Argo/dac/coriolis/6900944/profiles/D6900944_001.nc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">cy0D</span><span class="o">.</span><span class="n">JULD</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">cy0</span><span class="o">.</span><span class="n">JULD</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">cy1</span><span class="o">.</span><span class="n">JULD</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">cy2</span><span class="o">.</span><span class="n">JULD</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1">#Temperature</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cy0D</span><span class="o">.</span><span class="n">TEMP</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="o">-</span><span class="n">cy0D</span><span class="o">.</span><span class="n">PRES</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;bo&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;N_PROF=0&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cy0</span><span class="o">.</span><span class="n">TEMP</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="o">-</span><span class="n">cy0</span><span class="o">.</span><span class="n">PRES</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;yo&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;N_PROF=0&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cy1</span><span class="o">.</span><span class="n">TEMP</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="o">-</span><span class="n">cy1</span><span class="o">.</span><span class="n">PRES</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;ro&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;N_PROF=0&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;JULD&#39; (N_PROF: 1)&gt;
+array([&#39;2011-10-18T08:10:00.000000000&#39;], dtype=&#39;datetime64[ns]&#39;)
+Dimensions without coordinates: N_PROF
+Attributes:
+    long_name:              Julian day (UTC) of the station relative to REFER...
+    standard_name:          time
+    conventions:            Relative julian days with decimal part (as parts ...
+    resolution:             0.004166666666666667
+    axis:                   T
+    comment_on_resolution:  JULD resolution is 6 minutes, except when JULD = ...
+&lt;xarray.DataArray &#39;JULD&#39; (N_PROF: 2)&gt;
+array([&#39;2011-10-21T00:42:00.000000000&#39;, &#39;2011-10-21T00:42:00.000000000&#39;],
+      dtype=&#39;datetime64[ns]&#39;)
+Dimensions without coordinates: N_PROF
+Attributes:
+    long_name:              Julian day (UTC) of the station relative to REFER...
+    standard_name:          time
+    conventions:            Relative julian days with decimal part (as parts ...
+    resolution:             0.004166666666666667
+    axis:                   T
+    comment_on_resolution:  JULD resolution is 6 minutes, except when JULD = ...
+&lt;xarray.DataArray &#39;JULD&#39; (N_PROF: 2)&gt;
+array([&#39;2011-10-31T00:42:00.000000000&#39;, &#39;2011-10-31T00:42:00.000000000&#39;],
+      dtype=&#39;datetime64[ns]&#39;)
+Dimensions without coordinates: N_PROF
+Attributes:
+    long_name:              Julian day (UTC) of the station relative to REFER...
+    standard_name:          time
+    conventions:            Relative julian days with decimal part (as parts ...
+    resolution:             0.004166666666666667
+    axis:                   T
+    comment_on_resolution:  JULD resolution is 6 minutes, except when JULD = ...
+&lt;xarray.DataArray &#39;JULD&#39; (N_PROF: 2)&gt;
+array([&#39;2011-10-31T00:42:00.000000000&#39;, &#39;2011-10-31T00:42:00.000000000&#39;],
+      dtype=&#39;datetime64[ns]&#39;)
+Dimensions without coordinates: N_PROF
+Attributes:
+    long_name:              Julian day (UTC) of the station relative to REFER...
+    standard_name:          time
+    conventions:            Relative julian days with decimal part (as parts ...
+    resolution:             0.004166666666666667
+    axis:                   T
+    comment_on_resolution:  JULD resolution is 6 minutes, except when JULD = ...
+</pre></div>
+</div>
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb0cab42070&gt;]
+</pre></div>
+</div>
+<img alt="_images/Pruebas_2_2.png" src="_images/Pruebas_2_2.png" />
+</div>
+</div>
 <div class="section" id="remote-data-access-via-opendap">
 <h1>Remote data access via openDAP<a class="headerlink" href="#remote-data-access-via-opendap" title="Permalink to this headline">¶</a></h1>
 <p>With OPeNDAP, you can access data using an URL rather than a local path. For xarray it is like having the file locally, the only difference is that you provide a differente path.</p>
@@ -695,7 +771,7 @@ Version 1.0</dd><dt><span>references :</span></dt><dd>https://www.esrl.noaa.gov/
 <div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fba68151820&gt;]
 </pre></div>
 </div>
-<img alt="_images/Pruebas_4_1.png" src="_images/Pruebas_4_1.png" />
+<img alt="_images/Pruebas_6_1.png" src="_images/Pruebas_6_1.png" />
 </div>
 </div>
 </div>
