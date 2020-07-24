@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Argo Data System &#8212; Argo Online School</title>
+    <title>The basis of the Argo Data System &#8212; Argo Online School</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Argo data by float" href="L04_ArgoDatabyFloat.html" />
-    <link rel="prev" title="Basics of netCDF" href="L02_BasicsOfnetCDF.html" />
+    <link rel="next" title="Accesing argo data by float" href="L40_ArgoDatabyFloat.html" />
+    <link rel="prev" title="The Basics of netCDF format" href="L20_BasicsOfnetCDF.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -71,34 +71,53 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="L01_TheArgoProgram.html">
-   Argo data
+  <a class="reference internal" href="L10_TheArgoProgram.html">
+   The Argo data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="L02_BasicsOfnetCDF.html">
-   Basics of netCDF
+  <a class="reference internal" href="L20_BasicsOfnetCDF.html">
+   The Basics of netCDF format
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Argo Data System
+   The basis of the Argo Data System
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Accesing real time data
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L40_ArgoDatabyFloat.html">
+   Accesing argo data by float
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="L04_ArgoDatabyFloat.html">
-   Argo data by float
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="L05_ArgoDatabyDate.html">
+  <a class="reference internal" href="L50_ArgoDatabyDate.html">
    Argo data by date
   </a>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Accesing calibrated data
+ </span>
+</p>
+<ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="L06_AdjustedData.html">
+  <a class="reference internal" href="L60_AdjustedData.html">
    Calibrated data
   </a>
  </li>
@@ -144,7 +163,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/L03_TheBasicsOfArgoDataSystem.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/L30_TheBasicsOfArgoDataSystem.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -197,8 +216,8 @@
         
               <div>
                 
-  <div class="section" id="argo-data-system">
-<h1>Argo Data System<a class="headerlink" href="#argo-data-system" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="the-basis-of-the-argo-data-system">
+<h1>The basis of the Argo Data System<a class="headerlink" href="#the-basis-of-the-argo-data-system" title="Permalink to this headline">¶</a></h1>
 <p>When an Argo float surfaces, the data are received by one of the <em>Data Assembly Centers</em> (DAC). At the DACs, they are subjected to initial scrutiny using a set of real time quality control tests where erroneous data are flagged or corrected, then the data are passed to one of the two Argo <em>Global Data Assembly Center</em> (GDAC), the Coriolis GDAC (Brest, France, Europe) or the US-Godae GDAC (Mobterey, California, USA).</p>
 <p>The GDACs are the first stage at which the freely available data can be obtained via the internet. The GDACs synchronize their data holdings to ensure consistent data is available on both sites. The target is for these <em>real-time</em> data to be available within 24 hours of their transmission from the float.</p>
 <p>Additionally Argo data can be accesed by several other ways:</p>
@@ -249,8 +268,8 @@ There are also several index files in the top directory containing a list of met
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="L02_BasicsOfnetCDF.html" title="previous page">Basics of netCDF</a>
-    <a class='right-next' id="next-link" href="L04_ArgoDatabyFloat.html" title="next page">Argo data by float</a>
+    <a class='left-prev' id="prev-link" href="L20_BasicsOfnetCDF.html" title="previous page">The Basics of netCDF format</a>
+    <a class='right-next' id="next-link" href="L40_ArgoDatabyFloat.html" title="next page">Accesing argo data by float</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

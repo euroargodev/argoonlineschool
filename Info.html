@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Calibrated data &#8212; Argo Online School</title>
+    <title>&lt;no title&gt; &#8212; Argo Online School</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -30,7 +30,6 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Argo data by date" href="L05_ArgoDatabyDate.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -63,46 +62,39 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
   <ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="README.html">
-   Argo Online School
-  </a>
- </li>
+  <li class="">
+    <a href="README.html">Argo Online School</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Getting started</p>
+</li>
+  <li class="">
+    <a href="L10_TheArgoProgram.html">The Argo data</a>
+  </li>
+  <li class="">
+    <a href="L20_BasicsOfnetCDF.html">The Basics of netCDF format</a>
+  </li>
+  <li class="">
+    <a href="L30_TheBasicsOfArgoDataSystem.html">The basis of the Argo Data System</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Accesing real time data</p>
+</li>
+  <li class="">
+    <a href="L40_ArgoDatabyFloat.html">Accesing argo data by float</a>
+  </li>
+  <li class="">
+    <a href="L50_ArgoDatabyDate.html">Argo data by date</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Accesing calibrated data</p>
+</li>
+  <li class="">
+    <a href="L60_AdjustedData.html">Calibrated data</a>
+  </li>
 </ul>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="L01_TheArgoProgram.html">
-   Argo data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="L02_BasicsOfnetCDF.html">
-   Basics of netCDF
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="L03_TheBasicsOfArgoDataSystem.html">
-   Argo Data System
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="L04_ArgoDatabyFloat.html">
-   Argo data by float
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="L05_ArgoDatabyDate.html">
-   Argo data by date
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Calibrated data
-  </a>
- </li>
-</ul>
-
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -143,7 +135,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/L06_AdjustedData.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Info.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -163,15 +155,15 @@
         <!-- Launch buttons -->
 
     </div>
-
-    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
-        </div>
-        <nav id="bd-toc-nav">
-            
-        </nav>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+    </ul>
+</nav>
+
+
     </div>
 </div>
     <div id="main-content" class="row">
@@ -179,14 +171,7 @@
         
               <div>
                 
-  <div class="section" id="calibrated-data">
-<h1>Calibrated data<a class="headerlink" href="#calibrated-data" title="Permalink to this headline">¶</a></h1>
-<p>Delayed mode files
-Delayed mode profile files are the same as the real time profile files, except their file names on the GDACs all contain a “D” before the WMO number (e.g. D5900400_001.nc, BD5904179_001.nc). These profile files contain delayed mode adjusted data, which are recorded in the variable <PARAM>_ADJUSTED. The variable DATA_MODE will record ‘D’. Two other variables are also filled in delayed mode, which are <PARAM>_ADJUSTED_QC and <PARAM>_ADJUSTED_ERROR, which record the delayed mode quality control flags and the delayed mode adjustment uncertainty.</p>
-<p>Core Argo delayed mode files are available 1 – 2 years after a profile is taken; sometimes earlier. These have been subjected to detailed scrutiny by oceanographic experts and the adjusted salinity has been estimated by comparison with high quality ship-based CTD data and Argo climatologies using the process described by Wong et al, 2003; Böhme and Send, 2005; Owens and Wong, 2009; Cabanes et al, 2016.</p>
-<p>For BGC parameters, delayed mode files can be available within 5 – 6 cycles after deployment.  This is because the BGC sensors often return data that are out of calibration, but early adjustment methodologies exist that can significantly improve their accuracy.  Additional delayed mode quality control occurs when a longer record of float data is available.</p>
-<p>To learn more about delayed mode quality control, read the papers on the methods linked above or see the ADMT documentation page for core Argo and BGC-Argo quality control documentation.</p>
-</div>
+  <p>https://towardsdatascience.com/handling-netcdf-files-using-xarray-for-absolute-beginners-111a8ab4463f</p>
 
 
               </div>
@@ -197,7 +182,6 @@ Delayed mode profile files are the same as the real time profile files, except t
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="L05_ArgoDatabyDate.html" title="previous page">Argo data by date</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
