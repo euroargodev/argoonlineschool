@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Accesing argo data by float &#8212; Argo Online School</title>
+    <title>Accessing all profiles at once &#8212; Argo Online School</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -30,6 +30,8 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Accessing trayectory data" href="L42_ArgoDatabyFloat_Traj.html" />
+    <link rel="prev" title="Accesing argo data by float" href="L40_ArgoDatabyFloat.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -62,39 +64,82 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
   <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="README.html">Argo Online School</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Getting started</p>
-</li>
-  <li class="">
-    <a href="L10_TheArgoProgram.html">The Argo data</a>
-  </li>
-  <li class="">
-    <a href="L20_BasicsOfnetCDF.html">The Basics of netCDF format</a>
-  </li>
-  <li class="">
-    <a href="L30_TheBasicsOfArgoDataSystem.html">The basis of the Argo Data System</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Accessing Real Time data (RT)</p>
-</li>
-  <li class="">
-    <a href="L40_ArgoDatabyFloat.html">Accesing argo data by float</a>
-  </li>
-  <li class="">
-    <a href="L50_ArgoDatabyDate.html">Argo data by date</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Accessing calibrated data (DMQC)</p>
-</li>
-  <li class="">
-    <a href="L60_AdjustedData.html">Calibrated data</a>
-  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   Argo Online School
+  </a>
+ </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_TheArgoProgram.html">
+   The Argo data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_BasicsOfnetCDF.html">
+   The Basics of netCDF format
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L30_TheBasicsOfArgoDataSystem.html">
+   The basis of the Argo Data System
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Accessing Real Time data (RT)
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="L40_ArgoDatabyFloat.html">
+   Accesing argo data by float
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Accessing all profiles at once
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="L42_ArgoDatabyFloat_Traj.html">
+     Accessing trayectory data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="L43_ArgoDatabyFloat_ArgoPy.html">
+     Accessing argo data by float using Argopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L50_ArgoDatabyDate.html">
+   Argo data by date
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Accessing calibrated data (DMQC)
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L60_AdjustedData.html">
+   Calibrated data
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
@@ -135,7 +180,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/PruebasSeccionArgoSol.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/L41_ArgoDatabyFloat_Prof.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -155,15 +200,22 @@
         <!-- Launch buttons -->
 
     </div>
+
+    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metadata">
+   metadata
+  </a>
+ </li>
+</ul>
 
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-    </ul>
-</nav>
-
-
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -171,9 +223,9 @@
         
               <div>
                 
-  <div class="section" id="accesing-argo-data-by-float">
-<h1>Accesing argo data by float<a class="headerlink" href="#accesing-argo-data-by-float" title="Permalink to this headline">¶</a></h1>
-<p>First, import libraries</p>
+  <div class="section" id="accessing-all-profiles-at-once">
+<h1>Accessing all profiles at once<a class="headerlink" href="#accessing-all-profiles-at-once" title="Permalink to this headline">¶</a></h1>
+<p>Convenetly, all the core mision profiles are compated in a single file <code class="docutils literal notranslate"><span class="pre">&lt;FloatWmoID&gt;_prof.nc</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -192,17 +244,22 @@
 </div>
 </div>
 </div>
-<p>si fuerzo que todos los niveles sean iguales, funciona. por eso me da que es lo de la interpolacion.</p>
+<p>In this case, N_PROF is 66, since there are 66 two for the first cycle, the descending and the ascending. This profiles are just the ‘Primary sampling’, if you need the high resotuion upper 5dbar you ave to use the indvidual cycle files.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">juld</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">values</span>
-<span class="n">psal</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">PSAL</span><span class="o">.</span><span class="n">values</span>
-<span class="n">pres</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">values</span>
-<span class="n">prei</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2005</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">prof</span><span class="o">.</span><span class="n">PSAL</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7fa2c829b430&gt;
+</pre></div>
 </div>
+<img alt="_images/L41_ArgoDatabyFloat_Prof_5_1.png" src="_images/L41_ArgoDatabyFloat_Prof_5_1.png" />
+</div>
+</div>
+<p>However, if we want to add the proper pressure levels, since each profile have slighly different levels</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">prof</span><span class="o">.</span><span class="n">PRES</span><span class="p">[</span><span class="mi">3</span><span class="p">,:]</span><span class="o">.</span><span class="n">values</span>
@@ -222,16 +279,6 @@
        1638., 1663., 1688., 1713., 1738., 1763., 1788., 1813., 1838.,
        1863., 1888., 1913., 1938., 1963., 1988., 2013., 2036.],
       dtype=float32)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psali</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-<span class="n">psali</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">66</span><span class="p">):</span>
-    <span class="n">psali</span><span class="p">[</span><span class="n">ip</span><span class="p">,:]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">prei</span><span class="p">,</span><span class="n">pres</span><span class="p">[</span><span class="n">ip</span><span class="p">,:],</span><span class="n">psal</span><span class="p">[</span><span class="n">ip</span><span class="p">,:])</span>
 </pre></div>
 </div>
 </div>
@@ -259,6 +306,23 @@
 </div>
 </div>
 </div>
+<p>we will need to do a little of interpolation to use contour:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">juld</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">values</span>
+<span class="n">psal</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">PSAL</span><span class="o">.</span><span class="n">values</span>
+<span class="n">pres</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">values</span>
+<span class="n">prei</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2005</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">psali</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">psali</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">66</span><span class="p">):</span>
+    <span class="n">psali</span><span class="p">[</span><span class="n">ip</span><span class="p">,:]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">prei</span><span class="p">,</span><span class="n">pres</span><span class="p">[</span><span class="n">ip</span><span class="p">,:],</span><span class="n">psal</span><span class="p">[</span><span class="n">ip</span><span class="p">,:])</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -273,14 +337,30 @@
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prof</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">standard_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prof</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-
 <span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/PruebasSeccionArgoSol_9_0.png" src="_images/PruebasSeccionArgoSol_9_0.png" />
+<img alt="_images/L41_ArgoDatabyFloat_Prof_11_0.png" src="_images/L41_ArgoDatabyFloat_Prof_11_0.png" />
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">prof</span><span class="o">.</span><span class="n">PSAL</span><span class="p">,</span><span class="n">prof</span><span class="o">.</span><span class="n">TEMP</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">PRES</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fa2c8088070&gt;
+</pre></div>
+</div>
+<img alt="_images/L41_ArgoDatabyFloat_Prof_12_1.png" src="_images/L41_ArgoDatabyFloat_Prof_12_1.png" />
+</div>
+</div>
+<div class="section" id="metadata">
+<h2>metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -293,6 +373,8 @@
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="L40_ArgoDatabyFloat.html" title="previous page">Accesing argo data by float</a>
+    <a class='right-next' id="next-link" href="L42_ArgoDatabyFloat_Traj.html" title="next page">Accessing trayectory data</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
