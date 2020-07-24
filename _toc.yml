@@ -1,13 +1,15 @@
 - file: README.md
 
-- file: L01_TheArgoProgram
+- header: Getting started
+- file: L10_TheArgoProgram
+- file: L20_BasicsOfnetCDF
+- file: L30_TheBasicsOfArgoDataSystem
 
-- file: L02_BasicsOfnetCDF
+- header: Accesing real time data
+- file: L40_ArgoDatabyFloat
+  sections:
+    - file: L41_ArgoDatabyFloatArgoPy
+- file: L50_ArgoDatabyDate
 
-- file: L03_TheBasicsOfArgoDataSystem
-
-- file: L04_ArgoDatabyFloat
-
-- file: L05_ArgoDatabyDate
-
-- file: L06_AdjustedData
+- header: Accesing calibrated data
+- file: L60_AdjustedData

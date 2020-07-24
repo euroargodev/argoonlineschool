@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>The basis of the Argo Data System &#8212; Argo Online School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/mystnb.js"></script>
+    <script src="_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Accesing argo data by float" href="L40_ArgoDatabyFloat.html" />
+    <link rel="prev" title="The Basics of netCDF format" href="L20_BasicsOfnetCDF.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logoAoS.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Argo Online School</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="README.html">Argo Online School</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Getting started</p>
+</li>
+  <li class="">
+    <a href="L10_TheArgoProgram.html">The Argo data</a>
+  </li>
+  <li class="">
+    <a href="L20_BasicsOfnetCDF.html">The Basics of netCDF format</a>
+  </li>
+  <li class="active">
+    <a href="">The basis of the Argo Data System</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Accesing real time data</p>
+</li>
+  <li class="">
+    <a href="L40_ArgoDatabyFloat.html">Accesing argo data by float</a>
+  </li>
+  <li class="">
+    <a href="L50_ArgoDatabyDate.html">Argo data by date</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Accesing calibrated data</p>
+</li>
+  <li class="">
+    <a href="L60_AdjustedData.html">Calibrated data</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/L30_TheBasicsOfArgoDataSystem.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#a-unique-identifiers-for-each-float-the-wmo" class="nav-link">A unique identifiers for each float: the WMO</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#using-argo-data-from-the-gdacs" class="nav-link">Using Argo data from the GDACs</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#real-time-and-calibrated-data" class="nav-link">Real Time and Calibrated data</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="the-basis-of-the-argo-data-system">
+<h1>The basis of the Argo Data System<a class="headerlink" href="#the-basis-of-the-argo-data-system" title="Permalink to this headline">¶</a></h1>
+<p>When an Argo float surfaces, the data are received by one of the <em>Data Assembly Centers</em> (DAC). At the DACs, they are subjected to initial scrutiny using a set of real time quality control tests where erroneous data are flagged or corrected, then the data are passed to one of the two Argo <em>Global Data Assembly Center</em> (GDAC), the Coriolis GDAC (Brest, France, Europe) or the US-Godae GDAC (Mobterey, California, USA).</p>
+<p>The GDACs are the first stage at which the freely available data can be obtained via the internet. The GDACs synchronize their data holdings to ensure consistent data is available on both sites. The target is for these <em>real-time</em> data to be available within 24 hours of their transmission from the float.</p>
+<p>Additionally Argo data can be accesed by several other ways:</p>
+<ul class="simple">
+<li><p>via the Global Telecomunication System for operational centers.</p></li>
+<li><p>via interactive Data selection tools on the GDACs</p></li>
+<li><p>via gridded fields and velocity products based on Argo NetCDF files from the GDACs</p></li>
+<li><p>via data viewers that incorporate Argo data</p></li>
+<li><p>via the <a class="reference external" href="https://www.nodc.noaa.gov/argo/">Global Argo Data Repository (GADR)</a> for archived and offline data</p></li>
+<li><p>via monthly copies of the GDACs https://www.seanoe.org/data/00311/42182/</p></li>
+</ul>
+<p>See the <a class="reference external" href="http://www.argo.ucsd.edu/Argo_date_guide.html">A beginner’s guide to accessing Argo data</a> to read a full description, with links, to this other ways of accesing the data</p>
+<p><strong>However, in this book we focus in the accesss to the primary source of the Argo data, the GDACs</strong></p>
+<div class="section" id="a-unique-identifiers-for-each-float-the-wmo">
+<h2>A unique identifiers for each float: the WMO<a class="headerlink" href="#a-unique-identifiers-for-each-float-the-wmo" title="Permalink to this headline">¶</a></h2>
+<p>Each one of the Argo floats have a unique indentifier, kwnon as the World Meteorological Organization (WMO).</p>
+</div>
+<div class="section" id="using-argo-data-from-the-gdacs">
+<h2>Using Argo data from the GDACs<a class="headerlink" href="#using-argo-data-from-the-gdacs" title="Permalink to this headline">¶</a></h2>
+<p>For users interested in manipulating the actual Argo NetCDF files, the GDACs should be the route to access Argo data. Both GDACs offer access to the complete Argo data collection, including float metadata, detailed trajectory data, profile data and technical data all in NetCDF</p>
+<ul class="simple">
+<li><p>FTP site of the US-Godae GDAC ftp://usgodae.org/pub/outgoing/argo/</p></li>
+<li><p>FTP site of the Coriolis GDAC ftp://ftp.ifremer.fr/ifremer/argo</p></li>
+<li><p>HTTP site of the Coriolis GDAC https://data-argo.ifremer.fr</p></li>
+</ul>
+<p>The HTTP and FTP sites are identical and are organized into three main folders:</p>
+<ul class="simple">
+<li><p>a <em>dac</em> folder which sorts the data by Data Assembly Centre and float</p></li>
+<li><p>a <em>geo</em> folder which sorts the data by ocean basin and date</p></li>
+<li><p>a <em>latest_data</em> folder which includes the most recent data.
+There are also several index files in the top directory containing a list of metadata on each type of Argo data file (meta, prof, tech and traj) contained in the “dac” and “geo” folders. It is possible to download these lists and search them for floats in specific regions, times, DACs, etc. There is also a grelist which contains a list of floats that likely have sensor problems. We will describe this files later.</p></li>
+</ul>
+<p>In the Argo <a class="reference external" href="http://www.argodatamgt.org/Documentation">User’s Manual and the Argo quality control manual</a> there is a full description of the naming system of the files as well as the variable names and quality control flags within each data file. <strong>In this lessons we do an overview of all of it.</strong></p>
+</div>
+<div class="section" id="real-time-and-calibrated-data">
+<h2>Real Time and Calibrated data<a class="headerlink" href="#real-time-and-calibrated-data" title="Permalink to this headline">¶</a></h2>
+<p>Since the target is to have the Argo data available within 24 hours of their transmission from the float, this data is called <em>Real Time</em> (RT) data.  One year after the data were observed it is, if necessary, adjusted and made public, this data is called <em>Delayed Mode</em> (DM).</p>
+<p><em>In the next section we describe to access the RT data generated by one float.</em></p>
+</div>
+</div>
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="L20_BasicsOfnetCDF.html" title="previous page">The Basics of netCDF format</a>
+    <a class='right-next' id="next-link" href="L40_ArgoDatabyFloat.html" title="next page">Accesing argo data by float</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Euro Argo<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
