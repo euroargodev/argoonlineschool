@@ -5,11 +5,13 @@
 - file: L20_BasicsOfnetCDF
 - file: L30_TheBasicsOfArgoDataSystem
 
-- header: Accesing real time data
+- header: Accessing Real Time data (RT)
 - file: L40_ArgoDatabyFloat
   sections:
-    - file: L41_ArgoDatabyFloatArgoPy
+    - file: L41_ArgoDatabyFloat_Prof
+    - file: L42_ArgoDatabyFloat_Traj
+    - file: L43_ArgoDatabyFloat_ArgoPy
 - file: L50_ArgoDatabyDate
 
-- header: Accesing calibrated data
+- header: Accessing calibrated data (DMQC)
 - file: L60_AdjustedData

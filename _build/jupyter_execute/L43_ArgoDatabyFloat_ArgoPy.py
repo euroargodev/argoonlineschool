@@ -1,6 +1,4 @@
-# Accesing argo data by float using Argopy
-
-## Using argopy
+# Accessing argo data by float using Argopy
 
 from argopy import DataFetcher as ArgoDataFetcher
 plt.style.use('default')
