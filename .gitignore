@@ -3,6 +3,10 @@ Aborrar.md
 Info.ipynb
 Pruebas*.ipynb
 
+./Data/sst.day.mean.2019.nc
+./Data/6901472/6901472_BRtraj.nc
+./Data/6901472/profiles/*
+
 Data
 
 # Byte-compiled / optimized / DLL files

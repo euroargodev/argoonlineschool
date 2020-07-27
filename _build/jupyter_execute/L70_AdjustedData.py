@@ -11,3 +11,4 @@ To learn more about delayed mode quality control, read the papers on the methods
 
 
 
+## Quality Control flags

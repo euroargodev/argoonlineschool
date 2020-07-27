@@ -189,6 +189,10 @@ and some examples of addtional information
 for variable in ['FIRMWARE_VERSION','BATTERY_TYPE','DEPLOYMENT_PLATFORM','CONFIG_PARAMETER_NAME','SENSOR_SERIAL_NO']:
    print(f"The {Mdata.data_vars[variable].long_name} ({variable}) is {Mdata.data_vars[variable].values.astype(str)}")
 
+The full descritpion of variables is in the **Argo user's Manual**
+
+
+
 
 ```{toctree}
 :hidden:

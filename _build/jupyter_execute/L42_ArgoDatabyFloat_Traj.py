@@ -44,6 +44,5 @@ ax.invert_yaxis()
 fig.colorbar(sc);
 
 fig,ax = plt.subplots(figsize=(15,8))
-ax.plot(Rtraj.JULD,Rtraj.MEASUREMENT_CODE,'o')
-
+ax.plot(Rtraj.JULD,Rtraj.MEASUREMENT_CODE,'o');
 

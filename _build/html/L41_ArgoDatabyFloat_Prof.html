@@ -82,7 +82,7 @@
     <a href="L30_TheBasicsOfArgoDataSystem.html">The basis of the Argo Data System</a>
   </li>
 <li class="navbar-special">
-<p class="margin-caption">Accessing Real Time data (RT)</p>
+<p class="margin-caption">Accessing Real Time data</p>
 </li>
   <li class="active">
     <a href="L40_ArgoDatabyFloat.html">Accesing argo data by float</a>
@@ -99,13 +99,19 @@
   </ul>
   </li>
   <li class="">
-    <a href="L50_ArgoDatabyDate.html">Argo data by date</a>
+    <a href="L50_ArgoDatabyDate.html">Accesing Argo data by date</a>
   </li>
 <li class="navbar-special">
-<p class="margin-caption">Accessing calibrated data (DMQC)</p>
+<p class="margin-caption">Real Time Quality control</p>
 </li>
   <li class="">
-    <a href="L60_AdjustedData.html">Calibrated data</a>
+    <a href="L60_RTQualityControl.html">Quality Control of the Argo data</a>
+  </li>
+<li class="navbar-special">
+<p class="margin-caption">Accessing calibrated data</p>
+</li>
+  <li class="">
+    <a href="L70_AdjustedData.html">Calibrated data</a>
   </li>
 </ul>
 </nav>
@@ -177,7 +183,7 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#metadata" class="nav-link">metadata</a>
+            <a href="#metadata" class="nav-link">Metadata</a>
         </li>
     
     </ul>
@@ -194,6 +200,7 @@
   <div class="section" id="accessing-all-profiles-at-once">
 <h1>Accessing all profiles at once<a class="headerlink" href="#accessing-all-profiles-at-once" title="Permalink to this headline">¶</a></h1>
 <p>Convenetly, all the core mision profiles are compated in a single file <code class="docutils literal notranslate"><span class="pre">&lt;FloatWmoID&gt;_prof.nc</span></code></p>
+<p><strong>6901254/6901254_prof.nc</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -216,15 +223,12 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">prof</span><span class="o">.</span><span class="n">PSAL</span><span class="p">,</span><span class="mi">40</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">prof</span><span class="o">.</span><span class="n">PSAL</span><span class="p">,</span><span class="mi">40</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7fa2c829b430&gt;
-</pre></div>
-</div>
-<img alt="_images/L41_ArgoDatabyFloat_Prof_5_1.png" src="_images/L41_ArgoDatabyFloat_Prof_5_1.png" />
+<img alt="_images/L41_ArgoDatabyFloat_Prof_5_0.png" src="_images/L41_ArgoDatabyFloat_Prof_5_0.png" />
 </div>
 </div>
 <p>However, if we want to add the proper pressure levels, since each profile have slighly different levels</p>
@@ -285,7 +289,7 @@
 <span class="n">psali</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="n">psali</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">66</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">pres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
     <span class="n">psali</span><span class="p">[</span><span class="n">ip</span><span class="p">,:]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">prei</span><span class="p">,</span><span class="n">pres</span><span class="p">[</span><span class="n">ip</span><span class="p">,:],</span><span class="n">psal</span><span class="p">[</span><span class="n">ip</span><span class="p">,:])</span>
 </pre></div>
 </div>
@@ -313,22 +317,64 @@
 <img alt="_images/L41_ArgoDatabyFloat_Prof_11_0.png" src="_images/L41_ArgoDatabyFloat_Prof_11_0.png" />
 </div>
 </div>
+<p>or a TS diagram using the hydrographic data in <code class="docutils literal notranslate"><span class="pre">TEMP</span></code> and <code class="docutils literal notranslate"><span class="pre">PSAl</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">prof</span><span class="o">.</span><span class="n">PSAL</span><span class="p">,</span><span class="n">prof</span><span class="o">.</span><span class="n">TEMP</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">PRES</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seawater</span> <span class="k">as</span> <span class="nn">sw</span>
+
+<span class="n">temp</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">psal</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">PSAL</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">pres</span><span class="o">=</span><span class="n">prof</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="n">ptmp</span><span class="o">=</span><span class="n">sw</span><span class="o">.</span><span class="n">ptmp</span><span class="p">(</span><span class="n">psal</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="n">pres</span><span class="p">,</span> <span class="n">pr</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">t_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">s_bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span> <span class="mf">37.25</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">hist</span><span class="p">,</span> <span class="n">xedges</span><span class="p">,</span> <span class="n">yedges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram2d</span><span class="p">(</span><span class="n">psal</span><span class="p">,</span> <span class="n">ptmp</span><span class="p">,</span> <span class="p">(</span><span class="n">s_bins</span><span class="p">,</span> <span class="n">t_bins</span><span class="p">))</span>
+<span class="n">xidx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">digitize</span><span class="p">(</span><span class="n">psal</span><span class="p">,</span> <span class="n">xedges</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hist</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">yidx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">digitize</span><span class="p">(</span><span class="n">ptmp</span><span class="p">,</span> <span class="n">yedges</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">hist</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">hist</span><span class="p">[</span><span class="n">xidx</span><span class="p">,</span> <span class="n">yidx</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">sc</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">psal</span><span class="p">,</span> <span class="n">ptmp</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdBu_r&quot;</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;T/S diagram for float </span><span class="si">{</span><span class="n">prof</span><span class="o">.</span><span class="n">PLATFORM_NUMBER</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;potential temperature&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prof</span><span class="o">.</span><span class="n">PSAL</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">sc</span><span class="p">,</span><span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fa2c8088070&gt;
-</pre></div>
-</div>
-<img alt="_images/L41_ArgoDatabyFloat_Prof_12_1.png" src="_images/L41_ArgoDatabyFloat_Prof_12_1.png" />
+<img alt="_images/L41_ArgoDatabyFloat_Prof_13_0.png" src="_images/L41_ArgoDatabyFloat_Prof_13_0.png" />
 </div>
 </div>
 <div class="section" id="metadata">
-<h2>metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
+<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
+<p>all the metadata information for each profile is included:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">prof</span><span class="o">.</span><span class="n">dims</span><span class="p">[</span><span class="s1">&#39;N_PROF&#39;</span><span class="p">],</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cycle </span><span class="si">{</span><span class="n">prof</span><span class="o">.</span><span class="n">data_vars</span><span class="p">[</span><span class="s1">&#39;CYCLE_NUMBER&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)[</span><span class="n">i1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+          <span class="sa">f</span><span class="s2">&quot; Direction </span><span class="si">{</span><span class="n">prof</span><span class="o">.</span><span class="n">data_vars</span><span class="p">[</span><span class="s1">&#39;DIRECTION&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)[</span><span class="n">i1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+          <span class="sa">f</span><span class="s2">&quot; WMO </span><span class="si">{</span><span class="n">prof</span><span class="o">.</span><span class="n">data_vars</span><span class="p">[</span><span class="s1">&#39;PLATFORM_NUMBER&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)[</span><span class="n">i1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
+          <span class="sa">f</span><span class="s2">&quot; Data Center </span><span class="si">{</span><span class="n">prof</span><span class="o">.</span><span class="n">data_vars</span><span class="p">[</span><span class="s1">&#39;DATA_CENTRE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)[</span><span class="n">i1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>   
+          <span class="sa">f</span><span class="s2">&quot; Project </span><span class="si">{</span><span class="n">prof</span><span class="o">.</span><span class="n">data_vars</span><span class="p">[</span><span class="s1">&#39;PROJECT_NAME&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)[</span><span class="n">i1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Cycle 1 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN                                                      
+Cycle 11 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN                                                      
+Cycle 21 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN                                                      
+Cycle 31 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN                                                      
+Cycle 41 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN                                                      
+Cycle 51 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN                                                      
+Cycle 61 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN                                                      
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
