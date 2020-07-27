@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Calibrated data &#8212; Argo Online School</title>
+    <title>Accessing Argo data by date using Argopy &#8212; Argo Online School</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="_static/css/index.css" rel="stylesheet">
     <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
@@ -30,7 +30,8 @@
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Argo data by date" href="L50_ArgoDatabyDate.html" />
+    <link rel="next" title="Quality Control of the Argo data" href="L60_RTQualityControl.html" />
+    <link rel="prev" title="Accesing Argo data by date" href="L50_ArgoDatabyDate.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -94,29 +95,48 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Accessing Real Time data (RT)
+  Accessing Real Time data
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="L40_ArgoDatabyFloat.html">
    Accesing argo data by float
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 current active">
   <a class="reference internal" href="L50_ArgoDatabyDate.html">
-   Argo data by date
+   Accesing Argo data by date
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Accessing Argo data by date using Argopy
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Real Time Quality control
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L60_RTQualityControl.html">
+   Quality Control of the Argo data
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Accessing calibrated data (DMQC)
+  Accessing calibrated data
  </span>
 </p>
-<ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L70_AdjustedData.html">
    Calibrated data
   </a>
  </li>
@@ -162,7 +182,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/L60_AdjustedData.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/L51_ArgoDatabyDate_ArgoPy.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -198,13 +218,8 @@
         
               <div>
                 
-  <div class="section" id="calibrated-data">
-<h1>Calibrated data<a class="headerlink" href="#calibrated-data" title="Permalink to this headline">¶</a></h1>
-<p>Delayed mode files
-Delayed mode profile files are the same as the real time profile files, except their file names on the GDACs all contain a “D” before the WMO number (e.g. D5900400_001.nc, BD5904179_001.nc). These profile files contain delayed mode adjusted data, which are recorded in the variable <PARAM>_ADJUSTED. The variable DATA_MODE will record ‘D’. Two other variables are also filled in delayed mode, which are <PARAM>_ADJUSTED_QC and <PARAM>_ADJUSTED_ERROR, which record the delayed mode quality control flags and the delayed mode adjustment uncertainty.</p>
-<p>Core Argo delayed mode files are available 1 – 2 years after a profile is taken; sometimes earlier. These have been subjected to detailed scrutiny by oceanographic experts and the adjusted salinity has been estimated by comparison with high quality ship-based CTD data and Argo climatologies using the process described by Wong et al, 2003; Böhme and Send, 2005; Owens and Wong, 2009; Cabanes et al, 2016.</p>
-<p>For BGC parameters, delayed mode files can be available within 5 – 6 cycles after deployment.  This is because the BGC sensors often return data that are out of calibration, but early adjustment methodologies exist that can significantly improve their accuracy.  Additional delayed mode quality control occurs when a longer record of float data is available.</p>
-<p>To learn more about delayed mode quality control, read the papers on the methods linked above or see the ADMT documentation page for core Argo and BGC-Argo quality control documentation.</p>
+  <div class="section" id="accessing-argo-data-by-date-using-argopy">
+<h1>Accessing Argo data by date using Argopy<a class="headerlink" href="#accessing-argo-data-by-date-using-argopy" title="Permalink to this headline">¶</a></h1>
 </div>
 
 
@@ -216,7 +231,8 @@ Delayed mode profile files are the same as the real time profile files, except t
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="L50_ArgoDatabyDate.html" title="previous page">Argo data by date</a>
+    <a class='left-prev' id="prev-link" href="L50_ArgoDatabyDate.html" title="previous page">Accesing Argo data by date</a>
+    <a class='right-next' id="next-link" href="L60_RTQualityControl.html" title="next page">Quality Control of the Argo data</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
