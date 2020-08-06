@@ -28,16 +28,8 @@ from matplotlib import pyplot as plt
 %matplotlib inline
 
 # Usefull colormaps and colorbar makers:
-qcmap = mpl.colors.ListedColormap(['#000000', 
-                                   '#31FC03', 
-                                   '#ADFC03', 
-                                   '#FCBA03', 
-                                   '#FC1C03',
-                                   '#324CA8', 
-                                   '#000000', 
-                                   '#000000', 
-                                   '#B22CC9', 
-                                   '#000000'])
+qcmap = mpl.colors.ListedColormap(['#000000' , '#31FC03' , '#ADFC03' , '#FCBA03' ,'#FC1C03',
+                                   '#324CA8' , '#000000' , '#000000' , '#B22CC9', '#000000'])
 def colorbar_qc(cmap, **kwargs):
     """Adjust colorbar ticks with discrete colors for QC flags"""
     ncolors = 10
@@ -86,9 +78,9 @@ In this files there are also the the core argo variables `TEMP` `PSAL` and `PRE`
 fig,ax = plt.subplots(figsize=(18,10),subplot_kw={'projection': ccrs.PlateCarree()})
 ax.set_global()
 
-cs=ax.scatter(dayADS.LONGITUDE,dayADS.LATITUDE,c=dayADS.TEMP[:,1],cmap="RdBu_r",vmin=-2, vmax=30, edgecolor='k')
-ax.scatter(dayPDS.LONGITUDE,dayPDS.LATITUDE,c=dayPDS.TEMP[:,1],cmap="RdBu_r", vmin=-2, vmax=30, edgecolor='k')
-ax.scatter(dayIDS.LONGITUDE,dayIDS.LATITUDE,c=dayIDS.TEMP[:,1],cmap="RdBu_r", vmin=-2, vmax=30, edgecolor='k')
+cs=ax.scatter(dayADS.LONGITUDE,dayADS.LATITUDE,c=dayADS.TEMP[:,1],cmap="RdBu_r",vmin=-2, vmax=30, edgecolor='none')
+ax.scatter(dayPDS.LONGITUDE,dayPDS.LATITUDE,c=dayPDS.TEMP[:,1],cmap="RdBu_r", vmin=-2, vmax=30, edgecolor='none')
+ax.scatter(dayIDS.LONGITUDE,dayIDS.LATITUDE,c=dayIDS.TEMP[:,1],cmap="RdBu_r", vmin=-2, vmax=30, edgecolor='none')
 
 ax.set_title(f"Most superficial TEMP data on the {dayADS.JULD[0].values.astype('datetime64[D]')}")
 ax.coastlines()
@@ -115,7 +107,7 @@ for filein in ['./Data/atlantic_ocean/2019/11/20191111_prof.nc',
     tempi.fill(np.nan)
     for ip in range(0,DS.LONGITUDE.shape[0]):
         tempi[ip]=np.interp(10,DS.PRES[ip,:],DS.TEMP[ip,:])
-    cs=ax.scatter(lon,lat,c=tempi,cmap="RdBu_r",vmin=-2, vmax=30, edgecolor='k')
+    cs=ax.scatter(lon,lat,c=tempi,cmap="RdBu_r",vmin=-2, vmax=30, edgecolor='none')
 
 ax.set_title(f"Data from {DS.JULD[0].values.astype('datetime64[D]')}")
 ax.coastlines()
@@ -144,7 +136,7 @@ for basin in ['atlantic_ocean','pacific_ocean','indian_ocean']:
         tempi.fill(np.nan)
         for ip in range(0,lon.shape[0]):
             tempi[ip]=np.interp(10,DS.PRES[ip,:],DS.TEMP[ip,:])
-        cs=ax.scatter(lon,lat,c=tempi,cmap="RdBu_r",vmin=-2, vmax=30, edgecolor='k')
+        cs=ax.scatter(lon,lat,c=tempi,cmap="RdBu_r",vmin=-2, vmax=30, edgecolor='none')
 
 ax.set_title(f"Data from {DS.JULD[0].values.astype('datetime64[M]')}")
 ax.coastlines()
@@ -160,13 +152,16 @@ and it is possible to get the WMO of all the platforms than measured in this mon
 
 WMOs=np.array([])
 DACs=np.array([])
+#read all the basins
 for basin in ['atlantic_ocean','pacific_ocean','indian_ocean']:
     for iday in range(1,31):
         filein=f"./Data/{basin}/2019/11/201911{iday:02d}_prof.nc"
         DS=xr.open_dataset(filein)
+        #look for the WMO and DAC for each float
         DACs=np.append(DACs,DS.DATA_CENTRE.astype(str).values)
         WMOs=np.append(WMOs,DS.PLATFORM_NUMBER.astype(int).values)
 
+#Keep just the unique set of WMOs
 WMOs, indices = np.unique(WMOs, return_index=True)
 DACs=DACs[indices]
 

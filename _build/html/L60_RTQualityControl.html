@@ -188,6 +188,61 @@
                 
   <div class="section" id="quality-control-of-the-argo-data">
 <h1>Quality Control of the Argo data<a class="headerlink" href="#quality-control-of-the-argo-data" title="Permalink to this headline">¶</a></h1>
+<p>So far we have used the real time data, but without attending to any quality control.
+The Argo network provides both quality control (QC) flags and errors to help users decide if they want to use the data or not. There are flags for both the raw and adjusted data. Let’s focus on the Real Time data.</p>
+<div class="section" id="quality-control-flags">
+<h2>Quality Control flags<a class="headerlink" href="#quality-control-flags" title="Permalink to this headline">¶</a></h2>
+<p>The flags are:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>QCflag</p></th>
+<th class="text-align:center head"><p>Meaning</p></th>
+<th class="text-align:center head"><p>Real time description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>0</p></td>
+<td class="text-align:center"><p>No QC performed</p></td>
+<td class="text-align:center"><p>No QC performed</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>1</p></td>
+<td class="text-align:center"><p>Good data</p></td>
+<td class="text-align:center"><p>All real time QC tests passed</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>2</p></td>
+<td class="text-align:center"><p>Probably good data</p></td>
+<td class="text-align:center"><p>Probably good</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>3</p></td>
+<td class="text-align:center"><p>Bad data that are potentially correctable</p></td>
+<td class="text-align:center"><p>Test 15 or Test 16 or Test 17 failed and all other real-time QC tests passed. These  data are not to be used without scientific correction. A flag ‘3’ may be assigned by an operator during additional visual QC for bad</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>4</p></td>
+<td class="text-align:center"><p>Bad data</p></td>
+<td class="text-align:center"><p>Data have failed one or more of the real-time QC tests, excluding Test 16. A flag ‘4’ may be assigned by an operator during additional visual QC for bad data that are not correctable.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>5</p></td>
+<td class="text-align:center"><p>Value changed</p></td>
+<td class="text-align:center"><p>Value changed</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>6</p></td>
+<td class="text-align:center"><p>Not currently used</p></td>
+<td class="text-align:center"><p>Not currently used</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>7</p></td>
+<td class="text-align:center"><p>Not currently used</p></td>
+<td class="text-align:center"><p>Not currently used</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>8</p></td>
+<td class="text-align:center"><p>Estimated</p></td>
+<td class="text-align:center"><p>Estimated value (interpolated, extrapolated or other estimation)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>9</p></td>
+<td class="text-align:center"><p>Missing value</p></td>
+<td class="text-align:center"><p>Missing value</p></td>
+</tr>
+</tbody>
+</table>
 <p>Load libraries</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -244,7 +299,389 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">sc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PSAL</span><span class="p">,</span> <span class="n">dayADS</span><span class="o">.</span><span class="n">PRES</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PSAL_QC</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">qcmap</span><span class="p">)</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PSAL</span><span class="p">,</span> <span class="n">dayADS</span><span class="o">.</span><span class="n">TEMP</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">qcmap</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/L60_RTQualityControl_10_0.png" src="_images/L60_RTQualityControl_10_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lon</span><span class="o">=</span><span class="n">dayADS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">+</span><span class="n">pres</span><span class="o">*</span><span class="mi">0</span>
+<span class="n">lon</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<title>Show/Hide data repr</title>
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<title>Show/Hide attributes</title>
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+.xr-wrap {
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt, dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><div class='xr-wrap'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'></div><ul class='xr-dim-list'><li><span>N_PROF</span>: 184</li><li><span>N_LEVELS</span>: 1277</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-589422d0-a9a5-4a34-9057-29dfde66d37b' class='xr-array-in' type='checkbox' ><label for='section-589422d0-a9a5-4a34-9057-29dfde66d37b' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-80.13 -80.13 -80.13 -80.13 -80.13 -80.13 ... nan nan nan nan nan nan</span></div><pre class='xr-array-data'>array([[-80.12899   , -80.12899   , -80.12899   , ...,          nan,
+                 nan,          nan],
+       [-79.152     , -79.152     , -79.152     , ...,          nan,
+                 nan,          nan],
+       [-22.5808    , -22.5808    , -22.5808    , ...,          nan,
+                 nan,          nan],
+       ...,
+       [ 10.82094333,  10.82094333,  10.82094333, ...,          nan,
+                 nan,          nan],
+       [ 31.09137667,  31.09137667,  31.09137667, ...,          nan,
+                 nan,          nan],
+       [-65.20724   , -65.20724   , -65.20724   , ...,          nan,
+                 nan,          nan]])</pre></div></li><li class='xr-section-item'><input id='section-c8927987-6426-48bf-a2b1-40b1c7b1c401' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-c8927987-6426-48bf-a2b1-40b1c7b1c401' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-1b1cae8c-e290-463a-bcb8-3d882c1a09c1' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-1b1cae8c-e290-463a-bcb8-3d882c1a09c1' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pres</span><span class="o">=</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PRES</span>
+<span class="n">cycle</span><span class="o">=</span><span class="n">dayADS</span><span class="o">.</span><span class="n">CYCLE_NUMBER</span><span class="o">+</span><span class="n">pres</span><span class="o">*</span><span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7ff33e827190&gt;]
+</pre></div>
+</div>
+<img alt="_images/L60_RTQualityControl_12_1.png" src="_images/L60_RTQualityControl_12_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">pres</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PSAL_QC</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">qcmap</span><span class="p">)</span>
 <span class="n">colorbar_qc</span><span class="p">(</span><span class="n">qcmap</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2000</span><span class="p">)</span>
@@ -256,14 +693,53 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/L60_RTQualityControl_7_0.png" src="_images/L60_RTQualityControl_7_0.png" />
+<img alt="_images/L60_RTQualityControl_13_0.png" src="_images/L60_RTQualityControl_13_0.png" />
 </div>
 </div>
-<p>l=dayADS.PSAL_QC[0,0]
-print(dayADS.PSAL.where(dayADS.PSAL_QC.values.astype(str) == ‘1’))
-l.values</p>
-<div class="section" id="quality-control-flags">
-<h2>Quality Control flags<a class="headerlink" href="#quality-control-flags" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PSAL_QC</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PSAL</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;xarray.DataArray &#39;PSAL&#39; (N_PROF: 184, N_LEVELS: 1277)&gt;
+array([[35.878, 35.878, 35.878, ...,    nan,    nan,    nan],
+       [   nan,    nan, 36.374, ...,    nan,    nan,    nan],
+       [35.705, 35.705, 35.706, ...,    nan,    nan,    nan],
+       ...,
+       [38.139, 38.137, 38.137, ...,    nan,    nan,    nan],
+       [18.546, 18.548, 18.553, ...,    nan,    nan,    nan],
+       [36.583, 36.585, 36.586, ...,    nan,    nan,    nan]],
+      dtype=float32)
+Dimensions without coordinates: N_PROF, N_LEVELS
+Attributes:
+    long_name:       Practical salinity
+    standard_name:   sea_water_salinity
+    units:           psu
+    valid_min:       2.0
+    valid_max:       41.0
+    C_format:        %9.3f
+    FORTRAN_format:  F9.3
+    resolution:      0.001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">sc</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PSAL</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">),</span> 
+                <span class="n">dayADS</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/L60_RTQualityControl_15_0.png" src="_images/L60_RTQualityControl_15_0.png" />
+</div>
+</div>
 </div>
 </div>
 
