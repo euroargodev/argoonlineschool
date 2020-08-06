@@ -75,7 +75,7 @@ ax.set_ylabel("potential temperature")
 ax.set_xlabel(f"{prof.PSAL.long_name}")
 fig.colorbar(sc,extend='both');
 
-### Metadata
+## Metadata
 
 all the metadata information for each profile is included:
 
@@ -85,3 +85,4 @@ for i1 in range(1,prof.dims['N_PROF'],10):
           f" WMO {prof.data_vars['PLATFORM_NUMBER'].values.astype(str)[i1]}"
           f" Data Center {prof.data_vars['DATA_CENTRE'].values.astype(str)[i1]}"   
           f" Project {prof.data_vars['PROJECT_NAME'].values.astype(str)[i1]}" )
+
