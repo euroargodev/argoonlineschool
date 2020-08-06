@@ -2,17 +2,7 @@
 
 # Argo Online School
 
-The Argo Online school is a set of videos and hands-on jupyter notebooks to describe the minimum requiremets to use, and understand, the Argo data. Here you can find find the jupyter notebooks that are part of the Argo Online school. These notebooks use, mainly, [the Argo data python library](https://github.com/euroargodev/argopy), and cover the following lessons:
-
-1. Introduction to the Argo program
-2. Basics Of netCDF
-3. The Basics Of the Argo Data System
-  * Argo Data by float
-  * Argo Data by date
-4. Data in real time and calibrated
-
-## Usage
-You can access the content as a [JubyterBook](https://euroargodev.github.io/argoonlineschool), or download them and use in your local machine. In that case, you should create a python enviroment to use these notebooks. To create, and activate, the enviroment AOS [Argo Online School]:
+The Argo Online school is a set of videos and hands-on jupyter notebooks to describe the minimum requiremets to use, and understand, the Argo data. You can access the content as here in a [JubyterBook](https://euroargodev.github.io/argoonlineschool), or download them and use in your local machine. In that case, you should create a python enviroment to use these notebooks. To create, and activate, the enviroment AOS 
 
 ```
 conda env create -f environment.yml
@@ -22,7 +12,7 @@ conda activate AOS
 This enviroment already includes argopy stable version.
 
 ## Data
-The Data in the *./Data* folder is used for the examples. Alternatively you can download it from:
+If you download the notebooks you should create a ./Data* folder where include the files used for the examples. To download the files you should 
 
 Daily NOAA OI SST V2 High Resolution Dataset for 2009:
 
