@@ -1,27 +1,24 @@
-- file: README.md
+- file: L00_Introduction
 
-- part: Getting started
-  chapters:
-  - file: L10_TheArgoProgram
-  - file: L20_BasicsOfnetCDF
-  - file: L30_TheBasicsOfArgoDataSystem
+- file: L10_TheArgoProgram
+  expand_sections: true
+  sections:
+  - file: L11_TheBasicsOfArgoDataSystem
+  - file: L12_BasicsOfnetCDF
 
-- part: Accessing Real Time data by float
-  chapters:
-  - file: L40_ArgoDatabyFloat
-  - file: L41_ArgoDatabyFloat_Prof
-  - file: L42_ArgoDatabyFloat_Traj
-  - file: L43_ArgoDatabyFloat_ArgoPy
 
-- part: Accessing Real Time data by date
-  chapters:
-  - file: L50_ArgoDatabyDate
-  - file: L51_ArgoDatabyDate_ArgoPy
+- file: L20_ArgoDatabyFloat
+  expand_sections: true
+  sections:
+  - file: L21_ArgoDatabyFloat_Prof
+  - file: L22_ArgoDatabyFloat_Traj
+  - file: L23_ArgoDatabyFloat_ArgoPy
 
-- part: Real Time Quality control
-  chapters:
-  - file: L60_RTQualityControl
+- file: L30_ArgoDatabyDate
+  expand_sections: true
+  sections:
+  - file: L31_ArgoDatabyDate_ArgoPy
 
-- part: Accessing calibrated data
-  chapters:
-  - file: L70_AdjustedData
+- file: L40_RTQualityControl
+
+- file: L50_AdjustedData

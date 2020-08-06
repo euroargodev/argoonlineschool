@@ -191,3 +191,15 @@ for variable in ['FIRMWARE_VERSION','BATTERY_TYPE','DEPLOYMENT_PLATFORM','CONFIG
 
 The full descritpion of variables is in the **Argo user's Manual**
 
+
+
+
+```{toctree}
+:hidden:
+:titlesonly:
+
+
+L21_ArgoDatabyFloat_Prof
+L22_ArgoDatabyFloat_Traj
+L23_ArgoDatabyFloat_ArgoPy
+```

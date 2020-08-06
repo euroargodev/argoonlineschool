@@ -3,7 +3,7 @@
 title: Argo Online School
 author: Euro Argo
 logo: ./images/logoAoS.png
-exclude_patterns: [Prueba*.ipynb, Info.ipynb] 
+exclude_patterns: [Prueba*.ipynb, Info.ipynb]
 
 #######################################################################################
 # Execution settings
@@ -14,6 +14,7 @@ execute:
 # HTML-specific settings
 html:
   use_repository_button: true
+  home_page_in_navbar: true
 
 #######################################################################################
 # Launch button settings
