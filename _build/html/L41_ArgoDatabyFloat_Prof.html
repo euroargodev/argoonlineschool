@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/sphinx-book-theme.js"></script>
@@ -28,6 +29,13 @@
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Accessing trayectory data" href="L42_ArgoDatabyFloat_Traj.html" />
@@ -64,63 +72,100 @@
 </form>
 
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  
-  <ul class="nav sidenav_l1">
-  <li class="">
-    <a href="README.html">Argo Online School</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Getting started</p>
-</li>
-  <li class="">
-    <a href="L10_TheArgoProgram.html">The Argo data</a>
-  </li>
-  <li class="">
-    <a href="L20_BasicsOfnetCDF.html">The Basics of netCDF format</a>
-  </li>
-  <li class="">
-    <a href="L30_TheBasicsOfArgoDataSystem.html">The basis of the Argo Data System</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Accessing Real Time data</p>
-</li>
-  <li class="active">
-    <a href="L40_ArgoDatabyFloat.html">Accesing argo data by float</a>
-  <ul class="nav sidenav_l2">
-    <li class="active">
-      <a href="">Accessing all profiles at once</a>
-    </li>
-    <li class="">
-      <a href="L42_ArgoDatabyFloat_Traj.html">Accessing trayectory data</a>
-    </li>
-    <li class="">
-      <a href="L43_ArgoDatabyFloat_ArgoPy.html">Accessing argo data by float using Argopy</a>
-    </li>
-  </ul>
-  </li>
-  <li class="">
-    <a href="L50_ArgoDatabyDate.html">Accesing Argo data by date</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Real Time Quality control</p>
-</li>
-  <li class="">
-    <a href="L60_RTQualityControl.html">Quality Control of the Argo data</a>
-  </li>
-<li class="navbar-special">
-<p class="margin-caption">Accessing calibrated data</p>
-</li>
-  <li class="">
-    <a href="L70_AdjustedData.html">Calibrated data</a>
-  </li>
+  <p class="caption">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L10_TheArgoProgram.html">
+   The Argo data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L20_BasicsOfnetCDF.html">
+   The Basics of netCDF format
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L30_TheBasicsOfArgoDataSystem.html">
+   The basis of the Argo Data System
+  </a>
+ </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Accessing Real Time data by float
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L40_ArgoDatabyFloat.html">
+   Accesing argo data by float
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Accessing all profiles at once
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L42_ArgoDatabyFloat_Traj.html">
+   Accessing trayectory data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L43_ArgoDatabyFloat_ArgoPy.html">
+   Accessing argo data by float using Argopy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Accessing Real Time data by date
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L50_ArgoDatabyDate.html">
+   Accesing Argo data by date
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L51_ArgoDatabyDate_ArgoPy.html">
+   Accessing Argo data by date using Argopy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Real Time Quality control
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L60_RTQualityControl.html">
+   Quality Control of the Argo data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Accessing calibrated data
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L70_AdjustedData.html">
+   Calibrated data
+  </a>
+ </li>
+</ul>
+
 </nav>
 
  <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
 
 </div>
 
@@ -165,6 +210,19 @@
 </div>
         <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/euroargodev/argoonlineschool"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -174,22 +232,22 @@
         <!-- Launch buttons -->
 
     </div>
+
+    <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-<div class="tocsection onthispage pt-5 pb-3">
-    <i class="fas fa-list"></i> On this page
-</div>
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#metadata">
+   Metadata
+  </a>
+ </li>
+</ul>
 
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#metadata" class="nav-link">Metadata</a>
-        </li>
-    
-    </ul>
-</nav>
-
-
+        </nav>
     </div>
 </div>
     <div id="main-content" class="row">
@@ -378,6 +436,25 @@ Cycle 61 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN
 </div>
 </div>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               

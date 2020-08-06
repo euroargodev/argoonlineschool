@@ -191,12 +191,3 @@ ax.set_ylabel('Pressure')
 ax.set_title(f"PSAL {dayADS.PSAL_QC.long_name}");
 
 we will describre carefully then meaning of the QC falgs in section **AQU**
-
-
-```{toctree}
-:hidden:
-:titlesonly:
-
-
-L51_ArgoDatabyDate_ArgoPy
-```
