@@ -1,6 +1,6 @@
 .DS_Store
 Info.ipynb
-Pruebas*.ipynb
+Prueba*.ipynb
 
 ./Data/sst.day.mean.2019.nc
 ./Data/6901472/6901472_BRtraj.nc
