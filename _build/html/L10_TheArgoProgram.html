@@ -38,7 +38,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="The basis of the Argo Data System" href="L11_TheBasicsOfArgoDataSystem.html" />
+    <link rel="next" title="The Basics of netCDF format" href="L11_BasicsOfnetCDF.html" />
     <link rel="prev" title="Argo Online School" href="L00_Introduction.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,12 +86,7 @@
   </a>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="L11_TheBasicsOfArgoDataSystem.html">
-     The basis of the Argo Data System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="L12_BasicsOfnetCDF.html">
+    <a class="reference internal" href="L11_BasicsOfnetCDF.html">
      The Basics of netCDF format
     </a>
    </li>
@@ -101,11 +96,35 @@
   <a class="reference internal" href="L20_ArgoDatabyFloat.html">
    Accesing argo data by float
   </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="L21_ArgoDatabyFloat_Prof.html">
+     Accessing all profiles at once
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="L22_ArgoDatabyFloat_Traj.html">
+     Accessing trayectory data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="L23_ArgoDatabyFloat_ArgoPy.html">
+     Accessing argo data by float using Argopy
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="L30_ArgoDatabyDate.html">
    Accesing Argo data by date
   </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="L31_ArgoDatabyDate_ArgoPy.html">
+     Accessing Argo data by date using Argopy
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="L40_RTQualityControl.html">
@@ -201,6 +220,21 @@
    Why is it called Argo?
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-wmo-a-unique-identifiers-for-each-float">
+   The WMO: a unique identifiers for each float.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-basis-of-the-argo-data-system">
+   The basis of the Argo Data System
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-netcdf-format">
+   The netCDF format
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -213,7 +247,7 @@
                 
   <div class="section" id="the-argo-data">
 <h1>The Argo data<a class="headerlink" href="#the-argo-data" title="Permalink to this headline">¶</a></h1>
-<p><img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoArgo.png" alt="Argo status" width="50"/> Argo is a  broad-scale global array of profiling floats that measure temperature and salinity versus pressure. Argo is the major component of the ocean observing system. This is the actual distribution o the Argo array</p>
+<img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoArgo.png" alt="Argo status" width="100"/><p>Argo is a  broad-scale global array of profiling floats that measure temperature and salinity versus pressure. Argo is the major component of the ocean observing system. This is the actual distribution o the Argo array</p>
 <img src="http://www-hrx.ucsd.edu/www-argo/status.gif" alt="Argo status" width="700"/>
 <p>The objectives of Argo are:</p>
 <ul class="simple">
@@ -227,6 +261,7 @@
 <p>This questions is always in the mind of anyone than hears for the first time about the Argo program, therefore it is important to explain it. In Greek mythology, Argo was the ship in which Jason and the Argonauts sail to search for the golden fleece. In an analogus way, Argo floats sail the sea and complement the observations from the satellite called JASON-1, that measures the shape of the ocean surface.  Data from Argo and JASON-1 together will monitor the ocean currents, the oceans’ transport of heat and freshwater around the globe and sea-level rise.</p>
 <p>Additionally, at the developing phase of the Argo network in 1998, a document prepared by Dean Roemmich of Scripps Institution of Oceanography, and entitled “A Proposal for Global Ocean Observations for Climate: the Array for Real-time Geostrophic Oceanography” explored the potential of using profiling floats to monitor the ocean, …</p>
 <p>More information in the web page of the <a class="reference external" href="http://www.argo.ucsd.edu/index.html">Argo Steering Team</a></p>
+<hr class="docutils" />
 <p><strong>Before proceding, let’s check if you really need this course, and try to answer the following questions</strong></p>
 <ul class="simple">
 <li><p>what is a WMO number ?</p></li>
@@ -235,6 +270,31 @@
 <li><p>what a QC flag of 3 means ?</p></li>
 </ul>
 <p>If you don’t answer to more than 1 questions, please keep reading (or watching). Even though if you answered all the questions but you ara not very familiar with python, netCDF, or argopy, you may find interesting the content of this course</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="the-wmo-a-unique-identifiers-for-each-float">
+<h2>The WMO: a unique identifiers for each float.<a class="headerlink" href="#the-wmo-a-unique-identifiers-for-each-float" title="Permalink to this headline">¶</a></h2>
+<p>Each one of the Argo floats have a unique indentifier, kwnon as the World Meteorological Organization (WMO). The WMO is assigned at the moment of the deployment of the float, but it is not hard-coded in the float.</p>
+</div>
+<div class="section" id="the-basis-of-the-argo-data-system">
+<h2>The basis of the Argo Data System<a class="headerlink" href="#the-basis-of-the-argo-data-system" title="Permalink to this headline">¶</a></h2>
+<p>When an Argo float surfaces, the data are received by one of the <em>Data Assembly Centers</em> (DAC). At the DACs, they are subjected to initial scrutiny using a set of real time quality control tests where erroneous data are flagged or corrected, then the data are passed to one of the two Argo <em>Global Data Assembly Center</em> (GDAC), the Coriolis GDAC (Brest, France, Europe) or the US-Godae GDAC (Mobterey, California, USA).</p>
+<p>The GDACs are the first stage at which the freely available data can be obtained via the internet. The GDACs synchronize their data holdings to ensure consistent data is available on both sites. The target is for these <em>real-time</em> data to be available within 24 hours of their transmission from the float.</p>
+<p>Additionally Argo data can be accesed by several other ways:</p>
+<ul class="simple">
+<li><p>via the Global Telecomunication System for operational centers.</p></li>
+<li><p>via interactive Data selection tools on the GDACs</p></li>
+<li><p>via gridded fields and velocity products based on Argo NetCDF files from the GDACs</p></li>
+<li><p>via data viewers that incorporate Argo data</p></li>
+<li><p>via the <a class="reference external" href="https://www.nodc.noaa.gov/argo/">Global Argo Data Repository (GADR)</a> for archived and offline data</p></li>
+<li><p>via monthly copies of the GDACs https://www.seanoe.org/data/00311/42182/</p></li>
+</ul>
+<p>See the <a class="reference external" href="http://www.argo.ucsd.edu/Argo_date_guide.html">A beginner’s guide to accessing Argo data</a> to read a full description, with links, to this other ways of accesing the data</p>
+<p><strong>However, in this book we focus in the accesss to the primary source of the Argo data, the GDACs</strong></p>
+</div>
+<div class="section" id="the-netcdf-format">
+<h2>The netCDF format<a class="headerlink" href="#the-netcdf-format" title="Permalink to this headline">¶</a></h2>
+<p>At the early stage of the Argo program, and due to the huge ammount of data that was foressen  Argo would create, it was decided that netCDF would be the offical file format for the argo data. In the next lesson we give an introduction to the properties of this data format, and how to read files in netCDF.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -269,7 +329,7 @@
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="L00_Introduction.html" title="previous page">Argo Online School</a>
-    <a class='right-next' id="next-link" href="L11_TheBasicsOfArgoDataSystem.html" title="next page">The basis of the Argo Data System</a>
+    <a class='right-next' id="next-link" href="L11_BasicsOfnetCDF.html" title="next page">The Basics of netCDF format</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

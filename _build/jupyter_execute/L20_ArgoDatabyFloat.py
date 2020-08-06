@@ -1,5 +1,9 @@
 # Accesing argo data by float
 
+## Real Time and Calibrated data 
+
+Since the target is to have the Argo data available within 24 hours of their transmission from the float, this data is called *Real Time* (RT) data.  One year after the data were observed it is, if necessary, adjusted and made public, this data is called *Delayed Mode* (DM). We will begin by focusing in the real time data, and in section [Adjusted data](https://euroargodev.github.io/argoonlineschool/L50_AdjustedData.html) we will describe how the data is adjusted.
+
 ## Data files organized by float
 
 <img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/dac.png" alt="xarray logo" width="650"/>

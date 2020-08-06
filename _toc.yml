@@ -3,8 +3,7 @@
 - file: L10_TheArgoProgram
   expand_sections: true
   sections:
-  - file: L11_TheBasicsOfArgoDataSystem
-  - file: L12_BasicsOfnetCDF
+  - file: L11_BasicsOfnetCDF
 
 
 - file: L20_ArgoDatabyFloat
