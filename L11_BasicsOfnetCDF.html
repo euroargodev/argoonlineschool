@@ -1,34 +1,50 @@
 
-
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Basics of netCDF format &#8212; Argo Online School</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="_static/css/index.css" rel="stylesheet">
-    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/mystnb.js"></script>
-    <script src="_static/sphinx-book-theme.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -41,8 +57,8 @@
     <link rel="next" title="Accesing argo data by float" href="L20_ArgoDatabyFloat.html" />
     <link rel="prev" title="The Argo data" href="L10_TheArgoProgram.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
 
 
 
@@ -64,15 +80,12 @@
   <h1 class="site-logo" id="site-title">Argo Online School</h1>
   
 </a>
-</div>
-
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
-
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-  <ul class="nav sidenav_l1">
+    <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="L00_Introduction.html">
    Argo Online School
@@ -80,23 +93,25 @@
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active collapsible-parent">
   <a class="reference internal" href="L10_TheArgoProgram.html">
    The Argo data
   </a>
-  <ul class="current">
+  <ul class="current collapse-ul">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      The Basics of netCDF format
     </a>
    </li>
   </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="L20_ArgoDatabyFloat.html">
    Accesing argo data by float
   </a>
-  <ul>
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="L21_ArgoDatabyFloat_Prof.html">
      Accessing all profiles at once
@@ -113,18 +128,22 @@
     </a>
    </li>
   </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 collapsible-parent">
   <a class="reference internal" href="L30_ArgoDatabyDate.html">
    Accesing Argo data by date
   </a>
-  <ul>
+  <ul class="collapse-ul">
    <li class="toctree-l2">
     <a class="reference internal" href="L31_ArgoDatabyDate_ArgoPy.html">
      Accessing Argo data by date using Argopy
     </a>
    </li>
   </ul>
+  <i class="fas fa-chevron-down">
+  </i>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="L40_RTQualityControl.html">
@@ -138,9 +157,11 @@
  </li>
 </ul>
 
-</nav>
+</nav> <!-- To handle the deprecated key -->
 
- <!-- To handle the deprecated key -->
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
 
 </div>
 
@@ -165,11 +186,11 @@
             <i class="fas fa-arrow-up"></i>
         </button>
         
-        <div class="dropdown-buttons-trigger">
+        
+<div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
 
-    
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         
@@ -181,8 +202,8 @@
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
-    
 </div>
+
         <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -201,17 +222,36 @@
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
                     class="fas fa-expand"></i></button></a>
 
         <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/euroargodev/argoonlineschool/master?urlpath=tree/L11_BasicsOfnetCDF.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
+        
         <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> On this page
+            <i class="fas fa-list"></i> Contents
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
@@ -268,6 +308,7 @@
 </ul>
 
         </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -301,7 +342,7 @@
 <p>Let’s import the libraries</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">netCDF4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">netCDF4</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
@@ -309,7 +350,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fileExampleNC</span><span class="o">=</span><span class="s1">&#39;./Data/sst.day.mean.2019.nc&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fileExampleNC</span><span class="o">=</span><span class="s1">&#39;./Data/sst.day.mean.2019.nc&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -320,13 +361,13 @@
 <p>We will create <strong><code class="docutils literal notranslate"><span class="pre">SST</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data is actually no read yet (just have a reference to the variable object with metadata).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncDS</span> <span class="o">=</span> <span class="n">netCDF4</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">fileExampleNC</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ncDS</span> <span class="o">=</span> <span class="n">netCDF4</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">fileExampleNC</span><span class="p">)</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">ncDS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>netCDF4._netCDF4.Dataset
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>netCDF4._netCDF4.Dataset
 </pre></div>
 </div>
 </div>
@@ -335,12 +376,12 @@
 <p>Printing the object gives you summary information</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ncDS</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ncDS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;
 root group (NETCDF4_CLASSIC data model, file format HDF5):
     Conventions: CF-1.5
     title: NOAA/NCEI 1/4 Degree Daily Optimum Interpolation Sea Surface Temperature (OISST) Analysis, Version 2.1
@@ -370,23 +411,23 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 <p>First, we have to import the xarray libray, and netcdf4 and matplotlib, since both are used internally by xarray</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">netCDF4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">netCDF4</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">fileExampleNC</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">fileExampleNC</span><span class="p">)</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">xrDS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>xarray.core.dataset.Dataset
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>xarray.core.dataset.Dataset
 </pre></div>
 </div>
 </div>
@@ -394,12 +435,12 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 <p><strong>Printing the object gives you summary information</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">xrDS</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">xrDS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;xarray.Dataset&gt;
 Dimensions:  (lat: 720, lon: 1440, time: 365)
 Coordinates:
   * time     (time) datetime64[ns] 2019-01-01 2019-01-02 ... 2019-12-31
@@ -424,7 +465,7 @@ Attributes:
 <p><strong>However xarray has implemente a more user-friendly way of accessing the meta data stored in te Dataset</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span>
 </pre></div>
 </div>
 </div>
@@ -776,12 +817,12 @@ dl.xr-attrs {
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>Data variables:
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data variables:
     sst      (time, lat, lon) float32 ...
 </pre></div>
 </div>
@@ -792,14 +833,14 @@ dl.xr-attrs {
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span><span class="p">[</span><span class="n">d</span><span class="p">]</span><span class="o">.</span><span class="n">long_name</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span><span class="p">[</span><span class="n">d</span><span class="p">]</span><span class="o">.</span><span class="n">dims</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Daily Sea Surface Temperature
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Daily Sea Surface Temperature
 (&#39;time&#39;, &#39;lat&#39;, &#39;lon&#39;)
 </pre></div>
 </div>
@@ -807,13 +848,13 @@ dl.xr-attrs {
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">coords</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">coords</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">xrDS</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="n">d</span><span class="p">]</span><span class="o">.</span><span class="n">long_name</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">dims</span><span class="p">[</span><span class="n">d</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Time 365
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time 365
 Latitude 720
 Longitude 1440
 </pre></div>
@@ -825,24 +866,24 @@ Longitude 1440
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are exlploring&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;dataset_title&#39;</span><span class="p">]</span> <span class="p">,</span><span class="s1">&#39;from &#39;</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span> <span class="s1">&#39;in its version&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;version&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are exlploring&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;dataset_title&#39;</span><span class="p">]</span> <span class="p">,</span><span class="s1">&#39;from &#39;</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span> <span class="s1">&#39;in its version&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;version&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>We are exlploring NOAA Daily Optimum Interpolation Sea Surface Temperature from  NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/ in its version Version 2.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>We are exlploring NOAA Daily Optimum Interpolation Sea Surface Temperature from  NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/ in its version Version 2.1
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are exlploring&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">dataset_title</span> <span class="p">,</span><span class="s1">&#39;from &#39;</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="s1">&#39;in its version&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are exlploring&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">dataset_title</span> <span class="p">,</span><span class="s1">&#39;from &#39;</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="s1">&#39;in its version&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>We are exlploring NOAA Daily Optimum Interpolation Sea Surface Temperature from  NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/ in its version Version 2.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>We are exlploring NOAA Daily Optimum Interpolation Sea Surface Temperature from  NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/ in its version Version 2.1
 </pre></div>
 </div>
 </div>
@@ -856,7 +897,7 @@ Longitude 1440
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span><span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span><span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1210,7 +1251,7 @@ In the case of the NOAA Daily Optimum Interpolation Sea Surface Temperature, the
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Just focus on Sea Surface temperature variable</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Just focus on Sea Surface temperature variable</span>
 <span class="n">sst</span> <span class="o">=</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">sst</span>
 <span class="n">sst</span>
 </pre></div>
@@ -1561,27 +1602,26 @@ dl.xr-attrs {
 <p>It is also possible to use the attributes of a data variblle</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sst</span><span class="o">.</span><span class="n">long_name</span><span class="o">+</span><span class="s1">&#39; from the &#39;</span><span class="o">+</span><span class="n">sst</span><span class="o">.</span><span class="n">dataset</span> <span class="o">+</span><span class="s1">&#39; is in &#39;</span><span class="o">+</span><span class="n">sst</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sst</span><span class="o">.</span><span class="n">long_name</span><span class="o">+</span><span class="s1">&#39; from the &#39;</span><span class="o">+</span><span class="n">sst</span><span class="o">.</span><span class="n">dataset</span> <span class="o">+</span><span class="s1">&#39; is in &#39;</span><span class="o">+</span><span class="n">sst</span><span class="o">.</span><span class="n">units</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Daily Sea Surface Temperature from the NOAA High-resolution Blended Analysis is in degC
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Daily Sea Surface Temperature from the NOAA High-resolution Blended Analysis is in degC
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">),</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">),</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="stderr docutils container">
-<pre class="stderr literal-block">/Users/pvb/miniconda3/envs/AOS/lib/python3.8/site-packages/xarray/core/nanops.py:142: RuntimeWarning: Mean of empty slice
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/pvb/miniconda3/envs/AOS/lib/python3.8/site-packages/xarray/core/nanops.py:142: RuntimeWarning: Mean of empty slice
   return np.nanmean(a, axis=axis, dtype=dtype)
-</pre>
+</pre></div>
 </div>
 <div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
 <defs>
@@ -1926,7 +1966,7 @@ dl.xr-attrs {
 <p>Let’s actually use the data, firt to see the time series of SST near the, beatiful, Canary Islands, and after that the mean global SST</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#In the metadata there is not reference for the grid resolution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#In the metadata there is not reference for the grid resolution</span>
 <span class="n">sst</span><span class="o">.</span><span class="n">lon</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">sst</span><span class="o">.</span><span class="n">lon</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -2270,12 +2310,12 @@ dl.xr-attrs {
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">18</span><span class="p">),</span> <span class="n">lat</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">18</span><span class="p">),</span> <span class="n">lat</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb62b73a850&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb62b73a850&gt;]
 </pre></div>
 </div>
 <img alt="_images/L11_BasicsOfnetCDF_34_1.png" src="_images/L11_BasicsOfnetCDF_34_1.png" />
@@ -2283,13 +2323,13 @@ dl.xr-attrs {
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#28N 18W</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#28N 18W</span>
 <span class="n">sst</span><span class="p">[:,(</span><span class="mi">90</span><span class="o">+</span><span class="mi">28</span><span class="p">),(</span><span class="mi">360</span><span class="o">-</span><span class="mi">18</span><span class="p">)]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb54ff46fa0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb54ff46fa0&gt;]
 </pre></div>
 </div>
 <img alt="_images/L11_BasicsOfnetCDF_35_1.png" src="_images/L11_BasicsOfnetCDF_35_1.png" />
@@ -2297,30 +2337,29 @@ dl.xr-attrs {
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">sst</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vmin</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="stderr docutils container">
-<pre class="stderr literal-block">/Users/pvb/miniconda3/envs/AOS/lib/python3.8/site-packages/xarray/core/nanops.py:142: RuntimeWarning: Mean of empty slice
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/pvb/miniconda3/envs/AOS/lib/python3.8/site-packages/xarray/core/nanops.py:142: RuntimeWarning: Mean of empty slice
   return np.nanmean(a, axis=axis, dtype=dtype)
-</pre>
+</pre></div>
 </div>
 <img alt="_images/L11_BasicsOfnetCDF_36_1.png" src="_images/L11_BasicsOfnetCDF_36_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">sst</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb55353ec40&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fb55353ec40&gt;]
 </pre></div>
 </div>
 <img alt="_images/L11_BasicsOfnetCDF_37_1.png" src="_images/L11_BasicsOfnetCDF_37_1.png" />
@@ -2334,7 +2373,7 @@ dl.xr-attrs {
 <p>https://www.psl.noaa.gov/data/gridded_help/using_dods.html</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dap_url</span><span class="o">=</span><span class="s2">&quot;http://psl.noaa.gov/thredds/dodsC/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dap_url</span><span class="o">=</span><span class="s2">&quot;http://psl.noaa.gov/thredds/dodsC/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc&quot;</span>
 <span class="n">dataOP</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">dap_url</span><span class="p">)</span>
 <span class="n">dataOP</span>
 </pre></div>
@@ -2687,7 +2726,7 @@ dl.xr-attrs {
 <p>but you have to create the datasets to later plot them:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dataOPsubsampled</span><span class="o">=</span><span class="n">dataOP</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">18</span><span class="p">),</span> <span class="n">lat</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataOPsubsampled</span><span class="o">=</span><span class="n">dataOP</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">18</span><span class="p">),</span> <span class="n">lat</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dataOPsubsampled</span><span class="o">.</span><span class="n">sst</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">dataOP</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
@@ -2705,7 +2744,7 @@ dl.xr-attrs {
 <p>It’s good to close netCDF files, but not actually necessary when Dataset is open for read access only.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -2761,7 +2800,10 @@ dl.xr-attrs {
       </div>
     </div>
 
-    <script src="_static/js/index.js"></script>
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
     
   </body>
 </html>
