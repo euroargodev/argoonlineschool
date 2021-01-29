@@ -13,3 +13,5 @@ conda activate AOS
 ```
 
 This enviroment already includes argopy stable version.
+
+The data can be downloaded from https://www.oceanografia.es/argoonlineschool/Data/
