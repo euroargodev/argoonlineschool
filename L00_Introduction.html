@@ -301,8 +301,17 @@
 <div class="section" id="argo-online-school">
 <h1>Argo Online School<a class="headerlink" href="#argo-online-school" title="Permalink to this headline">¶</a></h1>
 <p>The Argo Online school is a set of videos and hands-on jupyter notebooks to describe the minimum requiremets to use and understand, the Argo data.</p>
-<p>You can access the hands-on content here in a <a class="reference external" href="https://euroargodev.github.io/argoonlineschool">JubyterBook</a> or download it and use in your local machine. In that case, you should create a python enviroment to use these notebooks. To create and activate the AOS enviroment</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+<p>You can access the hands-on content here in a <a class="reference external" href="https://euroargodev.github.io/argoonlineschool">JubyterBook</a> or download it and use in your local machine. In that case, you should create a python environment to use these notebooks.</p>
+<p>Since using some of the packages of this notebooks may give problems due to compatibility problems between conda-forge packages and packages contained in the default conda channels, I will recommend to set up <code class="docutils literal notranslate"><span class="pre">channel_priority:</span> <span class="pre">strict</span></code> and give priority to the <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> channel over the default channels when installing things. There are two ways of doing that. Either you always specify <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span></code> or you create a .condarc file in your home with this content:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">channels</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+  <span class="o">-</span> <span class="n">defaults</span>
+<span class="n">channel_priority</span><span class="p">:</span> <span class="n">strict</span>
+</pre></div>
+</div>
+<p>An environment should either use conda-forge or not, from creation to destruction. Do not mix and match. If you created it without using the conda-forge channel, then do not add it to the mix halfway. In practice, I always create an environment with conda-forge unless in very specific cases where I found incompatibilities.</p>
+<p>To create and activate the AOS environment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">AOS</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span> 
 <span class="n">conda</span> <span class="n">activate</span> <span class="n">AOS</span>
 </pre></div>
 </div>
@@ -316,10 +325,10 @@
 <div class="section" id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
 <p>If you download the notebooks you should create a ./Data* folder to include the files used for the examples. The files in the Data folder can be dowloaded from <a class="reference external" href="https://www.oceanografia.es/argoonlineschool/Data/">here</a> or directly from its source using <em>wget</em>, for instance:</p>
-<p>for the <em>Daily NOAA OI SST V2 High Resolution Dataset for 2009</em>:</p>
+<p>for the <em>Daily NOAA OI SST V2 High Resolution Dataset for 2019</em>:</p>
 <p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">wget</span> <span class="pre">ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc</span></code></p>
-<p>for the data from float 6900772:</p>
-<p><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6900772/*</span></code></p>
+<p>for the data from float 6901254:</p>
+<p><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6901254/*</span></code></p>
 <p>or for the data in the north Atlantic for the 11th November 2019</p>
 <p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">wget</span> <span class="pre">ftp://ftp.ifremer.fr/ifremer/argo//geo/indian_ocean/2019/11/20191111_prof.nc</span></code></p>
 </div>
