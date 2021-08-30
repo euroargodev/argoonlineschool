@@ -4,6 +4,7 @@ defaults:
   titlesonly: True
 options:
     numbered: True
+    expand_sections: true
 
 chapters:
 - file: L10_TheArgoProgram
