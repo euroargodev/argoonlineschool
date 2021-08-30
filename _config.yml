@@ -3,7 +3,8 @@
 title: Argo Online School
 author: Euro Argo
 logo: ./images/logoAoS.png
-exclude_patterns: [Prueba*.ipynb, Info.ipynb]
+exclude_patterns: [Prueba*.ipynb, Info.ipynb, README.md]
+only_build_toc_files: true
 
 #######################################################################################
 # Execution settings
@@ -24,7 +25,6 @@ launch_buttons:
 repository:
   url: https://github.com/euroargodev/argoonlineschool
   branch: master  # Which branch of the repository should be used when creating links
-
 
 latex:
   latex_documents:

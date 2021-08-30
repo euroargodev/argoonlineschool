@@ -1,3 +1,5 @@
+[![Jupyter Book Badge](https://jupyterbook.org/badge.svg)](<https://euroargodev.github.io/argoonlineschool>)
+
 <img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoAoS.png" alt="argopy logo" width="100"/>
 
 # Argo Online School

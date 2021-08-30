@@ -1,22 +1,27 @@
-- file: L00_Introduction
+format: jb-book
+root: L00_Introduction
+defaults:
+  titlesonly: True
+options:
+    numbered: True
 
+chapters:
 - file: L10_TheArgoProgram
-  expand_sections: true
   sections:
-  - file: L11_BasicsOfnetCDF
+  - file: L11_TheNetCDFFormat
+  - file: L12_AcknowledgingArgodata
 
-
-- file: L20_ArgoDatabyFloat
-  expand_sections: true
+- file: L20_ArgoDatabyFloat_Intro
   sections:
-  - file: L21_ArgoDatabyFloat_Prof
-  - file: L22_ArgoDatabyFloat_Traj
-  - file: L23_ArgoDatabyFloat_ArgoPy
+  - file: L21_ArgoDatabyFloat_Cycle
+  - file: L22_ArgoDatabyFloat_Prof
+  - file: L23_ArgoDatabyFloat_Traj
+  - file: L24_ArgoDatabyFloat_ArgoPy
 
-- file: L30_ArgoDatabyDate
-  expand_sections: true
+- file: L30_ArgoDatabyDate_Intro
   sections:
-  - file: L31_ArgoDatabyDate_ArgoPy
+  - file: L31_ArgoDatabyDate_Day
+  - file: L32_ArgoDatabyDate_ArgoPy
 
 - file: L40_RTQualityControl
 
