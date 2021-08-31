@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.2. Acknowledging Argo data &#8212; Argo Online School</title>
+    <title>4. Real-Time and Delayed mode data &#8212; Argo Online School</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Accesing Argo data by float" href="L20_ArgoDatabyFloat_Intro.html" />
-    <link rel="prev" title="1.1. The netCDF format" href="L11_TheNetCDFFormat.html" />
+    <link rel="next" title="4.1. Real Time quality control data" href="L41_RTQualityControlData.html" />
+    <link rel="prev" title="3.2. Accessing Argo data by date using Argopy" href="L32_ArgoDatabyDate_ArgoPy.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -90,23 +90,23 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="L10_TheArgoData.html">
    1. The Argo data
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="L11_TheNetCDFFormat.html">
      1.1. The netCDF format
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="L12_AcknowledgingArgodata.html">
      1.2. Acknowledging Argo data
     </a>
    </li>
@@ -166,11 +166,11 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="L40_RTandDM.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    4. Real-Time and Delayed mode data
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
@@ -229,7 +229,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/L12_AcknowledgingArgodata.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/L40_RTandDM.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -267,7 +267,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/euroargodev/argoonlineschool/master?urlpath=tree/L12_AcknowledgingArgodata.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/euroargodev/argoonlineschool/master?urlpath=tree/L40_RTandDM.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -292,12 +292,23 @@
         
               <div>
                 
-  <div class="section" id="acknowledging-argo-data">
-<h1><span class="section-number">1.2. </span>Acknowledging Argo data<a class="headerlink" href="#acknowledging-argo-data" title="Permalink to this headline">¶</a></h1>
-<p>Since data are freely available without restriction, to track uptake and impact, we ask that where Argo data are used in a publication or product, an acknowledgement be given.</p>
-<p>The Argo Data Management Team assigns Digital Object Identifiers (DOIs) to Argo documents and datasets. These can easily be included in publications and keeps a direct and permanent link to the Argo document or data set used in that publication (to ensure reproducibility). The data sets are archived in monthly snapshots each with its own DOI. To acknowledge Argo, please use the following sentence and the appropriate Argo DOI afterwards as described below.</p>
-<p><em>“These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.  (<a class="reference external" href="https://argo.ucsd.edu">https://argo.ucsd.edu</a>,  <a class="reference external" href="https://www.ocean-ops.org">https://www.ocean-ops.org</a>).  The Argo Program is part of the Global Ocean Observing System“</em></p>
-<p>Refere to <a class="reference external" href="https://argo.ucsd.edu/data/acknowledging-argo/">How to cite Argo data</a> for further information.</p>
+  <div class="section" id="real-time-and-delayed-mode-data">
+<h1><span class="section-number">4. </span>Real-Time and Delayed mode data<a class="headerlink" href="#real-time-and-delayed-mode-data" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://drive.google.com/file/d/1vjOB1VEXqmfyDm5y30uRMSIeJGU_EShI/preview&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;800&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;480&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;autoplay&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe src="https://drive.google.com/file/d/1vjOB1VEXqmfyDm5y30uRMSIeJGU_EShI/preview" width="800" height="480" allow="autoplay"></iframe>
+</div></div>
+</div>
+<p>The Argo program guarantees free and quality data distribution to the entire scientific &amp; operational community and the general public. Before that, data needs to be checked out through different controls to guarantee their homogeneity and quality within the established accuracy ranges (+/- 0.005ºC temperature and +/- 0.01 for salinity). The first control stage is the Real-Time (RT) quality control and the last stage is called the Delayed - Mode (DM) quality control. Additiobnally the Argo network provides both quality control (QC) flags and errors to help users decide if they want to use the data or not. There are flags for both the raw and adjusted data.</p>
+<p>So far we have accesed only the RT data and without paying attention to its quality. In this chapter we will describe how to use the quality control information stored in the netcdf files.</p>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -330,19 +341,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="L11_TheNetCDFFormat.html" title="previous page">
+        <a class="left-prev" href="L32_ArgoDatabyDate_ArgoPy.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">1.1. </span>The netCDF format</p>
+                <p class="prevnext-title"><span class="section-number">3.2. </span>Accessing Argo data by date using Argopy</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="L20_ArgoDatabyFloat_Intro.html" title="next page">
+        <a class="right-next" href="L41_RTQualityControlData.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">2. </span>Accesing Argo data by float</p>
+                <p class="prevnext-title"><span class="section-number">4.1. </span>Real Time quality control data</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
