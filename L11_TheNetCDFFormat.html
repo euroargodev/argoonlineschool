@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.1. The netCDF format &#8212; Argo Online School</title>
+    <title>The netCDF format &#8212; Argo Online School</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1.2. Acknowledging Argo data" href="L12_AcknowledgingArgodata.html" />
-    <link rel="prev" title="1. The Argo data" href="L10_TheArgoData.html" />
+    <link rel="next" title="Accesing Argo data by float" href="L20_ArgoDatabyFloat_Intro.html" />
+    <link rel="prev" title="Introduction" href="L10_TheArgoData_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -89,10 +89,32 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  The Argo program
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_TheArgoProgram_intro.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="L02_AcknowledgingArgodata.html">
+   Acknowledging Argo data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  The Argo Data
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="L10_TheArgoData.html">
-   1. The Argo data
+  <a class="reference internal" href="L10_TheArgoData_intro.html">
+   Introduction
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -102,19 +124,14 @@
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     1.1. The netCDF format
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="L12_AcknowledgingArgodata.html">
-     1.2. Acknowledging Argo data
+     The netCDF format
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="L20_ArgoDatabyFloat_Intro.html">
-   2. Accesing Argo data by float
+   Accesing Argo data by float
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -124,29 +141,29 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="L21_ArgoDatabyFloat_Cycle.html">
-     2.1. Reading an Argo CTD cycle data
+     Reading an Argo CTD cycle data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="L22_ArgoDatabyFloat_Prof.html">
-     2.2. Accessing all profiles at once
+     Accessing all profiles at once
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="L23_ArgoDatabyFloat_Traj.html">
-     2.3. Accessing trayectory data
+     Accessing trayectory data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="L24_ArgoDatabyFloat_ArgoPy.html">
-     2.4. Accessing Argo data by float using Argopy
+     Accessing Argo data by float using Argopy
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="L30_ArgoDatabyDate_Intro.html">
-   3. Accesing Argo data by date
+   Accesing Argo data by date
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -156,19 +173,19 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="L31_ArgoDatabyDate_Day.html">
-     3.1. Reading Argo data by date
+     Reading Argo data by date
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="L32_ArgoDatabyDate_ArgoPy.html">
-     3.2. Accessing Argo data by date using Argopy
+     Accessing Argo data by date using Argopy
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="L40_RTandDM.html">
-   4. Real-Time and Delayed mode data
+   Real-Time and Delayed mode data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -178,12 +195,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="L41_RTData.html">
-     4.1. Real Time quality control data
+     Real Time quality control data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="L42_DMData.html">
-     4.2. Delayed mode data
+     Delayed mode data
     </a>
    </li>
   </ul>
@@ -291,52 +308,52 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-netcdf">
-   1.1.1. What is NetCDF?
+   What is NetCDF?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-is-the-netcdf-format">
-   1.1.2. How is the netCDF format?
+   How is the netCDF format?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exploring-a-netcdf-file">
-   1.1.3. Exploring a netCDF File
+   Exploring a netCDF File
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#open-the-netcdf-file">
-   1.1.4. Open the netCDF file
+   Open the netCDF file
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exploring-a-netcdf-file-with-xarray">
-   1.1.5. Exploring a netCDF File with xarray
+   Exploring a netCDF File with xarray
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#open-the-netcdf-file-with-xarray">
-   1.1.6. Open the netCDF file with xarray
+   Open the netCDF file with xarray
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#accessing-a-netcdf-data-variable">
-   1.1.7. Accessing a netCDF data variable
+   Accessing a netCDF data variable
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-the-data">
-   1.1.8. Using the data
+   Using the data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#remote-data-access-via-opendap">
-   1.1.9. Remote data access via openDAP
+   Remote data access via openDAP
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#closing-your-netcdf-file">
-   1.1.10. Closing your netCDF file
+   Closing your netCDF file
   </a>
  </li>
 </ul>
@@ -351,14 +368,14 @@
               <div>
                 
   <div class="section" id="the-netcdf-format">
-<h1><span class="section-number">1.1. </span>The netCDF format<a class="headerlink" href="#the-netcdf-format" title="Permalink to this headline">¶</a></h1>
+<h1>The netCDF format<a class="headerlink" href="#the-netcdf-format" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-is-netcdf">
-<h2><span class="section-number">1.1.1. </span>What is NetCDF?<a class="headerlink" href="#what-is-netcdf" title="Permalink to this headline">¶</a></h2>
+<h2>What is NetCDF?<a class="headerlink" href="#what-is-netcdf" title="Permalink to this headline">¶</a></h2>
 <p><img alt="NetCDFLogo" src="https://www.unidata.ucar.edu/images/logos/netcdf-150x150.png" /> netCDF stands for <strong>Network Common Data Form</strong> and it is a set of software libraries and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. It is also a community standard for sharing scientific data.</p>
 <p><a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/"><strong>NetCDF</strong></a> is maintanied by <a class="reference external" href="https://www.unidata.ucar.edu/"><strong>Unidata</strong></a>, one of the University Corporation for Atmospheric Research (UCAR)’s Community Programs (UCP). Unidata also supports and maintains netCDF programming interfaces for C, C++, Java, and Fortran. Programming interfaces are also available for Python, IDL, MATLAB, R, Ruby, and Perl. Thanks <a class="reference external" href="https://www.ucar.edu/"><strong>UCAR</strong></a>!!</p>
 </div>
 <div class="section" id="how-is-the-netcdf-format">
-<h2><span class="section-number">1.1.2. </span>How is the netCDF format?<a class="headerlink" href="#how-is-the-netcdf-format" title="Permalink to this headline">¶</a></h2>
+<h2>How is the netCDF format?<a class="headerlink" href="#how-is-the-netcdf-format" title="Permalink to this headline">¶</a></h2>
 <p>The properties that makes netCDF so useful are the following ones:</p>
 <p><strong>Self-Describing</strong> A netCDF file includes information about the data it contains.</p>
 <p><strong>Portable</strong> A netCDF file can be accessed by computers with different ways of storing integers, characters, and floating-point numbers.</p>
@@ -368,7 +385,7 @@
 <p><strong>Archivable</strong> Access to all earlier forms of netCDF data will be supported by current and future versions of the software</p>
 </div>
 <div class="section" id="exploring-a-netcdf-file">
-<h2><span class="section-number">1.1.3. </span>Exploring a netCDF File<a class="headerlink" href="#exploring-a-netcdf-file" title="Permalink to this headline">¶</a></h2>
+<h2>Exploring a netCDF File<a class="headerlink" href="#exploring-a-netcdf-file" title="Permalink to this headline">¶</a></h2>
 <p>Let’s see most of these properties of a <strong>netCDF</strong> file by using actual data from the high-resolution Blended Analysis of daily Sea Surface Temperatute, <a class="reference external" href="https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html#detail"><strong>NOAA OI SST V2 High Resolution Dataset</strong></a> Thanks <a class="reference external" href="https://www.noaa.gov/"><strong>NOAA</strong></a>!!</p>
 <p>I have pre-downloaded the daily data from 2019. You can use this code for dowloading it:</p>
 <p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">wget</span> <span class="pre">ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.mnmean.nc</span> </code></p>
@@ -391,7 +408,7 @@
 </div>
 </div>
 <div class="section" id="open-the-netcdf-file">
-<h2><span class="section-number">1.1.4. </span>Open the netCDF file<a class="headerlink" href="#open-the-netcdf-file" title="Permalink to this headline">¶</a></h2>
+<h2>Open the netCDF file<a class="headerlink" href="#open-the-netcdf-file" title="Permalink to this headline">¶</a></h2>
 <p>We will create <strong><code class="docutils literal notranslate"><span class="pre">SST</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data is actually no read yet (just have a reference to the variable object with metadata).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -434,13 +451,13 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 </div>
 <div class="section" id="exploring-a-netcdf-file-with-xarray">
-<h2><span class="section-number">1.1.5. </span>Exploring a netCDF File with xarray<a class="headerlink" href="#exploring-a-netcdf-file-with-xarray" title="Permalink to this headline">¶</a></h2>
+<h2>Exploring a netCDF File with xarray<a class="headerlink" href="#exploring-a-netcdf-file-with-xarray" title="Permalink to this headline">¶</a></h2>
 <p><img src="http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png" alt="xarray logo" width="200"/> Before continuing with the descrption of the netCDF format, we would swtich to <strong>xarray</strong> .</p>
 <p>Although <strong>netCDF4-python</strong> provides a lower level interface for working with netCDF in Python, xarray use netCDF4-python internally, it is more user friendly than netCDF4. Additionally xarray is used by <a class="reference external" href="https://github.com/euroargodev/argopy"><em>argopy</em></a>, the Argo data python library that aims to ease Argo data access, and that is used in te Argo Online School.  xarray does not yet support all of netCDF4-python’s features, such as modifying files on-disk, but this is beyond the objective of this school.</p>
 <p>A brief introduction for xarray <a class="reference external" href="https://rabernat.github.io/research_computing/xarray.html">here</a></p>
 </div>
 <div class="section" id="open-the-netcdf-file-with-xarray">
-<h2><span class="section-number">1.1.6. </span>Open the netCDF file with xarray<a class="headerlink" href="#open-the-netcdf-file-with-xarray" title="Permalink to this headline">¶</a></h2>
+<h2>Open the netCDF file with xarray<a class="headerlink" href="#open-the-netcdf-file-with-xarray" title="Permalink to this headline">¶</a></h2>
 <p>We will create <strong><code class="docutils literal notranslate"><span class="pre">xrDS</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data is actually no read yet, it is just have a reference to the variable object with metadata.</p>
 <p>First, we have to import the xarray libray, and netcdf4 and matplotlib, since both are used internally by xarray</p>
 <div class="cell docutils container">
@@ -934,7 +951,7 @@ Attributes:
 </div>
 </div>
 <div class="section" id="accessing-a-netcdf-data-variable">
-<h2><span class="section-number">1.1.7. </span>Accessing a netCDF data variable<a class="headerlink" href="#accessing-a-netcdf-data-variable" title="Permalink to this headline">¶</a></h2>
+<h2>Accessing a netCDF data variable<a class="headerlink" href="#accessing-a-netcdf-data-variable" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>data variable objects stored by name in <strong><code class="docutils literal notranslate"><span class="pre">data_vars</span></code></strong> dict.</p></li>
 <li><p>print the variable yields summary info: range, long_name for the variable, dimesions, fillvalue ,… All the information neccessary used to use the variable</p></li>
@@ -1715,7 +1732,7 @@ Coordinates:
 </div>
 </div>
 <div class="section" id="using-the-data">
-<h2><span class="section-number">1.1.8. </span>Using the data<a class="headerlink" href="#using-the-data" title="Permalink to this headline">¶</a></h2>
+<h2>Using the data<a class="headerlink" href="#using-the-data" title="Permalink to this headline">¶</a></h2>
 <p>Let’s actually use the data, first to see the time series of SST near the, beatiful, Canary Islands, and after that the mean global SST</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2113,7 +2130,7 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
 </div>
 </div>
 <div class="section" id="remote-data-access-via-opendap">
-<h2><span class="section-number">1.1.9. </span>Remote data access via openDAP<a class="headerlink" href="#remote-data-access-via-opendap" title="Permalink to this headline">¶</a></h2>
+<h2>Remote data access via openDAP<a class="headerlink" href="#remote-data-access-via-opendap" title="Permalink to this headline">¶</a></h2>
 <p>With OPeNDAP, you can access data using an URL rather than a local path. For xarray it is like having the file locally, the only difference is that you provide a differente path.</p>
 <p>OPeNDAP stand for <em>Open-source Project for a Network Data Access Protocol</em> <a class="reference external" href="https://earthdata.nasa.gov/collaborate/open-data-services-and-software/api/opendap">More information here</a></p>
 <p><a class="reference external" href="https://www.psl.noaa.gov/data/gridded_help/using_dods.html">https://www.psl.noaa.gov/data/gridded_help/using_dods.html</a></p>
@@ -2142,7 +2159,7 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
 </div>
 </div>
 <div class="section" id="closing-your-netcdf-file">
-<h2><span class="section-number">1.1.10. </span>Closing your netCDF file<a class="headerlink" href="#closing-your-netcdf-file" title="Permalink to this headline">¶</a></h2>
+<h2>Closing your netCDF file<a class="headerlink" href="#closing-your-netcdf-file" title="Permalink to this headline">¶</a></h2>
 <p>It’s good to close netCDF files, but not actually necessary when Dataset is open for read access only.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2184,19 +2201,19 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="L10_TheArgoData.html" title="previous page">
+        <a class="left-prev" href="L10_TheArgoData_intro.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span class="section-number">1. </span>The Argo data</p>
+                <p class="prevnext-title">Introduction</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="L12_AcknowledgingArgodata.html" title="next page">
+        <a class="right-next" href="L20_ArgoDatabyFloat_Intro.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span class="section-number">1.2. </span>Acknowledging Argo data</p>
+                <p class="prevnext-title">Accesing Argo data by float</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

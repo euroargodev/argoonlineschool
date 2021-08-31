@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Argo Online School &#8212; Argo Online School</title>
+    <title>Acknowledging Argo data &#8212; Argo Online School</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -51,6 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="L10_TheArgoData_intro.html" />
+    <link rel="prev" title="Introduction" href="L01_TheArgoProgram_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -78,7 +80,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -87,10 +89,32 @@
   </a>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  The Argo program
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="L01_TheArgoProgram_intro.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Acknowledging Argo data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  The Argo Data
+ </span>
+</p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="L10_TheArgoProgram.html">
-   The Argo data
+  <a class="reference internal" href="L10_TheArgoData_intro.html">
+   Introduction
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -101,11 +125,6 @@
    <li class="toctree-l2">
     <a class="reference internal" href="L11_TheNetCDFFormat.html">
      The netCDF format
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="L12_AcknowledgingArgodata.html">
-     Acknowledging Argo data
     </a>
    </li>
   </ul>
@@ -164,15 +183,27 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="L40_RTQualityControl.html">
-   4. Quality Control of the Argo data
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="L40_RTandDM.html">
+   Real-Time and Delayed mode data
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="L50_AdjustedData.html">
-   Calibrated data
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="L41_RTData.html">
+     Real Time quality control data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="L42_DMData.html">
+     Delayed mode data
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -215,9 +246,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/L02_AcknowledgingArgodata.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -248,24 +279,28 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/euroargodev/argoonlineschool/master?urlpath=tree/L02_AcknowledgingArgodata.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#usage">
-   Usage
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -274,20 +309,12 @@
         
               <div>
                 
-  <img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoAoS.png" alt="argopy logo" width="100"/>
-<div class="section" id="argo-online-school">
-<h1>Argo Online School<a class="headerlink" href="#argo-online-school" title="Permalink to this headline">¶</a></h1>
-<p>The Argo Online school is a set of videos and hands-on jupyter notebooks to describe the minimum requiremets to use, and understand, the Argo data. Here you can find find the jupyter notebooks that are part of the Argo Online school. These notebooks use, mainly, <a class="reference external" href="https://github.com/euroargodev/argopy">the Argo data python library</a>.</p>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<p>You can access the content as a <a class="reference external" href="https://euroargodev.github.io/argoonlineschool">JubyterBook</a>, or download them and use in your local machine. In that case, you should create a python enviroment to use these notebooks. To create, and activate, the enviroment AOS [Argo Online School]:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
-<span class="n">conda</span> <span class="n">activate</span> <span class="n">AOS</span>
-</pre></div>
-</div>
-<p>This enviroment already includes argopy stable version.</p>
-<p>The data can be downloaded from <a class="reference external" href="https://www.oceanografia.es/argoonlineschool/Data/">https://www.oceanografia.es/argoonlineschool/Data/</a></p>
-</div>
+  <div class="section" id="acknowledging-argo-data">
+<h1>Acknowledging Argo data<a class="headerlink" href="#acknowledging-argo-data" title="Permalink to this headline">¶</a></h1>
+<p>Since data are freely available without restriction, to track uptake and impact, we ask that where Argo data are used in a publication or product, an acknowledgement be given.</p>
+<p>The Argo Data Management Team assigns Digital Object Identifiers (DOIs) to Argo documents and datasets. These can easily be included in publications and keeps a direct and permanent link to the Argo document or data set used in that publication (to ensure reproducibility). The data sets are archived in monthly snapshots each with its own DOI. To acknowledge Argo, please use the following sentence and the appropriate Argo DOI afterwards as described below.</p>
+<p><em>“These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.  (<a class="reference external" href="https://argo.ucsd.edu">https://argo.ucsd.edu</a>,  <a class="reference external" href="https://www.ocean-ops.org">https://www.ocean-ops.org</a>).  The Argo Program is part of the Global Ocean Observing System“</em></p>
+<p>Refere to <a class="reference external" href="https://argo.ucsd.edu/data/acknowledging-argo/">How to cite Argo data</a> for further information.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -313,10 +340,32 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="L01_TheArgoProgram_intro.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Introduction</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="L10_TheArgoData_intro.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Introduction</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
