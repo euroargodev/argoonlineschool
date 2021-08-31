@@ -26,5 +26,5 @@ chapters:
 
 - file: L40_RTandDM
   sections:
-  - file: L41_RTQualityControlData.ipynb
-  - file: L42_DMQualityControlData.ipynb
+  - file: L41_RTData
+  - file: L42_DMData

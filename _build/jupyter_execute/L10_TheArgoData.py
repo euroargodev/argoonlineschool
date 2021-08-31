@@ -29,6 +29,12 @@
 # 
 # Each one of the Argo floats have a unique indentifier, kwnon as the World Meteorological Organization (WMO). The WMO is assigned at the moment of the deployment of the float, but it is not hard-coded in the float.
 
+# In[7]:
+
+
+get_ipython().run_cell_magic('HTML', '', '<center>\n<iframe width="560" height="315" src="https://www.youtube.com/embed/TKk-EpK03Xg" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</center>')
+
+
 # **The basis of the Argo Data System**
 # 
 # As explained in the videos of lesson 2, when an Argo float surfaces, the data are received by one of the *Data Assembly Centers* (DAC). At the DACs, they are subjected to initial scrutiny using a set of real time quality control tests where erroneous data are flagged or corrected, then the data are passed to one of the two Argo *Global Data Assembly Center* (GDAC), the Coriolis GDAC (Brest, France, Europe) or the US-Godae GDAC (Mobterey, California, USA). 
