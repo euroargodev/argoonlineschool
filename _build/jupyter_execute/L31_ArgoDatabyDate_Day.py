@@ -4,7 +4,7 @@
 # # Reading Argo data by date
 
 # Lets use, as example, data in the *Atlantic for the 11th November 2019. 
-# It is pre-downloaded in the ./Data folder, but you can dowload it from the Coriolis GDAC (See here for instructions of how to dowload the data)
+# It is pre-downloaded in the ./Data folder, but you can dowload it from the Coriolis GDAC [See here for instructions of how to download the data](https://euroargodev.github.io/argoonlineschool/L00_Introduction.html)
 
 # In[1]:
 

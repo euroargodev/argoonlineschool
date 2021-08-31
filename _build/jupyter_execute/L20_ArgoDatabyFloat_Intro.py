@@ -5,13 +5,15 @@
 
 # **Real Time and Calibrated data**
 # 
-# Since the target is to have the Argo data available within 24 hours of their transmission from the float, this data is called *Real Time* (RT) data.  One year after the data were observed it is, if necessary, adjusted and made public, this data is called *Delayed Mode* (DM). We will begin by focusing in the real time data, and in section [Adjusted data](https://euroargodev.github.io/argoonlineschool/L50_AdjustedData.html) we will describe how the data is adjusted.
+# Since the target of the Argo program is to have the Argo data available within 24 hours of its transmission from the float, this data is called the *Real Time* (RT) data. One year after the data were observed, if necessary, it is adjusted and made public. This calibrated data is called *Delayed Mode* (DM) data. 
+# 
+# In section [RT and DM data](https://euroargodev.github.io/argoonlineschool/L50_AdjustedData.html) we will describe in detail the difference btween boths kinds of data, and what are the quality control flags, however, to keep it simple, we will begin by focusing in the real time data.
 
 # **Data files organized by float**
 # 
 # <img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/dac.png" alt="xarray logo" width="650"/>
 
-# When accessing the **dac** folder in any of the *FTP* or *HTTP* sites of any of the two GDACs you will find several (11) folders, one for each of the DACs.  Within each one of these folder there is one folder for each one of the floats processed by this particular *DAC*. 
+# When accessing the **dac** folder, via the *FTP* or *HTTP* protocols, of any of the two GDACs you will find several (11) folders, one for each of the DACs.  Within each one of these folders there is one folder for each of the floats processed by this particular *DAC*. 
 # 
 # In the example here, we will use data from float with **WMO** number 6901254, that is proceesed by coriolis (later we will see how to find the DAC for each float), therefore within the folder `./6901254`, we find the following files and folder:
 # 

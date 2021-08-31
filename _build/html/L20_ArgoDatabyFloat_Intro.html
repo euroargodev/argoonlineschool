@@ -91,7 +91,7 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="L10_TheArgoProgram.html">
+  <a class="reference internal" href="L10_TheArgoData.html">
    1. The Argo data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -166,15 +166,27 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="L40_RTQualityControl.html">
-   4. Quality Control of the Argo data
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="L40_RTandDM.html">
+   4. Real-Time and Delayed mode data
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="L50_AdjustedData.html">
-   5. Calibrated data
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="L41_RTQualityControlData.html">
+     4.1. Quality Control of the Argo data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="L42_DMQualityControlData.html">
+     4.2. Calibrated data
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -283,9 +295,10 @@
   <div class="section" id="accesing-argo-data-by-float">
 <h1><span class="section-number">2. </span>Accesing Argo data by float<a class="headerlink" href="#accesing-argo-data-by-float" title="Permalink to this headline">¶</a></h1>
 <p><strong>Real Time and Calibrated data</strong></p>
-<p>Since the target is to have the Argo data available within 24 hours of their transmission from the float, this data is called <em>Real Time</em> (RT) data.  One year after the data were observed it is, if necessary, adjusted and made public, this data is called <em>Delayed Mode</em> (DM). We will begin by focusing in the real time data, and in section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L50_AdjustedData.html">Adjusted data</a> we will describe how the data is adjusted.</p>
+<p>Since the target of the Argo program is to have the Argo data available within 24 hours of its transmission from the float, this data is called the <em>Real Time</em> (RT) data. One year after the data were observed, if necessary, it is adjusted and made public. This calibrated data is called <em>Delayed Mode</em> (DM) data.</p>
+<p>In section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L50_AdjustedData.html">RT and DM data</a> we will describe in detail the difference btween boths kinds of data, and what are the quality control flags, however, to keep it simple, we will begin by focusing in the real time data.</p>
 <p><strong>Data files organized by float</strong></p>
-<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/dac.png" alt="xarray logo" width="650"/><p>When accessing the <strong>dac</strong> folder in any of the <em>FTP</em> or <em>HTTP</em> sites of any of the two GDACs you will find several (11) folders, one for each of the DACs.  Within each one of these folder there is one folder for each one of the floats processed by this particular <em>DAC</em>.</p>
+<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/dac.png" alt="xarray logo" width="650"/><p>When accessing the <strong>dac</strong> folder, via the <em>FTP</em> or <em>HTTP</em> protocols, of any of the two GDACs you will find several (11) folders, one for each of the DACs.  Within each one of these folders there is one folder for each of the floats processed by this particular <em>DAC</em>.</p>
 <p>In the example here, we will use data from float with <strong>WMO</strong> number 6901254, that is proceesed by coriolis (later we will see how to find the DAC for each float), therefore within the folder <code class="docutils literal notranslate"><span class="pre">./6901254</span></code>, we find the following files and folder:</p>
 <ul class="simple">
 <li><p>6901254_Rtraj.nc</p></li>

@@ -7,7 +7,7 @@ options:
     expand_sections: true
 
 chapters:
-- file: L10_TheArgoProgram
+- file: L10_TheArgoData
   sections:
   - file: L11_TheNetCDFFormat
   - file: L12_AcknowledgingArgodata
@@ -24,6 +24,7 @@ chapters:
   - file: L31_ArgoDatabyDate_Day
   - file: L32_ArgoDatabyDate_ArgoPy
 
-- file: L40_RTQualityControl
-
-- file: L50_AdjustedData
+- file: L40_RTandDM
+  sections:
+  - file: L41_RTQualityControlData.ipynb
+  - file: L42_DMQualityControlData.ipynb
