@@ -3,8 +3,18 @@
 title: Argo Online School
 author: Euro Argo
 logo: ./images/logoAoS.png
+description: >-
+  An introduction to the use of Argo data.
+url: https://euroargodev.github.io/argoonlineschool
+
 exclude_patterns: [Prueba*.ipynb, Info.ipynb, README.md]
 only_build_toc_files: true
+number_toc_chapters: true
+
+
+show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
+collapse_inactive_chapters: false  # Whether to collapse the inactive chapters in the sidebar
+
 
 #######################################################################################
 # Execution settings

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accesing Argo data by float &#8212; Argo Online School</title>
+    <title>License for this book &#8212; Argo Online School</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Reading an Argo CTD cycle data" href="L21_ArgoDatabyFloat_Cycle.html" />
-    <link rel="prev" title="The netCDF format" href="L11_TheNetCDFFormat.html" />
+    <link rel="next" title="Introduction" href="L01_TheArgoProgram_intro.html" />
+    <link rel="prev" title="Argo Online School" href="L00_Introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -94,9 +94,9 @@
   The Argo online school
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="LICENSE.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    License for this book
   </a>
  </li>
@@ -123,7 +123,7 @@
   The Argo Data
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="L10_TheArgoData_intro.html">
    Introduction
@@ -141,11 +141,11 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="L20_ArgoDatabyFloat_Intro.html">
    Accesing Argo data by float
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
@@ -258,9 +258,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/L20_ArgoDatabyFloat_Intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/LICENSE.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -291,23 +291,6 @@
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/euroargodev/argoonlineschool/master?urlpath=tree/L20_ArgoDatabyFloat_Intro.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
@@ -321,34 +304,11 @@
         
               <div>
                 
-  <div class="section" id="accesing-argo-data-by-float">
-<h1>Accesing Argo data by float<a class="headerlink" href="#accesing-argo-data-by-float" title="Permalink to this headline">¶</a></h1>
-<p><strong>Real Time and Calibrated data</strong></p>
-<p>Since the target of the Argo program is to have the Argo data available within 24 hours of its transmission from the float, this data is called the <em>Real Time</em> (RT) data. One year after the data were observed, if necessary, it is adjusted and made public. This calibrated data is called <em>Delayed Mode</em> (DM) data.  In section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L40_RTandDM.html">Real-Time and Delayed mode data¶</a> we will describe in detail the differences between both kinds of data, and what are the quality control flags, however, to keep it simple, we will begin by focusing in the real time (RT) data.</p>
-<p><strong>Data files organized by float</strong></p>
-<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/dac.png" alt="xarray logo" width="650"/><p>When accessing the <strong>dac</strong> folder, via the <em>FTP</em> or <em>HTTP</em> protocols, of any of the two GDACs you will find several (11) folders, one for each of the DACs.  Within each one of these folders there is one folder for each of the floats processed by this particular <em>DAC</em>.</p>
-<p>In the example here, we will use data from float with <strong>WMO</strong> number 6901254, that is proceesed by coriolis (later we will see how to find the DAC for each float), therefore within the folder <code class="docutils literal notranslate"><span class="pre">./6901254</span></code>, we find the following files and folder:</p>
-<ul class="simple">
-<li><p>6901254_Rtraj.nc</p></li>
-<li><p>6901254_meta.nc</p></li>
-<li><p>6901254_prof.nc</p></li>
-<li><p>6901254_tech.nc</p></li>
-<li><p>./profiles</p></li>
-</ul>
-<p>we will describe the content of each of these files later, but let’s focus on the folder <code class="docutils literal notranslate"><span class="pre">./profiles/</span></code> since it contains one file for each one of the hydrographic cycles carried out by the float. <strong>R6901254_001.nc</strong> is the file that contains the data from the first cycle. It begins with a <em>R</em> since it is the real time data, if it began with an <em>D</em> it would be adjusted data, or Delayed Mode data; we will see and example in section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L40_RTandDM.html">Real-Time and Delayed mode data¶</a>.</p>
-<p>Additionally some argo floats, as 6901254, also made obserations in the first descent from the surface to the parking depth, in this case the name of the files with this data would be <strong>R6901254_001D.nc</strong>.</p>
-<p>In general, the format of the file names for individual profiles are <code class="docutils literal notranslate"><span class="pre">&lt;R/D&gt;&lt;FloatWmoID&gt;_&lt;XXX&gt;&lt;D&gt;.nc</span></code> where :</p>
-<ul class="simple">
-<li><p>The initial <em>R</em> indicates Real-Time data, the initial <em>D</em> indicates Delayed-Mode data</p></li>
-<li><p><em>XXX</em> is the cycle number</p></li>
-<li><p>The second <em>D</em> indicates a descending profile, if exist, while profiles without this D are collected during ascent.</p></li>
-</ul>
-<p>Note that it may happens that, in the future, you try to downdload the fles from float 6901254 and there is not <code class="docutils literal notranslate"><span class="pre">R6901254_001.nc</span></code> and <code class="docutils literal notranslate"><span class="pre">R6901254_001D.nc</span></code> files, but you find only  <code class="docutils literal notranslate"><span class="pre">D6901254_001.nc</span></code> and <code class="docutils literal notranslate"><span class="pre">D6901254_001D.nc</span></code> since the R-files are substituded by the D-files once the data is adjusted, we will describe that in detail in section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L40_RTandDM.html">Real-Time and Delayed mode data¶</a></p>
-<blockquote>
-<div><p>The data from the float is pre-downloaded in the <em>./Data</em> folder, but you can dowload it from the Coriolis GDAC. See the <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L00_Introduction.html#data-used-in-the-argo-online-school">Data</a> section for instructions on how to download the data.</p>
-</div></blockquote>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="section" id="license-for-this-book">
+<h1>License for this book<a class="headerlink" href="#license-for-this-book" title="Permalink to this headline">¶</a></h1>
+<p>All content in this book (ie, any files and content in the <code class="docutils literal notranslate"><span class="pre">content/</span></code> folder)
+is licensed under the <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>
+(CC BY-SA 4.0) license.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -376,8 +336,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="L11_TheNetCDFFormat.html" title="previous page">The netCDF format</a>
-    <a class='right-next' id="next-link" href="L21_ArgoDatabyFloat_Cycle.html" title="next page">Reading an Argo CTD cycle data</a>
+    <a class='left-prev' id="prev-link" href="L00_Introduction.html" title="previous page">Argo Online School</a>
+    <a class='right-next' id="next-link" href="L01_TheArgoProgram_intro.html" title="next page">Introduction</a>
 
         </div>
         

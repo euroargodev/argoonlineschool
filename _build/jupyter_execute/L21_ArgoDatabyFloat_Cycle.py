@@ -49,6 +49,11 @@ cy1
 print(f"The core variables are: \n TEMP {cy1.TEMP.long_name} \n PSAL {cy1.PSAL.long_name} and \n PRES{cy1.PRES.long_name}")
 
 
+# >>
+# In this file we also have the variables TEMP_ADJUSTED, PSAL_ADJUSTED and PRES_ADJUSTED, that correspond to data that has gone through the second stage of quality control. However, here we keep the focus in the Real Time data in section [Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/L40_RTandDM.html) we will describe in detail de quality control.
+# >>
+# 
+
 # In[5]:
 
 

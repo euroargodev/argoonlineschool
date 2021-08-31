@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accesing Argo data by float &#8212; Argo Online School</title>
+    <title>Introduction &#8212; Argo Online School</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Reading an Argo CTD cycle data" href="L21_ArgoDatabyFloat_Cycle.html" />
-    <link rel="prev" title="The netCDF format" href="L11_TheNetCDFFormat.html" />
+    <link rel="next" title="The netCDF format" href="L11_TheNetCDFFormat.html" />
+    <link rel="prev" title="Acknowledging Argo data" href="L02_AcknowledgingArgodata.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -124,11 +124,11 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="L10_TheArgoData_intro.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    Introduction
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
@@ -141,11 +141,11 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="L20_ArgoDatabyFloat_Intro.html">
    Accesing Argo data by float
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
@@ -258,7 +258,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/L20_ArgoDatabyFloat_Intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/L10_TheArgoData_intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -296,7 +296,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/euroargodev/argoonlineschool/master?urlpath=tree/L20_ArgoDatabyFloat_Intro.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/euroargodev/argoonlineschool/master?urlpath=tree/L10_TheArgoData_intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -321,32 +321,47 @@
         
               <div>
                 
-  <div class="section" id="accesing-argo-data-by-float">
-<h1>Accesing Argo data by float<a class="headerlink" href="#accesing-argo-data-by-float" title="Permalink to this headline">¶</a></h1>
-<p><strong>Real Time and Calibrated data</strong></p>
-<p>Since the target of the Argo program is to have the Argo data available within 24 hours of its transmission from the float, this data is called the <em>Real Time</em> (RT) data. One year after the data were observed, if necessary, it is adjusted and made public. This calibrated data is called <em>Delayed Mode</em> (DM) data.  In section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L40_RTandDM.html">Real-Time and Delayed mode data¶</a> we will describe in detail the differences between both kinds of data, and what are the quality control flags, however, to keep it simple, we will begin by focusing in the real time (RT) data.</p>
-<p><strong>Data files organized by float</strong></p>
-<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/dac.png" alt="xarray logo" width="650"/><p>When accessing the <strong>dac</strong> folder, via the <em>FTP</em> or <em>HTTP</em> protocols, of any of the two GDACs you will find several (11) folders, one for each of the DACs.  Within each one of these folders there is one folder for each of the floats processed by this particular <em>DAC</em>.</p>
-<p>In the example here, we will use data from float with <strong>WMO</strong> number 6901254, that is proceesed by coriolis (later we will see how to find the DAC for each float), therefore within the folder <code class="docutils literal notranslate"><span class="pre">./6901254</span></code>, we find the following files and folder:</p>
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoArgo.png" alt="Argo status" width="100"/><div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/TKk-EpK03Xg&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TKk-EpK03Xg" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+</div></div>
+</div>
+<p><strong>The WMO: a unique identifiers for each float</strong></p>
+<p>Each one of the Argo floats have a unique indentifier, kwnon as the World Meteorological Organization (WMO). The WMO is assigned at the moment of the deployment of the float, but it is not hard-coded in the float.</p>
+<p><strong>The basis of the Argo Data System</strong></p>
+<p>As explained in the videos of lesson 2, when an Argo float surfaces, the data are received by one of the <em>Data Assembly Centers</em> (DAC). At the DACs, they are subjected to initial scrutiny using a set of real time quality control tests where erroneous data are flagged or corrected, then the data are passed to one of the two Argo <em>Global Data Assembly Center</em> (GDAC), the Coriolis GDAC (Brest, France, Europe) or the US-Godae GDAC (Mobterey, California, USA).</p>
+<p>The GDACs are the first stage at which the freely available data can be obtained via the internet. The GDACs synchronize their data to ensure consistent data is available on both sites. The target is for these <em>real-time</em> data to be available within 12-24 hours of their transmission from the float.</p>
+<p>Additionally Argo data can be accesed by several other ways:</p>
 <ul class="simple">
-<li><p>6901254_Rtraj.nc</p></li>
-<li><p>6901254_meta.nc</p></li>
-<li><p>6901254_prof.nc</p></li>
-<li><p>6901254_tech.nc</p></li>
-<li><p>./profiles</p></li>
+<li><p>via the Global Telecomunication System for operational centers.</p></li>
+<li><p>via interactive Data selection tools on the GDACs</p></li>
+<li><p>via gridded fields and velocity products based on Argo NetCDF files from the GDACs</p></li>
+<li><p>via data viewers that incorporate Argo data</p></li>
+<li><p>via the <a class="reference external" href="https://www.nodc.noaa.gov/argo/">Global Argo Data Repository (GADR)</a> for archived and offline data</p></li>
+<li><p>via monthly copies of the GDACs <a class="reference external" href="https://www.seanoe.org/data/00311/42182/">https://www.seanoe.org/data/00311/42182/</a></p></li>
 </ul>
-<p>we will describe the content of each of these files later, but let’s focus on the folder <code class="docutils literal notranslate"><span class="pre">./profiles/</span></code> since it contains one file for each one of the hydrographic cycles carried out by the float. <strong>R6901254_001.nc</strong> is the file that contains the data from the first cycle. It begins with a <em>R</em> since it is the real time data, if it began with an <em>D</em> it would be adjusted data, or Delayed Mode data; we will see and example in section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L40_RTandDM.html">Real-Time and Delayed mode data¶</a>.</p>
-<p>Additionally some argo floats, as 6901254, also made obserations in the first descent from the surface to the parking depth, in this case the name of the files with this data would be <strong>R6901254_001D.nc</strong>.</p>
-<p>In general, the format of the file names for individual profiles are <code class="docutils literal notranslate"><span class="pre">&lt;R/D&gt;&lt;FloatWmoID&gt;_&lt;XXX&gt;&lt;D&gt;.nc</span></code> where :</p>
+<p>See the <a class="reference external" href="https://argo.ucsd.edu/data/">Argo data sources</a> to read a full description, with links, to this other ways of accesing the data</p>
+<p><strong>Here we focus in the accesss to the primary source of the Argo data, the GDACs</strong></p>
+<p><strong>Data organization at the GDACS</strong></p>
+<p>In the GDACS, the Argo data is organized in two different ways:</p>
 <ul class="simple">
-<li><p>The initial <em>R</em> indicates Real-Time data, the initial <em>D</em> indicates Delayed-Mode data</p></li>
-<li><p><em>XXX</em> is the cycle number</p></li>
-<li><p>The second <em>D</em> indicates a descending profile, if exist, while profiles without this D are collected during ascent.</p></li>
+<li><p>By date, with one folder for each ocean basin, and then a folder for each year and month and a file for each day.</p></li>
+<li><p>By DAC (data acqusition center) and argo float (WMO number)</p></li>
+<li><p>By processing date: The last processed data organized by processing day, with access to the last 12 months.</p></li>
 </ul>
-<p>Note that it may happens that, in the future, you try to downdload the fles from float 6901254 and there is not <code class="docutils literal notranslate"><span class="pre">R6901254_001.nc</span></code> and <code class="docutils literal notranslate"><span class="pre">R6901254_001D.nc</span></code> files, but you find only  <code class="docutils literal notranslate"><span class="pre">D6901254_001.nc</span></code> and <code class="docutils literal notranslate"><span class="pre">D6901254_001D.nc</span></code> since the R-files are substituded by the D-files once the data is adjusted, we will describe that in detail in section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L40_RTandDM.html">Real-Time and Delayed mode data¶</a></p>
-<blockquote>
-<div><p>The data from the float is pre-downloaded in the <em>./Data</em> folder, but you can dowload it from the Coriolis GDAC. See the <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L00_Introduction.html#data-used-in-the-argo-online-school">Data</a> section for instructions on how to download the data.</p>
-</div></blockquote>
+<p>At the early stage of the Argo program, and due to the huge ammount of data that was foressen  Argo would create, it was decided that netCDF would be the offical file format for the Argo data. Hence, before explaining how to <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L20_ArgoDatabyFloat_Intro.html">acces Argo data by float</a> or <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L30_ArgoDatabyDate_Intro.html">by date</a> it is neccesary to make a short introduction to the properties of this data format, and how to read files in <strong>netCDF</strong>.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -376,8 +391,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="L11_TheNetCDFFormat.html" title="previous page">The netCDF format</a>
-    <a class='right-next' id="next-link" href="L21_ArgoDatabyFloat_Cycle.html" title="next page">Reading an Argo CTD cycle data</a>
+    <a class='left-prev' id="prev-link" href="L02_AcknowledgingArgodata.html" title="previous page">Acknowledging Argo data</a>
+    <a class='right-next' id="next-link" href="L11_TheNetCDFFormat.html" title="next page">The netCDF format</a>
 
         </div>
         

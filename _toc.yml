@@ -1,30 +1,28 @@
 format: jb-book
 root: L00_Introduction
-defaults:
-  titlesonly: True
-options:
-    numbered: True
-    expand_sections: true
+parts:
 
-chapters:
-- file: L10_TheArgoData
-  sections:
-  - file: L11_TheNetCDFFormat
-  - file: L12_AcknowledgingArgodata
-
-- file: L20_ArgoDatabyFloat_Intro
-  sections:
-  - file: L21_ArgoDatabyFloat_Cycle
-  - file: L22_ArgoDatabyFloat_Prof
-  - file: L23_ArgoDatabyFloat_Traj
-  - file: L24_ArgoDatabyFloat_ArgoPy
-
-- file: L30_ArgoDatabyDate_Intro
-  sections:
-  - file: L31_ArgoDatabyDate_Day
-  - file: L32_ArgoDatabyDate_ArgoPy
-
-- file: L40_RTandDM
-  sections:
-  - file: L41_RTData
-  - file: L42_DMData
+- caption: The Argo program
+  chapters:
+  - file: L01_TheArgoProgram_intro  
+  - file: L02_AcknowledgingArgodata
+  
+- caption: The Argo Data
+  chapters:
+  - file: L10_TheArgoData_intro
+    sections:
+    - file: L11_TheNetCDFFormat
+  - file: L20_ArgoDatabyFloat_Intro
+    sections:
+    - file: L21_ArgoDatabyFloat_Cycle
+    - file: L22_ArgoDatabyFloat_Prof
+    - file: L23_ArgoDatabyFloat_Traj
+    - file: L24_ArgoDatabyFloat_ArgoPy
+  - file: L30_ArgoDatabyDate_Intro
+    sections:
+    - file: L31_ArgoDatabyDate_Day
+    - file: L32_ArgoDatabyDate_ArgoPy
+  - file: L40_RTandDM
+    sections:
+    - file: L41_RTData
+    - file: L42_DMData
