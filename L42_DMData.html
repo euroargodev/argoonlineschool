@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.2. Calibrated data &#8212; Argo Online School</title>
+    <title>4.2. Delayed mode data &#8212; Argo Online School</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -42,7 +42,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="4.1. Quality Control of the Argo data" href="L41_RTQualityControlData.html" />
+    <link rel="prev" title="4.1. Real Time quality control data" href="L41_RTData.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -79,7 +79,7 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -176,13 +176,13 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="L41_RTQualityControlData.html">
-     4.1. Quality Control of the Argo data
+    <a class="reference internal" href="L41_RTData.html">
+     4.1. Real Time quality control data
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     4.2. Calibrated data
+     4.2. Delayed mode data
     </a>
    </li>
   </ul>
@@ -228,7 +228,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/L42_DMQualityControlData.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/L42_DMData.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -266,7 +266,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/euroargodev/argoonlineschool/master?urlpath=tree/L42_DMQualityControlData.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/euroargodev/argoonlineschool/master?urlpath=tree/L42_DMData.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -286,7 +286,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quality-control-flags">
@@ -311,8 +311,12 @@
         
               <div>
                 
-  <div class="section" id="calibrated-data">
-<h1><span class="section-number">4.2. </span>Calibrated data<a class="headerlink" href="#calibrated-data" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="delayed-mode-data">
+<h1><span class="section-number">4.2. </span>Delayed mode data<a class="headerlink" href="#delayed-mode-data" title="Permalink to this headline">¶</a></h1>
+<p>What if the Real-Time (RT) quality control is not enough?, or if we need the previous data of the float and the data from its neighbors to discern between subtle sensor malfunctioning and natural variability?.</p>
+<p>This is where the second data quality control comes in. It is called Delayed - Mode (DM) quality control. Principal investigators and regional data experts are in charge of this meticulous task since it requires a more elaborate specific data analysis of every float and oceanographic expertise in the region where the float was deployed.
+The most common types of bad data are known as spikes, offsets, drifts, etc…
+The spikes are abrupt short changes in the data and constitute a clear case of anomaly. Spikes are easy to detect and to correct. Drifts and offsets can be identified in the trend of ΔS over time, where ΔS is the difference in salinity between float-measured values and statistical recommendations. If ΔS = a + bt, where t is time, then a is the offset and b is the drift rate. Note that these drifts and offsets can be sensor-related, or they can be due to natural variability, as we explained before. To distinguish between sensor errors and natural variability Evaluation is necessary that experts look carefully at the data. [L2-DM_QC_Graphics]</p>
 <p>Delayed mode files
 Delayed mode profile files are the same as the real time profile files, except their file names on the GDACs all contain a “D” before the WMO number (e.g. D5900400_001.nc, BD5904179_001.nc). These profile files contain delayed mode adjusted data, which are recorded in the variable <PARAM>_ADJUSTED. The variable DATA_MODE will record ‘D’. Two other variables are also filled in delayed mode, which are <PARAM>_ADJUSTED_QC and <PARAM>_ADJUSTED_ERROR, which record the delayed mode quality control flags and the delayed mode adjustment uncertainty.</p>
 <p>Core Argo delayed mode files are available 1 – 2 years after a profile is taken; sometimes earlier. These have been subjected to detailed scrutiny by oceanographic experts and the adjusted salinity has been estimated by comparison with high quality ship-based CTD data and Argo climatologies using the process described by Wong et al, 2003; Böhme and Send, 2005; Owens and Wong, 2009; Cabanes et al, 2016.</p>
@@ -440,7 +444,7 @@ Delayed mode profile files are the same as the real time profile files, except t
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/L42_DMQualityControlData_9_0.png" src="_images/L42_DMQualityControlData_9_0.png" />
+<img alt="_images/L42_DMData_9_0.png" src="_images/L42_DMData_9_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -832,7 +836,7 @@ Attributes:
        ...,
        [nan, nan, nan, ..., nan, nan, nan],
        [nan, nan, nan, ..., nan, nan, nan],
-       [nan, nan, nan, ..., nan, nan, nan]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-ec61a79d-1d92-47e8-8c18-7217530c9d98' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-ec61a79d-1d92-47e8-8c18-7217530c9d98' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-1503f560-ffd6-40dc-8451-df41cde72b24' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1503f560-ffd6-40dc-8451-df41cde72b24' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Practical salinity</dd><dt><span>standard_name :</span></dt><dd>sea_water_salinity</dd><dt><span>units :</span></dt><dd>psu</dd><dt><span>valid_min :</span></dt><dd>2.0</dd><dt><span>valid_max :</span></dt><dd>41.0</dd><dt><span>C_format :</span></dt><dd>%9.3f</dd><dt><span>FORTRAN_format :</span></dt><dd>F9.3</dd><dt><span>resolution :</span></dt><dd>0.001</dd></dl></div></li></ul></div></div></div><img alt="_images/L42_DMQualityControlData_10_1.png" src="_images/L42_DMQualityControlData_10_1.png" />
+       [nan, nan, nan, ..., nan, nan, nan]], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-ec61a79d-1d92-47e8-8c18-7217530c9d98' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-ec61a79d-1d92-47e8-8c18-7217530c9d98' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-1503f560-ffd6-40dc-8451-df41cde72b24' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1503f560-ffd6-40dc-8451-df41cde72b24' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Practical salinity</dd><dt><span>standard_name :</span></dt><dd>sea_water_salinity</dd><dt><span>units :</span></dt><dd>psu</dd><dt><span>valid_min :</span></dt><dd>2.0</dd><dt><span>valid_max :</span></dt><dd>41.0</dd><dt><span>C_format :</span></dt><dd>%9.3f</dd><dt><span>FORTRAN_format :</span></dt><dd>F9.3</dd><dt><span>resolution :</span></dt><dd>0.001</dd></dl></div></li></ul></div></div></div><img alt="_images/L42_DMData_10_1.png" src="_images/L42_DMData_10_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -850,7 +854,7 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/L42_DMQualityControlData_11_0.png" src="_images/L42_DMQualityControlData_11_0.png" />
+<img alt="_images/L42_DMData_11_0.png" src="_images/L42_DMData_11_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1251,7 +1255,7 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/L42_DMQualityControlData_13_0.png" src="_images/L42_DMQualityControlData_13_0.png" />
+<img alt="_images/L42_DMData_13_0.png" src="_images/L42_DMData_13_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1269,7 +1273,7 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/L42_DMQualityControlData_14_0.png" src="_images/L42_DMQualityControlData_14_0.png" />
+<img alt="_images/L42_DMData_14_0.png" src="_images/L42_DMData_14_0.png" />
 </div>
 </div>
 </div>
@@ -1299,11 +1303,23 @@ Attributes:
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="L41_RTQualityControlData.html" title="previous page"><span class="section-number">4.1. </span>Quality Control of the Argo data</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="L41_RTData.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span class="section-number">4.1. </span>Real Time quality control data</p>
+            </div>
+        </a>
+    </div>
+
+</div>
         
         </div>
     </div>
