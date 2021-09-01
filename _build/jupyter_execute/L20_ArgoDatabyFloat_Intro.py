@@ -37,9 +37,3 @@
 # >The data from the float is pre-downloaded in the *./Data* folder, but you can dowload it from the Coriolis GDAC. See the [Data](https://euroargodev.github.io/argoonlineschool/L00_Introduction.html#data-used-in-the-argo-online-school) section for instructions on how to download the data.
 # 
 # 
-
-# In[ ]:
-
-
-
-

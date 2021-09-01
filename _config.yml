@@ -25,7 +25,7 @@ execute:
 # HTML-specific settings
 html:
   use_repository_button: true
-  home_page_in_navbar: true
+  home_page_in_navbar: false
 
 #######################################################################################
 # Launch button settings
@@ -39,3 +39,8 @@ repository:
 latex:
   latex_documents:
     targetname: book.tex
+
+sphinx:
+  config:
+    html_theme_options:
+      show_navbar_depth: 2

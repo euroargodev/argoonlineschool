@@ -1,12 +1,12 @@
 format: jb-book
-root: L00_Introduction
+root: intro
 parts:
-
 - caption: The Argo program
   chapters:
   - file: L01_TheArgoProgram_intro  
   - file: L02_AcknowledgingArgodata
-  
+
+
 - caption: The Argo Data
   chapters:
   - file: L10_TheArgoData_intro
