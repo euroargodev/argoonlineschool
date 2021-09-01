@@ -79,17 +79,10 @@
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="L00_Introduction.html">
-   Argo Online School
-  </a>
- </li>
-</ul>
-<p class="caption">
+        <p class="caption">
  <span class="caption-text">
   The Argo program
  </span>
@@ -116,7 +109,7 @@
   <a class="reference internal" href="L10_TheArgoData_intro.html">
    Introduction
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
@@ -133,7 +126,7 @@
   <a class="reference internal" href="L20_ArgoDatabyFloat_Intro.html">
    Accesing Argo data by float
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
@@ -165,7 +158,7 @@
   <a class="reference internal" href="L30_ArgoDatabyDate_Intro.html">
    Accesing Argo data by date
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
@@ -187,7 +180,7 @@
   <a class="reference internal" href="L40_RTandDM.html">
    Real-Time and Delayed mode data
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
@@ -211,7 +204,7 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
 </div>
 
 </div>
@@ -257,19 +250,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/euroargodev/argoonlineschool"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -278,23 +258,6 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/euroargodev/argoonlineschool/master?urlpath=tree/L21_ArgoDatabyFloat_Cycle.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
 
         </div>
 
@@ -348,7 +311,7 @@
 <h2>The first cycle<a class="headerlink" href="#the-first-cycle" title="Permalink to this headline">¶</a></h2>
 <img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/ArgoCycle.png" alt="ArgoCycle" width="1200"/>
 <p>An <strong>Argo cycle</strong> starts with a descent toward deep water, usually from the surface, and ends after the next programmed ascent to the surface (see the figure). During the surface interval, data transmission typically occurs but it is not a requirement for a cycle to have occurred, but if ocurrs, the cycle ends after the full surface interval has been completed.</p>
-<p>Measurements (e.g. pressure, temperature, salinity) are performed during ascent, occasionally during descent, and  subsurface measurements during parking are sometime performed.</p>
+<p>Nowdays Argo floats can measure differnte parametres, however, we will focus in what is called the <em><a class="reference external" href="https://argo.ucsd.edu/about/mission/">Argo core mission</a></em> ,this is observations of temperature, salinity and pressure down to 2000 metres of depth. The measurements are performed during ascent, occasionally during descent, and  subsurface measurements during parking are sometime performed.</p>
 <p>Each cycle of a float has a unique number, increased by one after each ascent to the surfce or shallow water. Float cycle numbers usually start at 1. The next cycles are increasing numbers (e.g. 2, 3,…N). Some floats report a cycle 0, called <em>launch cycle</em>, that is shorther than the regular cycles. The cycle time is therefore regular only for later profiles and may be variable if the float is reprogrammed after its deployment.</p>
 <p>For those floats with cycle 0, if there is an initial descend profile, it would be on cycle 0.</p>
 <p>First, import libraries</p>
@@ -1083,7 +1046,8 @@ Attributes:
        [[b&#x27;              &#x27;, b&#x27;              &#x27;, b&#x27;              &#x27;]]],
       dtype=object)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-45f77be1-c452-4076-a8ff-3b917fc1447f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-45f77be1-c452-4076-a8ff-3b917fc1447f' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>Argo float vertical profile</dd><dt><span>institution :</span></dt><dd>CORIOLIS</dd><dt><span>source :</span></dt><dd>Argo float</dd><dt><span>history :</span></dt><dd>2019-01-15T11:25:18Z creation; 2019-01-15T11:25:24Z last update (coriolis COQC software)</dd><dt><span>references :</span></dt><dd>http://www.argodatamgt.org/Documentation</dd><dt><span>user_manual_version :</span></dt><dd>3.1</dd><dt><span>Conventions :</span></dt><dd>Argo-3.1 CF-1.6</dd><dt><span>featureType :</span></dt><dd>trajectoryProfile</dd><dt><span>decoder_version :</span></dt><dd>CODA_027d</dd></dl></div></li></ul></div></div></div></div>
 </div>
-<p>We see how useful is the <strong>Self-Describing</strong> propierty of the netCDF format. Let’s focus in the core variables, TEMP, SALT and PRES. Although we could inspect the previous print-out of the <em>cy1</em> dataset, we can use the data itself:</p>
+<p>We see how useful is the <strong>Self-Describing</strong> propierty of the netCDF format.</p>
+<p>The name for the core observations, temperature, salinity and pressure down to 2000 metres of depth, are TEMP, SALT and PRES. Although we could inspect the previous print-out of the <em>cy1</em> dataset, we can use the data itself:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The core variables are: </span><span class="se">\n</span><span class="s2"> TEMP </span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> PSAL </span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">PSAL</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> and </span><span class="se">\n</span><span class="s2"> PRES</span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
