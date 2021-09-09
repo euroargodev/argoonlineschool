@@ -3,26 +3,28 @@ root: intro
 parts:
 - caption: The Argo program
   chapters:
-  - file: L01_TheArgoProgram_intro  
-  - file: L02_AcknowledgingArgodata
+  - file: L110_TheArgoProgram_intro  
+  - file: L111_AcknowledgingArgodata
 
-
-- caption: The Argo Data
+- caption: The Argo data
   chapters:
-  - file: L10_TheArgoData_intro
+  - file: L210_TheArgoData_intro
     sections:
-    - file: L11_TheNetCDFFormat
-  - file: L20_ArgoDatabyFloat_Intro
+    - file: L211_TheNetCDFFormat
+
+- caption: Using Argo data
+  chapters:
+  - file: L320_ArgoDatabyFloat_Intro
     sections:
-    - file: L21_ArgoDatabyFloat_Cycle
-    - file: L22_ArgoDatabyFloat_Prof
-    - file: L23_ArgoDatabyFloat_Traj
-    - file: L24_ArgoDatabyFloat_ArgoPy
-  - file: L30_ArgoDatabyDate_Intro
+    - file: L321_ArgoDatabyFloat_Cycle
+    - file: L322_ArgoDatabyFloat_Prof
+    - file: L323_ArgoDatabyFloat_Traj
+    - file: L324_ArgoDatabyFloat_ArgoPy
+  - file: L330_ArgoDatabyDate_Intro
     sections:
-    - file: L31_ArgoDatabyDate_Day
-    - file: L32_ArgoDatabyDate_ArgoPy
-  - file: L40_RTandDM
+    - file: L331_ArgoDatabyDate_Day
+    - file: L332_ArgoDatabyDate_ArgoPy
+  - file: L340_RTandDM
     sections:
-    - file: L41_RTData
-    - file: L42_DMData
+    - file: L341_RTData
+    - file: L342_DMData
