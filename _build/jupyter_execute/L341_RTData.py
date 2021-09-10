@@ -84,9 +84,9 @@ dayADS = xr.open_dataset('./Data/atlantic_ocean/2019/11/20191111_prof.nc')
 dayADS
 
 
-# BEside the core variables, TEMP, PSAL and PRES, we also have the variables TEMP_ADJUSTED, PSAL_ADJUSTED and PRES_ADJUSTED, that correspond to DM, or calibrated data. However, here we keep the focus in the Real Time data, and in the next section we will use the calibrated data.
+# Beside the core variables, TEMP, PSAL and PRES, we also have the variables TEMP_ADJUSTED, PSAL_ADJUSTED and PRES_ADJUSTED, that correspond to DM, or calibrated data. However, here we keep the focus in the Real Time data, and in the next section we will use the calibrated data.
 # 
-# 
+# Let's begin by plotting all the data. We will use a [TS diagram](http://www.physocean.icm.csic.es/ShelfCoast/chapter10-en.html)
 
 # In[4]:
 
