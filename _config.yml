@@ -1,46 +1,50 @@
-#######################################################################################
 # Book settings
-title: Argo Online School
-author: Euro Argo
-logo: ./images/logoAoS.png
-description: >-
+title                       : Argo Online School
+author                      : Euro Argo
+copyright                   : 2020-2021
+logo                        : ./images/logoAoS.png
+exclude_patterns            : [Prueba*.ipynb, Info.ipynb, README.md]
+description : >-
   An introduction to the use of Argo data.
-url: https://euroargodev.github.io/argoonlineschool
+only_build_toc_files        : true
 
-exclude_patterns: [Prueba*.ipynb, Info.ipynb, README.md]
-only_build_toc_files: true
-number_toc_chapters: true
-
-
-show_sidebar: true                # Show the sidebar. Only set to false if your only wish to host a single page.
-collapse_inactive_chapters: false  # Whether to collapse the inactive chapters in the sidebar
-
-
-#######################################################################################
-# Execution settings
 execute:
-  execute_notebooks: off
+  execute_notebooks: 'off'
 
-#######################################################################################
-# HTML-specific settings
-html:
-  use_repository_button: true
-  home_page_in_navbar: false
+# Information about where the book exists on the web
+repository :
+  url                       : "https://github.com/euroargodev/argoonlineschool"
+  path_to_book              : ""  # A path to your book's folder, relative to the repository root.
+  branch                    : master  # Which branch of the repository should be used when creating links
 
-#######################################################################################
 # Launch button settings
 launch_buttons:
-  notebook_interface        : classic  # The interface interactive links will activate
+  notebook_interface: jupyterlab  # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url: "" # The URL of the BinderHub (e.g., https://mybinder.org)
 
-repository:
-  url: https://github.com/euroargodev/argoonlineschool
-  branch: master  # Which branch of the repository should be used when creating links
+number_toc_chapters         : true
 
+collapse_inactive_chapters  : true  # Whether to collapse the inactive chapters in the sidebar
+
+# HTML-specific settings
+html:
+  favicon                   : ""  # A path to a favicon image
+  use_edit_page_button      : false  # Whether to add an "edit this page" button to pages.
+  use_repository_button     : true  # Whether to add a link to your repository button
+  use_issues_button         : true  # Whether to add an "open an issue" button
+  extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
+  extra_footer              : ""  # Will be displayed underneath the footer.
+  google_analytics_id       : ""  # A GA id that can be used to track book views.
+  home_page_in_navbar       : false  # Whether to include your home page in the left Navigation Bar
+  baseurl                   : "https://euroargodev.github.io/argoonlineschool"  # The base URL where your book will be hosted.
+
+#######################################################################################
+# LaTeX-specific settings
 latex:
-  latex_documents:
-    targetname: book.tex
+  latex_engine              : pdflatex  # one of 'pdflatex', 'xelatex' (recommended for unicode), 'luatex', 'platex', 'uplatex'
+  use_jupyterbook_latex     : true # use sphinx-jupyterbook-latex for pdf builds as default
 
-sphinx:
+#sphinx:
   config:
     html_theme_options:
       show_navbar_depth: 2
