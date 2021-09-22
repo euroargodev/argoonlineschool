@@ -3,28 +3,30 @@ root: intro
 parts:
 - caption: The Argo program
   chapters:
-  - file: L110_TheArgoProgram_intro
-  - file: L111_AcknowledgingArgodata
+  - file: Lectures/L01_TheArgoProgram/C10_TheArgoProgram_intro
+  - file: Lectures/L01_TheArgoProgram/C11_AcknowledgingArgodata
 
 - caption: The Argo data
   chapters:
-  - file: L210_TheArgoData_intro
+  - file: Lectures/L02_TheArgoData/C10_TheArgoData_intro
     sections:
-    - file: L211_TheNetCDFFormat
+    - file: Lectures/L02_TheArgoData/C11_TheNetCDFFormat
 
 - caption: Using Argo data
   chapters:
-  - file: L320_ArgoDatabyFloat_Intro
+  - file: Lectures/L03_UsingArgoData/C10_ArgoDatabyFloat_Intro
     sections:
-    - file: L321_ArgoDatabyFloat_Cycle
-    - file: L322_ArgoDatabyFloat_Prof
-    - file: L323_ArgoDatabyFloat_Traj
-    - file: L324_ArgoDatabyFloat_ArgoPy
-  - file: L330_ArgoDatabyDate_Intro
+    - file: Lectures/L03_UsingArgoData/C11_ArgoDatabyFloat_Cycle
+    - file: Lectures/L03_UsingArgoData/C12_ArgoDatabyFloat_Prof
+    - file: Lectures/L03_UsingArgoData/C13_ArgoDatabyFloat_Traj
+    - file: Lectures/L03_UsingArgoData/C14_ArgoDatabyFloat_ArgoPy
+
+  - file: Lectures/L03_UsingArgoData/C20_ArgoDatabyDate_Intro
     sections:
-    - file: L331_ArgoDatabyDate_Day
-    - file: L332_ArgoDatabyDate_ArgoPy
-  - file: L340_RTandDM
+    - file: Lectures/L03_UsingArgoData/C21_ArgoDatabyDate_Day
+    - file: Lectures/L03_UsingArgoData/C22_ArgoDatabyDate_ArgoPy
+
+  - file: Lectures/L03_UsingArgoData/C30_RTandDM
     sections:
-    - file: L341_RTData
-    - file: L342_DMData
+    - file: Lectures/L03_UsingArgoData/C31_RTData
+    - file: Lectures/L03_UsingArgoData/C32_DMData
