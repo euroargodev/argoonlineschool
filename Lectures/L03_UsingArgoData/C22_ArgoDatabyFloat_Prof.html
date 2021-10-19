@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,27 +33,27 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lectures/L03_UsingArgoData/C12_ArgoDatabyFloat_Prof.html" />
+    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lectures/L03_UsingArgoData/C22_ArgoDatabyFloat_Prof.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Accessing trayectory data" href="C13_ArgoDatabyFloat_Traj.html" />
-    <link rel="prev" title="Reading an Argo CTD cycle data" href="C11_ArgoDatabyFloat_Cycle.html" />
+    <link rel="next" title="Accessing trayectory data" href="C23_ArgoDatabyFloat_Traj.html" />
+    <link rel="prev" title="Reading an Argo CTD cycle data" href="C21_ArgoDatabyFloat_Cycle.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -87,7 +87,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   The Argo program
  </span>
@@ -104,14 +104,26 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The Argo data
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../L02_TheArgoData/C10_TheArgoData_intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Using Argo data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="C10_UsingArgoData_intro.html">
    Introduction
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -127,15 +139,8 @@
    </li>
   </ul>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Using Argo data
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="C10_ArgoDatabyFloat_Intro.html">
+  <a class="reference internal" href="C20_ArgoDatabyFloat_Intro.html">
    Accesing Argo data by float
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -145,7 +150,7 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="C11_ArgoDatabyFloat_Cycle.html">
+    <a class="reference internal" href="C21_ArgoDatabyFloat_Cycle.html">
      Reading an Argo CTD cycle data
     </a>
    </li>
@@ -155,19 +160,19 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="C13_ArgoDatabyFloat_Traj.html">
+    <a class="reference internal" href="C23_ArgoDatabyFloat_Traj.html">
      Accessing trayectory data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="C14_ArgoDatabyFloat_ArgoPy.html">
+    <a class="reference internal" href="C24_ArgoDatabyFloat_ArgoPy.html">
      Accessing Argo data by float using Argopy
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="C20_ArgoDatabyDate_Intro.html">
+  <a class="reference internal" href="C30_ArgoDatabyDate_Intro.html">
    Accesing Argo data by date
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -177,19 +182,19 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="C21_ArgoDatabyDate_Day.html">
+    <a class="reference internal" href="C31_ArgoDatabyDate_Day.html">
      Reading Argo data by date
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="C22_ArgoDatabyDate_ArgoPy.html">
+    <a class="reference internal" href="C32_ArgoDatabyDate_ArgoPy.html">
      Accessing Argo data by date using Argopy
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="C30_RTandDM.html">
+  <a class="reference internal" href="C40_RTandDM.html">
    Real-Time and Delayed mode data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -199,12 +204,12 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="C31_RTData.html">
+    <a class="reference internal" href="C41_RTData.html">
      Real Time quality control data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="C32_DMData.html">
+    <a class="reference internal" href="C42_DMData.html">
      Delayed mode data
     </a>
    </li>
@@ -251,7 +256,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/Lectures/L03_UsingArgoData/C12_ArgoDatabyFloat_Prof.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/Lectures/L03_UsingArgoData/C22_ArgoDatabyFloat_Prof.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -271,7 +276,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLectures/L03_UsingArgoData/C12_ArgoDatabyFloat_Prof.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLectures/L03_UsingArgoData/C22_ArgoDatabyFloat_Prof.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -313,7 +318,7 @@
         
               <div>
                 
-  <div class="section" id="accessing-all-profiles-at-once">
+  <div class="tex2jax_ignore mathjax_ignore section" id="accessing-all-profiles-at-once">
 <h1>Accessing all profiles at once<a class="headerlink" href="#accessing-all-profiles-at-once" title="Permalink to this headline">¶</a></h1>
 <p>Conveniently, all the core mision profiles are compated in a single file, named: <code class="docutils literal notranslate"><span class="pre">&lt;FloatWmoID&gt;_prof.nc</span></code></p>
 <p><strong>6901254/6901254_prof.nc</strong></p>
@@ -344,7 +349,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/C12_ArgoDatabyFloat_Prof_5_0.png" src="../../_images/C12_ArgoDatabyFloat_Prof_5_0.png" />
+<img alt="../../_images/C22_ArgoDatabyFloat_Prof_5_0.png" src="../../_images/C22_ArgoDatabyFloat_Prof_5_0.png" />
 </div>
 </div>
 <p>However, if we want to add the proper pressure levels, since each profile have slighly different levels</p>
@@ -430,7 +435,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/C12_ArgoDatabyFloat_Prof_11_0.png" src="../../_images/C12_ArgoDatabyFloat_Prof_11_0.png" />
+<img alt="../../_images/C22_ArgoDatabyFloat_Prof_11_0.png" src="../../_images/C22_ArgoDatabyFloat_Prof_11_0.png" />
 </div>
 </div>
 <p>or a TS diagram using the hydrographic data in <code class="docutils literal notranslate"><span class="pre">TEMP</span></code> and <code class="docutils literal notranslate"><span class="pre">PSAl</span></code></p>
@@ -462,7 +467,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/C12_ArgoDatabyFloat_Prof_13_0.png" src="../../_images/C12_ArgoDatabyFloat_Prof_13_0.png" />
+<img alt="../../_images/C22_ArgoDatabyFloat_Prof_13_0.png" src="../../_images/C22_ArgoDatabyFloat_Prof_13_0.png" />
 </div>
 </div>
 <div class="section" id="metadata">
@@ -524,7 +529,7 @@ Cycle 61 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="C11_ArgoDatabyFloat_Cycle.html" title="previous page">
+        <a class="left-prev" href="C21_ArgoDatabyFloat_Cycle.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
@@ -533,7 +538,7 @@ Cycle 61 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="C13_ArgoDatabyFloat_Traj.html" title="next page">
+        <a class="right-next" href="C23_ArgoDatabyFloat_Traj.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
                 <p class="prevnext-title">Accessing trayectory data</p>

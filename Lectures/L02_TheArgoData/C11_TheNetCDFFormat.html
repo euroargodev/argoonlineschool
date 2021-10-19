@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,17 +33,17 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -52,8 +52,8 @@
     <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lectures/L02_TheArgoData/C11_TheNetCDFFormat.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Accesing Argo data by float" href="../L03_UsingArgoData/C10_ArgoDatabyFloat_Intro.html" />
-    <link rel="prev" title="Introduction" href="C10_TheArgoData_intro.html" />
+    <link rel="next" title="Accesing Argo data by float" href="../L03_UsingArgoData/C20_ArgoDatabyFloat_Intro.html" />
+    <link rel="prev" title="Introduction" href="../L03_UsingArgoData/C10_UsingArgoData_intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -87,7 +87,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   The Argo program
  </span>
@@ -104,14 +104,26 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The Argo data
  </span>
 </p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="C10_TheArgoData_intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Using Argo data
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="C10_TheArgoData_intro.html">
+  <a class="reference internal" href="../L03_UsingArgoData/C10_UsingArgoData_intro.html">
    Introduction
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -127,15 +139,8 @@
    </li>
   </ul>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Using Argo data
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../L03_UsingArgoData/C10_ArgoDatabyFloat_Intro.html">
+  <a class="reference internal" href="../L03_UsingArgoData/C20_ArgoDatabyFloat_Intro.html">
    Accesing Argo data by float
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -145,29 +150,29 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../L03_UsingArgoData/C11_ArgoDatabyFloat_Cycle.html">
+    <a class="reference internal" href="../L03_UsingArgoData/C21_ArgoDatabyFloat_Cycle.html">
      Reading an Argo CTD cycle data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../L03_UsingArgoData/C12_ArgoDatabyFloat_Prof.html">
+    <a class="reference internal" href="../L03_UsingArgoData/C22_ArgoDatabyFloat_Prof.html">
      Accessing all profiles at once
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../L03_UsingArgoData/C13_ArgoDatabyFloat_Traj.html">
+    <a class="reference internal" href="../L03_UsingArgoData/C23_ArgoDatabyFloat_Traj.html">
      Accessing trayectory data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../L03_UsingArgoData/C14_ArgoDatabyFloat_ArgoPy.html">
+    <a class="reference internal" href="../L03_UsingArgoData/C24_ArgoDatabyFloat_ArgoPy.html">
      Accessing Argo data by float using Argopy
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../L03_UsingArgoData/C20_ArgoDatabyDate_Intro.html">
+  <a class="reference internal" href="../L03_UsingArgoData/C30_ArgoDatabyDate_Intro.html">
    Accesing Argo data by date
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -177,19 +182,19 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../L03_UsingArgoData/C21_ArgoDatabyDate_Day.html">
+    <a class="reference internal" href="../L03_UsingArgoData/C31_ArgoDatabyDate_Day.html">
      Reading Argo data by date
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../L03_UsingArgoData/C22_ArgoDatabyDate_ArgoPy.html">
+    <a class="reference internal" href="../L03_UsingArgoData/C32_ArgoDatabyDate_ArgoPy.html">
      Accessing Argo data by date using Argopy
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../L03_UsingArgoData/C30_RTandDM.html">
+  <a class="reference internal" href="../L03_UsingArgoData/C40_RTandDM.html">
    Real-Time and Delayed mode data
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -199,12 +204,12 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../L03_UsingArgoData/C31_RTData.html">
+    <a class="reference internal" href="../L03_UsingArgoData/C41_RTData.html">
      Real Time quality control data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../L03_UsingArgoData/C32_DMData.html">
+    <a class="reference internal" href="../L03_UsingArgoData/C42_DMData.html">
      Delayed mode data
     </a>
    </li>
@@ -358,7 +363,7 @@
         
               <div>
                 
-  <div class="section" id="the-netcdf-format">
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-netcdf-format">
 <h1>The netCDF format<a class="headerlink" href="#the-netcdf-format" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-is-netcdf">
 <h2>What is NetCDF?<a class="headerlink" href="#what-is-netcdf" title="Permalink to this headline">¶</a></h2>
@@ -2192,7 +2197,7 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="C10_TheArgoData_intro.html" title="previous page">
+        <a class="left-prev" href="../L03_UsingArgoData/C10_UsingArgoData_intro.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
@@ -2201,7 +2206,7 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../L03_UsingArgoData/C10_ArgoDatabyFloat_Intro.html" title="next page">
+        <a class="right-next" href="../L03_UsingArgoData/C20_ArgoDatabyFloat_Intro.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
                 <p class="prevnext-title">Accesing Argo data by float</p>

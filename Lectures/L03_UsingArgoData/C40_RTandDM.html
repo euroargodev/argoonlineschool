@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accesing Argo data by date &#8212; Argo Online School</title>
+    <title>Real-Time and Delayed mode data &#8212; Argo Online School</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e2363ea40746bee74734a24ffefccd78.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -33,27 +33,27 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lectures/L03_UsingArgoData/C20_ArgoDatabyDate_Intro.html" />
+    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lectures/L03_UsingArgoData/C40_RTandDM.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Reading Argo data by date" href="C21_ArgoDatabyDate_Day.html" />
-    <link rel="prev" title="Accessing Argo data by float using Argopy" href="C14_ArgoDatabyFloat_ArgoPy.html" />
+    <link rel="next" title="Real Time quality control data" href="C41_RTData.html" />
+    <link rel="prev" title="Accessing Argo data by date using Argopy" href="C32_ArgoDatabyDate_ArgoPy.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -87,7 +87,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   The Argo program
  </span>
@@ -104,14 +104,26 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   The Argo data
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../L02_TheArgoData/C10_TheArgoData_intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Using Argo data
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="C10_UsingArgoData_intro.html">
    Introduction
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -127,15 +139,8 @@
    </li>
   </ul>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Using Argo data
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="C10_ArgoDatabyFloat_Intro.html">
+  <a class="reference internal" href="C20_ArgoDatabyFloat_Intro.html">
    Accesing Argo data by float
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -145,66 +150,66 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="C11_ArgoDatabyFloat_Cycle.html">
+    <a class="reference internal" href="C21_ArgoDatabyFloat_Cycle.html">
      Reading an Argo CTD cycle data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="C12_ArgoDatabyFloat_Prof.html">
+    <a class="reference internal" href="C22_ArgoDatabyFloat_Prof.html">
      Accessing all profiles at once
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="C13_ArgoDatabyFloat_Traj.html">
+    <a class="reference internal" href="C23_ArgoDatabyFloat_Traj.html">
      Accessing trayectory data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="C14_ArgoDatabyFloat_ArgoPy.html">
+    <a class="reference internal" href="C24_ArgoDatabyFloat_ArgoPy.html">
      Accessing Argo data by float using Argopy
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="C30_ArgoDatabyDate_Intro.html">
    Accesing Argo data by date
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="C21_ArgoDatabyDate_Day.html">
+    <a class="reference internal" href="C31_ArgoDatabyDate_Day.html">
      Reading Argo data by date
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="C22_ArgoDatabyDate_ArgoPy.html">
+    <a class="reference internal" href="C32_ArgoDatabyDate_ArgoPy.html">
      Accessing Argo data by date using Argopy
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="C30_RTandDM.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    Real-Time and Delayed mode data
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="C31_RTData.html">
+    <a class="reference internal" href="C41_RTData.html">
      Real Time quality control data
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="C32_DMData.html">
+    <a class="reference internal" href="C42_DMData.html">
      Delayed mode data
     </a>
    </li>
@@ -251,7 +256,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/Lectures/L03_UsingArgoData/C20_ArgoDatabyDate_Intro.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/Lectures/L03_UsingArgoData/C40_RTandDM.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -271,7 +276,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLectures/L03_UsingArgoData/C20_ArgoDatabyDate_Intro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLectures/L03_UsingArgoData/C40_RTandDM.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -300,17 +305,12 @@
         
               <div>
                 
-  <div class="section" id="accesing-argo-data-by-date">
-<h1>Accesing Argo data by date<a class="headerlink" href="#accesing-argo-data-by-date" title="Permalink to this headline">¶</a></h1>
-<p><strong>Data files organized by date</strong></p>
-<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/geo.png" alt="geo organization" width="650"/>
-<p>The geographical limits of Atlantic, Pacific and Indian oceans are:</p>
-<ul class="simple">
-<li><p>The Pacific/Atlantic frontier is 70°W.</p></li>
-<li><p>The Pacific/Indian frontier is 145°E.</p></li>
-<li><p>The Atlantic/Indian frontier is 20°E.</p></li>
-</ul>
-<p>In each directory the data is organized by <strong>year</strong>, <strong>month</strong> and <strong>day</strong>, according to the date of the beginning of the profile.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="real-time-and-delayed-mode-data">
+<h1>Real-Time and Delayed mode data<a class="headerlink" href="#real-time-and-delayed-mode-data" title="Permalink to this headline">¶</a></h1>
+<p>The Argo program guarantees free and quality data distribution to the entire scientific &amp; operational community and the general public. Before that, data needs to be checked out through different controls to guarantee their homogeneity and quality within the established accuracy ranges (+/- 0.005ºC temperature and +/- 0.01 for salinity).</p>
+<p>The first control stage is the <strong>Real-Time (RT) quality control</strong> and the last stage is called the <strong>Delayed - Mode (DM) quality control</strong>. Therefore, the data that has gone through the RT quality control is called <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L41_RTData.html"><strong>RT data</strong></a> and the data that has gone through, both, the RT and DM quality controls is called <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L41_DMData.html"><strong>DM data</strong></a>; although some times we also refer to this data as <strong>calibrated data</strong></p>
+<p>For both, RT and DM data, there are quality control (QC) flags and errors that the Argo network provides to help users decide to use the data or not. There are flags</p>
+<p>So far we have accesed only the RT data and without paying attention to its quality. In this chapter we will describe how to use the quality control information stored in the netcdf files.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -345,19 +345,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="C14_ArgoDatabyFloat_ArgoPy.html" title="previous page">
+        <a class="left-prev" href="C32_ArgoDatabyDate_ArgoPy.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Accessing Argo data by float using Argopy</p>
+                <p class="prevnext-title">Accessing Argo data by date using Argopy</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="C21_ArgoDatabyDate_Day.html" title="next page">
+        <a class="right-next" href="C41_RTData.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Reading Argo data by date</p>
+                <p class="prevnext-title">Real Time quality control data</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
