@@ -37,7 +37,7 @@ env.bak/
 venv.bak/
 
 # Visual studio code
-.vscode/
+.vscode
 
 # Spyder project settings
 .spyderproject

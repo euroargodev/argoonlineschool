@@ -1,5 +1,5 @@
 # Introduction
-Esto es una prueba
+As indicated in the introduction, the third componente of the Argo Online School is  hands-on, and it is based on jupyter notebooks:
 
 ## The hands-on component of the Argo Online School
 
