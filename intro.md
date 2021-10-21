@@ -10,9 +10,22 @@ Given the amount of data gathered by the Argo network of floats, the associated 
 The AOS is a set of videos and hands-on jupyter notebooks designed to be accessible for hight shcool or graduate students in any discipline, with no prerequisites. The AOS is organized in three main sections:
 
 [1. The Argo Program](https://euroargodev.github.io/argoonlineschool/Lectures/L01_TheArgoProgram/C10_TheArgoProgram_intro.html)
-This sections de
+In This sections we cover the basics of the Argo programa, this is: What is the Argo network?
+    Why do we need Argo and what are its objectives?
+    How are the observations done?
+    What is an oceanographic “profile”?
+    Technological innovations.
 
 [2. The Argo Data](https://euroargodev.github.io/argoonlineschool/Lectures/L02_TheArgoData/C10_TheArgoData_intro.html)
+
+Argo general data stream
+What are the Argo data and its format?
+Real-Time and Delayed mode data.
+What does a quality control flag mean?
+Where can I get access to data and how is it organized?
+Getting access through HTTP server.  Data viewers.
+
+
 
 [3. Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lectures/L02_TheArgoData/C10_TheArgoData_intro.html)
 
