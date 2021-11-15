@@ -3,35 +3,35 @@ root: intro
 parts:
 - caption: Lesson 1
   chapters:
-  - file: Lectures/L01_TheArgoProgram/C10_TheArgoProgram_intro
+  - file: Lessons/L01_TheArgoProgram/C10_TheArgoProgram_intro
     sections:
-    - file: Lectures/L01_TheArgoProgram/C12_WhatArgoNetwork
-    - file: Lectures/L01_TheArgoProgram/C13_NeedArgo
+    - file: Lessons/L01_TheArgoProgram/C12_WhatArgoNetwork
+    - file: Lessons/L01_TheArgoProgram/C13_NeedArgo
 
 
 - caption: Lesson 2
   chapters:
-  - file: Lectures/L02_TheArgoData/C10_TheArgoData_intro
+  - file: Lessons/L02_TheArgoData/C10_TheArgoData_intro
 
 - caption: Lesson 3
   chapters:
-  - file: Lectures/L03_UsingArgoData/C10_UsingArgoData_intro
+  - file: Lessons/L03_UsingArgoData/C10_UsingArgoData_intro
     sections:
-    - file: Lectures/L03_UsingArgoData/C11_TheNetCDFFormat
+    - file: Lessons/L03_UsingArgoData/C11_TheNetCDFFormat
 
-  - file: Lectures/L03_UsingArgoData/C20_ArgoDatabyFloat_Intro
+  - file: Lessons/L03_UsingArgoData/C20_ArgoDatabyFloat_Intro
     sections:
-    - file: Lectures/L03_UsingArgoData/C21_ArgoDatabyFloat_Cycle
-    - file: Lectures/L03_UsingArgoData/C22_ArgoDatabyFloat_Prof
-    - file: Lectures/L03_UsingArgoData/C23_ArgoDatabyFloat_Traj
-    - file: Lectures/L03_UsingArgoData/C24_ArgoDatabyFloat_ArgoPy
+    - file: Lessons/L03_UsingArgoData/C21_ArgoDatabyFloat_Cycle
+    - file: Lessons/L03_UsingArgoData/C22_ArgoDatabyFloat_Prof
+    - file: Lessons/L03_UsingArgoData/C23_ArgoDatabyFloat_Traj
+    - file: Lessons/L03_UsingArgoData/C24_ArgoDatabyFloat_ArgoPy
 
-  - file: Lectures/L03_UsingArgoData/C30_ArgoDatabyDate_Intro
+  - file: Lessons/L03_UsingArgoData/C30_ArgoDatabyDate_Intro
     sections:
-    - file: Lectures/L03_UsingArgoData/C31_ArgoDatabyDate_Day
-    - file: Lectures/L03_UsingArgoData/C32_ArgoDatabyDate_ArgoPy
+    - file: Lessons/L03_UsingArgoData/C31_ArgoDatabyDate_Day
+    - file: Lessons/L03_UsingArgoData/C32_ArgoDatabyDate_ArgoPy
 
-  - file: Lectures/L03_UsingArgoData/C40_RTandDM
+  - file: Lessons/L03_UsingArgoData/C40_RTandDM
     sections:
-    - file: Lectures/L03_UsingArgoData/C41_RTData
-    - file: Lectures/L03_UsingArgoData/C42_DMData
+    - file: Lessons/L03_UsingArgoData/C41_RTData
+    - file: Lessons/L03_UsingArgoData/C42_DMData
