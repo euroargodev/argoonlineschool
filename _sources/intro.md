@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoAoS.png" alt="argopy logo" width="100"/>
 
-# Argo Online School
+# The Argo Online School
 Argo is an international program that collects information from inside the ocean using a fleet of floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level  measuring ocean variables, but spends almost all its life below the surface. Argo has been collecting more than 100,000 profiles per year since 2012, and nowdays [Argo](https://argo.ucsd.edu/) is the mayor component of the Global Ocean Observing System.
 
 <img src="http://sio-argo.ucsd.edu/statusbig.gif" alt="Argo status" width="800"/>
@@ -27,8 +27,18 @@ Getting access through HTTP server.  Data viewers.
 
 
 
-[3. Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lectures/L02_TheArgoData/C10_TheArgoData_intro.html)
+[3. Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lectures/L03_UsingArgoData/C10_UsingArgoData_intro.html)
 
+
+## Acknowledging Argo data
+
+Since data are freely available without restriction, to track uptake and impact, we ask that where Argo data are used in a publication or product, an acknowledgement be given. 
+
+The Argo Data Management Team assigns Digital Object Identifiers (DOIs) to Argo documents and datasets. These can easily be included in publications and keeps a direct and permanent link to the Argo document or data set used in that publication (to ensure reproducibility). The data sets are archived in monthly snapshots each with its own DOI. To acknowledge Argo, please use the following sentence and the appropriate Argo DOI afterwards as described below.
+
+*“These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.  (https://argo.ucsd.edu,  https://www.ocean-ops.org).  The Argo Program is part of the Global Ocean Observing System“*
+
+Refere to [How to cite Argo data](https://argo.ucsd.edu/data/acknowledging-argo/) for further information.
 
 ## Further reading
 More information can be found in the [Argo Steering Team web page](http://www.argo.ucsd.edu/) or the [Argo Data Management team documentation](http://www.argodatamgt.org/Documentation)
@@ -37,3 +47,4 @@ More information can be found in the [Argo Steering Team web page](http://www.ar
 ## License for this book
 All content in this book is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
 (CC BY-SA 4.0) license.
+
