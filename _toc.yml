@@ -1,20 +1,19 @@
 format: jb-book
 root: intro
 parts:
-- caption: The Argo program
+- caption: 1. The Argo program
   chapters:
   - file: Lectures/L01_TheArgoProgram/C10_TheArgoProgram_intro
-  - file: Lectures/L01_TheArgoProgram/C11_AcknowledgingArgodata
 
-- caption: The Argo data
+- caption: 2. The Argo data
   chapters:
   - file: Lectures/L02_TheArgoData/C10_TheArgoData_intro
 
-- caption: Using Argo data
+- caption: 3. Using Argo data
   chapters:
   - file: Lectures/L03_UsingArgoData/C10_UsingArgoData_intro
     sections:
-    - file: Lectures/L02_TheArgoData/C11_TheNetCDFFormat
+    - file: Lectures/L03_UsingArgoData/C11_TheNetCDFFormat
 
   - file: Lectures/L03_UsingArgoData/C20_ArgoDatabyFloat_Intro
     sections:

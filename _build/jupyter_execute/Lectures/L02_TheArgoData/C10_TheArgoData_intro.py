@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# #  Introduction
+# #  About the Argo Data
 # 
 # <img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoArgo.png" alt="Argo status" width="100"/>
 

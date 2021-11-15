@@ -1,4 +1,4 @@
-# Introduction
+# Introduction to the use of Argo Data
 As indicated in the introduction, the third componente of the Argo Online School is  hands-on, and it is based on jupyter notebooks:
 
 ## The hands-on component of the Argo Online School
