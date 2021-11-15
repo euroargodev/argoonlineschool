@@ -1,15 +1,19 @@
 format: jb-book
 root: intro
 parts:
-- caption: 1. The Argo program
+- caption: Lesson 1
   chapters:
   - file: Lectures/L01_TheArgoProgram/C10_TheArgoProgram_intro
+    sections:
+    - file: Lectures/L01_TheArgoProgram/C12_WhatArgoNetwork
+    - file: Lectures/L01_TheArgoProgram/C13_NeedArgo
 
-- caption: 2. The Argo data
+
+- caption: Lesson 2
   chapters:
   - file: Lectures/L02_TheArgoData/C10_TheArgoData_intro
 
-- caption: 3. Using Argo data
+- caption: Lesson 3
   chapters:
   - file: Lectures/L03_UsingArgoData/C10_UsingArgoData_intro
     sections:
