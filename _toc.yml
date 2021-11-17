@@ -5,9 +5,13 @@ parts:
   chapters:
   - file: Lessons/L01_TheArgoProgram/C10_TheArgoProgram_intro
     sections:
-    - file: Lessons/L01_TheArgoProgram/C12_WhatArgoNetwork
-    - file: Lessons/L01_TheArgoProgram/C13_NeedArgo
-
+    - file: Lessons/L01_TheArgoProgram/C10_TheArgoProgram_intro.ipynb 
+    - file: Lessons/L01_TheArgoProgram/C11_WhatArgoNetwork.ipynb      
+    - file: Lessons/L01_TheArgoProgram/C13_NeedArgo.ipynb             
+    - file: Lessons/L01_TheArgoProgram/C14_ObservationsDone.ipynb     
+    - file: Lessons/L01_TheArgoProgram/C15_OceanographicProfile.ipynb
+    - file: Lessons/L01_TheArgoProgram/C16_TechInnovations.ipynb
+    - file: Lessons/L01_TheArgoProgram/C17_RecapLesson1.ipynb
 
 - caption: Lesson 2
   chapters:
