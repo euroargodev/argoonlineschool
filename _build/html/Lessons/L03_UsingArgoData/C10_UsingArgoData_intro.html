@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Argo Data &#8212; Argo Online School</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/C10_UsingArgoData_intro.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The netCDF format" href="C11_TheNetCDFFormat.html" />
+    <link rel="prev" title="The Argo Data" href="../L02_TheArgoData/C10_TheArgoData_intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logoAoS.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Argo Online School</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   The Argo Online School
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lesson 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../L01_TheArgoProgram/C10_TheArgoProgram_intro.html">
+   The Argo Program
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/C11_WhatArgoNetwork.html">
+     What is the Argo network?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/C13_NeedArgo.html">
+     Why do we need Argo and what are its objectives?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/C14_ObservationsDone.html">
+     How the observations are done?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/C15_OceanographicProfile.html">
+     What is an oceanographic profile?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/C16_TechInnovations.html">
+     Technological innovations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/C17_RecapLesson1.html">
+     Recap Lesson 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lesson 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../L02_TheArgoData/C10_TheArgoData_intro.html">
+   The Argo Data
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lesson 3
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Using Argo Data
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C11_TheNetCDFFormat.html">
+     The netCDF format
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="C20_ArgoDatabyFloat_Intro.html">
+   Accesing Argo data by float
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C21_ArgoDatabyFloat_Cycle.html">
+     Reading an Argo CTD cycle data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C22_ArgoDatabyFloat_Prof.html">
+     Accessing all profiles at once
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C23_ArgoDatabyFloat_Traj.html">
+     Accessing trayectory data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C24_ArgoDatabyFloat_ArgoPy.html">
+     Accessing Argo data by float using Argopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="C30_ArgoDatabyDate_Intro.html">
+   Accesing Argo data by date
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C31_ArgoDatabyDate_Day.html">
+     Reading Argo data by date
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C32_ArgoDatabyDate_ArgoPy.html">
+     Accessing Argo data by date using Argopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="C40_RTandDM.html">
+   Real-Time and Delayed mode data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C41_RTData.html">
+     Real Time quality control data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="C42_DMData.html">
+     Delayed mode data
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Lessons/L03_UsingArgoData/C10_UsingArgoData_intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/euroargodev/argoonlineschool"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L03_UsingArgoData/C10_UsingArgoData_intro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-hands-on-component-of-the-argo-online-school">
+   The hands-on component of the Argo Online School
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-used-in-the-argo-online-school">
+     Data used in the Argo Online School
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-reading">
+     Further reading
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#license-for-this-book">
+   License for this book
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="using-argo-data">
+<h1>Using Argo Data<a class="headerlink" href="#using-argo-data" title="Permalink to this headline">¶</a></h1>
+<p>As indicated in the introduction, the third componente of the Argo Online School is  hands-on, and it is based on jupyter notebooks:</p>
+<div class="section" id="the-hands-on-component-of-the-argo-online-school">
+<h2>The hands-on component of the Argo Online School<a class="headerlink" href="#the-hands-on-component-of-the-argo-online-school" title="Permalink to this headline">¶</a></h2>
+<p>You can access the hands-on content as here, in a web-page, build using <a class="reference external" href="https://euroargodev.github.io/argoonlineschool">JubyterBook</a>, or download the jupyter notebooks and use them in your local machine.</p>
+<p>The hands-on component of the Argo Online School was developed using JupyterLab, since it contains a complete environment for interactive scientific computing which runs in your web browser. Jupyter is an open source python project, and as a very useful first aproach to python and jupyterlab, you can use <a class="reference external" href="https://earth-env-data-science.github.io/intro">An Introduction to Earth and Environmental Data Science</a> and <a class="reference external" href="https://rabernat.github.io/research_computing/">Research computing in earth Sciences</a> developed by <a class="reference external" href="https://ocean-transport.github.io/">Ryan Abernathey</a> and <a class="reference external" href="https://emlab.ldeo.columbia.edu/index.php/team/kerry-key/">Kerry Key</a>.</p>
+<p>In the case that you decide to download and run the python jupyter notebooks in your local machine, you should create a python environment. Since using some of the packages may give problems due to compatibility problems between conda-forge packages and packages contained in the default conda channels, I will recommend to set up <code class="docutils literal notranslate"><span class="pre">channel_priority:</span> <span class="pre">strict</span></code> and give priority to the <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> channel over the default channels when installing things. There are two ways of doing that. Either you always specify <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span></code> or you create a .condarc file in your home with this content:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">channels</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+  <span class="o">-</span> <span class="n">defaults</span>
+<span class="n">channel_priority</span><span class="p">:</span> <span class="n">strict</span>
+</pre></div>
+</div>
+<p>An environment should either use conda-forge or not, from creation to destruction. Do not mix and match. If you created it without using the conda-forge channel, then do not add it to the mix halfway. In practice, I always create an environment with conda-forge unless in very specific cases where I found incompatibilities.</p>
+<p>To create and activate the AOS environment, that already includes the last stable version of <a class="reference external" href="https://argopy.readthedocs.io/en/latest/">argopy</a>, the python library for Argo data, you should:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">AOS</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span> 
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">AOS</span>
+</pre></div>
+</div>
+<p>If by any chane, a library is not included in  environment.yml should install it using, for instance:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">netcdf4</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">xarray</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">seawater</span>
+</pre></div>
+</div>
+<div class="section" id="data-used-in-the-argo-online-school">
+<h3>Data used in the Argo Online School<a class="headerlink" href="#data-used-in-the-argo-online-school" title="Permalink to this headline">¶</a></h3>
+<p>If you download the notebooks you should create a ./Data* folder to include the files used for the examples. The files in the Data folder can be dowloaded from <a class="reference external" href="https://www.oceanografia.es/argoonlineschool/Data/">here</a> or directly from its source using <em>wget</em>, for instance:</p>
+<p>for the <em>Daily NOAA OI SST V2 High Resolution Dataset for 2019</em>:</p>
+<p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">wget</span> <span class="pre">ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc</span></code></p>
+<p>for the data from float 6901254:</p>
+<p><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6901254/*</span></code></p>
+<p>or for the data in the north Atlantic for the 11th November 2019</p>
+<p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">wget</span> <span class="pre">ftp://ftp.ifremer.fr/ifremer/argo//geo/indian_ocean/2019/11/20191111_prof.nc</span></code></p>
+</div>
+<div class="section" id="further-reading">
+<h3>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h3>
+<p>For the full description of the formats and files produced by the Argo Data Assembly Centres (DACs), see the <a class="reference external" href="https://archimer.ifremer.fr/doc/00187/29825/">Argo user’s manual</a>, the <a class="reference external" href="https://archimer.ifremer.fr/doc/00228/33951/">Argo Quality Control Manual for CTD and Trajectory Data</a> or the <a class="reference external" href="http://www.argodatamgt.org/content/download/340/2645/file/argo_data_management_handbook.pdf">The Argo data management handbook</a></p>
+<p>More information can be found in the <a class="reference external" href="http://www.argo.ucsd.edu/">Argo Steering Team web page</a> or the <a class="reference external" href="http://www.argodatamgt.org/Documentation">Argo Data Management team documentation</a></p>
+</div>
+</div>
+<div class="section" id="license-for-this-book">
+<h2>License for this book<a class="headerlink" href="#license-for-this-book" title="Permalink to this headline">¶</a></h2>
+<p>All content in this book (ie, any files and content in the <code class="docutils literal notranslate"><span class="pre">content/</span></code> folder)
+is licensed under the <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>
+(CC BY-SA 4.0) license.</p>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Lessons/L03_UsingArgoData"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../L02_TheArgoData/C10_TheArgoData_intro.html" title="previous page">The Argo Data</a>
+    <a class='right-next' id="next-link" href="C11_TheNetCDFFormat.html" title="next page">The netCDF format</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Euro Argo<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
