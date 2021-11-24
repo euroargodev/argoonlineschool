@@ -47,10 +47,7 @@ parts:
     
 - caption: Quizzes
   chapters:
-  - file: Lessons/Quizzes/Quizzes_intro
-    sections:
-    - file: Lessons/Quizzes/Quiz10
-
+  - file: Lessons/Quizzes/Quiz10
   
 
 
