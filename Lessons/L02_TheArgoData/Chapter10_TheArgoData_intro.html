@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Argo Data &#8212; Argo Online School</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet" />
-  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -31,19 +31,19 @@
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
@@ -55,7 +55,10 @@
     <link rel="next" title="Using Argo Data" href="../L03_UsingArgoData/Chapter10_UsingArgoData_intro.html" />
     <link rel="prev" title="Recap Lesson 1" href="../L01_TheArgoProgram/Chapter17_RecapLesson1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,6 +75,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="../../_static/logoAoS.png" class="logo" alt="logo">
       
       
@@ -81,7 +88,7 @@
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +97,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Lesson 1
  </span>
@@ -139,7 +146,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Lesson 2
  </span>
@@ -151,7 +158,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Lesson 3
  </span>
@@ -340,47 +347,47 @@
         
               <div>
                 
-  <div class="section" id="the-argo-data">
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-argo-data">
 <h1>The Argo Data<a class="headerlink" href="#the-argo-data" title="Permalink to this headline">¶</a></h1>
 <img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoArgo.png" alt="Argo status" width="100"/><div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
 <span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.youtube.com/embed/TKk-EpK03Xg&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://drive.google.com/file/d/1hb4H2MhoKU38uHTBO1HZJDwMKLZ-Pnkz/preview&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;480&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TKk-EpK03Xg" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://drive.google.com/file/d/1hb4H2MhoKU38uHTBO1HZJDwMKLZ-Pnkz/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 </div></div>
 </div>
-<p><strong>The WMO: a unique identifiers for each float</strong></p>
-<p>Each one of the Argo floats have a unique indentifier, kwnon as the World Meteorological Organization (WMO). The WMO is assigned at the moment of the deployment of the float, but it is not hard-coded in the float.</p>
+<p><strong>The WMO: a unique identifier for each float</strong></p>
+<p>Each one of the Argo floats has a unique identifier, known as the World Meteorological Organization (WMO). The WMO is assigned at the moment of the deployment of the float, but it is not hard-coded in the float.</p>
 <p><strong>The basis of the Argo Data System</strong></p>
-<p>As explained in the videos of lesson 2, when an Argo float surfaces, the data are received by one of the <em>Data Assembly Centers</em> (DAC). At the DACs, they are subjected to initial scrutiny using a set of real time quality control tests where erroneous data are flagged or corrected, then the data are passed to one of the two Argo <em>Global Data Assembly Center</em> (GDAC), the Coriolis GDAC (Brest, France, Europe) or the US-Godae GDAC (Mobterey, California, USA).</p>
+<p>As explained in the videos of Lesson 2, when an Argo float surfaces, the data are received by one of the <em>Data Assembly Centers</em> (DAC). At the DACs, they are subjected to initial scrutiny using a set of real-time quality control tests where erroneous data are flagged or corrected, then the data are passed to one of the two Argo <em>Global Data Assembly Center</em> (GDAC), the Coriolis GDAC (Brest, France, Europe) or the US-Godae GDAC (Monterey, California, USA).</p>
 <p>The GDACs are the first stage at which the freely available data can be obtained via the internet. The GDACs synchronize their data to ensure consistent data is available on both sites. The target is for these <em>real-time</em> data to be available within 12-24 hours of their transmission from the float.</p>
-<p>Additionally Argo data can be accesed by several other ways:</p>
+<p>Additionally, Argo data can be accessed in several other ways:</p>
 <ul class="simple">
-<li><p>via the Global Telecomunication System for operational centers.</p></li>
-<li><p>via interactive Data selection tools on the GDACs</p></li>
-<li><p>via gridded fields and velocity products based on Argo NetCDF files from the GDACs</p></li>
-<li><p>via data viewers that incorporate Argo data</p></li>
-<li><p>via the <a class="reference external" href="https://www.nodc.noaa.gov/argo/">Global Argo Data Repository (GADR)</a> for archived and offline data</p></li>
+<li><p>via the Global Telecommunication System for operational centers.</p></li>
+<li><p>via interactive Data selection tools on the GDACs.</p></li>
+<li><p>via gridded fields and velocity products based on Argo NetCDF files from the GDACs.</p></li>
+<li><p>via data viewers that incorporate Argo data.</p></li>
+<li><p>via the <a class="reference external" href="https://www.nodc.noaa.gov/argo/">Global Argo Data Repository (GADR)</a> for archived and offline data.</p></li>
 <li><p>via monthly copies of the GDACs <a class="reference external" href="https://www.seanoe.org/data/00311/42182/">https://www.seanoe.org/data/00311/42182/</a></p></li>
 </ul>
-<p>See the <a class="reference external" href="https://argo.ucsd.edu/data/">Argo data sources</a> to read a full description, with links, to this other ways of accesing the data</p>
-<p><strong>Here we focus in the accesss to the primary source of the Argo data, the GDACs</strong></p>
+<p>See the <a class="reference external" href="https://argo.ucsd.edu/data/">Argo data sources</a> to read a full description, with links, to these other ways of accessing the data.</p>
+<p><strong>Here we focus on the access to the primary source of the Argo data, the GDACs</strong></p>
 <p><strong>Data organization at the GDACS</strong></p>
 <p>In the GDACS, the Argo data is organized in two different ways:</p>
 <ul class="simple">
 <li><p>By date, with one folder for each ocean basin, and then a folder for each year and month and a file for each day.</p></li>
-<li><p>By DAC (data acqusition center) and argo float (WMO number)</p></li>
+<li><p>By DAC (data acquisition center) and Argo float (WMO number).</p></li>
 <li><p>By processing date: The last processed data organized by processing day, with access to the last 12 months.</p></li>
 </ul>
-<p>At the early stage of the Argo program, and due to the huge ammount of data that was foressen  Argo would create, it was decided that netCDF would be the offical file format for the Argo data. Hence, before explaining how to <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L20_ArgoDatabyFloat_Intro.html">acces Argo data by float</a> or <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L30_ArgoDatabyDate_Intro.html">by date</a> it is neccesary to make a short introduction to the properties of this data format, and how to read files in <strong>netCDF</strong>.</p>
+<p>At the early stage of the Argo program, and due to the huge amount of data that was foreseen  Argo would create, it was decided that netCDF would be the official file format for the Argo data. Hence, before explaining how to <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L20_ArgoDatabyFloat_Intro.html">acces Argo data by float</a> or <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L30_ArgoDatabyDate_Intro.html">by date</a> it is necessary to make a short introduction to the properties of this data format, and how to read files in <strong>netCDF</strong>.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -406,16 +413,27 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="../L01_TheArgoProgram/Chapter17_RecapLesson1.html" title="previous page">Recap Lesson 1</a>
-    <a class='right-next' id="next-link" href="../L03_UsingArgoData/Chapter10_UsingArgoData_intro.html" title="next page">Using Argo Data</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../L01_TheArgoProgram/Chapter17_RecapLesson1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Recap Lesson 1</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../L03_UsingArgoData/Chapter10_UsingArgoData_intro.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Using Argo Data</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -431,8 +449,7 @@
       </div>
     </div>
   
-  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
