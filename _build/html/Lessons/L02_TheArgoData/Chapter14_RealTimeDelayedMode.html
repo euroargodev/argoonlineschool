@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time and Delayed mode data. &#8212; Argo Online School</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter14_RealTimeDelayedMode.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Where can I get access to data and how is it organized?" href="Chapter15_QualityFlagMean.html" />
+    <link rel="prev" title="What are the Argo data and its format?" href="Chapter13_WhatArgoDataFormat.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logoAoS.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Argo Online School</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   The Argo Online School
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lesson 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html">
+   The Argo Program
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/Chapter12_WhatArgoNetwork.html">
+     What is the Argo network?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/Chapter13_NeedArgo.html">
+     Why do we need Argo and what are its objectives?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/Chapter14_ObservationsDone.html">
+     How the observations are done?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/Chapter15_OceanographicProfile.html">
+     What is an oceanographic profile?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/Chapter16_TechInnovations.html">
+     Technological innovations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L01_TheArgoProgram/Chapter17_RecapLesson1.html">
+     Recap Lesson 1
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lesson 2
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Chapter10_TheArgoData_intro.html">
+   The Argo Data
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter12_ArgoDataStream.html">
+     The Argo General Data Stream
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter13_WhatArgoDataFormat.html">
+     What are the Argo data and its format?
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Real-Time and Delayed mode data.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter15_QualityFlagMean.html">
+     Where can I get access to data and how is it organized?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter16_GetAccesOrganized.html">
+     Where can I get access to data and how is it organized?
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Lesson 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../L03_UsingArgoData/Chapter10_UsingArgoData_intro.html">
+   Using Argo Data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L03_UsingArgoData/Chapter11_TheNetCDFFormat.html">
+     The netCDF format
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../L03_UsingArgoData/Chapter20_ArgoDatabyFloat_Intro.html">
+   Accesing Argo data by float
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L03_UsingArgoData/Chapter21_ArgoDatabyFloat_Cycle.html">
+     Reading an Argo CTD cycle data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L03_UsingArgoData/Chapter22_ArgoDatabyFloat_Prof.html">
+     Accessing all profiles at once
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L03_UsingArgoData/Chapter23_ArgoDatabyFloat_Traj.html">
+     Accessing trayectory data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L03_UsingArgoData/Chapter24_ArgoDatabyFloat_ArgoPy.html">
+     Accessing Argo data by float using Argopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../L03_UsingArgoData/Chapter30_ArgoDatabyDate_Intro.html">
+   Accesing Argo data by date
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L03_UsingArgoData/Chapter31_ArgoDatabyDate_Day.html">
+     Reading Argo data by date
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L03_UsingArgoData/Chapter32_ArgoDatabyDate_ArgoPy.html">
+     Accessing Argo data by date using Argopy
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../L03_UsingArgoData/Chapter40_RTandDM.html">
+   Real-Time and Delayed mode data
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L03_UsingArgoData/Chapter41_RTData.html">
+     Real Time quality control data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../L03_UsingArgoData/Chapter42_DMData.html">
+     Delayed mode data
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Lessons/L02_TheArgoData/Chapter14_RealTimeDelayedMode.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/euroargodev/argoonlineschool"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L02_TheArgoData/Chapter14_RealTimeDelayedMode.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="real-time-and-delayed-mode-data">
+<h1>Real-Time and Delayed mode data.<a class="headerlink" href="#real-time-and-delayed-mode-data" title="Permalink to this headline">¶</a></h1>
+<p><strong>[HOST - Video 204-01] Introduction - Host - INT. (White background)
+Animations: Error margin and RT - DM Quality control in the bckgrnd</strong></p>
+<p>There are numerous reasons why data can be reported abnormally during the Argo profiler’s operating cycles. This might be mainly due to problems related to the CTD sensors, either external interference to the sensor, for instance, due to biodeposition, or intrinsic problems of the sensor itself. commas or etc: In both cases, incorrect data with spikes, biases, sensor drifts, etc., can be reported as bad data or possible bad data.</p>
+<p><strong>[GIF Animation - GRAPHIC 204-03]  Spikes, Drifts or Bias
+Animation showing an example of different data errors</strong></p>
+<p>However, detecting problems related to the CTD sensors, sometimes, can sometimes be very difficult. Even more so when we take into account the concept of “natural variability”. Natural variability is just the natural change of the properties of the ocean and it may happen in periods ranging from seconds to millennia. For instance, changes occur daily, such as the tides; sporadically, such as storm surges or tsunamis; and seasonally, such as the simple warming of coastal waters in summer. In addition to the uncertainty associated with sensor errors, natural systems have an uncertainty associated with the range of natural variability itself. In such cases, it is very difficult to distinguish between the natural variability observed and the errors.</p>
+<p>Since there is also natural variability in the temperature and salinity that can be mistaken for sensor malfunction, we have to be careful not to treat actual natural variability as sensor malfunction and correct it. For instance, a float may drift into saltier waters and we may misinterpret the change as sensor malfunctioning if we do not check out the trajectory of the float.  It may also happen that an area of the ocean is becoming saltier than it used to be, and therefore if we compare the data with historical data, we risk losing this natural variability. Therefore, it is also necessary to compare the float’s data with data from neighboring floats.<br />
+That is why a robust data analysis system has been developed to assist us in distinguishing between the natural variability of the area where the profiler is located and a possible sensor malfunction, and if in doubt, it is better not to correct the data.</p>
+<p><strong>[HOST - Video 204-05] Real-Time (RT) quality control - Host - INT. (White background)</strong></p>
+<p><strong>[Animation - Video 204-06]Animación que muestre un dato Argo pasando por los diferentes controles de calidad en tiempo real. Comentarios: Algo parecido a lo que sucede en este video a partir del 00:30 <a class="reference external" href="https://www.youtube.com/watch?v=RADq6YnJUcg">https://www.youtube.com/watch?v=RADq6YnJUcg</a>.</strong></p>
+<p><strong>[GRAPHIC 204-07]  Tabla TABLA. Tests included in the Real-Time quality control.</strong></p>
+<p>All the data will be distributed in the GTS, but with its corresponding quality flags, that give an indication of the quality of the data. On the other hand, the data and its flags will be also converted to the netCDF format and sent to the Argo Global Data Management Centers (GDAC).</p>
+<p>For instance, test 1 verifies whether the maximum pressure measured by a float is higher than the ocean depth in the location of the float; test 5 verifies if the location reported by the float is actually in the ocean, or if by error it is reporting a position overland; test 17 checks whether the float is sending, again and again, the same data, etc. We don’t expect you to learn what every test is about, but if you are curious about all of them, take a look at the Argo Quality Control Manual.</p>
+<p><strong>[HOST - Video 204-09] Delayed - Mode (DM) quality control - Host - INT. (White background)</strong></p>
+<p><strong>[GRAPHIC 204-10] 2 Graphics showing spikes, drifts and discontinuity. (Designada como L2-DM_QC_Graphics en la lista de animaciones)</strong></p>
+<p>The spikes are abrupt short changes in the data and constitute a clear case of anomaly. Spikes are easy to detect and correct. Drifts and offsets can be identified in the trend of ΔS over time, where ΔS is the difference in salinity between float-measured values and statistical recommendations. If ΔS = a + bt, where t is time, then a is the offset and b is the drift rate. Note that these drifts and offsets can be sensor-related, or they can be due to natural variability, as we explained before. To distinguish between sensor errors and natural variability evaluation it is necessary that experts look carefully at the data.</p>
+<p><strong>[HOST - Video 204-12] Delayed - Mode (DM) quality control BIODEPOSITION - Host - INT. (White background)</strong></p>
+<p><strong>[GRAPHIC 204-13] BIODEPOSITION (Designada como L2-A4 en la lista de animaciones)</strong></p>
+<p><strong>Biodeposition</strong> is one of the main reasons why DM quality control is so necessary. Small accumulations of organic matter, like the algae that grow in the pools in summer, known as biodeposition, may affect the measurement’s accuracy by microscopic alterations of the sensor’s shape. It mainly affects the conductivity sensors that allow us to measure salinity, and the effect of biodeposition is very small in most cases, but its effects on the data are approximate of the same order as the natural variations of the ocean. But, what does it exactly mean? At first glance, we would not be able to know if a potential error is due to the natural variability of the area or due to processes such as biodeposition.
+Thus, one of the main obstacles since the start of the Argo Program was providing a technique that allowed us to distinguish between natural variations in salinity and the drift of the conductivity sensor due to biodeposition. The Delayed - Mode quality control is based on a statistical estimation called objective analysis; it provides a solid basis for interpolating irregularly spaced data. During the first years of the Argo era, researchers from the University of Washington and the Woods Hole Oceanographic Institution developed a method based on the comparison of all measurements of each Argo float and historical data at certain depth levels characterized by stability in salinity, but dependent on each zone. This method is known as Delayed Mode (DM) calibration and is currently used for each of the floats. This type of calibration is repeated, at least, every year to guarantee the accuracy of the measurements. As we said before, this analysis is crucial to keeping measurements that don’t coincide with historical records but that contain natural variability unknown to date. Each data set must be carefully analyzed and, despite good tools such as objective analysis, the final decision on a possible data correction rests in the hands of the expert, what we call the DM operator.
+To keep a record of all the actions performed, the data verified through the DM quality control will be marked with a “D” and those that have only been verified by the RT quality control will be marked with an “R”:</p>
+<p>• If the DM quality control has been performed after one year of data and the float is still active, both data collected in Real-Time “R” and data verified through DM quality control “D” will be available, being the latter the one with the highest quality.</p>
+<p>• Once a float is declared as inactive, data will be collected in the GDAC as “D” and it will contain both adjusted and unadjusted data. [L2-G1] (creo que se refiere al L2-G4 que ponemos debajo en una gráfica que se entienda bien)</p>
+<p><strong>[GRAPHIC 204-14] L2-G4. Gráfico que relata el análisis en Modo Diferido. A partir de señales adyacentes, el análisis es capaz de proponer una posible señal corregida sobre la señal original.</strong></p>
+<p>There is no need to keep digging deeper into technical details about the DM control but let’s take a look at this graphic to make sure you understand the basics. The original signal from the Argo profiler is shown in blue color, which describes clear anomalous behavior. The red lines are the historical data in the area near the Argo float.  The calibration suggests a correction based on them (green color), however, the final decision, together with other complementary analyzes, is in the hands of the DM. Regardless of any changes done during the RT and DM quality controls, all the data is kept and included in the NetCDF files.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Lessons/L02_TheArgoData"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Chapter13_WhatArgoDataFormat.html" title="previous page">What are the Argo data and its format?</a>
+    <a class='right-next' id="next-link" href="Chapter15_QualityFlagMean.html" title="next page">Where can I get access to data and how is it organized?</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Euro Argo<br/>
+        
+            &copy; Copyright 2020-2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -5,10 +5,10 @@
 
 # [Video 103-01] Introduction - Host - Argo and its objectives
 
-# In[2]:
+# In[1]:
 
 
-get_ipython().run_cell_magic('HTML', '', '<center>\n<iframe width="560" height="315" src="https://www.youtube.com/embed/LsqYWKf-9yc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</center>')
+get_ipython().run_cell_magic('HTML', '', '<center>\n<iframe width="560" height="315" src="https://drive.google.com/file/d/1pivKHZE5bpFZCRNe2bnv1S_XP6vXV2mH/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</center>')
 
 
 # Argo's general objectives are:
@@ -20,12 +20,12 @@ get_ipython().run_cell_magic('HTML', '', '<center>\n<iframe width="560" height="
 # - To provide free data via the Global Data Assembly Centres (GDAC) located In Brest, France, and Monterey, California, after having gone through automated quality control (QC). 
 # 
 
-# In[61]:
+# In[3]:
 
 
-get_ipython().run_cell_magic('HTML', '', '<center>\n<iframe width="560" height="315" src="https://www.youtube.com/embed/E6EPvv1mAE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</center>')
+get_ipython().run_cell_magic('HTML', '', '<center>\n<iframe width="560" height="315" src="https://drive.google.com/file/d/170rjpguO0e8YDQcpyGgnU1kukpcRZTtx/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\n</center>')
 
 
-# Argo's array growth is monitored by the Technical Coordinator at [OceanOPS](https://www.ocean-ops.org/board), that is located at the French Research Institute for Exploitation of the Sea ([IFREMER](https://wwz.ifremer.fr/)) in Brest, France. OceanOPS is a Support Centre for the Marine Meteorology and Oceanography Observations Program (MMOP) and is responsible for the system that monitors and coordinates operational ocean observations. A major task of OceanOPS is the implementation of Unesco´s  Interngovernmental Oceanographic Commission's Resolution XX-6. This resolution concludes that: "concerned coastal states must be informed in advance, through appropriate channels, of all deployments of profiling floats which might drift into waters under their jurisdiction, indicating the exact locations of such deployments".
+# Argo's array growth is monitored by the Technical Coordinator at [OceanOPS](https://www.ocean-ops.org/board), which is located at the French Research Institute for Exploitation of the Sea ([IFREMER](https://wwz.ifremer.fr/)) in Brest, France. OceanOPS is a Support Centre for the Marine Meteorology and Oceanography Observations Program (MMOP) and is responsible for the system that monitors and coordinates operational ocean observations. A major task of OceanOPS is the implementation of Unesco´s  Intergovernmental Oceanographic Commission's Resolution XX-6. This resolution concludes that: "concerned coastal states must be informed in advance, through appropriate channels, of all deployments of profiling floats which might drift into waters under their jurisdiction, indicating the exact locations of such deployments".
 # Thus, OceanOPS offers a formal profiling float deployment notification process and some countries have given formal concurrence for the operation of Argo floats within their Exclusive Economic Zone (EEZ). The framework now in place allows Argo to grow while complying with IOC rules.
 # 

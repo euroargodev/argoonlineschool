@@ -1,7 +1,7 @@
 .DS_Store
 Aborrar.md
 Info.ipynb
-Pruebas*.ipynb
+Prueba*
 
 ./Data/sst.day.mean.2019.nc
 ./Data/6901472/6901472_BRtraj.nc

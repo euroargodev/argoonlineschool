@@ -14,7 +14,13 @@ parts:
 
 - caption: Lesson 2
   chapters:
-  - file: Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro
+  - file: Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.ipynb
+    sections:  
+    - file: Lessons/L02_TheArgoData/Chapter12_ArgoDataStream.ipynb
+    - file: Lessons/L02_TheArgoData/Chapter13_WhatArgoDataFormat.ipynb
+    - file: Lessons/L02_TheArgoData/Chapter14_RealTimeDelayedMode.ipynb
+    - file: Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.ipynb
+    - file: Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.ipynb
 
 - caption: Lesson 3
   chapters:
@@ -38,3 +44,14 @@ parts:
     sections:
     - file: Lessons/L03_UsingArgoData/Chapter41_RTData
     - file: Lessons/L03_UsingArgoData/Chapter42_DMData
+    
+- caption: Quizzes
+  chapters:
+  - file: Lessons/Quizzes/Quizzes_intro
+    sections:
+    - file: Lessons/Quizzes/Quiz10
+
+  
+
+
+    
