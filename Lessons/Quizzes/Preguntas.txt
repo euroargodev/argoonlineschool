@@ -1,0 +1,151 @@
+(01).- ¿Qué requisitos deben cumplir los datos del Programa Internacional Argo para que sean admitidos por los centros receptores?
+a)	Deben incluir temperatura, salinidad y presión.
+b)	Deben incluir temperatura, salinidad, presión y controles de calidad.
+c)	Deben incluir temperatura y presión, controles de calidad, y estar disponibles de manera libre y gratuita.
+d)	Deben incluir temperatura, salinidad y presión, y los datos son distribuidos de manera libre y gratuita.
+
+(02).-  El objetivo de cobertura de la flota de perfiladores Argo, tal como estableció el Argo Science Team al comienzo del programa es de:
+a)	Una cobertura promedio de una boya Argo cada 3 grados en longitud y latitud.
+b)	Tener en torno a 10.000 boyas operativas repartidas regularmente en el océano global.
+c)	Tener boyas espaciadas en una malla promedio de 50x50 km.
+d)	Doblar el número de boyas cada 3 años hasta el año 2020.
+
+(03).- En la denominada misión principal (core) del programa Argo, el objetivo de precisión de las medidas de temperatura, presión y salinidad es: 
+a)	0.002°C en temperatura, ± 2.4 dbar en presión y ± .01 en salinidad.
+b)	0.002°C en temperatura, ± 1.0 dbar en presión y ± .01 en salinidad.
+c)	0.002°C en temperatura, ± 1.0 dbar en presión y ± .003 en salinidad.
+d)	0.002°C en temperatura, ± 2.4 dbar en presión y ± .004 en salinidad.
+
+(04).- En relación con las boyas Argo actualmente desplegadas en el océano, que afirmación no es correcta.
+a)	Miden salinidad, temperatura y profundidad.
+b)	Algunas están realizando mediciones de salinidad a profundidades superiores a 2000m.
+c)	Todas las boyas llevan sistema de trasmisión Argos. 
+d)	Algunas boyas han incorporado sensores de medición de carbono orgánico particulado.
+
+(05).- Cuál de las siguientes afirmaciones en relación con el programa Argo no es correcta:
+a)	Está a punto de alcanzarse el objetivo de lanzar 2000 boyas. 
+b)	Tiene entre sus objetivos la medición sistemática del océano y la asimilación en tiempo presente de los datos en modelos.
+c)	La cobertura es de una boya cada 3 grados.
+d)	Los datos obtenidos por las boyas Argo son usados en investigación.
+
+(06).- Cuál de las siguientes variables no está incluidas entre las aceptadas en la extensión a parámetros biogeoquímicos del programa Argo:
+a)	Fosfato.
+b)	Oxígeno disuelto.
+c)	Nitrato.
+d)	pH.
+
+(07).- La Argo Project Office:
+a)	Es una oficina de gestión del programa Argo presente en cada país y dependiente de los programas nacionales.
+b)	Es una oficina de gestión del programa Argo que proporciona soporte e infraestructura independiente de los programas nacionales.
+c)	Es una entidad que financia el programa Argo.
+d)	Es una entidad que evalúa los programas nacionales.
+
+(08).- En relación con los órganos de coordinación y gestión de Argo.
+a)	La Argo Project Office se encuentra en la Universidad de California, en San Diego. 
+b)	El Argo Information Centre se encuentra en Brest.
+c)	El Argo Steering Team se encuentra en la Universidad de California, en San Diego.
+d)	El Argo Data Managment Team se encuentra en la sede de la World Metereological Organization, en Ginebra.
+
+(09).- Los centros de adquisición de datos, regionales y globales del programa de observación de Argo están financiados por:
+a)	El Argo Information Centre, que depende de la comisión oceanográfica internacional. 
+b)	Cada país que se adhiere a Argo se compromete a financiar su programa nacional como parte de los servicios meteorológicos, y la parte correspondiente de los centros regionales y globales.
+c)	La UNESCO financia los centros regionales y globales, mientras que los centros nacionales son financiados por cada país.
+d)	Cada país elige de manera libre cuánto y cómo financia su participación en el programa Argo.
+
+(10).- El programa Argo usa el formato NetCDF para la distribución de datos. De este formato se puede decir:
+a)	Es un formato no propietario, desarrollado por IFREMER para Argo pero que solamente se usa en la comunidad de ciencias marinas.
+b)	Es un formato no propietario, desarrollado principalmente por UNIDATA, que es una comunidad de usuarios de la Corporación Americana de Universidades para la investigación en ciencias atmosféricas (UCAR).
+c)	Es parte del lenguaje de programación Java, y por tanto ya no es propietario, pues SUN lo desarrolla bajo la licencia Pública General de GNU.
+d)	Ninguna de las anteriores afirmaciones es cierta.
+
+(11).- En la distribución de datos del programa Argo en el formato NetCDF mediante FTP, los ficheros están agrupados de la siguiente manera:
+a)	Existe un fichero único por cada boya, organizado por su número de serie, con el siguiente nombre: Ar_XXXXXXX.nc,  dondeXXXXXXX es el número de serie.
+b)	Existe un fichero único por cada mes: Ar_mmyyyy.nc, donde mm es el mes y yyyy el año.
+c)	Los datos se agrupan de manera geográfica, con un fichero para cada día del año según la cuenca, o por centro de procesamiento de datos, con un directorio por cada boya. 
+d)	Ninguna de las afirmaciones anteriores es cierta. 
+(12).- El programa Argo tiene como objetivo difundir los datos observados, de manera libre y gratuita, con un control que se denomina en tiempo presente (Real Time), en un plazo de:
+a)	1 hora
+b)	6 meses, con re-calibración cada año.
+c)	24/48 horas.
+d)	6 horas, como los datos atmosféricos.
+
+(13).- En la distribución de datos del programa Argo, el formato TESAC se usa principalmente para:
+a)	La distribución de los datos en el Global Telecomunication System
+b)	La distribución de los datos mediante FTP
+c)	El envío de los datos por correo electrónico a los centros de predicción atmosférica nacionales.
+d)	El envío de los datos por correo electrónico a los centros Argo nacionales.
+
+(14).- En la distribución de datos del programa Argo, el formato BUFR se usa principalmente para:
+a)	La distribución de los datos mediante FTP.
+b)	Envío de los datos por correo electrónico a los centros de predicción atmosférica nacionales.
+c)	Es un formato obsoleto, que dejó de usarse en el año 2000, por resolución del Argo SteertingTeam.
+d)	La distribución de los datos en el Global Telecomunication System.
+
+(15).- El programa Argo tiene como objetivo difundir los datos observados, de manera libre y gratuita, con un control que se denomina en tiempo diferido (Delayed Mode), en un plazo de:
+a)	1 hora
+b)	6 meses, con re-calibración cada año.
+c)	24/48 horas.
+d)	6 horas, como los datos atmosféricos.
+(16).- Durante el proceso de control de calidad en tiempo presente, se asignan banderas de calidad a los datos de todos los sensores de las boyas Argo. Cuál de las siguientes afirmaciones es cierta. 
+a)	En general, una medida de salinidad con PSAL_QC = ‘4’ son datos erróneos que, en principio, no se pueden ajustar. Sin embargo, los operadores de modo diferido (delayed mode operators) pueden evaluar la calidad y la capacidad de ajuste de estos datos erróneos si tienen una razón para hacerlo.
+b)	En general, la salinidad de flotación con PSAL_QC = ‘0’ son datos erróneos que, en principio, no se pueden ajustar. Sin embargo, los operadores de modo diferido (delayed mode operators) pueden evaluar la calidad y la capacidad de ajuste de estos datos erróneos si tienen una razón para hacerlo.
+c)	En general, la salinidad de flotación con PSAL_QC = ‘1’ son datos erróneos que, en principio, no se pueden ajustar. Sin embargo, los operadores de modo diferido (delayed mode operators) pueden evaluar la calidad y la capacidad de ajuste de estos datos erróneos si tienen una razón para hacerlo.
+d)	Ninguna de las anteriores afirmaciones es cierta.
+
+(17).- Durante el control que se denomina en tiempo diferido (Delayed Mode), el método que se usa en Argo está basado en la referencia:
+a)	Owens and Wong, 2008.
+b)	Roemmich and Gilson, 2008.
+c)	Send and Klein, 2002.
+d)	No existe un método único, cada responsable de control en tiempo diferido usa su propio método.
+
+(18).- Para la denominada misión core del programa Argo, la siguiente configuración es la más habitual:
+a)	Parking depth a 1000m y perfiles cada 10 días.
+b)	Parking depth a 2000m y perfiles cada 10 días.
+c)	Parking depth a 2000m y perfiles cada 5 días.
+d)	Parking depth a 1000m y perfiles cada 5 días.
+
+(19).- Los principales sistemas de trasmisión de datos usados en Argo son:
+a)	Iridum y Argos.
+b)	GPS y Obercomm.
+c)	GLONASS y Galileo.
+d)	IridiumSBD y RUDICS.
+
+(20).- Las boyas perfiladoras Argo realizan, en su mayoría, observaciones de temperatura y conductividad en función de presión con un sensor:
+a)	SBE61.
+b)	RBR Concerto.
+c)	SBE37.
+d)	SBE41.
+
+(21).- El diseño original de Argo excluía las zonas con hielo, los mares regionales y tenía como objetivo una flota con el siguiente número de perfiladores activos.
+a)	2000
+b)	2500
+c)	3000
+d)	Ninguna de las anteriores es cierta.
+
+(22).- Además del mantenimiento de lo que se denomina la misión principal (core), existe un plan para ampliar Argo en las corrientes de frontera oeste, con las siguientes características:
+a)	Incrementar la profundidad de observación hasta los 4000m.
+b)	Incrementar la frecuencia de los perfiles a uno cada 5 días.
+c)	Dotar a las boyas Argo de un sensor de temperatura de alta resolución en la capa de mezcla.
+d)	Duplicar la cobertura espacial. 
+
+(23).- Además del mantenimiento de lo que se denomina la misión principal (core), existe un plan para ampliar Argo por debajo de los 2000m, con las siguientes características:
+a)	Incrementar la profundidad de observación hasta los 4000m, la profundidad promedio del océano.
+b)	Incrementar la frecuencia de los perfiles a uno cada 5 días.
+c)	Desplegar unas 1250 boyas con capacidad para observar el océano profundo. 
+d)	Incrementar la cobertura espacial hasta una boya Argo profunda cada 3 grados en longitud y latitud.
+
+(24).- En la extensión de la red de observación Argo por debajo de los 2000 metros, las observaciones de temperatura y conductividad en función de presión se realizan con un sensor:
+a)	SBE61 y SBE41. 
+b)	Indronaut 626.
+c)	SBE37.
+d)	Todavía no se ha comenzado la extensión de Argo por debajo de los 2000 m.
+
+
+(25).- Además del mantenimiento de la misión principal (core), existe una planificación para ampliar Argo a observaciones biogeoquímicas. Cuál de las siguientes afirmaciones es cierta:
+a)	Para 2020, el Argo Steering Team ha planificado que al menos un cuarto de las boyas perfiladoras Argo tendrá los 4 sensores principales biogeoquímicos: clorofila, oxigeno, turbidez y pH.
+b)	Durante 2018, la Comisión Oceanográfica Intergubernamental (IOC) aprobó un programa piloto para extender el programa Argo en 6 nuevos parámetros.
+c)	Durante 2018, la IOC denegó un programa piloto para extender el programa Argo en 6 nuevos parámetros, debido a las inferencias con los derechos de los estados ribereños según la Ley del Mar.
+d)	No existe intención, por parte del Argo Steering Team, de extender el programa Argo a observaciones biogeoquímicas. 
+
+
+

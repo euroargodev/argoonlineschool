@@ -10,25 +10,29 @@ Given the amount of data gathered by the Argo network of floats, the associated 
 The AOS is a set of videos and hands-on jupyter notebooks designed to be accessible for hight shcool or graduate students in any discipline, with no prerequisites. The AOS is organized in three main sections:
 
 [1. The Argo Program](https://euroargodev.github.io/argoonlineschool/Lectures/L01_TheArgoProgram/C10_TheArgoProgram_intro.html)
-In This sections we cover the basics of the Argo programa, this is: What is the Argo network?
-    Why do we need Argo and what are its objectives?
-    How are the observations done?
-    What is an oceanographic “profile”?
-    Technological innovations.
+In this section and using a set of video ...
+* What is the Argo network?
+* Why do we need Argo and what are its objectives?
+* How the observations are done?
+* What is an oceanographic profile?
+* Technological innovations
+* Recap Lesson 1
+
 
 [2. The Argo Data](https://euroargodev.github.io/argoonlineschool/Lectures/L02_TheArgoData/C10_TheArgoData_intro.html)
-
-Argo general data stream
-What are the Argo data and its format?
-Real-Time and Delayed mode data.
-What does a quality control flag mean?
-Where can I get access to data and how is it organized?
-Getting access through HTTP server.  Data viewers.
-
+In this section and using a set of video ...
+* The Argo General Data Stream
+* What are the Argo data and its format?
+* Real-Time and Delayed mode data.
+* Where can I get access to data and how is it organized?
 
 
 [3. Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lectures/L03_UsingArgoData/C10_UsingArgoData_intro.html)
+In this section and using hands-on jupyter notebook
 
+
+## Further reading
+More information can be found in the [Argo Steering Team web page](http://www.argo.ucsd.edu/) or the [Argo Data Management team documentation](http://www.argodatamgt.org/Documentation)
 
 ## Acknowledging Argo data
 
@@ -40,11 +44,10 @@ The Argo Data Management Team assigns Digital Object Identifiers (DOIs) to Argo 
 
 Refere to [How to cite Argo data](https://argo.ucsd.edu/data/acknowledging-argo/) for further information.
 
-## Further reading
-More information can be found in the [Argo Steering Team web page](http://www.argo.ucsd.edu/) or the [Argo Data Management team documentation](http://www.argodatamgt.org/Documentation)
-
-
 ## License for this book
-All content in this book is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
-(CC BY-SA 4.0) license.
+All content in this book is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0) license.
+
+## Credits
+The Argo Online School has been funded by the European Union's Horizon 2020 research and innovation programme under grant agreement [Euro-Argo RISE 824131](https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022) In Lessons 1 and 2 the video production has been done by [Rafael Luis Mendez Peña](http://www.rafaelmendezp.com/)
+
 
