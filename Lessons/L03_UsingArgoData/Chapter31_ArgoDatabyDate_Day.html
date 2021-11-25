@@ -393,8 +393,8 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="reading-argo-data-by-date">
 <h1>Reading Argo data by date<a class="headerlink" href="#reading-argo-data-by-date" title="Permalink to this headline">¶</a></h1>
-<p>Lets use, as example, data in the *Atlantic for the 11th November 2019.
-It is pre-downloaded in the ./Data folder, but you can dowload it from the Coriolis GDAC <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L00_Introduction.html">See here for instructions of how to download the data</a></p>
+<p>Let’s use, as an example, data in the *Atlantic for the 11th November 2019.
+It is pre-downloaded in the ./Data folder, but you can download it from the Coriolis GDAC <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L00_Introduction.html">See here for instructions of how to download the data</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -2807,7 +2807,7 @@ Attributes:
 </div>
 </div>
 </div>
-<p>For each one of the profiles, that are the Argo Core misions ones, this is the <em>Primary sampling</em> we have all the meta information to track the float that did the observations. Let’s see it for a few profiles:</p>
+<p>For each one of the profiles, that are the Argo Core missions ones, this is the <em>Primary sampling</em> we have all the meta-information to track the float that did the observations. Let’s see it for a few profiles:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">dayADS</span><span class="o">.</span><span class="n">dims</span><span class="p">[</span><span class="s1">&#39;N_PROF&#39;</span><span class="p">],</span><span class="mi">10</span><span class="p">):</span>
@@ -2841,7 +2841,7 @@ WMO 6903227  Data Center IF Data Center ARGO Italy
 </div>
 </div>
 </div>
-<p>The correspondence for the DATA_CENTRE code and the actual nanme is in the <em>Reference table 4: data centres and institutions codes</em></p>
+<p>The correspondence for the DATA_CENTRE code and the name is in the <em>Reference table 4: data centres and institutions codes</em></p>
 <p>And we have all the geographical information in <code class="docutils literal notranslate"><span class="pre">LONGITUDE</span></code> and <code class="docutils literal notranslate"><span class="pre">LATITUDE</span></code> . First let’s read the data for the same day in the <em>pacific_ocean</em> and <em>indian_ocean</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2872,7 +2872,7 @@ WMO 6903227  Data Center IF Data Center ARGO Italy
 <img alt="../../_images/Chapter31_ArgoDatabyDate_Day_11_0.png" src="../../_images/Chapter31_ArgoDatabyDate_Day_11_0.png" />
 </div>
 </div>
-<p>In this files there are also the the core argo variables <code class="docutils literal notranslate"><span class="pre">TEMP</span></code> <code class="docutils literal notranslate"><span class="pre">PSAL</span></code> and <code class="docutils literal notranslate"><span class="pre">PRE</span></code>, we can just take a quick look of the data a the most superficial level for each profile</p>
+<p>In this files there are also the the core argo variables <code class="docutils literal notranslate"><span class="pre">TEMP</span></code> <code class="docutils literal notranslate"><span class="pre">PSAL</span></code> and <code class="docutils literal notranslate"><span class="pre">PRE</span></code>, we can just take a quick look of the data a the most superficial level for each profile.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()})</span>
@@ -2967,7 +2967,7 @@ WMO 6903227  Data Center IF Data Center ARGO Italy
 <img alt="../../_images/Chapter31_ArgoDatabyDate_Day_17_0.png" src="../../_images/Chapter31_ArgoDatabyDate_Day_17_0.png" />
 </div>
 </div>
-<p>and it is possible to get the WMO of all the platforms than measured during this month, together with its data acquisition center, hence, if necccesary we can dowload the netcdf files for each cycle:</p>
+<p>and it is possible to get the WMO of all the platforms measured during this month, together with its data acquisition center, hence, if necessary we can download the netCDF files for each cycle:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">WMOs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
@@ -3032,7 +3032,7 @@ WMO 6903227  Data Center IF Data Center ARGO Italy
 <img alt="../../_images/Chapter31_ArgoDatabyDate_Day_22_0.png" src="../../_images/Chapter31_ArgoDatabyDate_Day_22_0.png" />
 </div>
 </div>
-<p>We realise that there is some <em>incorect</em>, or at least <em>suspcicuos</em> data. In the data variables of the netCDF file we realise that there are a lot of the <em>_QC</em> variables. In the case of PSAL_QC, it changes for some profiles</p>
+<p>There is some <em>incorrect</em>, or at least <em>suspicious</em> data. In the data variables of the netCDF file we realise that there are a lot of the <em>_QC</em> variables. In the case of PSAL_QC, it changes for some profiles</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
