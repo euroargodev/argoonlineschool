@@ -22,7 +22,12 @@
                 "answer": "They must include temperature, salinity and pressure, and the data are freely and freely distributed. ",
                 "correct": true,
                 "feedback": "Correct"
-            }    
+            },
+            {
+                "answer": "Live snakes via Python",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
         ]
     },
     {
@@ -187,8 +192,8 @@
         "answers": [
             {
                 "answer": "Up to 2000 meters deep.",
-                "correct": false,
-                "feedback": "Incorrect"
+                "correct": true,
+                "feedback": "Correct"
             },
             {
                 "answer": "Up to 8000 meters deep.",
@@ -197,8 +202,8 @@
             },
             {
                 "answer": "Up to 6000 meters deep.",
-                "correct": true,
-                "feedback": "Correct"
+                "correct": false,
+                "feedback": "Incorrect"
             },
             {
                 "answer": "Up to an average of the world's ocean depth.",

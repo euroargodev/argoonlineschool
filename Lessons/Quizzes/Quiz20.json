@@ -1,0 +1,208 @@
+[
+    {
+        "question": "In the distribution of data from the Argo program in NetCDF format through FTP, the files are grouped as follows:",
+        "answers": [
+            {
+                "answer": "There is a unique file for each float, organized by its serial number, with the following name: Ar_XXXXXXX.nc, whereXXXXXXX is the serial number.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "There is a unique file for each month: Ar_mmyyyy.nc, where mm is the month and yyyy the year.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "The data is grouped geographically, with a file for each day of the year according to the basin, or by data processing center, with a directory for each float.",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "None of the above statements is true.",
+                "correct": false,
+                "feedback": "Incorrect"
+            }           
+        ]
+    },
+    {
+        "question": "The Argo program aims to disseminate the observed data, freely and for free, with a control that is called in present time ( Real Time ), within a period of:",
+        "answers": [
+            {
+                "answer": "1 hour.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "6 months, with re-calibration every year.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "12 hours.",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "6 hours, as atmospheric data.",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "The aim of the Argo program is to disseminate the observed data, freely and for free, with a control called delayed time ( Delayed Mode ), within a period of:",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "1 hour.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "6 months, with re-calibration every year.",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "24/48 hours.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "6 hours, as atmospheric data.",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "During the quality control process in present time, quality flags are assigned to the data of all the sensors of the Argo floats. Which of the following statements is true?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "In general, a salinity measurement with PSAL_QC = '4' is erroneous data that, in principle, cannot be adjusted. However, delayed mode operators can evaluate the quality and tunability of this bad data if they have a reason to do so.",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "In general, the float salinity with PSAL_QC = '0' is erroneous data that, in principle, cannot be adjusted. However, delayed mode operators can evaluate the quality and tunability of this erroneous data if they have a reason to do so.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "In general, the float salinity with PSAL_QC = '1' is erroneous data that, in principle, cannot be adjusted. However, delayed mode operators can evaluate the quality and tunability of this erroneous data if they have a reason to do so.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "None of the above statements is true.",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "During the control that is called in delayed time ( Delayed Mode ), the method used in Argo is based on the reference:",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Owens and Wong, 2009.",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "Roemmich and Gilson, 2008.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "Send and Klein, 2002.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "There is no single method, each time-delayed control officer uses his own method.",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "For the so-called core mission of the Argo program ( except for the marginal seas ), the following configuration is the most common:",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Parking depth at 1000m and profiles every 10 days.",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "Parking depth at 2000m and profiles every 10 days.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "Parking depth at 2000m and profiles every 5 days.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "Parking depth at 1000m and profiles every 5 days.",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "The main data transmission systems used in Argo are:",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": ")   Iridum and Argos.",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "GPS and Obercomm.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "GLONASS and Galileo.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "IridiumSBD and RUDICS.",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "The majority of Argo floats make observations of temperature and conductivity as a function of pressure with a sensor:",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "SBE61",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "RBR Concerto",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "SBE37",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "SBE41 and SBE41CP",
+                "correct": true,
+                "feedback": "Correct"
+            }
+        ]
+    }
+]
