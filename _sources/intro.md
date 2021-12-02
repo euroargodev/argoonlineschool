@@ -48,6 +48,6 @@ Refere to [How to cite Argo data](https://argo.ucsd.edu/data/acknowledging-argo/
 All content in this book is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0) license.
 
 ## Credits
-The Argo Online School has been funded by the European Union's Horizon 2020 research and innovation programme under grant agreement [Euro-Argo RISE 824131](https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022) In Lessons 1 and 2 the video production has been done by [Rafael Luis Mendez Peña](http://www.rafaelmendezp.com/)
+The Argo Online School has been funded by the European Union's Horizon 2020 research and innovation programme under grant agreement [Euro-Argo RISE 824131](https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022). Video production of Lessons 1 and 2 has been done by [Rafael Luis Mendez Peña](http://www.rafaelmendezp.com/) . Quiz sections are based on [John M. Shea](https://github.com/jmshea) work. The AOS has also been possible thanks to the collaboration of the Euro-Argo RISE members and the [Argo Steering Team](https://argo.ucsd.edu/organization/argo-steering-team/).
 
 
