@@ -160,7 +160,7 @@
         "type": "many_choice",
         "answers": [
             {
-                "answer": ")   Iridum and Argos.",
+                "answer": "Iridum and Argos.",
                 "correct": true,
                 "feedback": "Correct"
             },
