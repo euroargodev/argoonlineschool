@@ -26,7 +26,7 @@
         ]
     },
     {
-        "question": "The coverage objective of the Argo profilers fleet, as established by the Argo Science Team at the beginning of the program was:",
+        "question": "The coverage objective of the Argo fleet, as established by the Argo Science Team at the beginning of the program, was:",
         "type": "many_choice",
         "answers": [
             {
@@ -78,7 +78,7 @@
         ]
     },
     {
-        "question": "Which of the following variables is not included, among those accepted in the Biogeochemical mission of the Argo program?",
+        "question": "Which of the following variables is not included, among those accepted, in the Biogeochemical mission of the Argo program?",
         "type": "many_choice",
         "answers": [
             {
