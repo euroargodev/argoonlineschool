@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz - Lesson 1 &#8212; Argo Online School</title>
+    <title>Quiz - Lesson 2 &#8212; Argo Online School</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -49,11 +49,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html" />
+    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz20.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Quiz - Lesson 2" href="Quiz20.html" />
-    <link rel="prev" title="Delayed mode data" href="../L03_UsingArgoData/Chapter42_DMData.html" />
+    <link rel="prev" title="Quiz - Lesson 1" href="Quiz10.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -296,13 +295,13 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Quiz10.html">
    Quiz - Lesson 1
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Quiz20.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Quiz - Lesson 2
   </a>
  </li>
@@ -347,7 +346,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/Lessons/Quizzes/Quiz10.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/Lessons/Quizzes/Quiz20.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -367,7 +366,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/Quizzes/Quiz10.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/Quizzes/Quiz20.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -396,9 +395,9 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="quiz-lesson-1">
-<h1>Quiz - Lesson 1<a class="headerlink" href="#quiz-lesson-1" title="Permalink to this headline">¶</a></h1>
-<p>Quiz time! It is time to evaluate in an easy way the knowledge gained in Lesson 1. For each question, there is only one correct answer. And remember, you can open an issue in the Git repository if you need help. Good luck!</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="quiz-lesson-2">
+<h1>Quiz - Lesson 2<a class="headerlink" href="#quiz-lesson-2" title="Permalink to this headline">¶</a></h1>
+<p>Quiz time! It is time to evaluate in an easy way the knowledge gained in Lesson 2. For each question, there is only one correct answer. And remember, you can open an issue in the Git repository if you need help. Good luck!</p>
 <p>Thanks to John M. Shea.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
@@ -412,7 +411,7 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-<div class="output text_html"><div id="qJdsjdGuNGgR" data-shufflequestions="False"
+<div class="output text_html"><div id="oGkHcFUncKJi" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-numquestions="1000000"> <style>:root {
     --medium-slate-blue: #6f78ffff;
@@ -573,153 +572,101 @@
     100% {
         background-color: var(--correct-green);
     }
-}</style><script type="text/Javascript">var questionsqJdsjdGuNGgR=[
+}</style><script type="text/Javascript">var questionsoGkHcFUncKJi=[
     {
-        "question": "What requirements must the data of the Argo International Program meet to be accepted by the receiving centers?",
+        "question": "In the distribution of data from the Argo program in NetCDF format through FTP, the files are grouped as follows:",
         "type": "many_choice",
         "answers": [
             {
-                "answer": "They must include temperature, salinity and pressure.",
+                "answer": "There is a unique file for each float, organized by its serial number, with the following name: Ar_XXXXXXX.nc, whereXXXXXXX is the serial number.",
                 "correct": false,
                 "feedback": "Incorrect"
             },
             {
-                "answer": "They must include temperature, salinity, pressure and quality controls.",
+                "answer": "There is a unique file for each month: Ar_mmyyyy.nc, where mm is the month and yyyy the year.",
                 "correct": false,
                 "feedback": "Incorrect"
             },
             {
-                "answer": "They must include temperature and pressure, quality controls, and be freely available.",
-                "correct": false,
-                "feedback": "Incorrect"
-            },
-            {
-                "answer": "They must include temperature, salinity and pressure, and the data are freely and freely distributed. ",
+                "answer": "The data is grouped geographically, with a file for each day of the year according to the basin, or by data processing center, with a directory for each float.",
                 "correct": true,
                 "feedback": "Correct"
-            }    
+            },
+            {
+                "answer": "None of the above statements is true.",
+                "correct": false,
+                "feedback": "Incorrect"
+            }           
         ]
     },
     {
-        "question": "The coverage objective of the Argo fleet, as established by the Argo Science Team at the beginning of the program, was:",
+        "question": "The Argo program aims to disseminate the observed data, freely and for free, with a control that is called in present time ( Real Time ), within a period of:",
         "type": "many_choice",
         "answers": [
             {
-                "answer": "An average coverage of one Argo float every 3 degrees in longitude and latitude.",
+                "answer": "1 hour.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "6 months, with re-calibration every year.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "12 hours.",
                 "correct": true,
                 "feedback": "Correct"
             },
             {
-                "answer": "Have around 10,000 operational floats regularly distributed in the global ocean.",
-                "correct": false,
-                "feedback": "Incorrect"
-            },
-            {
-                "answer": "Have floats spaced on an average mesh of 50x50 km.",
-                "correct": false,
-                "feedback": "Incorrect"
-            },
-            {
-                "answer": "Double the number of floats every 3 years until 2020.",
+                "answer": "6 hours, as atmospheric data.",
                 "correct": false,
                 "feedback": "Incorrect"
             }
         ]
     },
     {
-        "question": "In relation to the Argo floats currently deployed in the ocean, select the incorrect statement.",
+        "question": "The aim of the Argo program is to disseminate the observed data, freely and for free, with a control called delayed time ( Delayed Mode ), within a period of:",
         "type": "many_choice",
         "answers": [
             {
-                "answer": "They measure salinity, temperature and depth.",
+                "answer": "1 hour.",
                 "correct": false,
                 "feedback": "Incorrect"
             },
             {
-                "answer": "Some are making salinity measurements at depths greater than 2000m.",
-                "correct": false,
-                "feedback": "Incorrect"
-            },
-            {
-                "answer": "All floats have an Argos transmission system.",
+                "answer": "6 months, with re-calibration every year.",
                 "correct": true,
                 "feedback": "Correct"
             },
             {
-                "answer": "Some floats have incorporated particulate organic carbon measurement sensors.",
+                "answer": "24/48 hours.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "6 hours, as atmospheric data.",
                 "correct": false,
                 "feedback": "Incorrect"
             }
         ]
     },
     {
-        "question": "Which of the following variables is not included, among those accepted, in the Biogeochemical mission of the Argo program?",
+        "question": "During the quality control process in present time, quality flags are assigned to the data of all the sensors of the Argo floats. Which of the following statements is true?",
         "type": "many_choice",
         "answers": [
             {
-                "answer": "Phosphate.",
+                "answer": "In general, a salinity measurement with PSAL_QC = '4' is erroneous data that, in principle, cannot be adjusted. However, delayed mode operators can evaluate the quality and tunability of this bad data if they have a reason to do so.",
                 "correct": true,
                 "feedback": "Correct"
             },
             {
-                "answer": "Dissolved oxygen.",
+                "answer": "In general, the float salinity with PSAL_QC = '0' is erroneous data that, in principle, cannot be adjusted. However, delayed mode operators can evaluate the quality and tunability of this erroneous data if they have a reason to do so.",
                 "correct": false,
                 "feedback": "Incorrect"
             },
             {
-                "answer": "Nitrate.",
-                "correct": false,
-                "feedback": "Incorrect"
-            },
-            {
-                "answer": "pH.",
-                "correct": false,
-                "feedback": "Incorrect"
-            }
-        ]
-    },
-    {
-        "question": "The Argo Project Office",
-        "type": "many_choice",
-        "answers": [
-            {
-                "answer": "It is an Argo program management office present in each country and dependent on national programs.",
-                "correct": false,
-                "feedback": "Incorrect"
-            },
-            {
-                "answer": "It is an Argo program management office that provides support and infrastructure independent of national programs.",
-                "correct": true,
-                "feedback": "Correct"
-            },
-            {
-                "answer": "It is an entity that finances the Argo program.",
-                "correct": false,
-                "feedback": "Incorrect"
-            },
-            {
-                "answer": "It is an entity that evaluates national programs.",
-                "correct": false,
-                "feedback": "Incorrect"
-            }
-        ]
-    },
-    {
-        "question": "The Argo program uses the NetCDF format for data distribution. From this format it can be said:",
-        "type": "many_choice",
-        "answers": [
-            {
-                "answer": "It is a non-proprietary format, developed by IFREMER for Argo but only used in the marine science community.",
-                "correct": false,
-                "feedback": "Incorrect"
-            },
-            {
-                "answer": "It is a non-proprietary format, developed mainly by UNIDATA, which is a community of users of the American Corporation of Universities for Research in Atmospheric Sciences (UCAR).",
-                "correct": true,
-                "feedback": "Correct"
-            },
-            {
-                "answer": "It is part of the Java programming language, and therefore it is no longer proprietary, as SUN develops it under the GNU General Public License.",
+                "answer": "In general, the float salinity with PSAL_QC = '1' is erroneous data that, in principle, cannot be adjusted. However, delayed mode operators can evaluate the quality and tunability of this erroneous data if they have a reason to do so.",
                 "correct": false,
                 "feedback": "Incorrect"
             },
@@ -731,54 +678,106 @@
         ]
     },
     {
-        "question": "Which of the following statements in relation to the Argo program is not correct:",
+        "question": "During the control that is called in delayed time ( Delayed Mode ), the method used in Argo is based on the reference:",
         "type": "many_choice",
         "answers": [
             {
-                "answer": "The goal of launching 2000 buoys is about to be reached. ",
+                "answer": "Owens and Wong, 2009.",
                 "correct": true,
                 "feedback": "Correct"
             },
             {
-                "answer": "It has among its objectives the systematic measurement of the ocean and the assimilation in present time of the data in models.",
+                "answer": "Roemmich and Gilson, 2008.",
                 "correct": false,
                 "feedback": "Incorrect"
             },
             {
-                "answer": "Coverage is one buoy every 3 degrees.",
+                "answer": "Send and Klein, 2002.",
                 "correct": false,
                 "feedback": "Incorrect"
             },
             {
-                "answer": "The data obtained by the Argo buoys are used in research.",
+                "answer": "There is no single method, each time-delayed control officer uses his own method.",
                 "correct": false,
                 "feedback": "Incorrect"
             }
         ]
     },
     {
-        "question": "How deep can Deep Argo type floats operate? ",
+        "question": "For the so-called core mission of the Argo program ( except for the marginal seas ), the following configuration is the most common:",
         "type": "many_choice",
         "answers": [
             {
-                "answer": "Up to 2000 meters deep.",
-                "correct": false,
-                "feedback": "Incorrect"
-            },
-            {
-                "answer": "Up to 8000 meters deep.",
-                "correct": false,
-                "feedback": "Incorrect"
-            },
-            {
-                "answer": "Up to 6000 meters deep.",
+                "answer": "Parking depth at 1000m and profiles every 10 days.",
                 "correct": true,
                 "feedback": "Correct"
             },
             {
-                "answer": "Up to an average of the world's ocean depth.",
+                "answer": "Parking depth at 2000m and profiles every 10 days.",
                 "correct": false,
                 "feedback": "Incorrect"
+            },
+            {
+                "answer": "Parking depth at 2000m and profiles every 5 days.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "Parking depth at 1000m and profiles every 5 days.",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "The main data transmission systems used in Argo are:",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": ")   Iridum and Argos.",
+                "correct": true,
+                "feedback": "Correct"
+            },
+            {
+                "answer": "GPS and Obercomm.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "GLONASS and Galileo.",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "IridiumSBD and RUDICS.",
+                "correct": false,
+                "feedback": "Incorrect"
+            }
+        ]
+    },
+    {
+        "question": "The majority of Argo floats make observations of temperature and conductivity as a function of pressure with a sensor:",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "SBE61",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "RBR Concerto",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "SBE37",
+                "correct": false,
+                "feedback": "Incorrect"
+            },
+            {
+                "answer": "SBE41 and SBE41CP",
+                "correct": true,
+                "feedback": "Correct"
             }
         ]
     }
@@ -1404,7 +1403,7 @@ if (typeof version == 'undefined') {
 }
 
         {
-        show_questions(questionsqJdsjdGuNGgR,  qJdsjdGuNGgR);
+        show_questions(questionsoGkHcFUncKJi,  oGkHcFUncKJi);
         }
         </script>
 </div></div>
@@ -1436,19 +1435,12 @@ if (typeof version == 'undefined') {
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../L03_UsingArgoData/Chapter42_DMData.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Quiz10.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Delayed mode data</p>
+            <p class="prev-next-title">Quiz - Lesson 1</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="Quiz20.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Quiz - Lesson 2</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         
