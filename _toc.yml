@@ -48,7 +48,7 @@ parts:
 - caption: Quizzes
   chapters:
   - file: Lessons/Quizzes/Quiz10
-  
+  - file: Lessons/Quizzes/Quiz20
 
 
     

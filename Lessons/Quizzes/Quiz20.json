@@ -1,6 +1,7 @@
 [
     {
         "question": "In the distribution of data from the Argo program in NetCDF format through FTP, the files are grouped as follows:",
+        "type": "many_choice",
         "answers": [
             {
                 "answer": "There is a unique file for each float, organized by its serial number, with the following name: Ar_XXXXXXX.nc, whereXXXXXXX is the serial number.",
@@ -25,7 +26,8 @@
         ]
     },
     {
-        "question": "The Argo program aims to disseminate the observed data, freely and for free, with a control that is called in present time ( Real Time ), within a period of:",
+        "question": "The Argo program aims to disseminate the observed data, open and free, with a quality in present time ( Real Time ), within a period of:",
+        "type": "many_choice",
         "answers": [
             {
                 "answer": "1 hour.",
@@ -50,7 +52,7 @@
         ]
     },
     {
-        "question": "The aim of the Argo program is to disseminate the observed data, freely and for free, with a control called delayed time ( Delayed Mode ), within a period of:",
+        "question": "The aim of the Argo program is to disseminate the observed data, open and free, with a quality control in delayed time ( Delayed Mode ), within a period of:",
         "type": "many_choice",
         "answers": [
             {
@@ -158,7 +160,7 @@
         "type": "many_choice",
         "answers": [
             {
-                "answer": ")   Iridum and Argos.",
+                "answer": "Iridum and Argos.",
                 "correct": true,
                 "feedback": "Correct"
             },
