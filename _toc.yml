@@ -21,6 +21,7 @@ parts:
     - file: Lessons/L02_TheArgoData/Chapter14_RealTimeDelayedMode.ipynb
     - file: Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.ipynb
     - file: Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.ipynb
+    - file: Lessons/L02_TheArgoData/Chapter17_RecapLesson2.ipynb    
 
 - caption: Lesson 3
   chapters:
