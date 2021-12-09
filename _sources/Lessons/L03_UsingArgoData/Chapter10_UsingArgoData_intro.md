@@ -52,6 +52,9 @@ However we recomend to download the data from [here](https://drive.google.com/dr
 
 <img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" alt="ArgoCycle" width="650"/>
 
+
+Alternative, if you want to dowload all the Argo data in one single compressed file, you can go to [Argo float data and metadata from Global Data Assembly Centre ](https://www.seanoe.org/data/00311/42182/)
+
 ### Further reading
 
 
