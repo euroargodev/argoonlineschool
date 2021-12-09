@@ -38,25 +38,27 @@ If you download the notebooks you should create a ./Data* folder to include the 
 
 for the *Daily NOAA OI SST V2 High-Resolution Dataset for 2019*:
 
-`! wget ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc`
+```
+wget ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc
+```
 
 for the data from float 6901254:
 
-`wget ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6901254/*`
+```
+wget ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6901254/*`
+```
 
 or for the data in the North Atlantic for the 11th November 2019
 
-`! wget ftp://ftp.ifremer.fr/ifremer/argo//geo/indian_ocean/2019/11/20191111_prof.nc`
+```
+wget ftp://ftp.ifremer.fr/ifremer/argo//geo/indian_ocean/2019/11/20191111_prof.nc`
+```
 
 However we recomend to download the data from [here](https://drive.google.com/drive/folders/19yMW3sMAFouUb0bPpoyDeZY3-QC63pqi) to use exactly the same dataset and therefore to be able to reproduce precisely the notebooks here. Once you have downloaded the data, the ./Data folder should look like:
 
-<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" alt="ArgoCycle" width="650"/>
-
-
-Alternative, if you want to dowload all the Argo data in one single compressed file, you can go to [Argo float data and metadata from Global Data Assembly Centre ](https://www.seanoe.org/data/00311/42182/)
+<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" alt="ArgoCycle" width="800"/>
 
 ### Further reading
-
 
 For the full description of the formats and files produced by the Argo Data Assembly Centres (DACs), see the [Argo user’s manual](https://archimer.ifremer.fr/doc/00187/29825/), the [Argo Quality Control Manual for CTD and Trajectory Data](https://archimer.ifremer.fr/doc/00228/33951/) or the [The Argo data management handbook](http://www.argodatamgt.org/content/download/340/2645/file/argo_data_management_handbook.pdf)
 
