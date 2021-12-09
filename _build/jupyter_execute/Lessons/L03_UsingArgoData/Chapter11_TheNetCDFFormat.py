@@ -29,32 +29,30 @@
 # 
 # Let's see most of these properties of a **netCDF** file by using actual data from the high-resolution Blended Analysis of daily Sea Surface Temperature, [**NOAA OI SST V2 High-Resolution Dataset**](https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html#detail) Thanks [**NOAA**](https://www.noaa.gov/)!!
 # 
-# I have pre-downloaded the daily data from 2019. You can use this code for downloading it:
-# 
-# `! wget ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.mnmean.nc `
+# I have pre-downloaded the daily data from 2019 and it is in the ./Data folder.  Refer to the section [Data used in the Argo Online School](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html#data-used-in-the-argo-online-school) to learn how to download the data, if you have not done it yet.
 # 
 # Although there are several methods to read netCDF data in python, we will begin with [netcdf4-python](https://unidata.github.io/netcdf4-python/netCDF4/), the unidata Python interface to the netCDF C library.
 # 
 # Let's import the libraries.
 
-# In[4]:
+# In[23]:
 
 
 import netCDF4
 import numpy as np
 
 
-# In[5]:
+# In[24]:
 
 
-fileExampleNC='./Data/sst.day.mean.2019.nc'
+fileExampleNC='../../Data/sst.day.mean.2019.nc'
 
 
 # ## Open the netCDF file
 # 
 # We will create **`SST`**, a `Dataset` object, representing an open netCDF file. The data actually is not read yet (just have a reference to the variable object with metadata).
 
-# In[3]:
+# In[25]:
 
 
 ncDS = netCDF4.Dataset(fileExampleNC)
@@ -65,7 +63,7 @@ type(ncDS)
 # 
 # Printing the object gives you summary information.
 
-# In[4]:
+# In[26]:
 
 
 print(ncDS)
@@ -85,7 +83,7 @@ print(ncDS)
 # 
 # First, we have to import the xarray library, and netcdf4 and matplotlib, since both are used internally by xarray.
 
-# In[6]:
+# In[27]:
 
 
 import netCDF4
@@ -94,7 +92,7 @@ from matplotlib import pyplot as plt
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# In[6]:
+# In[28]:
 
 
 xrDS = xr.open_dataset(fileExampleNC)
@@ -103,7 +101,7 @@ type(xrDS)
 
 # **Printing the object gives you summary information**
 
-# In[7]:
+# In[29]:
 
 
 print(xrDS)
@@ -113,7 +111,7 @@ print(xrDS)
 # 
 # **However xarray has implemented a more user-friendly way of accessing the metadata stored in te Dataset**
 
-# In[8]:
+# In[30]:
 
 
 xrDS
@@ -122,7 +120,7 @@ xrDS
 # **All these meta information can be used for any purpose**
 # - A list of all the data variables in the netCDF file
 
-# In[9]:
+# In[31]:
 
 
 xrDS.data_vars
@@ -130,7 +128,7 @@ xrDS.data_vars
 
 # - A list of some attributes for all the variables and coordinates in the data set:
 
-# In[ ]:
+# In[32]:
 
 
 for d in xrDS.data_vars:
@@ -138,7 +136,7 @@ for d in xrDS.data_vars:
     print(xrDS.data_vars[d].dims)
 
 
-# In[ ]:
+# In[33]:
 
 
 for d in xrDS.coords:
@@ -147,13 +145,13 @@ for d in xrDS.coords:
 
 # - Use of the general attributes of the Dataset [in two ways]
 
-# In[ ]:
+# In[34]:
 
 
 print('We are exlploring', xrDS.attrs['dataset_title'] ,'from ',xrDS.attrs['source'], 'in its version', xrDS.attrs['version'])
 
 
-# In[ ]:
+# In[35]:
 
 
 print('We are exlploring', xrDS.dataset_title ,'from ',xrDS.source, 'in its version', xrDS.version)
@@ -163,7 +161,7 @@ print('We are exlploring', xrDS.dataset_title ,'from ',xrDS.source, 'in its vers
 # - data variable objects stored by name in **`data_vars`** dict.
 # - print the variable yields summary info: range, long_name for the variable, dimensions, fillvalue, etc. All the information necessary used to use the variable
 
-# In[7]:
+# In[36]:
 
 
 xrDS.data_vars['sst']
@@ -174,7 +172,7 @@ xrDS.data_vars['sst']
 # - print the variable yields summary info: range, long_name for the variable, dimensions, fillvalue, etc. All the information necessary used to use the variable.
 # - xarray is so clever that it will maintain its coordinates, time, lat and lon, in this case.
 
-# In[15]:
+# In[37]:
 
 
 # Just focus on Sea Surface Temperature variable
@@ -184,13 +182,13 @@ sst
 
 # It is also possible to use the attributes of a data variable.
 
-# In[8]:
+# In[38]:
 
 
 print(sst.long_name+' from the '+sst.dataset +' is in '+sst.units)
 
 
-# In[17]:
+# In[39]:
 
 
 sst.sel(lat=(28),method='nearest').mean(dim=('time'))
@@ -199,20 +197,20 @@ sst.sel(lat=(28),method='nearest').mean(dim=('time'))
 # ## Using the data
 # Let's use the data. First to see the time series of SST, near the beautiful Canary Islands, and after that, the mean global SST.
 
-# In[18]:
+# In[40]:
 
 
 #In the metadata there is no reference for the grid resolution
 sst.lon[0]-sst.lon[1]
 
 
-# In[ ]:
+# In[41]:
 
 
 sst.sel(lon=(360-18), lat=28, method='nearest').plot()
 
 
-# In[ ]:
+# In[42]:
 
 
 #28N 18W
@@ -242,7 +240,7 @@ sst.mean(dim=('time', 'lon')).plot()
 # 
 # https://www.psl.noaa.gov/data/gridded_help/using_dods.html
 
-# In[9]:
+# In[ ]:
 
 
 dap_url="http://psl.noaa.gov/thredds/dodsC/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc"
@@ -256,7 +254,7 @@ dataOP
 # 
 # but you have to create the datasets to later plot them:
 
-# In[10]:
+# In[ ]:
 
 
 dataOPsubsampled=dataOP.sel(lon=(360-18), lat=28, method='nearest')
@@ -269,7 +267,7 @@ ax.grid()
 # ## Closing your netCDF file
 # It's good to close netCDF files, but not actually necessary when Dataset is open for reading access only.
 
-# In[11]:
+# In[ ]:
 
 
 xrDS.close()
