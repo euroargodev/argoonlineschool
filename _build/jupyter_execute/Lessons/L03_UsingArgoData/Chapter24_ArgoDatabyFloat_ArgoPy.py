@@ -80,9 +80,3 @@ ax.text(data.LONGITUDE[1],cy1.LATITUDE[1],'Date of observation for 001:'+cy1.JUL
 ax.grid()
 ax.legend();
 
-
-# In[ ]:
-
-
-
-

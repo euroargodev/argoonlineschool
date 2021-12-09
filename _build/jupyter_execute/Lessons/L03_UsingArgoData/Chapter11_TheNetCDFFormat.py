@@ -7,11 +7,11 @@
 # 
 # ![NetCDFLogo](https://www.unidata.ucar.edu/images/logos/netcdf-150x150.png) netCDF stands for **Network Common Data Form** and it is a set of software libraries and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. It is also a community standard for sharing scientific data.  
 # 
-# [**NetCDF**](https://www.unidata.ucar.edu/software/netcdf/) is maintanied by [**Unidata**](https://www.unidata.ucar.edu/), one of the University Corporation for Atmospheric Research (UCAR)'s Community Programs (UCP). Unidata also supports and maintains netCDF programming interfaces for C, C++, Java, and Fortran. Programming interfaces are also available for Python, IDL, MATLAB, R, Ruby, and Perl. Thanks [**UCAR**](https://www.ucar.edu/)!!
+# [**NetCDF**](https://www.unidata.ucar.edu/software/netcdf/) is maintained by [**Unidata**](https://www.unidata.ucar.edu/), one of the University Corporation for Atmospheric Research (UCAR)'s Community Programs (UCP). Unidata also supports and maintains netCDF programming interfaces for C, C++, Java, and Fortran. Programming interfaces are also available for Python, IDL, MATLAB, R, Ruby, and Perl. Thanks [**UCAR**](https://www.ucar.edu/)!!
 
 # ## How is the netCDF format?
 # 
-# The properties that makes netCDF so useful are the following ones:
+# The properties that make netCDF so useful are the following ones:
 # 
 # **Self-Describing** A netCDF file includes information about the data it contains.
 # 
@@ -23,28 +23,28 @@
 # 
 # **Appendable** Data may be appended to a properly structured netCDF file without copying the dataset or redefining its structure.
 # 
-# **Archivable** Access to all earlier forms of netCDF data will be supported by current and future versions of the software
+# **Archivable** Access to all earlier forms of netCDF data will be supported by current and future versions of the software.
 
 # ## Exploring a netCDF File
 # 
-# Let's see most of these properties of a **netCDF** file by using actual data from the high-resolution Blended Analysis of daily Sea Surface Temperatute, [**NOAA OI SST V2 High Resolution Dataset**](https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html#detail) Thanks [**NOAA**](https://www.noaa.gov/)!!
+# Let's see most of these properties of a **netCDF** file by using actual data from the high-resolution Blended Analysis of daily Sea Surface Temperature, [**NOAA OI SST V2 High-Resolution Dataset**](https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html#detail) Thanks [**NOAA**](https://www.noaa.gov/)!!
 # 
-# I have pre-downloaded the daily data from 2019. You can use this code for dowloading it:
+# I have pre-downloaded the daily data from 2019. You can use this code for downloading it:
 # 
 # `! wget ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.mnmean.nc `
 # 
-# Although there area several methods to read netCDF data in python, we will began with [netcdf4-python](https://unidata.github.io/netcdf4-python/netCDF4/), the unidata Python interface to the netCDF C library.
+# Although there are several methods to read netCDF data in python, we will begin with [netcdf4-python](https://unidata.github.io/netcdf4-python/netCDF4/), the unidata Python interface to the netCDF C library.
 # 
-# Let's import the libraries
+# Let's import the libraries.
 
-# In[1]:
+# In[4]:
 
 
 import netCDF4
 import numpy as np
 
 
-# In[2]:
+# In[5]:
 
 
 fileExampleNC='./Data/sst.day.mean.2019.nc'
@@ -52,7 +52,7 @@ fileExampleNC='./Data/sst.day.mean.2019.nc'
 
 # ## Open the netCDF file
 # 
-# We will create **`SST`**, a `Dataset` object, representing an open netCDF file. The data is actually no read yet (just have a reference to the variable object with metadata).
+# We will create **`SST`**, a `Dataset` object, representing an open netCDF file. The data actually is not read yet (just have a reference to the variable object with metadata).
 
 # In[3]:
 
@@ -61,9 +61,9 @@ ncDS = netCDF4.Dataset(fileExampleNC)
 type(ncDS)
 
 
-# And here it comes the **Self-Describing** propierty of the netCDF format, with all information about the data it contains. The information provides depend on the particular data set, as we will see for Argo data.
+# And here it comes the **Self-Describing** porperty of the netCDF format, with all information about the data it contains. The information provides depends on the particular data set, as we will see for Argo data.
 # 
-# Printing the object gives you summary information
+# Printing the object gives you summary information.
 
 # In[4]:
 
@@ -75,17 +75,17 @@ print(ncDS)
 # 
 # <img src="http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png" alt="xarray logo" width="200"/> Before continuing with the descrption of the netCDF format, we would swtich to **xarray** . 
 # 
-# Although **netCDF4-python** provides a lower level interface for working with netCDF in Python, xarray use netCDF4-python internally, it is more user friendly than netCDF4. Additionally xarray is used by [*argopy*](https://github.com/euroargodev/argopy), the Argo data python library that aims to ease Argo data access, and that is used in te Argo Online School.  xarray does not yet support all of netCDF4-python's features, such as modifying files on-disk, but this is beyond the objective of this school.
+# Although **netCDF4-python** provides a lower-level interface for working with netCDF in Python, xarray uses netCDF4-python internally, it is more user-friendly than netCDF4. Additionally, xarray is used by [*argopy*](https://github.com/euroargodev/argopy), the Argo data python library that aims to ease Argo data access, and that is used in te Argo Online School.  xarray does not yet support all of netCDF4-python's features, such as modifying files on-disk, but this is beyond the objective of this school.
 # 
 # A brief introduction for xarray [here](https://rabernat.github.io/research_computing/xarray.html)
 
 # ## Open the netCDF file with xarray
 # 
-# We will create **`xrDS`**, a `Dataset` object, representing an open netCDF file. The data is actually no read yet, it is just have a reference to the variable object with metadata.
+# We will create **`xrDS`**, a `Dataset` object, representing an open netCDF file. The data actually is not read yet, it just has a reference to the variable object with metadata.
 # 
-# First, we have to import the xarray libray, and netcdf4 and matplotlib, since both are used internally by xarray
+# First, we have to import the xarray library, and netcdf4 and matplotlib, since both are used internally by xarray.
 
-# In[5]:
+# In[6]:
 
 
 import netCDF4
@@ -109,9 +109,9 @@ type(xrDS)
 print(xrDS)
 
 
-# And again here it comes the **Self-Describing** propierty of the netCDF format, with all information about the data it contains. The information provides depend on the particular data set, as we will see for Argo data.
+# And again here it comes the **Self-Describing** property of the netCDF format, with all information about the data it contains. The information provides depends on the particular data set, as we will see for Argo data.
 # 
-# **However xarray has implemente a more user-friendly way of accessing the meta data stored in te Dataset**
+# **However xarray has implemented a more user-friendly way of accessing the metadata stored in te Dataset**
 
 # In[8]:
 
@@ -119,7 +119,7 @@ print(xrDS)
 xrDS
 
 
-# **All these metainformation can be used for any purpose**
+# **All these meta information can be used for any purpose**
 # - A list of all the data variables in the netCDF file
 
 # In[9]:
@@ -161,30 +161,30 @@ print('We are exlploring', xrDS.dataset_title ,'from ',xrDS.source, 'in its vers
 
 # ## Accessing a netCDF data variable
 # - data variable objects stored by name in **`data_vars`** dict.
-# - print the variable yields summary info: range, long_name for the variable, dimesions, fillvalue ,... All the information neccessary used to use the variable
+# - print the variable yields summary info: range, long_name for the variable, dimensions, fillvalue, etc. All the information necessary used to use the variable
 
-# In[ ]:
+# In[7]:
 
 
 xrDS.data_vars['sst']
 
 
 # **We can just extract one single Data variable.**
-# In the case of the NOAA Daily Optimum Interpolation Sea Surface Temperature, there is only one Data variable, SST, but it is useful for later when we use the argo data
-# - print the variable yields summary info: range, long_name for the variable, dimesions, fillvalue ,... All the information neccessary used to use the variable
-# - xarray is so clever that it will matein its coordinates, time, lat and lon in this case.
+# In the case of the NOAA Daily Optimum Interpolation Sea Surface Temperature, there is only one Data variable, SST, but it is useful for later when we use the Argo data
+# - print the variable yields summary info: range, long_name for the variable, dimensions, fillvalue, etc. All the information necessary used to use the variable.
+# - xarray is so clever that it will maintain its coordinates, time, lat and lon, in this case.
 
 # In[15]:
 
 
-# Just focus on Sea Surface temperature variable
+# Just focus on Sea Surface Temperature variable
 sst = xrDS.sst
 sst
 
 
-# It is also possible to use the attributes of a data variable
+# It is also possible to use the attributes of a data variable.
 
-# In[16]:
+# In[8]:
 
 
 print(sst.long_name+' from the '+sst.dataset +' is in '+sst.units)
@@ -197,12 +197,12 @@ sst.sel(lat=(28),method='nearest').mean(dim=('time'))
 
 
 # ## Using the data
-# Let's actually use the data, first to see the time series of SST near the, beatiful, Canary Islands, and after that the mean global SST
+# Let's use the data. First to see the time series of SST, near the beautiful Canary Islands, and after that, the mean global SST.
 
 # In[18]:
 
 
-#In the metadata there is not reference for the grid resolution
+#In the metadata there is no reference for the grid resolution
 sst.lon[0]-sst.lon[1]
 
 
@@ -236,13 +236,13 @@ sst.mean(dim=('time', 'lon')).plot()
 
 # ## Remote data access via openDAP
 # 
-# With OPeNDAP, you can access data using an URL rather than a local path. For xarray it is like having the file locally, the only difference is that you provide a differente path.
+# With OPeNDAP, you can access data using an URL rather than a local path. For xarray it is like having the file locally, the only difference is that you provide a different path.
 # 
 # OPeNDAP stand for *Open-source Project for a Network Data Access Protocol* [More information here](https://earthdata.nasa.gov/collaborate/open-data-services-and-software/api/opendap)
 # 
 # https://www.psl.noaa.gov/data/gridded_help/using_dods.html
 
-# In[ ]:
+# In[9]:
 
 
 dap_url="http://psl.noaa.gov/thredds/dodsC/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc"
@@ -256,7 +256,7 @@ dataOP
 # 
 # but you have to create the datasets to later plot them:
 
-# In[ ]:
+# In[10]:
 
 
 dataOPsubsampled=dataOP.sel(lon=(360-18), lat=28, method='nearest')
@@ -267,9 +267,9 @@ ax.grid()
 
 
 # ## Closing your netCDF file
-# It's good to close netCDF files, but not actually necessary when Dataset is open for read access only.
+# It's good to close netCDF files, but not actually necessary when Dataset is open for reading access only.
 
-# In[ ]:
+# In[11]:
 
 
 xrDS.close()

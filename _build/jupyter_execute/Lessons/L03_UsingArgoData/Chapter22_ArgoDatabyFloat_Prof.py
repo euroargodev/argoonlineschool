@@ -23,7 +23,7 @@ get_ipython().run_line_magic('matplotlib', 'inline')
 prof  = xr.open_dataset('./Data/6901254/6901254_prof.nc')
 
 
-# In this case, N_PROF is 66, since there are 66 two for the first cycle, the descending and the ascending. This profiles are just the 'Primary sampling', if you need the high resotuion upper 5dbar you ave to use the indvidual cycle files.
+# In this case, N_PROF is 66, since there are 66 two for the first cycle, the descending and the ascending. These profiles are just the 'Primary sampling', if you need the high resolution upper 5dbar you have to use the individual cycle files.
 
 # In[3]:
 
@@ -32,7 +32,7 @@ fig , ax = plt.subplots(figsize=(10,10))
 ax.contourf(prof.PSAL,40);
 
 
-# However, if we want to add the proper pressure levels, since each profile have slighly different levels
+# However, if we want to add the proper pressure levels since each profile have slitghly different levels.
 
 # In[4]:
 
@@ -46,7 +46,7 @@ prof.PRES[3,:].values
 prof.PRES[4,:].values
 
 
-# we will need to do a little of interpolation to use contour:
+# We will need to do a little of interpolation to use contour:
 
 # In[6]:
 
@@ -112,7 +112,7 @@ fig.colorbar(sc,extend='both');
 
 # ## Metadata
 
-# all the metadata information for each profile is included:
+# All the metadata information for each profile is included:
 
 # In[9]:
 

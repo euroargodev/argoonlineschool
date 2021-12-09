@@ -3,8 +3,8 @@
 
 # # Reading Argo data by date
 
-# Lets use, as example, data in the *Atlantic for the 11th November 2019. 
-# It is pre-downloaded in the ./Data folder, but you can dowload it from the Coriolis GDAC [See here for instructions of how to download the data](https://euroargodev.github.io/argoonlineschool/L00_Introduction.html)
+# Let's use, as an example, data in the *Atlantic for the 11th November 2019. 
+# It is pre-downloaded in the ./Data folder, but you can download it from the Coriolis GDAC [See here for instructions of how to download the data](https://euroargodev.github.io/argoonlineschool/L00_Introduction.html)
 
 # In[1]:
 
@@ -53,7 +53,7 @@ dayADS
 print(f" for this day there were {dayADS.dims['N_PROF']} profiles")
 
 
-# For each one of the profiles, that are the Argo Core misions ones, this is the _Primary sampling_ we have all the meta information to track the float that did the observations. Let's see it for a few profiles:
+# For each one of the profiles, that are the Argo Core missions ones, this is the _Primary sampling_ we have all the meta-information to track the float that did the observations. Let's see it for a few profiles:
 
 # In[5]:
 
@@ -64,7 +64,7 @@ for i1 in range(1,dayADS.dims['N_PROF'],10):
           f" Data Center {dayADS.data_vars['PROJECT_NAME'].values.astype(str)[i1]}" )
 
 
-# The correspondence for the DATA_CENTRE code and the actual nanme is in the _Reference table 4: data centres and institutions codes_ 
+# The correspondence for the DATA_CENTRE code and the name is in the _Reference table 4: data centres and institutions codes_ 
 
 # And we have all the geographical information in `LONGITUDE` and `LATITUDE` . First let's read the data for the same day in the *pacific_ocean* and *indian_ocean*
 
@@ -92,7 +92,7 @@ ax.gridlines(draw_labels=True, x_inline=False, y_inline=False);
 ax.grid()
 
 
-# In this files there are also the the core argo variables `TEMP` `PSAL` and `PRE`, we can just take a quick look of the data a the most superficial level for each profile
+# In this files there are also the the core argo variables `TEMP` `PSAL` and `PRE`, we can just take a quick look of the data a the most superficial level for each profile.
 
 # In[8]:
 
@@ -178,7 +178,7 @@ cbar=fig.colorbar(cs,ax=ax,extend='both',orientation='horizontal',shrink=.8,aspe
 cbar.set_label(dayPDS.TEMP.long_name)    
 
 
-# and it is possible to get the WMO of all the platforms than measured during this month, together with its data acquisition center, hence, if necccesary we can dowload the netcdf files for each cycle:
+# and it is possible to get the WMO of all the platforms measured during this month, together with its data acquisition center, hence, if necessary we can download the netCDF files for each cycle:
 
 # In[11]:
 
@@ -237,7 +237,7 @@ ax.set_xlabel(f"{dayADS.PSAL.long_name}")
 ax.set_ylabel(f"{dayADS.PRES.long_name}");
 
 
-# We realise that there is some *incorect*, or at least *suspcicuos* data. In the data variables of the netCDF file we realise that there are a lot of the *_QC* variables. In the case of PSAL_QC, it changes for some profiles
+# There is some *incorrect*, or at least *suspicious* data. In the data variables of the netCDF file we realise that there are a lot of the *_QC* variables. In the case of PSAL_QC, it changes for some profiles
 
 # In[15]:
 
@@ -254,9 +254,3 @@ ax.set_title(f"PSAL {dayADS.PSAL_QC.long_name}");
 
 
 # we will describre carefully then meaning of the QC falgs in section **AQUI** [UPDATE]
-
-# In[ ]:
-
-
-
-

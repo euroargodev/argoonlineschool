@@ -283,6 +283,23 @@
   </ul>
  </li>
 </ul>
+<p class="caption">
+ <span class="caption-text">
+  Quizzes
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Quizzes/Quiz10.html">
+   Quiz - Lesson 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Quizzes/Quiz20.html">
+   Quiz - Lesson 2
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -377,13 +394,22 @@
 <p><strong>[HOST - Video 206-01] Where can I get access to data and how is it organized? - Host - INT. (White background)</strong></p>
 <p><strong>[ANIMATION 206-02] Servers (represent servers and data centers in the background)</strong></p>
 <p><strong>[ANIMATION Video 206-03] FTP and HTTP Servers</strong></p>
-<p><strong>[TUTORIAL 206-04] FTP access</strong></p>
+<p><strong>[TUTORIAL 206-04] FTP access INTRO HOST</strong></p>
+<p><strong>206-04 [Screen capture tutorial - Computer screen &amp; voice over]</strong></p>
+<p>Take a look at this simple example on how to get access to Argo data through Coriolis GDAC FTP. Let’s go for it!</p>
+<ol class="simple">
+<li><p>Before opening the FTP client, make sure where the files are allocated. In this case, the files are located in <a class="reference external" href="http://ftp.ifremer.fr/ifremer/argo">ftp.ifremer.fr/ifremer/argo</a>.</p></li>
+<li><p>Open the FTP client and fill in the box with the host provided <a class="reference external" href="http://ftp.ifremer.fr/ifremer/argo">ftp.ifremer.fr/ifremer/argo</a> in the host.</p></li>
+<li><p>You are now connected to the Coriolis GDAC!</p></li>
+</ol>
 <p>Each data will have a specific quality flag assigned that indicates its status! Both Real-Time quality control and Delayed - Mode quality control follow a solid quality flag policy. Here are some examples that show how robust this quality flag policy is:</p>
 <p>• The value assigned by a test cannot override a higher value from a previous test. Taking the Real-Time quality control as an example: a QC flag ‘4’ (bad data) set by Test 11 (gradient test) cannot be decreased to QC flag ‘3’ (bad data that is potentially correctable) set by Test 15 (gray list).</p>
 <p>• A measurement with QC flag ‘4’ (bad data) or ‘3’ (bad data that are potentially correctable) cannot get a better QC flag in other quality control tests.</p>
 <p>• Since salinity (PSAL) is almost always calculated from temperature (TEMP) and conductivity (CNDC), if the temperature is flagged ‘4’ (or ‘3’), then salinity is also flagged as ‘4’ (or ‘3’).</p>
-<p><strong>[GRAPHIC 205-04] Flags
-<a class="reference external" href="https://argo.ucsd.edu/data/how-to-use-argo-files/">https://argo.ucsd.edu/data/how-to-use-argo-files/</a></strong></p>
+<p><strong>[TUTORIAL 206-06] HTTP access INTRO HOST</strong></p>
+<p><strong>206-06 Screen capture tutorial - Computer screen &amp; voice over</strong></p>
+<p><strong>INTRO - HOST in front of a computer or white background</strong></p>
+<p><strong>Screen capture tutorial - Computer screen &amp; voice over</strong></p>
 </div>
 
     <script type="text/x-thebe-config">

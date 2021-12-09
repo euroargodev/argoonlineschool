@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoAoS.png" alt="argopy logo" width="100"/>
+<img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoAoS_banner.png" alt="AoS logo" width="200"/>
 
 # The Argo Online School
 Argo is an international program that collects information from inside the ocean using a fleet of floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level  measuring ocean variables but spend almost all their life below the surface. Argo has been collecting more than 100,000 profiles per year since 2012, and nowadays [Argo](https://argo.ucsd.edu/) is the major component of the Global Ocean Observing System.

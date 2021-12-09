@@ -3,7 +3,7 @@
 
 # # Accessing trayectory data
 
-# First, import libraries
+# First, import libraries:
 
 # In[1]:
 

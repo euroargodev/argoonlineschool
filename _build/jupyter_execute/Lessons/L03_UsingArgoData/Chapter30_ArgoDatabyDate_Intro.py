@@ -8,7 +8,7 @@
 # <img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/geo.png" alt="geo organization" width="650"/>
 # 
 
-# The geographical limits of Atlantic, Pacific and Indian oceans are:
+# The geographical limits of the Atlantic, Pacific and Indian oceans are:
 # 
 # - The Pacific/Atlantic frontier is 70°W.
 # - The Pacific/Indian frontier is 145°E.
