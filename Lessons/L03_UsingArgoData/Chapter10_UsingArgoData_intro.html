@@ -461,14 +461,19 @@
 <h3>Data used in the Argo Online School<a class="headerlink" href="#data-used-in-the-argo-online-school" title="Permalink to this headline">¶</a></h3>
 <p>If you download the notebooks you should create a ./Data* folder to include the files used for the examples. The files in the Data folder can be downloaded  directly from its source using <em>wget</em>, for instance:</p>
 <p>for the <em>Daily NOAA OI SST V2 High-Resolution Dataset for 2019</em>:</p>
-<p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">wget</span> <span class="pre">ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp2</span><span class="o">.</span><span class="n">psl</span><span class="o">.</span><span class="n">noaa</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">Datasets</span><span class="o">/</span><span class="n">noaa</span><span class="o">.</span><span class="n">oisst</span><span class="o">.</span><span class="n">v2</span><span class="o">.</span><span class="n">highres</span><span class="o">/</span><span class="n">sst</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">mean</span><span class="mf">.2019</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
 <p>for the data from float 6901254:</p>
-<p><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6901254/*</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>wget ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6901254/*`
+</pre></div>
+</div>
 <p>or for the data in the North Atlantic for the 11th November 2019</p>
-<p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">wget</span> <span class="pre">ftp://ftp.ifremer.fr/ifremer/argo//geo/indian_ocean/2019/11/20191111_prof.nc</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>wget ftp://ftp.ifremer.fr/ifremer/argo//geo/indian_ocean/2019/11/20191111_prof.nc`
+</pre></div>
+</div>
 <p>However we recomend to download the data from <a class="reference external" href="https://drive.google.com/drive/folders/19yMW3sMAFouUb0bPpoyDeZY3-QC63pqi">here</a> to use exactly the same dataset and therefore to be able to reproduce precisely the notebooks here. Once you have downloaded the data, the ./Data folder should look like:</p>
-<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" alt="ArgoCycle" width="650"/>
-<p>Alternative, if you want to dowload all the Argo data in one single compressed file, you can go to <a class="reference external" href="https://www.seanoe.org/data/00311/42182/">Argo float data and metadata from Global Data Assembly Centre </a></p>
+<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" alt="ArgoCycle" width="800"/>
 </div>
 <div class="section" id="further-reading">
 <h3>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h3>
