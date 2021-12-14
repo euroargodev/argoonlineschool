@@ -179,7 +179,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../L02_TheArgoData/Chapter15_QualityFlagMean.html">
-     Where can I get access to data and how is it organized?
+     What does a quality control flag mean?
     </a>
    </li>
    <li class="toctree-l2">
@@ -439,8 +439,8 @@
 <div class="section" id="the-first-cycle">
 <h2>The first cycle<a class="headerlink" href="#the-first-cycle" title="Permalink to this headline">¶</a></h2>
 <img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/ArgoCycle.png" alt="ArgoCycle" width="1200"/>
-<p>An <strong>Argo cycle</strong> starts with a descent toward deep water, usually from the surface, and ends after the next programmed ascent to the surface (see the figure). During the surface interval, data transmission typically occurs but it is not a requirement for a cycle to have occurred, but if occurs, the cycle ends after the full surface interval has been completed.</p>
-<p>Nowdays Argo floats can measure different parameters, however, we will focus on what is called the <em><a class="reference external" href="https://argo.ucsd.edu/about/mission/">Argo core mission</a></em>, this is observations of temperature, salinity and pressure down to 2000 meters of depth. The measurements are performed during ascent, occasionally during descent, and subsurface measurements during parking are sometimes performed.</p>
+<p>An <strong>Argo cycle</strong> starts with a descent towards deep water, usually from the surface, and ends after the next programmed ascent to the surface (see the figure). During the surface interval, data transmission typically occurs but it is not a requirement for a cycle to have occurred. If it occurs, the cycle ends after the full surface interval has been completed.</p>
+<p>Nowadays Argo floats can measure different parameters, however, we will focus on what is called the <em><a class="reference external" href="https://argo.ucsd.edu/about/mission/">Argo core mission</a></em>, this is observations of temperature, salinity and pressure down to 2000 meters of depth. The measurements are performed during ascent, occasionally during descent, and subsurface measurements during parking are sometimes performed.</p>
 <p>Each cycle of a float has a unique number, increased by one after each ascent to the surface or shallow water. Float cycle numbers usually start at 1. The next cycles are increasing numbers (e.g. 2, 3,…N). Some floats report a cycle 0, called <em>launch cycle</em>, which is shorter than the regular cycles. The cycle time is therefore regular only for later profiles and may be variable if the float is reprogrammed after its deployment.</p>
 <p>For those floats with cycle 0, if there is an initial descend profile, it would be on cycle 0.</p>
 <p>First, import libraries.</p>
@@ -1175,26 +1175,28 @@ Attributes:
        [[b&#x27;              &#x27;, b&#x27;              &#x27;, b&#x27;              &#x27;]]],
       dtype=object)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-eda634c1-60d6-4785-9777-bbe92900f330' class='xr-section-summary-in' type='checkbox'  checked><label for='section-eda634c1-60d6-4785-9777-bbe92900f330' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>Argo float vertical profile</dd><dt><span>institution :</span></dt><dd>CORIOLIS</dd><dt><span>source :</span></dt><dd>Argo float</dd><dt><span>history :</span></dt><dd>2019-01-15T11:25:18Z creation; 2019-01-15T11:25:24Z last update (coriolis COQC software)</dd><dt><span>references :</span></dt><dd>http://www.argodatamgt.org/Documentation</dd><dt><span>user_manual_version :</span></dt><dd>3.1</dd><dt><span>Conventions :</span></dt><dd>Argo-3.1 CF-1.6</dd><dt><span>featureType :</span></dt><dd>trajectoryProfile</dd><dt><span>decoder_version :</span></dt><dd>CODA_027d</dd></dl></div></li></ul></div></div></div></div>
 </div>
-<p>Check what useful is the <strong>Self-Describing</strong> propierty of the netCDF format.</p>
+<p>Check what useful is the <strong>Self-Describing</strong> property of the netCDF format.</p>
 <p>The name for the core observations, temperature, salinity and pressure down to 2000 meters of depth, are TEMP, SALT and PRES. Although we could inspect the previous print-out of the <em>cy1</em> dataset, we can use the data itself:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The core variables are: </span><span class="se">\n</span><span class="s2"> TEMP </span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> PSAL </span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">PSAL</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> and </span><span class="se">\n</span><span class="s2"> PRES</span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The core variables are: </span><span class="se">\n</span><span class="s2"> TEMP </span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> PSAL </span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">PSAL</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> and </span><span class="se">\n</span><span class="s2"> PRES </span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The core variables are: 
- TEMP Sea temperature in-situ ITS-90 scale 
- PSAL Practical salinity and 
- PRESSea water pressure, equals 0 at sea-level
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">dcf936167f67</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The core variables are: </span><span class="se">\n</span><span class="s2"> TEMP </span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">TEMP</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2"> PSAL </span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">PSAL</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> and </span><span class="se">\n</span><span class="s2"> PRES </span><span class="si">{</span><span class="n">cy1</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;cy1&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
 <blockquote>
 <div></div></blockquote>
-<p>In this file we also have the variables TEMP_ADJUSTED, PSAL_ADJUSTED and PRES_ADJUSTED, that correspond to data that has gone through the second stage of quality control. However, here we keep the focus in the Real Time data in section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L40_RTandDM.html">Real-Time and Delayed mode data</a> we will describe in detail de quality control.</p>
+<p>In this file, the variables TEMP_ADJUSTED, PSAL_ADJUSTED and PRES_ADJUSTED are also shown, which correspond to data that has gone through the second stage of quality control. However, here we keep the focus on the Real-Time data in section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/L40_RTandDM.html">Real-Time and Delayed mode data</a>.</p>
 <blockquote>
 <div></div></blockquote>
 <div class="cell docutils container">
@@ -1262,12 +1264,12 @@ Attributes:
 </div>
 </div>
 </div>
-<p>Ago floats may measure several profiles in each cycle, however, as a rule of thumb the first profile is always the <strong>core mission Argo CTD profile</strong> (2000 dbar - 5 dbar). In the case of this float there is an additional second profile, with higher resolution (10 sec sampling and 1 dbar average) but unpumped. The sensor of conductity (for salinity) doesn’t pump water through to avoid contamination or biodeposition from the surface. The data from this second profile is used, mostly, for calibrations of SST observations from satellites.</p>
+<p>Ago floats may measure several profiles in each cycle, however, as a rule of thumb the first profile is always the <strong>core mission Argo CTD profile</strong> (2000 dbar - 5 dbar). In the case of this float there is an additional second profile, with higher resolution (10 sec sampling and 1 dbar average) but unpumped. The sensor of conductivity (for salinity) doesn’t pump water through to avoid contamination or biodeposition from the surface. The data from this second profile is used, mostly, for calibrations of SST observations from satellites.</p>
 <p>In the <em>Reference table 16: vertical sampling schemes</em> of the <em>Argo Data Management Team. Argo user’s manual. <a class="reference external" href="https://doi.org/10.13155/29825">https://doi.org/10.13155/29825</a></em> there is a description of all the different options in VERTICAL_SAMPLING_SCHEME. However, a discussion of all of them is beyond the objective of this AoS than focusing on understanding the basic concepts.</p>
 </div>
 <div class="section" id="the-descending-profile">
 <h2>The descending profile<a class="headerlink" href="#the-descending-profile" title="Permalink to this headline">¶</a></h2>
-<p>As mentioned before, some floats also make measurements in the first descending phase of the first cycle, the data is in the &lt;R/D&gt;<FloatWmoID>_001D.nc file</p>
+<p>As mentioned before, some floats also make measurements in the first descending phase of the first cycle. The data is in the &lt;R/D&gt;<FloatWmoID>_001D.nc file</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy1D</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../../Data/6901254/profiles/R6901254_001D.nc&#39;</span><span class="p">)</span>
@@ -1320,7 +1322,7 @@ Attributes:
 </div>
 <div class="section" id="geographical-information">
 <h2>Geographical information<a class="headerlink" href="#geographical-information" title="Permalink to this headline">¶</a></h2>
-<p>The NetCDF file includes the information about the geographical position of the observations (LONGITUDE and LATITUDE) and the date of the observation (JULD).</p>
+<p>The NetCDF file includes information about the geographical position of the observations (LONGITUDE and LATITUDE) and the date of the observation (JULD).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;LONGITUDE&#39;</span><span class="p">,</span> <span class="s1">&#39;LATITUDE&#39;</span> <span class="p">,</span> <span class="s1">&#39;JULD&#39;</span><span class="p">]:</span>
@@ -1429,7 +1431,7 @@ N_CALIB 1
 </div>
 </div>
 </div>
-<p>N_LEVELS is the number of vertical leves, i.e. in pressure. N_PROF the number of profiles within the cycle, as we saw previously and N_PARAM is te number of paramters, 3 for this float: TEMP, PSAL and PRES</p>
+<p>N_LEVELS is the number of vertical leves, i.e. in pressure. N_PROF the number of profiles within the cycle, as we saw previously. N_PARAM is te number of paramters, 3 for this float: TEMP, PSAL and PRES</p>
 <p>Later we will explain N_CALIB and N_HISTORY</p>
 </div>
 <div class="section" id="meta-data">
@@ -1442,7 +1444,7 @@ N_CALIB 1
 </div>
 </div>
 </div>
-<p>Always, we have the basic information that appears in all the netcdf files of an Argo float:</p>
+<p>Always, basic information appears in all the netcdf files of an Argo float:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;PLATFORM_NUMBER&#39;</span><span class="p">,</span><span class="s1">&#39;DATA_CENTRE&#39;</span><span class="p">,</span><span class="s1">&#39;PROJECT_NAME&#39;</span><span class="p">,</span><span class="s1">&#39;PI_NAME&#39;</span><span class="p">]:</span>

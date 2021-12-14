@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Where can I get access to data and how is it organized? &#8212; Argo Online School</title>
+    <title>What does a quality control flag mean? &#8212; Argo Online School</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -179,7 +179,7 @@
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Where can I get access to data and how is it organized?
+     What does a quality control flag mean?
     </a>
    </li>
    <li class="toctree-l2">
@@ -401,11 +401,19 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="where-can-i-get-access-to-data-and-how-is-it-organized">
-<h1>Where can I get access to data and how is it organized?<a class="headerlink" href="#where-can-i-get-access-to-data-and-how-is-it-organized" title="Permalink to this headline">¶</a></h1>
-<p><strong>[HOST - Video 206-01] Where can I get access to data and how is it organized? - Host - INT. (White background)</strong></p>
-<p><strong>[ANIMATION 206-02] Servers (represent servers and data centers in the background)</strong></p>
-<p><strong>[ANIMATION Video 206-03] FTP and HTTP Servers</strong></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="what-does-a-quality-control-flag-mean">
+<h1>What does a quality control flag mean?<a class="headerlink" href="#what-does-a-quality-control-flag-mean" title="Permalink to this headline">¶</a></h1>
+<p><strong>[HOST - Video 205-01] What does a quality control flag mean?</strong></p>
+<p><strong>[ANIMATION 205-02] FLAGS (Designada como L2-A5 en la lista de animaciones)</strong></p>
+<p>Each data will have a specific quality flag assigned that indicates its status! Both Real-Time quality control and Delayed - Mode quality control follow a solid quality flag policy. Here are some examples that show how robust this quality flag policy is:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>• The value assigned by a test cannot override a higher value from a previous test. Taking the Real-Time quality control as an example: a QC flag ‘4’ (bad data) set by Test 11 (gradient test) cannot be decreased to QC flag ‘3’ (bad data that is potentially correctable) set by Test 15 (gray list).
+
+• A measurement with QC flag &#39;4&#39; (bad data) or &#39;3&#39; (bad data that are potentially correctable) cannot get a better QC flag in other quality control tests.
+
+• Since salinity (PSAL) is almost always calculated from temperature (TEMP) and conductivity (CNDC), if the temperature is flagged &#39;4&#39; (or &#39;3&#39;), then salinity is also flagged as &#39;4&#39; (or &#39;3&#39;).
+</pre></div>
+</div>
+<p><strong>[GRAPHIC 205-04] Flags</strong></p>
 </div>
 
     <script type="text/x-thebe-config">

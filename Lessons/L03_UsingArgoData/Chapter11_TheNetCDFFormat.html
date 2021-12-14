@@ -179,7 +179,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../L02_TheArgoData/Chapter15_QualityFlagMean.html">
-     Where can I get access to data and how is it organized?
+     What does a quality control flag mean?
     </a>
    </li>
    <li class="toctree-l2">
@@ -514,7 +514,7 @@
 </div>
 </div>
 </div>
-<p>And here it comes the <strong>Self-Describing</strong> porperty of the netCDF format, with all information about the data it contains. The information provides depends on the particular data set, as we will see for Argo data.</p>
+<p>And here it comes the <strong>Self-Describing</strong> property of the netCDF format, with all information about the data it contains. The information provided depends on the particular data set, as we will see for Argo data.</p>
 <p>Printing the object gives you summary information.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -549,7 +549,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 <div class="section" id="open-the-netcdf-file-with-xarray">
 <h2>Open the netCDF file with xarray<a class="headerlink" href="#open-the-netcdf-file-with-xarray" title="Permalink to this headline">¶</a></h2>
-<p>We will create <strong><code class="docutils literal notranslate"><span class="pre">xrDS</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data actually is not read yet, it just has a reference to the variable object with metadata.</p>
+<p>We will create <strong><code class="docutils literal notranslate"><span class="pre">xrDS</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data is not read yet, it just has a reference to the variable object with metadata.</p>
 <p>First, we have to import the xarray library, and netcdf4 and matplotlib, since both are used internally by xarray.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -603,7 +603,7 @@ Attributes:
 </div>
 </div>
 </div>
-<p>And again here it comes the <strong>Self-Describing</strong> property of the netCDF format, with all information about the data it contains. The information provides depends on the particular data set, as we will see for Argo data.</p>
+<p>And again here it comes the <strong>Self-Describing</strong> property of the netCDF format, with all information about the data it contains. The information provided depends on the particular data set, as we will see for Argo data.</p>
 <p><strong>However xarray has implemented a more user-friendly way of accessing the metadata stored in te Dataset</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1454,7 +1454,7 @@ Attributes:
 <p><strong>We can just extract one single Data variable.</strong>
 In the case of the NOAA Daily Optimum Interpolation Sea Surface Temperature, there is only one Data variable, SST, but it is useful for later when we use the Argo data</p>
 <ul class="simple">
-<li><p>print the variable yields summary info: range, long_name for the variable, dimensions, fillvalue, etc. All the information necessary used to use the variable.</p></li>
+<li><p>print the variable yields summary info: range, long_name for the variable, dimensions, fillvalue, etc. All the information necessary is used to use the variable.</p></li>
 <li><p>xarray is so clever that it will maintain its coordinates, time, lat and lon, in this case.</p></li>
 </ul>
 <div class="cell docutils container">
@@ -2221,7 +2221,7 @@ Coordinates:
 </div>
 <div class="section" id="using-the-data">
 <h2>Using the data<a class="headerlink" href="#using-the-data" title="Permalink to this headline">¶</a></h2>
-<p>Let’s use the data. First to see the time series of SST, near the beautiful Canary Islands, and after that, the mean global SST.</p>
+<p>Let’s use the data. First, to see the time series of SST near the beautiful Canary Islands, and after that, the mean global SST.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#In the metadata there is no reference for the grid resolution</span>
@@ -2660,7 +2660,7 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
 </div>
 <div class="section" id="closing-your-netcdf-file">
 <h2>Closing your netCDF file<a class="headerlink" href="#closing-your-netcdf-file" title="Permalink to this headline">¶</a></h2>
-<p>It’s good to close netCDF files, but not actually necessary when Dataset is open for reading access only.</p>
+<p>It’s good to close netCDF files, but not necessary when Dataset is open for reading access only.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
