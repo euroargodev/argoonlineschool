@@ -44,14 +44,22 @@ The AOS was presented at the [2nd Ocean Observers Workshop](https://bit.ly/3pUCh
 
 # Acknowledgements
 
-The audiovisual work has been recorded and edited by Rafael Méndez Pérez (http://rafaelmendezp.com/). Proofreading and coaching support by Agustín Prunell-Friend. Quiz sections are based on John M. Shea [@jmshea] work. The AOS has also been possible thanks to the collaboration of the Euro-Argo RISE members and the Argo Steering Team.
+The audiovisual work has been recorded and edited by Rafael Méndez Pérez (http://rafaelmendezp.com/). Proofreading and coaching support by Agustín Prunell-Friend. Quiz sections are based on John M. Shea [@jmshea](https://github.com/jmshea) work. The AOS has also been possible thanks to the collaboration of the Euro-Argo RISE members and the Argo Steering Team. Other learning tools based on this design pattern include the _Earth and Environmental Data Science_ (https://github.com/earth-env-data-science/earth-env-data-science-book), which inspired the creation of the AOS. 
 
 Since data are freely available without restriction, to track uptake and impact, we ask that where Argo data are used in a publication or product, an acknowledgement be given. To acknowledge Argo, please use the following sentence and the appropriate Argo DOI afterward as described below.
 
-“These data were collected and made freely available by the International Argo Program and the national programs that contribute to it. (https://argo.ucsd.edu, https://www.ocean-ops.org). The Argo Program is part of the Global Ocean Observing System“
+“These data were collected and made freely available by the International Argo Program and the national programs that contribute to it. (https://argo.ucsd.edu, https://www.ocean-ops.org). The Argo Program is part of the Global Ocean Observing System“.
 
-The Argo Online School has been funded by the European Union’s Horizon 2020 research and innovation program under grant agreement Euro-Argo RISE [824131](https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022)
+The Argo Online School has been funded by the European Union's Horizon 2020 research and innovation program under grant agreement Euro-Argo RISE [824131](https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022).
 
 # References
 
-Other learning tools based on this design pattern include the _Earth and Environmental Data Science_ (https://github.com/earth-env-data-science/earth-env-data-science-book), which inspired the creation of the AOS.  
+Owens, W. B. & Wong, A. P. S. An improved calibration method for the drift of the conductivity sensor on autonomous CTD profiling floats by θ–S climatology. Deep Sea Research Part I: Oceanographic Research Papers 56, 450–457 (2009). Retrieved from https://doi.org/10.1016/j.dsr.2008.09.008.
+Riser, S. C. et al. Fifteen years of ocean observations with the global Argo array. Nature Clim Change 6, 145–153 (2016). Retrieved from https://doi.org/10.1038/nclimate2872
+Roemmich, D. et al. The Argo Program: Observing the Global Oceans with Profiling Floats. Oceanog. 22, 34–43 (2009). Rerieved from https://doi.org/10.5670/oceanog.2009.36
+Wong, A. P. S. et al. Argo Data 1999–2019: Two Million Temperature-Salinity Profiles and Subsurface Velocity Observations From a Global Array of Profiling Floats. Front. Mar. Sci. 7, 700 (2020). Retrieved from https://doi.org/10.3389/fmars.2020.00700
+Argo Steering Team https://argo.ucsd.edu/ 
+Argo Data Management Team http://www.argodatamgt.org/
+Euro - Argo https://www.euro-argo.eu/ 
+ 
+
