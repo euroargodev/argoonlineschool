@@ -56,7 +56,7 @@ The Argo Online School has been funded by the European Union's Horizon 2020 rese
 
 - Owens, W. B. & Wong, A. P. S. An improved calibration method for the drift of the conductivity sensor on autonomous CTD profiling floats by θ–S climatology. Deep Sea Research Part I: Oceanographic Research Papers 56, 450–457 (2009). Retrieved from https://doi.org/10.1016/j.dsr.2008.09.008.
 - Riser, S. C. et al. Fifteen years of ocean observations with the global Argo array. Nature Clim Change 6, 145–153 (2016). Retrieved from https://doi.org/10.1038/nclimate2872
-- Roemmich, D. et al. The Argo Program: Observing the Global Oceans with Profiling Floats. Oceanog. 22, 34–43 (2009). Rerieved from https://doi.org/10.5670/oceanog.2009.36
+- Roemmich, D. et al. The Argo Program: Observing the Global Oceans with Profiling Floats. Oceanog. 22, 34–43 (2009). Retrieved from https://doi.org/10.5670/oceanog.2009.36
 - Wong, A. P. S. et al. Argo Data 1999–2019: Two Million Temperature-Salinity Profiles and Subsurface Velocity Observations From a Global Array of Profiling Floats. Front. Mar. Sci. 7, 700 (2020). Retrieved from https://doi.org/10.3389/fmars.2020.00700
 - Argo Steering Team https://argo.ucsd.edu/ 
 - Argo Data Management Team http://www.argodatamgt.org/
