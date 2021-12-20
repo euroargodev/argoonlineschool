@@ -46,7 +46,7 @@ The AOS was presented at the [2nd Ocean Observers Workshop](https://bit.ly/3pUCh
 
 # Notes on instructional design
 
-The AoS aims to teach the basic foundations to understand and use the Argo data. The AOS does not attempt to show everything about the Argo program, since the Argo documentation is available from the Argo Data Managment Team ([http://www.argodatamgt.org/Documentation](http://www.argodatamgt.org/Documentation)) [@ArgoQCManual2021; ArgoUserManual2021] for deeper learning. The AoS does not pretend to be a library or Application Programming Interface to ease Argo data access, since with that purpose has been designed the Argopy, a python library for Argo data beginners and experts [@Maze2020] or the ArgoVis, a web application for fast Delivery, visualization, and analysis of argo Data [@Argovis], among others.
+The AoS aims to teach the basic foundations to understand and use the Argo data. The AOS does not attempt to show everything about the Argo program, since the Argo documentation is available from the Argo Data Managment Team ([http://www.argodatamgt.org/Documentation](http://www.argodatamgt.org/Documentation)) [@ArgoQCManual2021; @ArgoUserManual2021] for deeper learning. The AoS does not pretend to be a library or Application Programming Interface to ease Argo data access, since with that purpose has been designed the Argopy, a python library for Argo data beginners and experts [@Maze2020] or the ArgoVis, a web application for fast Delivery, visualization, and analysis of argo Data [@Argovis], among others.
 
 The AoS is a set of videos and hands-on python driven jupyter notebooks, designed to be accessible for high school or graduate students in any discipline, with no prerequisites, and it offers:
 
