@@ -61,5 +61,3 @@ The Argo Online School has been funded by the European Union's Horizon 2020 rese
 - Argo Steering Team https://argo.ucsd.edu/ 
 - Argo Data Management Team http://www.argodatamgt.org/
 - Euro - Argo https://www.euro-argo.eu/ 
- 
-
