@@ -46,8 +46,10 @@ The AOS was presented at the [2nd Ocean Observers Workshop](https://bit.ly/3pUCh
 
 # Notes on instructional design
 
-The Argo online School aims to teach the basic foundations to understand and use the Argo data. The AOS does not attempt to show everything about the Argo program, since the Argo documentation is available for deeper learning, and the AoS does not pretend to be a library or Application Programming Interface to ease Argo data access, with that purpose has been designed the Argopy, a python library for Argo data beginners and experts [@Maze2020] or the ArgoVis, a web application for fast Delivery, visualization, and analysis of argo Data [@Argovis], among others.
-The AOS is a set of videos and hands-on python driven jupyter notebooks, designed to be accessible for high school or graduate students in any discipline, with no prerequisites, and it offers:
+The AoS aims to teach the basic foundations to understand and use the Argo data. The AOS does not attempt to show everything about the Argo program, since the Argo documentation is available for deeper learning, and the AoS does not pretend to be a library or Application Programming Interface to ease Argo data access, with that purpose has been designed the Argopy, a python library for Argo data beginners and experts [@Maze2020] or the ArgoVis, a web application for fast Delivery, visualization, and analysis of argo Data [@Argovis], among others.
+
+The AoS is a set of videos and hands-on python driven jupyter notebooks, designed to be accessible for high school or graduate students in any discipline, with no prerequisites, and it offers:
+
 * An overview of the Argo program and an assessment of the need for Argo.
 * A description of how the Argo data is organized.
 * A description of how to access the Argo data.
@@ -57,7 +59,7 @@ The AOS is a set of videos and hands-on python driven jupyter notebooks, designe
 
 All content is divided into 3 main lessons: 1. The Argo Program, that describes the basic concepts of the program, 2. The Argo Data  that describes how the data is organized and  3. Using the Argo data,  that uses the knowledge of the previous sections and python driven jupyter notebooks teach how to use the data. Finally, a quiz section is included  for auto evaluation. Lessons 1 and 2 are aimed at users with minimal or no knowledge of the Argo network, therefore no prerequisites are needed. Lesson 3 is intended for advanced users, as it requires basic programming skills in python. However, lesson 3 is duly explained step by step, to facilitate the transition of users coming from lessons 1 and 2.  The basic recommendations and instructions for configuring the hand-on section of the AoS are also provide, whether the user wants to work online or if they want to work on their local computer. Specific libraries and packages are recommended to guarantee the correct functioning of the AoS. To date, the three lessons contain a total of 25 sections, and all the sections have been carefully designed to be connected with the rest of the lessons.
 
-The AOS has been developed using python driven Jupyter notebooks [@Kluyver2016jupyter] and jupyter-book [@JupyterBook2020], two open source projects that allow editing control in a clear and easy way, and also permits web-based interactive development environments that contain code, visualizations, and texts. It is widely used for data science, and inspired by the course _[An Introduction to Earth and Environmental Data Science](https://earth-env-data-science.github.io/intro.html)_ [@Abernathey2021].  
+The AoS has been developed using python driven Jupyter notebooks [@Kluyver2016jupyter] and jupyter-book [@JupyterBook2020], two open source projects that allow editing control in a clear and easy way, and also permits web-based interactive development environments that contain code, visualizations, and texts. It is widely used for data science, and inspired by the course _[An Introduction to Earth and Environmental Data Science](https://earth-env-data-science.github.io/intro.html)_ [@Abernathey2021].  
 
 The AoS is accessible through the web page of Euro-Argo [https://www.euro-argo.eu/argo-online-school](https://www.euro-argo.eu/argo-online-school), but all the content that builds it is hosted in the public github repository of Euro-Argo: [https://github.com/euroargodev/argoonlineschool](https://github.com/euroargodev/argoonlineschool).
 
@@ -65,9 +67,7 @@ As long as the Argo program continues to grow, the AoS will, too. This first ver
 
 # Acknowledgements
 
-The AOS has been possible thanks to the collaboration of the Euro-Argo RISE members, the Argo Steering Team ([https://argo.ucsd.edu](https://argo.ucsd.edu)) and has been funded by the European Union's Horizon 2020 research and innovation program under grant agreement Euro-Argo RISE 824131([https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022](https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022)).
-
-
+The AoS has been possible thanks to the collaboration of the Euro-Argo members, the Argo Steering Team ([https://argo.ucsd.edu](https://argo.ucsd.edu)) and has been funded by the European Union's Horizon 2020 research and innovation program under grant agreement Euro-Argo RISE 824131 ([https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022](https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022)).
 
 The audiovisual work has been recorded and edited by Rafael Méndez Pérez ([http://rafaelmendezp.com/](http://rafaelmendezp.com/)) while proofreading and english coaching support was provided by Agustín Prunell-Friend. The quiz sections are based on John M. Shea [@jmshea2021].
 
