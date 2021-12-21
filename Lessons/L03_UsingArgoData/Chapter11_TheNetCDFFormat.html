@@ -292,6 +292,11 @@
      Delayed mode data
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Chapter43_RecapLesson3.html">
+     Recap Lesson 3
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -459,12 +464,42 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="the-netcdf-format">
+  <div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://drive.google.com/file/d/1rm_6tH2wuJnvqcXSUYiYRNyLcPTBtcRk/preview&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;480&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><center>
+<iframe width="560" height="315" src="https://drive.google.com/file/d/1rm_6tH2wuJnvqcXSUYiYRNyLcPTBtcRk/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+</div></div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="the-netcdf-format">
 <h1>The netCDF format<a class="headerlink" href="#the-netcdf-format" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-is-netcdf">
 <h2>What is NetCDF?<a class="headerlink" href="#what-is-netcdf" title="Permalink to this headline">¶</a></h2>
 <p><img alt="NetCDFLogo" src="https://www.unidata.ucar.edu/images/logos/netcdf-150x150.png" /> netCDF stands for <strong>Network Common Data Form</strong> and it is a set of software libraries and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. It is also a community standard for sharing scientific data.</p>
 <p><a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/"><strong>NetCDF</strong></a> is maintained by <a class="reference external" href="https://www.unidata.ucar.edu/"><strong>Unidata</strong></a>, one of the University Corporation for Atmospheric Research (UCAR)’s Community Programs (UCP). Unidata also supports and maintains netCDF programming interfaces for C, C++, Java, and Fortran. Programming interfaces are also available for Python, IDL, MATLAB, R, Ruby, and Perl. Thanks <a class="reference external" href="https://www.ucar.edu/"><strong>UCAR</strong></a>!!</p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
+<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://drive.google.com/file/d/19jrboTjYKxSjQ9Ry15xKEAf0yxPS34WA/preview&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;480&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><center>
+<iframe width="560" height="315" src="https://drive.google.com/file/d/19jrboTjYKxSjQ9Ry15xKEAf0yxPS34WA/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
+</div></div>
+</div>
 </div>
 <div class="section" id="how-is-the-netcdf-format">
 <h2>How is the netCDF format?<a class="headerlink" href="#how-is-the-netcdf-format" title="Permalink to this headline">¶</a></h2>
@@ -2594,7 +2629,7 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x166227cd0&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/Chapter11_TheNetCDFFormat_34_1.png" src="../../_images/Chapter11_TheNetCDFFormat_34_1.png" />
+<img alt="../../_images/Chapter11_TheNetCDFFormat_36_1.png" src="../../_images/Chapter11_TheNetCDFFormat_36_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2608,7 +2643,7 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x166c71c40&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/Chapter11_TheNetCDFFormat_35_1.png" src="../../_images/Chapter11_TheNetCDFFormat_35_1.png" />
+<img alt="../../_images/Chapter11_TheNetCDFFormat_37_1.png" src="../../_images/Chapter11_TheNetCDFFormat_37_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2620,7 +2655,7 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Chapter11_TheNetCDFFormat_36_0.png" src="../../_images/Chapter11_TheNetCDFFormat_36_0.png" />
+<img alt="../../_images/Chapter11_TheNetCDFFormat_38_0.png" src="../../_images/Chapter11_TheNetCDFFormat_38_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2634,7 +2669,7 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x16c12f130&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/Chapter11_TheNetCDFFormat_37_1.png" src="../../_images/Chapter11_TheNetCDFFormat_37_1.png" />
+<img alt="../../_images/Chapter11_TheNetCDFFormat_39_1.png" src="../../_images/Chapter11_TheNetCDFFormat_39_1.png" />
 </div>
 </div>
 </div>
@@ -3041,7 +3076,7 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/Chapter11_TheNetCDFFormat_41_0.png" src="../../_images/Chapter11_TheNetCDFFormat_41_0.png" />
+<img alt="../../_images/Chapter11_TheNetCDFFormat_43_0.png" src="../../_images/Chapter11_TheNetCDFFormat_43_0.png" />
 </div>
 </div>
 </div>
@@ -3051,6 +3086,16 @@ Attributes:
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">8</span><span class="n">bccc64547d3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;xrDS&#39; is not defined
 </pre></div>
 </div>
 </div>
