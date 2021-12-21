@@ -1,9 +1,9 @@
+# Using Argo Data
+
 <center>
     <iframe width="560" height="315" src="https://drive.google.com/file/d/17s5UwuNwyQzjL7EW9DYhWkAYP8nYTYLI/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> 
     </iframe>
 </center>
-
-# Using Argo Data
 
 As indicated in the introduction, the third component of the Argo Online School is  hands-on, and it is based on Jupyter Notebooks:
 
