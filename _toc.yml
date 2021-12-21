@@ -45,7 +45,8 @@ parts:
     sections:
     - file: Lessons/L03_UsingArgoData/Chapter41_RTData
     - file: Lessons/L03_UsingArgoData/Chapter42_DMData
-    - file: Lessons/L03_UsingArgoData/Chapter43_RecapLesson3
+
+  - file: Lessons/L03_UsingArgoData/Chapter43_RecapLesson3
     
 - caption: Quizzes
   chapters:
