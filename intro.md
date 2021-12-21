@@ -40,6 +40,7 @@ In this section and using hands-on jupyter notebooks you will learn about:
 * [Accesing Argo data by float](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter20_ArgoDatabyFloat_Intro.html)
 * [Accesing Argo data by date](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter30_ArgoDatabyDate_Intro.html)
 * [Aceesing Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter40_RTandDM.html)
+* [Recap Lesson 3](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter43_RecapLesson3.html)
 
 Additonally we have included Quizzes for the [first](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) and [second](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) lessons if you want to challenge yourself!! 
 
