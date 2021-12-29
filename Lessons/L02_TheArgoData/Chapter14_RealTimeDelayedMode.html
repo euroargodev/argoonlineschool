@@ -424,8 +424,23 @@
 </div></div>
 </div>
 <p>There are numerous reasons why data can be reported abnormally during the Argo profiler’s operating cycles. This might be mainly due to problems related to the CTD sensors, either external interference to the sensor, for instance, due to biodeposition, or intrinsic problems of the sensor itself. commas or etc: In both cases, incorrect data with spikes, biases, sensor drifts, etc., can be reported as bad data or possible bad data.</p>
-<p><strong>[GIF Animation - GRAPHIC 204-03]  Spikes, Drifts or Bias
-Animation showing an example of different data errors</strong></p>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">center</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/GIF_Bad_Data.gif&quot;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&quot;Argo status&quot;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;800&quot;</span><span class="o">/&gt;</span>
+<span class="o">&lt;/</span><span class="n">center</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-10-0dd4ee80f04f&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="o">&lt;</span><span class="n">center</span><span class="o">&gt;</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
 <p>However, detecting problems related to the CTD sensors, sometimes, can sometimes be very difficult. Even more so when we take into account the concept of “natural variability”. Natural variability is just the natural change of the properties of the ocean and it may happen in periods ranging from seconds to millennia. For instance, changes occur daily, such as the tides; sporadically, such as storm surges or tsunamis; and seasonally, such as the simple warming of coastal waters in summer. In addition to the uncertainty associated with sensor errors, natural systems have an uncertainty associated with the range of natural variability itself. In such cases, it is very difficult to distinguish between the natural variability observed and the errors.</p>
 <p>Since there is also natural variability in the temperature and salinity that can be mistaken for sensor malfunction, we have to be careful not to treat actual natural variability as sensor malfunction and correct it. For instance, a float may drift into saltier waters and we may misinterpret the change as sensor malfunctioning if we do not check out the trajectory of the float.  It may also happen that an area of the ocean is becoming saltier than it used to be, and therefore if we compare the data with historical data, we risk losing this natural variability. Therefore, it is also necessary to compare the float’s data with data from neighboring floats.<br />
 That is why a robust data analysis system has been developed to assist us in distinguishing between the natural variability of the area where the profiler is located and a possible sensor malfunction, and if in doubt, it is better not to correct the data.</p>
