@@ -42,7 +42,7 @@ In this section and using hands-on jupyter notebooks you will learn about:
 * [Aceesing Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter40_RTandDM.html)
 * [Recap Lesson 3](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter43_RecapLesson3.html)
 
-Additonally we have included Quizzes for the [first](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) and [second](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) lessons if you want to challenge yourself!! 
+Additonally we have included Quizzes for the [first](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) and [second](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) lessons if you want to challenge yourself! 
 
 ## Further reading
 More information can be found in the [Argo Steering Team web page](http://www.argo.ucsd.edu/) or the [Argo Data Management team documentation](http://www.argodatamgt.org/Documentation)
