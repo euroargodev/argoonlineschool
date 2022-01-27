@@ -32,7 +32,7 @@ The **Argo Online School (AoS)** is a set of videos, animations and hands-on pyt
 
 The target audience of the AoS are high school or early graduate students, and the programming content included in Lesson 3 provides an ideal opportunity to support students with technical or science curriculum. It is recommended not to skip any lesson in the AoS as the content is carefully connected from less to greater complexity, guaranteeing a progressive learning. The user has the opportunity to self-assess the learning process carried out during their course in the AoS through the proposed quizzes.
 
-The AoS has been designed to have the possibility to be expanded to following the implementation of new features in the Argo program
+The AoS has been designed to have the possibility to be expanded to following the implementation of new features in the Argo program.
 
 # Statement of need
 
@@ -46,7 +46,7 @@ The AOS was presented at the [2nd Ocean Observers Workshop](https://bit.ly/3pUCh
 
 # Notes on instructional design
 
-The AoS aims to teach the basic foundations to understand and use the Argo data. The AOS does not attempt to show everything about the Argo program, since the Argo documentation is available from the Argo Data Managment Team ([http://www.argodatamgt.org/Documentation](http://www.argodatamgt.org/Documentation)) [@ArgoQCManual2021; @ArgoUserManual2021] for deeper learning. The AoS does not pretend to be a library or Application Programming Interface to ease Argo data access, since with that purpose has been designed the Argopy, a python library for Argo data beginners and experts [@Maze2020] or the ArgoVis, a web application for fast Delivery, visualization, and analysis of argo Data [@Argovis], among others.
+The AoS aims to teach the basic foundations to understand and use the Argo data. The AOS does not attempt to show everything about the Argo program, since the Argo documentation is available from the Argo Data Managment Team ([http://www.argodatamgt.org/Documentation](http://www.argodatamgt.org/Documentation)) [@ArgoQCManual2021; @ArgoUserManual2021] for deeper learning. The AoS does not pretend to be a library or Application Programming Interface to ease Argo data access, since with that purpose has been designed the Argopy, a python library for Argo data beginners and experts [@Maze2020] or the ArgoVis, a web application for fast delivery, visualization, and analysis of argo Data [@Argovis], among others.
 
 The AoS is a set of videos and hands-on python driven jupyter notebooks, designed to be accessible for high school or graduate students in any discipline, with no prerequisites, and it offers:
 
@@ -57,7 +57,7 @@ The AoS is a set of videos and hands-on python driven jupyter notebooks, designe
 * A review of the main characteristics of the quality controls used: Real-Time and Delayed-Mode.
 * Step-by-step instructions on data access, processing, and product generation, through the execution of commands based on a programming language.
 
-All content is divided into 3 main lessons: 1. The Argo Program, that describes the basic concepts of the program, 2. The Argo Data  that describes how the data is organized and  3. Using the Argo data,  that uses the knowledge of the previous sections and python driven jupyter notebooks teach how to use the data. Finally, a quiz section is included  for auto evaluation. Lessons 1 and 2 are aimed at users with minimal or no knowledge of the Argo network, therefore no prerequisites are needed. Lesson 3 is intended for advanced users, as it requires basic programming skills in python. However, lesson 3 is duly explained step by step, to facilitate the transition of users coming from lessons 1 and 2.  The basic recommendations and instructions for configuring the hand-on section of the AoS are also provide, whether the user wants to work online or if they want to work on their local computer. Specific libraries and packages are recommended to guarantee the correct functioning of the AoS. To date, the three lessons contain a total of 25 sections, and all the sections have been carefully designed to be connected with the rest of the lessons.
+All content is divided into 3 main lessons: 1. The Argo Program, that describes the basic concepts of the program, 2. The Argo Data that describes how the data is organized and 3. Using the Argo data, that uses the knowledge of the previous sections and python driven jupyter notebooks to teach how to use the data. Finally, a quiz section is included for self-appraisal. Lessons 1 and 2 are aimed at users with minimal or no knowledge of the Argo network, therefore no prerequisites are needed. Lesson 3 is intended for advanced users, as it requires basic programming skills in python. However, lesson 3 is duly explained step by step, to facilitate the transition of users coming from lessons 1 and 2. The basic recommendations and instructions for configuring the hands-on section of the AoS are also provide, whether the users want to work online or if they want to work on their local computer. Specific libraries and packages are recommended to guarantee the correct functioning of the AoS. To date, the three lessons contain a total of 25 sections, and all the sections have been carefully designed to be connected with the rest of the lessons.
 
 The AoS has been developed using python driven Jupyter notebooks [@Kluyver2016jupyter] and jupyter-book [@JupyterBook2020], two open source projects that allow editing control in a clear and easy way, and also permits web-based interactive development environments that contain code, visualizations, and texts. It is widely used for data science, and inspired by the course _[An Introduction to Earth and Environmental Data Science](https://earth-env-data-science.github.io/intro.html)_ [@Abernathey2021].  
 
@@ -72,3 +72,9 @@ The AoS has been possible thanks to the collaboration of the Euro-Argo members, 
 The audiovisual work has been recorded and edited by Rafael Méndez Pérez ([http://rafaelmendezp.com/](http://rafaelmendezp.com/)) while proofreading and english coaching support was provided by Agustín Prunell-Friend. The quiz sections are based on John M. Shea [@jmshea2021].
 
 # References
+
+Roemmich, D., G.C. Johnson, S. Riser, R. Davis, J. Gilson, W.B. Owens, S.L. Garzoli, C. Schmid, and M. Ignaszewski. (2009). The Argo Program: Observing the global ocean with profiling floats. Oceanography 22(2):34–43, doi:10.5670/oceanog.2009.36.
+
+Maze, Guillaume & Balem, Kevin. (2020). Argopy: A Python library for Argo ocean data analysis. Journal of Open Source Software. 5. 2425. 10.21105/joss.02425. 
+
+Barba, Lorena A., & Forsyth, G. F. (2018). CFD Python: The 12 steps to Navier–Stokes equations. Journal of Open Source Education, 1(9), 21. doi:10.21105/jose.00021
