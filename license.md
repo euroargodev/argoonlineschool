@@ -6,7 +6,7 @@ Creative Commons Master Terms of Use
 
 Effective as of 26 August 2020
 
-# 1. General Information Regarding These Terms of Use
+## 1. General Information Regarding These Terms of Use
 
 Master terms: Welcome, and thank you for your interest in Creative Commons (“Creative Commons,” “CC,” “we,” “our,” or “us”). Unless otherwise noted on a particular site or service, these master terms of use (“Master Terms”) apply to your use of all of the websites that Creative Commons Corporation operates. These include https://creativecommons.org, https://wiki.creativecommons.org, https://network.creativecommons.org, https://search.creativecommons.org, https://labs.creativecommons.org, http://openpolicynetwork.org, http://open4us.org, https://rightsback.org, http://teamopen.cc, and http://thepowerofopen.org, together with all other subdomains thereof, (collectively, the “Websites”). The Master Terms also apply to all products, information, and services provided through the Websites, including without limitation the license chooser, legal tools, the CCID service available at https://login.creativecommons.org/login (“CC Login Service”), and the CC Global Network community website (together with the Websites, the “Services”).
 
@@ -18,25 +18,25 @@ Collectively, the Terms: The Master Terms, together with any Additional Terms, f
 
 Human-readable summary of Sec 1: These terms, together with any special terms for particular websites, create a contract between you and Creative Commons. The contract governs your use of all websites operated by Creative Commons, unless a particular website indicates otherwise. These human-readable summaries of each section are not part of the contract, but are intended to help you understand its terms.
 
-2. Your Agreement to the Terms
+## 2. Your Agreement to the Terms
 
 BY CLICKING “I ACCEPT” OR OTHERWISE ACCESSING OR USING ANY OF THE SERVICES (INCLUDING THE LICENSES, PUBLIC DOMAIN TOOLS, AND CHOOSERS), YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREED TO BE BOUND BY THE TERMS. By clicking “I ACCEPT” or otherwise accessing or using any Services you also represent that you have the legal authority to accept the Terms on behalf of yourself and any party you represent in connection with your use of any Services. If you do not agree to the Terms, you are not authorized to use any Services. If you are an individual who is entering into these Terms on behalf of an entity, you represent and warrant that you have the power to bind that entity, and you hereby agree on that entity’s behalf to be bound by these Terms, with the terms “you,” and “your” applying to you, that entity, and other users accessing the Services on behalf of that entity.
 
 Human-readable summary of Sec 2: Please read these terms and only use our sites and services if you agree to them.
 
-3. Changes to the Terms
+## 3. Changes to the Terms
 
 From time to time, Creative Commons may change, remove, or add to the Terms, and reserves the right to do so in its discretion. In that case, we will post updated Terms and indicate the date of revision. If we feel the modifications are material, we will make reasonable efforts to post a prominent notice on the relevant Website(s) and notify those of you with a current CC Login Service account via email. All new and/or revised Terms take effect immediately and apply to your use of the Services from that date on, except that material changes will take effect 30 days after the change is made and identified as material. Your continued use of any Services after new and/or revised Terms are effective indicates that you have read, understood, and agreed to those Terms.
 
 Human-readable summary of Sec 3: These terms may change. When the changes are important, we will put a notice on the website. If you continue to use the sites after the changes are made, you agree to the changes.
 
-4. No Legal Advice
+## 4. No Legal Advice
 
 Creative Commons is not a law firm, does not provide legal advice, and is not a substitute for a law firm. Sending us an email or using any of the Services, including the licenses, public domain tools, and choosers, does not constitute legal advice or create an attorney-client relationship.
 
 Human-readable summary of Sec 4: Some of us are lawyers, but we aren’t your lawyer. Please consult your own attorney if you need legal advice.
 
-5. Content Available through the Services
+## 5. Content Available through the Services
 
 Provided as-is: You acknowledge that Creative Commons does not make any representations or warranties about the material, data, and information, such as data files, text, computer software, code, music, audio files or other sounds, photographs, videos, or other images (collectively, the “Content”) which you may have access to as part of, or through your use of, the Services. Under no circumstances is Creative Commons liable in any way for any Content, including, but not limited to: any infringing Content, any errors or omissions in Content, or for any loss or damage of any kind incurred as a result of the use of any Content posted, transmitted, linked from, or otherwise accessible through or made available via the Services. You understand that by using the Services, you may be exposed to Content that is offensive, indecent, or objectionable.
 
@@ -50,7 +50,7 @@ Search and Attribution Tools: On some of its Websites, Creative Commons provides
 
 Human-readable summary of Sec 5: We try our best to have useful information on our sites, but we cannot promise that everything is accurate or appropriate for your situation. Content on the site is licensed under CC BY 4.0 unless it says it is available under different terms. If you find content using CC Search, be sure to independently verify the license terms, attribution, and other copyright information before using it.
 
-6. Content Supplied by You
+## 6. Content Supplied by You
 
 Your responsibility: You represent, warrant, and agree that no Content posted or otherwise shared by you on or through any of the Services (“Your Content”), violates or infringes upon the rights of any third party, including copyright, trademark, privacy, publicity, or other personal or proprietary rights, breaches or conflicts with any obligation, such as a confidentiality obligation, or contains libelous, defamatory, or otherwise unlawful material.
 
@@ -60,7 +60,7 @@ Removal: Creative Commons may, but is not obligated to, review Your Content and 
 
 Human-readable summary of Sec 6: We do not take any ownership of your content when you post it on our sites. If you post content you own, you agree it can be used under the terms of CC BY 4.0 or any future version of that license. If you do not own the content, then you should not post it unless it is in the public domain or licensed CC BY 4.0, except that you may also post pictures and videos if you are authorized to use them under law (e.g., fair use) or if they are available under any CC license. You must note that information on the file when you upload it. You are responsible for any content you upload to our sites.
 
-7. Participating in the CCGN and Community: Registered Users
+## 7. Participating in the CCGN and Community: Registered Users
 
 By registering for an account through any of the Services, including securing a CC Login Service account, or applying for membership to the CCGN, you represent and warrant that you are the age of majority in your jurisdiction (typically age 18). Services offered to registered users are provided subject to these Master Terms, the CC Privacy Policy, and any Additional Terms specified on the relevant Website(s), all of which are hereby incorporated by reference into these Terms.
 
@@ -72,7 +72,7 @@ Termination: Creative Commons reserves the right to modify or discontinue your a
 
 Human-readable summary of Sec 7: Please do not register for an account on our sites unless you are 18 years old. CC has the right to end your account at any time. You are responsible for use of your account. And of course, please do not set up an account for someone else unless you have permission to do so. Setting up an account doesn’t make you a member of CC.
 
-8. Prohibited Conduct
+## 8. Prohibited Conduct
 
 You agree not to engage in any of the following activities:
 
@@ -101,19 +101,19 @@ You agree not to engage in any of the following activities:
 
 Human-readable summary of Sec 8: Play nice. Be yourself. Don’t break the law or be disruptive.
 
-9. Creative Commons Global Network (“CCGN”)
+## 9. Creative Commons Global Network (“CCGN”)
 
 By submitting your application to become a member of the CCGN at network.creativecommons.org, you acknowledge that you have read, understood, and, in the event you are accepted for membership, agree to be bound by the CCGN Charter, including the Code of Conduct and the policies referenced and incorporated therein. If you are admitted to the CCGN, these terms and the CCGN Charter shall govern your use of and participation in the CCGN, including your participation in any forum operated by the CCGN, such as platforms, chapters, and working groups. Note that your participation in such fora may also be governed by additional rules and guidelines for doing so. Please see CC’s Privacy Policy for more information about how your information (as an applicant, member, and voucher) will be used.
 
 Human-readable summary of Sec 9: When you join the CCGN, you agree to certain policies. Please read them before you apply. 
 
-10. DISCLAIMER OF WARRANTIES
+## 10. DISCLAIMER OF WARRANTIES
 
 TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, CREATIVE COMMONS OFFERS THE SERVICES (INCLUDING ALL CONTENT AVAILABLE ON OR THROUGH THE SERVICES) AS-IS AND MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE SERVICES, EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING WITHOUT LIMITATION, WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. CREATIVE COMMONS DOES NOT WARRANT THAT THE FUNCTIONS OF THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, THAT CONTENT MADE AVAILABLE ON OR THROUGH THE SERVICES WILL BE ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT ANY SERVERS USED BY CC ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. CREATIVE COMMONS DOES NOT WARRANT OR MAKE ANY REPRESENTATION REGARDING USE OF THE CONTENT AVAILABLE THROUGH THE SERVICES IN TERMS OF ACCURACY, RELIABILITY, OR OTHERWISE.
 
 Human-readable summary of Sec 10: CC does not make any guarantees about the sites, services, or content available on the sites.
 
-11. LIMITATION OF LIABILITY
+## 11. LIMITATION OF LIABILITY
 
 TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL CREATIVE COMMONS BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY INCIDENTAL, DIRECT, INDIRECT, PUNITIVE, ACTUAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, OR OTHER DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF REVENUE OR INCOME, LOST PROFITS, PAIN AND SUFFERING, EMOTIONAL DISTRESS, COST OF SUBSTITUTE GOODS OR SERVICES, OR SIMILAR DAMAGES SUFFERED OR INCURRED BY YOU OR ANY THIRD PARTY THAT ARISE IN CONNECTION WITH THE SERVICES (OR THE TERMINATION THEREOF FOR ANY REASON), EVEN IF CREATIVE COMMONS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
@@ -123,19 +123,19 @@ Certain jurisdictions do not permit the exclusion of certain warranties or limit
 
 Human-readable summary of Sec 11: CC is not responsible for the content on the sites, your use of our services, or for the conduct of others on our sites.
 
-12. Indemnification
+## 12. Indemnification
 
 To the extent authorized by law, you agree to indemnify and hold harmless Creative Commons, its employees, officers, directors, affiliates, and agents from and against any and all claims, losses, expenses, damages, and costs, including reasonable attorneys’ fees, resulting directly or indirectly from or arising out of (a) your violation of the Terms, (b) your failure to verify the copyright license, attribution, and other information associated with Content resulting from your use of CC Search, (c) your use of any of the Services, and/or (d) the Content you make available on any of the Services.
 
 Human-readable summary of Sec 12: If something happens because you violate these terms, because of your use of the services, or because of the content you post on the sites, you agree to repay CC for the damage it causes.
 
-13. Privacy Policy
+## 13. Privacy Policy
 
 Creative Commons is committed to responsibly handling the information and data we collect through our Services in compliance with our Privacy Policy, which is incorporated by reference into these Master Terms. Please review the Privacy Policy so you are aware of how we collect and use your personal information.
 
 Human-readable summary of Sec 13: Please read our Privacy Policy. It is part of these terms, too.
 
-14. Trademarks
+## 14. Trademarks
 
 CC’s name, logos, icons, and other trademarks may only be used in accordance with our Trademark Policy, which is incorporated by reference into these Master Terms. Please review the Trademark Policy so you understand how CC’s trademarks may be used.
 
@@ -143,7 +143,7 @@ Other trademarks used on the site are the registered trademarks of their respect
 
 Human-readable summary of Sec 14: If you want to use CC trademarks, please read our Trademark Policy. Other trademarks used on this site are not intended to suggest endorsement or affiliation with CC. 
 
-15. Copyright Complaints
+## 15. Copyright Complaints
 
 Creative Commons respects copyright, and we prohibit users of the Services from submitting, uploading, posting, or otherwise transmitting any Content on the Services that violates another person’s proprietary rights.
 
@@ -153,7 +153,7 @@ Please note that Creative Commons does not host the Content made available throu
 
 Human-readable summary of Sec 15: Please let us know if you find infringing content on our websites.
 
-16. Termination
+## 16. Termination
 
 By Creative Commons: Creative Commons may modify, suspend, or terminate the operation of, or access to, all or any portion of the Services at any time for any reason. Additionally, your individual access to, and use of, the Services may be terminated by Creative Commons at any time and for any reason.
 
@@ -165,7 +165,7 @@ Survival: The disclaimer of warranties, the limitation of liability, and the jur
 
 Human-readable summary of Sec 16: If you violate these terms, you may no longer use our sites.
 
-17. Miscellaneous Terms
+## 17. Miscellaneous Terms
 
 Choice of law: The Terms are governed by and construed by the laws of the State of California in the United States, not including its choice of law rules.
 
