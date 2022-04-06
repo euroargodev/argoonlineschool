@@ -58,7 +58,7 @@ The Argo Data Management Team assigns Digital Object Identifiers (DOIs) to Argo 
 Refer to [How to cite Argo data](https://argo.ucsd.edu/data/acknowledging-argo/) for further information.
 
 ## License for this book
-All content in this book is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0) license.
+All the content in the Argo Online School (AOS) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0) license.
 
 ## Credits
 The Argo Online School has been funded by the European Union's Horizon 2020 research and innovation program under grant agreement [Euro-Argo RISE 824131](https://www.euro-argo.eu/EU-Projects/Euro-Argo-RISE-2019-2022). The video production has been done by [Rafael Luis Mendez Peña](http://www.rafaelmendezp.com/). Quiz sections are based on [John M. Shea](https://github.com/jmshea) work. The AOS has also been possible thanks to the collaboration of the Euro-Argo RISE members and the [Argo Steering Team](https://argo.ucsd.edu/organization/argo-steering-team/).
