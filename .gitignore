@@ -24,6 +24,7 @@ docs/generated/
 cache
 .idea
 local_work
+tmp/
 
 # pyenv
 .python-version
