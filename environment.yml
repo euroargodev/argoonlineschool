@@ -10,5 +10,7 @@ dependencies:
   - matplotlib
   - seawater
   - cartopy
-  - argopy
   - seaborn
+  - gsw
+  - pip:
+      - git+http://github.com/euroargodev/argopy.git@master
