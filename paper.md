@@ -22,7 +22,7 @@ bibliography: paper.bib
 
 # Summary
 
-The **Argo Online School (AoS)** is a set of videos, animations and hands-on python driven jupyter notebooks designed to make the Argo program accessible. It is integrated by 25 sections about the Argo program and its data, organized into a total of 3  lessons and 2 self-assessment sections:
+The **Argo Online School (AoS)** is a set of videos, animations and hands-on python driven jupyter notebooks designed to make the data, of the more than 4000 profiling floats that constitute the Argo program, accessible. The Argo program samples, in near real time, the upper 2000 metres of the ocean using a fleet of floats that drift with the ocean currents. The AoS is integrated by 25 sections about the Argo program and its data, organized into a total of 3  lessons and 2 self-assessment sections:
 
 * Lesson 1 is intended to introduce the basics of Argo, its objectives and key elements, such as the structure of the Argo floats and their operation in the open ocean.
 
