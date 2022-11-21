@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>The netCDF format &#8212; Argo Online School</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -63,7 +62,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -72,9 +85,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -92,14 +106,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   The Argo Online School
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    The Argo Online School
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Lesson 1
  </span>
@@ -321,90 +336,191 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/Lessons/L03_UsingArgoData/Chapter11_TheNetCDFFormat.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/euroargodev/argoonlineschool"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L03_UsingArgoData/Chapter11_TheNetCDFFormat.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/euroargodev/argoonlineschool"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L03_UsingArgoData/Chapter11_TheNetCDFFormat.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/Lessons/L03_UsingArgoData/Chapter11_TheNetCDFFormat.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-netcdf">
    What is NetCDF?
@@ -457,12 +573,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>The netCDF format</h1>
@@ -531,11 +646,12 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="the-netcdf-format">
-<h1>The netCDF format<a class="headerlink" href="#the-netcdf-format" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="the-netcdf-format">
+<h1>The netCDF format<a class="headerlink" href="#the-netcdf-format" title="Permalink to this headline">#</a></h1>
 <div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
@@ -551,8 +667,8 @@ const thebe_selector_output = ".output, .cell_output"
 </center>
 </div></div>
 </div>
-<div class="section" id="what-is-netcdf">
-<h2>What is NetCDF?<a class="headerlink" href="#what-is-netcdf" title="Permalink to this headline">¶</a></h2>
+<section id="what-is-netcdf">
+<h2>What is NetCDF?<a class="headerlink" href="#what-is-netcdf" title="Permalink to this headline">#</a></h2>
 <p><img alt="NetCDFLogo" src="https://www.unidata.ucar.edu/images/logos/netcdf-150x150.png" /> netCDF stands for <strong>Network Common Data Form</strong> and it is a set of software libraries and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. It is also a community standard for sharing scientific data.</p>
 <p><a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/"><strong>NetCDF</strong></a> is maintained by <a class="reference external" href="https://www.unidata.ucar.edu/"><strong>Unidata</strong></a>, one of the University Corporation for Atmospheric Research (UCAR)’s Community Programs (UCP). Unidata also supports and maintains netCDF programming interfaces for C, C++, Java, and Fortran. Programming interfaces are also available for Python, IDL, MATLAB, R, Ruby, and Perl. Thanks <a class="reference external" href="https://www.ucar.edu/"><strong>UCAR</strong></a>!!</p>
 <div class="cell tag_hide_input docutils container">
@@ -570,9 +686,9 @@ const thebe_selector_output = ".output, .cell_output"
 </center>
 </div></div>
 </div>
-</div>
-<div class="section" id="how-is-the-netcdf-format">
-<h2>How is the netCDF format?<a class="headerlink" href="#how-is-the-netcdf-format" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="how-is-the-netcdf-format">
+<h2>How is the netCDF format?<a class="headerlink" href="#how-is-the-netcdf-format" title="Permalink to this headline">#</a></h2>
 <p>The properties that make netCDF so useful are the following ones:</p>
 <p><strong>Self-Describing</strong> A netCDF file includes information about the data it contains.</p>
 <p><strong>Portable</strong> A netCDF file can be accessed by computers with different ways of storing integers, characters, and floating-point numbers.</p>
@@ -580,9 +696,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Scalable</strong> Small subsets of large datasets in various formats may be accessed efficiently through netCDF interfaces, even from remote servers.</p>
 <p><strong>Appendable</strong> Data may be appended to a properly structured netCDF file without copying the dataset or redefining its structure.</p>
 <p><strong>Archivable</strong> Access to all earlier forms of netCDF data will be supported by current and future versions of the software.</p>
-</div>
-<div class="section" id="exploring-a-netcdf-file">
-<h2>Exploring a netCDF File<a class="headerlink" href="#exploring-a-netcdf-file" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="exploring-a-netcdf-file">
+<h2>Exploring a netCDF File<a class="headerlink" href="#exploring-a-netcdf-file" title="Permalink to this headline">#</a></h2>
 <p>Let’s see most of these properties of a <strong>netCDF</strong> file by using actual data from the high-resolution Blended Analysis of daily Sea Surface Temperature, <a class="reference external" href="https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html#detail"><strong>NOAA OI SST V2 High-Resolution Dataset</strong></a> Thanks <a class="reference external" href="https://www.noaa.gov/"><strong>NOAA</strong></a>!!</p>
 <p>I have pre-downloaded the daily data from 2019 and it is in the ./Data folder.  Refer to the section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html#data-used-in-the-argo-online-school">Data used in the Argo Online School</a> to learn how to download the data, if you have not done it yet.</p>
 <p>Although there are several methods to read netCDF data in python, we will begin with <a class="reference external" href="https://unidata.github.io/netcdf4-python/netCDF4/">netcdf4-python</a>, the unidata Python interface to the netCDF C library.</p>
@@ -602,9 +718,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="open-the-netcdf-file">
-<h2>Open the netCDF file<a class="headerlink" href="#open-the-netcdf-file" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="open-the-netcdf-file">
+<h2>Open the netCDF file<a class="headerlink" href="#open-the-netcdf-file" title="Permalink to this headline">#</a></h2>
 <p>We will create <strong><code class="docutils literal notranslate"><span class="pre">SST</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data actually is not read yet (just have a reference to the variable object with metadata).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -645,15 +761,15 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="exploring-a-netcdf-file-with-xarray">
-<h2>Exploring a netCDF File with xarray<a class="headerlink" href="#exploring-a-netcdf-file-with-xarray" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="exploring-a-netcdf-file-with-xarray">
+<h2>Exploring a netCDF File with xarray<a class="headerlink" href="#exploring-a-netcdf-file-with-xarray" title="Permalink to this headline">#</a></h2>
 <p><img src="http://xarray.pydata.org/en/stable/_static/dataset-diagram-logo.png" alt="xarray logo" width="200"/> Before continuing with the descrption of the netCDF format, we would swtich to <strong>xarray</strong> .</p>
 <p>Although <strong>netCDF4-python</strong> provides a lower-level interface for working with netCDF in Python, xarray uses netCDF4-python internally, it is more user-friendly than netCDF4. Additionally, xarray is used by <a class="reference external" href="https://github.com/euroargodev/argopy"><em>argopy</em></a>, the Argo data python library that aims to ease Argo data access, and that is used in te Argo Online School.  xarray does not yet support all of netCDF4-python’s features, such as modifying files on-disk, but this is beyond the objective of this school.</p>
 <p>A brief introduction for xarray <a class="reference external" href="https://rabernat.github.io/research_computing/xarray.html">here</a></p>
-</div>
-<div class="section" id="open-the-netcdf-file-with-xarray">
-<h2>Open the netCDF file with xarray<a class="headerlink" href="#open-the-netcdf-file-with-xarray" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="open-the-netcdf-file-with-xarray">
+<h2>Open the netCDF file with xarray<a class="headerlink" href="#open-the-netcdf-file-with-xarray" title="Permalink to this headline">#</a></h2>
 <p>We will create <strong><code class="docutils literal notranslate"><span class="pre">xrDS</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data is not read yet, it just has a reference to the variable object with metadata.</p>
 <p>First, we have to import the xarray library, and netcdf4 and matplotlib, since both are used internally by xarray.</p>
 <div class="cell docutils container">
@@ -1168,9 +1284,9 @@ Longitude 1440
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="accessing-a-netcdf-data-variable">
-<h2>Accessing a netCDF data variable<a class="headerlink" href="#accessing-a-netcdf-data-variable" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="accessing-a-netcdf-data-variable">
+<h2>Accessing a netCDF data variable<a class="headerlink" href="#accessing-a-netcdf-data-variable" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>data variable objects stored by name in <strong><code class="docutils literal notranslate"><span class="pre">data_vars</span></code></strong> dict.</p></li>
 <li><p>print the variable yields summary info: range, long_name for the variable, dimensions, fillvalue, etc. All the information necessary used to use the variable</p></li>
@@ -2323,9 +2439,9 @@ Coordinates:
   * lon      (lon) float32 0.125 0.375 0.625 0.875 ... 359.1 359.4 359.6 359.9</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'sst'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-cf1bf44a-b85b-4d6c-9898-c1bdae0848fd' class='xr-array-in' type='checkbox' checked><label for='section-cf1bf44a-b85b-4d6c-9898-c1bdae0848fd' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>nan nan nan nan nan nan nan nan ... nan nan nan nan nan nan nan nan</span></div><div class='xr-array-data'><pre>array([nan, nan, nan, ..., nan, nan, nan], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-627760be-1447-4e56-ab6c-4b5eeb307be2' class='xr-section-summary-in' type='checkbox'  checked><label for='section-627760be-1447-4e56-ab6c-4b5eeb307be2' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>lat</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>28.12</div><input id='attrs-d0862c3e-1e19-4b82-9be3-273f472d18eb' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d0862c3e-1e19-4b82-9be3-273f472d18eb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e717e34a-17fc-43bc-a538-950aa82178fb' class='xr-var-data-in' type='checkbox'><label for='data-e717e34a-17fc-43bc-a538-950aa82178fb' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array(28.125, dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-bbc5c932-6405-41ab-af56-c872bc422373' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-bbc5c932-6405-41ab-af56-c872bc422373' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-dcadffe3-eca5-460d-a2a8-f0790afbee45' class='xr-var-data-in' type='checkbox'><label for='data-dcadffe3-eca5-460d-a2a8-f0790afbee45' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
        3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ec7214aa-3bc1-4eab-b4f2-81aee68e658b' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-ec7214aa-3bc1-4eab-b4f2-81aee68e658b' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
-</div>
-<div class="section" id="using-the-data">
-<h2>Using the data<a class="headerlink" href="#using-the-data" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="using-the-data">
+<h2>Using the data<a class="headerlink" href="#using-the-data" title="Permalink to this headline">#</a></h2>
 <p>Let’s use the data. First, to see the time series of SST near the beautiful Canary Islands, and after that, the mean global SST.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2742,9 +2858,9 @@ array(-0.25, dtype=float32)</pre><div class='xr-wrap' hidden><div class='xr-head
 <img alt="../../_images/Chapter11_TheNetCDFFormat_40_1.png" src="../../_images/Chapter11_TheNetCDFFormat_40_1.png" />
 </div>
 </div>
-</div>
-<div class="section" id="remote-data-access-via-opendap">
-<h2>Remote data access via openDAP<a class="headerlink" href="#remote-data-access-via-opendap" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="remote-data-access-via-opendap">
+<h2>Remote data access via openDAP<a class="headerlink" href="#remote-data-access-via-opendap" title="Permalink to this headline">#</a></h2>
 <p>With OPeNDAP, you can access data using an URL rather than a local path. For xarray it is like having the file locally, the only difference is that you provide a different path.</p>
 <p>OPeNDAP stand for <em>Open-source Project for a Network Data Access Protocol</em> <a class="reference external" href="https://earthdata.nasa.gov/collaborate/open-data-services-and-software/api/opendap">More information here</a></p>
 <p><a class="reference external" href="https://www.psl.noaa.gov/data/gridded_help/using_dods.html">https://www.psl.noaa.gov/data/gridded_help/using_dods.html</a></p>
@@ -3149,9 +3265,9 @@ Attributes:
 <img alt="../../_images/Chapter11_TheNetCDFFormat_44_0.png" src="../../_images/Chapter11_TheNetCDFFormat_44_0.png" />
 </div>
 </div>
-</div>
-<div class="section" id="closing-your-netcdf-file">
-<h2>Closing your netCDF file<a class="headerlink" href="#closing-your-netcdf-file" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="closing-your-netcdf-file">
+<h2>Closing your netCDF file<a class="headerlink" href="#closing-your-netcdf-file" title="Permalink to this headline">#</a></h2>
 <p>It’s good to close netCDF files, but not necessary when Dataset is open for reading access only.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3170,8 +3286,8 @@ Attributes:
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3195,9 +3311,11 @@ Attributes:
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="Chapter10_UsingArgoData_intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -3213,24 +3331,28 @@ Attributes:
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Euro Argo<br/>
+  
+      &copy; Copyright 2020-2021.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Euro Argo<br/>
-    
-        &copy; Copyright 2020-2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

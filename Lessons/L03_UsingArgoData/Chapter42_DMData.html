@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Delayed mode data &#8212; Argo Online School</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +20,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -39,12 +37,13 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -63,7 +62,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -72,9 +85,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -92,14 +106,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   The Argo Online School
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    The Argo Online School
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Lesson 1
  </span>
@@ -321,90 +336,191 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/Lessons/L03_UsingArgoData/Chapter42_DMData.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/euroargodev/argoonlineschool"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L03_UsingArgoData/Chapter42_DMData.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/euroargodev/argoonlineschool"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L03_UsingArgoData/Chapter42_DMData.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/Lessons/L03_UsingArgoData/Chapter42_DMData.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
    Delayed mode data
@@ -431,12 +547,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Delayed mode data</h1>
@@ -479,25 +594,26 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="delayed-mode-data">
-<h1>Delayed mode data<a class="headerlink" href="#delayed-mode-data" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="delayed-mode-data">
+<h1>Delayed mode data<a class="headerlink" href="#delayed-mode-data" title="Permalink to this headline">#</a></h1>
 <p>What if the Real-Time (RT) quality control is not enough?, or if we need the previous data of the float and the data from its neighbors to discern between subtle sensor malfunctioning and natural variability?.</p>
 <p>This is where the second data quality control comes in. It is called Delayed - Mode (DM) quality control. Principal investigators and regional data experts are in charge of this meticulous task since it requires a more elaborate specific data analysis of every float and oceanographic expertise in the region where the float was deployed.
 The most common types of bad data are known as spikes, offsets, drifts, etc…
 The spikes are abrupt short changes in the data and constitute a clear case of anomaly. Spikes are easy to detect and correct. Drifts and offsets can be identified in the trend of ΔS over time, where ΔS is the difference in salinity between float-measured values and statistical recommendations. If ΔS = a + bt, where t is time, then a is the offset and b is the drift rate. Note that these drifts and offsets can be sensor-related, or they can be due to natural variability, as we explained before. To distinguish between sensor errors and natural variability Evaluation is necessary that experts look carefully at the data. [L2-DM_QC_Graphics]</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="delayed-mode-files">
-<h1>Delayed mode files<a class="headerlink" href="#delayed-mode-files" title="Permalink to this headline">¶</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="delayed-mode-files">
+<h1>Delayed mode files<a class="headerlink" href="#delayed-mode-files" title="Permalink to this headline">#</a></h1>
 <p>Delayed mode profile files are the same as the Real-Time profile files, except their file names on the GDACs all contain a “D” before the WMO number (e.g. D5900400_001.nc, BD5904179_001.nc). These profile files contain delayed mode adjusted data, which are recorded in the variable <PARAM>_ADJUSTED. The variable DATA_MODE will record ‘D’. Two other variables are also filled in delayed mode, which are <PARAM>_ADJUSTED_QC and <PARAM>_ADJUSTED_ERROR, which record the delayed mode quality control flags and the delayed mode adjustment uncertainty.</p>
 <p>Core Argo delayed mode files are available 1 – 2 years after a profile is taken; sometimes earlier. These have been subjected to detailed scrutiny by oceanographic experts and the adjusted salinity has been estimated by comparison with high-quality ship-based CTD data and Argo climatologies using the process described by Wong et al, 2003; Böhme and Send, 2005; Owens and Wong, 2009; Cabanes et al, 2016.</p>
 <p>For BGC parameters, delayed mode files can be available within 5 – 6 cycles after deployment.  This is because the BGC sensors often return data that are out of calibration, but early adjustment methodologies exist that can significantly improve their accuracy.  Additional delayed mode quality control occurs when a longer record of float data is available.</p>
 <p>To learn more about delayed mode quality control, read the papers on the methods linked above or see the ADMT documentation page for core Argo and BGC-Argo quality control documentation.</p>
 <p>For each parameter, there are two variables associated with it:  a raw version and an adjusted version.  The raw version can be found in the “PARAM” variable (e.g. TEMP, PRES, DOXY) and the adjusted version can be found in the “PARAM_ADJUSTED” variable (e.g. TEMP_ADJUSTED, PRES_ADJUSTED, DOXY_ADJUSTED).</p>
-<div class="section" id="quality-control-flags">
-<h2>Quality Control flags<a class="headerlink" href="#quality-control-flags" title="Permalink to this headline">¶</a></h2>
+<section id="quality-control-flags">
+<h2>Quality Control flags<a class="headerlink" href="#quality-control-flags" title="Permalink to this headline">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:center head"><p>QCflag</p></th>
@@ -559,8 +675,8 @@ The spikes are abrupt short changes in the data and constitute a clear case of a
 </tr>
 </tbody>
 </table>
-<div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -3372,9 +3488,9 @@ Attributes:
        [[b&#x27;20161219132250&#x27;, b&#x27;20170315131950&#x27;, b&#x27;20161219132320&#x27;]]],
       dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_INSTITUTION</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-28fbf5cc-ea2c-493f-9c69-60a2aca89349' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-28fbf5cc-ea2c-493f-9c69-60a2aca89349' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-20831958-d719-4033-80cb-4a248a17abef' class='xr-var-data-in' type='checkbox'><label for='data-20831958-d719-4033-80cb-4a248a17abef' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Institution which performed action</dd><dt><span>conventions :</span></dt><dd>Argo reference table 4</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_STEP</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-dc383b17-2444-417a-a7dc-9675313261bd' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-dc383b17-2444-417a-a7dc-9675313261bd' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f9755e7f-c326-45f4-9788-a20164e4a02b' class='xr-var-data-in' type='checkbox'><label for='data-f9755e7f-c326-45f4-9788-a20164e4a02b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Step in data processing</dd><dt><span>conventions :</span></dt><dd>Argo reference table 12</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_SOFTWARE</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f3482572-7d3a-430c-b32c-60197f7050ec' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f3482572-7d3a-430c-b32c-60197f7050ec' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4c2ef394-a45f-4bf2-b840-e851933c75ef' class='xr-var-data-in' type='checkbox'><label for='data-4c2ef394-a45f-4bf2-b840-e851933c75ef' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Name of software which performed action</dd><dt><span>conventions :</span></dt><dd>Institution dependent</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_SOFTWARE_RELEASE</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f378c814-bcb2-44e8-905f-b4ae4dfe7a14' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f378c814-bcb2-44e8-905f-b4ae4dfe7a14' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-000c1541-336a-4eef-8076-d64b8256df86' class='xr-var-data-in' type='checkbox'><label for='data-000c1541-336a-4eef-8076-d64b8256df86' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Version/release of software which performed action</dd><dt><span>conventions :</span></dt><dd>Institution dependent</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_REFERENCE</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-5230b238-f5b7-4f18-9bea-1e03d03576e0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5230b238-f5b7-4f18-9bea-1e03d03576e0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-deeac625-643d-4833-a25c-dbe918615464' class='xr-var-data-in' type='checkbox'><label for='data-deeac625-643d-4833-a25c-dbe918615464' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Reference of database</dd><dt><span>conventions :</span></dt><dd>Institution dependent</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_DATE</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-2e29ca60-5b46-45ef-bedf-121426648b72' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2e29ca60-5b46-45ef-bedf-121426648b72' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-38e64e5b-1cf2-4351-b4ce-c7a7a24d4638' class='xr-var-data-in' type='checkbox'><label for='data-38e64e5b-1cf2-4351-b4ce-c7a7a24d4638' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Date the history record was created</dd><dt><span>conventions :</span></dt><dd>YYYYMMDDHHMISS</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_ACTION</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-957f35f0-5951-460b-9b00-cca448aac1ac' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-957f35f0-5951-460b-9b00-cca448aac1ac' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7cd837b7-49d0-408a-81a4-c90715fc8538' class='xr-var-data-in' type='checkbox'><label for='data-7cd837b7-49d0-408a-81a4-c90715fc8538' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Action performed on data</dd><dt><span>conventions :</span></dt><dd>Argo reference table 7</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_PARAMETER</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-227657fe-3d36-461e-b4b9-f89f5f6faad8' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-227657fe-3d36-461e-b4b9-f89f5f6faad8' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ca1179e8-292d-49b3-8233-440d5bb276f0' class='xr-var-data-in' type='checkbox'><label for='data-ca1179e8-292d-49b3-8233-440d5bb276f0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Station parameter action is performed on</dd><dt><span>conventions :</span></dt><dd>Argo reference table 3</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=object)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_START_PRES</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-4e7e5745-b5e3-426d-a303-8f5261833456' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4e7e5745-b5e3-426d-a303-8f5261833456' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0b83a3c6-eb75-46ea-a5ee-622d6f0d0f4a' class='xr-var-data-in' type='checkbox'><label for='data-0b83a3c6-eb75-46ea-a5ee-622d6f0d0f4a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Start pressure action applied on</dd><dt><span>units :</span></dt><dd>decibar</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_STOP_PRES</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-08180e75-ac39-47a9-b9e8-ad3515a514c0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-08180e75-ac39-47a9-b9e8-ad3515a514c0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7c40f61b-e768-4c13-b285-4051f0521a2a' class='xr-var-data-in' type='checkbox'><label for='data-7c40f61b-e768-4c13-b285-4051f0521a2a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Stop pressure action applied on</dd><dt><span>units :</span></dt><dd>decibar</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_PREVIOUS_VALUE</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-56c33b6e-90a8-47b9-b653-bd2a2c56d29d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-56c33b6e-90a8-47b9-b653-bd2a2c56d29d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-bbc45a22-42a2-4acc-a143-7805bf4a4f01' class='xr-var-data-in' type='checkbox'><label for='data-bbc45a22-42a2-4acc-a143-7805bf4a4f01' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Parameter/Flag previous value before action</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>HISTORY_QCTEST</span></div><div class='xr-var-dims'>(N_HISTORY, N_PROF)</div><div class='xr-var-dtype'>object</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-d10d6838-4724-4ae0-88ac-f46281a23703' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d10d6838-4724-4ae0-88ac-f46281a23703' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3620b26f-08b0-421f-aa15-b910d84679a5' class='xr-var-data-in' type='checkbox'><label for='data-3620b26f-08b0-421f-aa15-b910d84679a5' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Documentation of tests performed, tests failed (in hex form)</dd><dt><span>conventions :</span></dt><dd>Write tests performed when ACTION=QCP$; tests failed when ACTION=QCF$</dd></dl></div><div class='xr-var-data'><pre>array([], shape=(0, 142), dtype=object)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2b3f2e7e-973d-47ef-8419-11043ead600a' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2b3f2e7e-973d-47ef-8419-11043ead600a' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>Argo float vertical profile</dd><dt><span>institution :</span></dt><dd>FR GDAC</dd><dt><span>source :</span></dt><dd>Argo float</dd><dt><span>history :</span></dt><dd>2018-11-20T18:47:39Z creation</dd><dt><span>references :</span></dt><dd>http://www.argodatamgt.org/Documentation</dd><dt><span>user_manual_version :</span></dt><dd>3.1</dd><dt><span>Conventions :</span></dt><dd>Argo-3.1 CF-1.6</dd><dt><span>featureType :</span></dt><dd>trajectoryProfile</dd></dl></div></li></ul></div></div></div></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -3398,9 +3514,11 @@ Attributes:
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="Chapter41_RTData.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -3416,24 +3534,28 @@ Attributes:
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Euro Argo<br/>
+  
+      &copy; Copyright 2020-2021.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Euro Argo<br/>
-    
-        &copy; Copyright 2020-2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
