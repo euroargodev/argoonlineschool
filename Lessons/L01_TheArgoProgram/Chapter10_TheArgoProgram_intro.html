@@ -527,6 +527,18 @@ title="Print to PDF"
 <h1>The Argo Program<a class="headerlink" href="#the-argo-program" title="Permalink to this headline">#</a></h1>
 <img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoArgo.png" alt="Argo status" width="100"/><div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span><span class="p">,</span> <span class="n">YouTubeVideo</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Video</span>
+</pre></div>
+</div>
+</div>
+</div>
+<aside class="margin sidebar">
+<p class="sidebar-title">Video</p>
+<p>All the videos from the Argo Online Shcool are in YouTube</p>
+</aside>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
 <span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://drive.google.com/file/d/1OZcuwlTxdfQoVMppk_3kDzVGYg8MRt8O/preview&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;480&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
@@ -539,6 +551,36 @@ title="Print to PDF"
 <iframe width="560" height="315" src="https://drive.google.com/file/d/1OZcuwlTxdfQoVMppk_3kDzVGYg8MRt8O/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 </div></div>
+</div>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Modo1</span>
+<span class="n">display</span><span class="p">(</span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s2">&quot;-TE64w4hi2o?controls=1&amp;amp;start=0&amp;loop=1&amp;modestbranding=1&quot;</span><span class="p">,</span>
+                    <span class="n">width</span><span class="o">=</span><span class="mi">672</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">378</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Argo Online School&quot;</span><span class="p">,</span>
+                    <span class="n">allow</span><span class="o">=</span><span class="s2">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="672"
+    height="378"
+    src="https://www.youtube.com/embed/-TE64w4hi2o?controls=1&amp;start=0&loop=1&modestbranding=1?title=Argo+Online+School&allow=accelerometer%3B+autoplay%3B+clipboard-write%3B+encrypted-media%3B+gyroscope%3B+picture-in-picture+allowfullscreen"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Modo2</span>
+<span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;iframe width=&quot;672&quot; height=&quot;378&quot; src=&quot;https://www.youtube-nocookie.com/embed/-TE64w4hi2o?controls=1&amp;amp;start=1&amp;loop=1&amp;modestbranding=1&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><iframe width="672" height="378" src="https://www.youtube-nocookie.com/embed/-TE64w4hi2o?controls=1&amp;start=1&loop=1&modestbranding=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
 </div>
 <p>Argo is a large-scale global set of profiling floats that measure temperature and salinity versus pressure, in addition to six <a class="reference external" href="https://biogeochemical-argo.org/">biogeochemical variables</a>: oxygen concentration, nitrate concentration, pH, chlorophyll-a concentration, suspended particles and downwelling irradiance. Argo is the main component of the ocean observing system. This is the current distribution of the Argo matrix.</p>
 <center>
@@ -572,24 +614,6 @@ title="Print to PDF"
 <iframe width="560" height="315" src="https://drive.google.com/file/d/16dRAJAU9_6arlkF2Fzw59B-E-hua_qOk/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
 </div></div>
-</div>
-<aside class="sidebar">
-<p class="sidebar-title">My sidebar title</p>
-<p>My sidebar content</p>
-</aside>
-<div class="cell tag_hide_input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Video</span>
-<span class="n">Video</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="s2">&quot;https://drive.google.com/uc?export=view&amp;id=1m8bL3KmmUMBIqAUcygQplxO-PRAoECzd&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">640</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">480</span><span class="p">,</span> <span class="n">html_attributes</span><span class="o">=</span><span class="s1">&#39;controls&#39;</span><span class="p">)</span>
-<span class="c1">#allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture , </span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><video src="https://drive.google.com/uc?export=view&id=1m8bL3KmmUMBIqAUcygQplxO-PRAoECzd" controls  width="640"  height="480">
-      Your browser does not support the <code>video</code> element.
-    </video></div></div>
 </div>
 <div class="toctree-wrapper compound">
 </div>
