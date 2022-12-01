@@ -1,0 +1,45 @@
+﻿1
+00:00:04,760 --> 00:00:07,320
+There are three Argo missions.
+
+2
+00:00:07,320 --> 00:00:12,160
+Core Argo, BGC Argo
+and Deep Argo.
+
+3
+00:00:12,160 --> 00:00:16,040
+Core Argo is the temperature,
+salinity, pressure
+
+4
+00:00:16,040 --> 00:00:18,800
+operational mission that
+was the original goal
+
+5
+00:00:18,800 --> 00:00:21,160
+of the Argo program.
+
+6
+00:00:21,160 --> 00:00:24,760
+BGC Argo measures
+biochemical parameters
+
+7
+00:00:24,760 --> 00:00:27,240
+and is in the pilot phase.
+
+8
+00:00:27,240 --> 00:00:31,040
+Deep Argo measures the
+same parameters as Core,
+
+9
+00:00:31,040 --> 00:00:34,480
+but profiles are between
+4000-6000 meters
+
+10
+00:00:34,480 --> 00:00:37,240
+and is also in the pilot phase.

@@ -1,0 +1,86 @@
+﻿1
+00:00:01,200 --> 00:00:03,360
+Lack of sustained observations
+
+2
+00:00:03,360 --> 00:00:07,120
+of the atmosphere, oceans
+and land have hindered
+
+3
+00:00:07,120 --> 00:00:10,600
+the development and
+validation of climate models.
+
+4
+00:00:10,600 --> 00:00:13,680
+An example from an analysis
+done prior to Argo
+
+5
+00:00:13,680 --> 00:00:16,840
+concluded that the current
+ transporting heat northwards
+
+6
+00:00:16,840 --> 00:00:20,480
+in the Atlantic and influencing
+ Western European climate
+
+7
+00:00:20,480 --> 00:00:24,200
+had weakened by 30%
+ in the past decade.
+
+8
+00:00:24,200 --> 00:00:27,880
+This result has to be based on
+ just five research measurements
+
+9
+00:00:27,880 --> 00:00:29,760
+spread over 40 years. 
+
+10
+00:00:29,760 --> 00:00:32,240
+Was this change part of
+a trend that might lead
+
+11
+00:00:32,240 --> 00:00:34,800
+to a major change
+in the Atlantic circulation?
+
+12
+00:00:34,800 --> 00:00:36,720
+Or due to natural variability 
+
+13
+00:00:36,720 --> 00:00:38,960
+that will be reversed
+ in the future? 
+
+14
+00:00:38,960 --> 00:00:42,120
+Or is it an artifact of the
+limited observations?
+
+15
+00:00:42,120 --> 00:00:45,160
+The use of Fargo data has been
+remarkably successful
+
+16
+00:00:45,160 --> 00:00:47,840
+in observing climate variability
+ and change in the ocean,
+
+17
+00:00:47,840 --> 00:00:50,640
+and the program is now
+evolving to become part
+
+18
+00:00:50,640 --> 00:00:53,200
+of a more complete
+observing system.

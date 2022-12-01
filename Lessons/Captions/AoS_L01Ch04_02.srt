@@ -1,0 +1,105 @@
+﻿1
+00:00:01,200 --> 00:00:03,280
+At this point, you're
+probably wondering 
+
+2
+00:00:03,280 --> 00:00:05,160
+how the observations are done. 
+
+3
+00:00:05,160 --> 00:00:07,400
+We have seen
+ the cycle of an Argo float
+
+4
+00:00:07,400 --> 00:00:10,040
+and how it measures
+ oceanographic parameters.
+
+5
+00:00:10,040 --> 00:00:11,800
+But how does it work? 
+
+6
+00:00:11,800 --> 00:00:14,320
+What's inside
+ this revolutionary device? 
+
+7
+00:00:14,320 --> 00:00:15,400
+Standard Argo floats
+
+8
+00:00:15,400 --> 00:00:17,880
+are devices that
+weight around 20 kilos
+
+9
+00:00:17,880 --> 00:00:20,640
+an are, approximately,
+2 meters high.
+
+10
+00:00:20,640 --> 00:00:23,840
+The dive vertically by
+changing their buoyancy
+
+11
+00:00:23,840 --> 00:00:26,720
+so they can resurface
+ and submerge. 
+
+12
+00:00:26,720 --> 00:00:28,760
+There is no propulsion
+system at all
+
+13
+00:00:28,760 --> 00:00:31,160
+so their horizontal
+movements are caused
+
+14
+00:00:31,160 --> 00:00:33,960
+by the currents
+that carry them adrift.
+
+15
+00:00:33,960 --> 00:00:36,680
+They consist of three subsystems.
+
+16
+00:00:36,680 --> 00:00:39,480
+A hydraulic system that
+controls the buoyancy
+
+17
+00:00:39,480 --> 00:00:41,920
+through an external
+inflatable bladder
+
+18
+00:00:41,920 --> 00:00:44,880
+so that the profiler can
+resurface and submerge.
+
+19
+00:00:44,880 --> 00:00:48,040
+A microprocessor
+that collects and stores
+
+20
+00:00:48,040 --> 00:00:51,160
+the data from the sensors
+until it can be transmitted.
+
+21
+00:00:51,160 --> 00:00:53,640
+And finally,
+a data transmission system
+
+22
+00:00:53,640 --> 00:00:56,520
+that controls communication
+with satellites.

@@ -1,0 +1,112 @@
+﻿1
+00:00:01,400 --> 00:00:05,200
+Data from the marine environment
+is a truly valuable asset
+
+2
+00:00:05,200 --> 00:00:08,720
+fast and secured access
+to the information is vital
+
+3
+00:00:08,720 --> 00:00:11,440
+when dealing with threat
+ to the marine environment,
+
+4
+00:00:11,440 --> 00:00:14,480
+in the development
+of policies and laws
+
+5
+00:00:14,480 --> 00:00:17,760
+protecting vulnerable areas
+in our coasts and oceans
+
+6
+00:00:17,760 --> 00:00:20,280
+so that we can understand
+the tendencies
+
+7
+00:00:20,280 --> 00:00:23,120
+and are able to forecast
+upcoming changes.
+
+8
+00:00:23,120 --> 00:00:27,240
+Unfortunately, the collection,
+storage and access to marine data
+
+9
+00:00:27,240 --> 00:00:29,640
+has for many years
+been fragmented.
+
+10
+00:00:29,640 --> 00:00:33,200
+There are organizations,
+ systems, networks
+
+11
+00:00:33,200 --> 00:00:35,440
+and ocean observing
+programs around the world
+
+12
+00:00:35,440 --> 00:00:37,240
+which observe the oceans, 
+
+13
+00:00:37,240 --> 00:00:39,880
+collect data according
+to international standards
+
+14
+00:00:39,880 --> 00:00:42,480
+and make that information
+freely available
+
+15
+00:00:42,480 --> 00:00:46,120
+as layers of interoperable
+data and data products.
+
+16
+00:00:46,120 --> 00:00:48,880
+In this way, the
+International Argo Program
+
+17
+00:00:48,880 --> 00:00:50,880
+ is a component of GOOS,
+
+18
+00:00:50,880 --> 00:00:54,560
+a highly collaborative and
+multidisciplinary observing system
+
+19
+00:00:54,560 --> 00:00:57,400
+built around elements
+of observation,
+
+20
+00:00:57,400 --> 00:01:00,840
+which are administered
+and finance nationally. 
+
+21
+00:01:00,840 --> 00:01:03,080
+The main objective
+of this course
+
+22
+00:01:03,080 --> 00:01:06,040
+is that you get used to data
+ from the Argo network,
+
+23
+00:01:06,040 --> 00:01:10,120
+from the moment it is collected
+until results are obtained.

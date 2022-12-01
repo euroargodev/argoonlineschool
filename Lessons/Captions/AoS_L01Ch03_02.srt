@@ -1,0 +1,68 @@
+﻿1
+00:00:05,880 --> 00:00:08,320
+The core mission
+of the Argo program
+
+2
+00:00:08,320 --> 00:00:11,560
+was to provide a real time
+ improvement in capacity
+
+3
+00:00:11,560 --> 00:00:14,880
+and measurement of temperature
+ and salinity across
+
+4
+00:00:14,880 --> 00:00:19,040
+the first 2000 meters of ocean
+ depth, contributing thus
+
+5
+00:00:19,040 --> 00:00:22,560
+to a global description
+ of the seasonal and interannual
+
+6
+00:00:22,560 --> 00:00:26,960
+variability of the upper part
+ of the thermohaline circulation.
+
+7
+00:00:26,960 --> 00:00:30,240
+Thus, within the core mission,
+ the main objective
+
+8
+00:00:30,240 --> 00:00:33,600
+focused on establishing
+ a coverage of a profiler
+
+9
+00:00:33,600 --> 00:00:37,720
+every three degrees of longitude
+ and three degrees of latitude
+
+10
+00:00:37,720 --> 00:00:41,960
+in the band of 60 degrees north
+ to 60 degrees south.
+
+11
+00:00:41,960 --> 00:00:43,840
+Although continuous advancements 
+
+12
+00:00:43,840 --> 00:00:46,840
+in technology and hard
+ work of the Argo community
+
+13
+00:00:46,840 --> 00:00:50,280
+are allowing the original core
+ missions objectives to keep
+
+14
+00:00:50,280 --> 00:00:54,440
+growing and enabling
+ us to explore even further.

@@ -1,0 +1,106 @@
+﻿1
+00:00:01,200 --> 00:00:04,320
+The Argo program constitutes
+a fundamental piece
+
+2
+00:00:04,320 --> 00:00:07,000
+inside the Global Ocean
+ Observing System,
+
+3
+00:00:07,000 --> 00:00:10,200
+and it is a joint initiative
+of over 30 countries.
+
+4
+00:00:10,200 --> 00:00:14,200
+It is sponsored by the World
+ Meteorological Organization,
+
+5
+00:00:14,200 --> 00:00:17,400
+the Intergovernmental
+Oceanographic Commission,
+
+6
+00:00:17,400 --> 00:00:20,480
+the International
+Science Council 
+
+7
+00:00:20,480 --> 00:00:23,520
+and the United Nations
+ Environment Program
+
+8
+00:00:23,520 --> 00:00:26,600
+Argo contributes to the
+Climate Variability
+
+9
+00:00:26,600 --> 00:00:28,840
+and Predictability
+ Experiment project,
+
+10
+00:00:28,840 --> 00:00:31,880
+whose mission is to enable
+a better understanding
+
+11
+00:00:31,880 --> 00:00:34,320
+of climate to the
+benefit of society
+
+12
+00:00:34,320 --> 00:00:36,680
+and the environment
+ in which we live. 
+
+13
+00:00:36,680 --> 00:00:39,280
+Argo is also a major contributor
+
+14
+00:00:39,280 --> 00:00:42,320
+to the Global Ocean Data
+ Assimilation Experiment,
+
+15
+00:00:42,320 --> 00:00:44,600
+whose mission is to improve 
+
+16
+00:00:44,600 --> 00:00:48,320
+global and regional ocean
+analysis and forecasting systems.
+
+17
+00:00:48,320 --> 00:00:50,680
+Overall coordination
+ is provided through
+
+18
+00:00:50,680 --> 00:00:52,640
+the Argo Information Center,
+
+19
+00:00:52,640 --> 00:00:56,400
+an office associated to the World
+Meteorological Organization
+
+20
+00:00:56,400 --> 00:00:59,560
+and the Intergovernmental
+ Oceanographic Commission.
+
+21
+00:00:59,560 --> 00:01:04,080
+Each country that finances the
+network does so voluntarily,
+
+22
+00:01:04,080 --> 00:01:06,880
+making the data obtained
+freely available.

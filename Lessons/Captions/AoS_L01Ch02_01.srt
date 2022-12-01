@@ -1,0 +1,56 @@
+﻿1
+00:00:01,400 --> 00:00:03,600
+As we have seen, there's
+ a need to understand
+
+2
+00:00:03,600 --> 00:00:05,120
+how the ocean works
+
+3
+00:00:05,120 --> 00:00:07,240
+as it's a key player
+in the climate system,
+
+4
+00:00:07,240 --> 00:00:10,400
+but studying the oceans
+can be a challenging task
+
+5
+00:00:10,400 --> 00:00:13,960
+as they cover 70%
+of the Earth's surface.
+
+6
+00:00:13,960 --> 00:00:15,560
+And not only that,
+
+7
+00:00:15,560 --> 00:00:18,840
+the ocean average depth
+is about 4000 meters.
+
+8
+00:00:18,840 --> 00:00:22,400
+In 1999 an innovative
+step was taken 
+
+9
+00:00:22,400 --> 00:00:25,680
+by scientists to greatly improve
+the collection of observations
+
+10
+00:00:25,680 --> 00:00:27,680
+through increased
+sampling and coverage
+
+11
+00:00:27,680 --> 00:00:30,120
+in terms of time and area.
+
+12
+00:00:30,120 --> 00:00:33,120
+That step forward
+was Argo.

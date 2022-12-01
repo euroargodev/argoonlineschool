@@ -1,13 +1,16 @@
 .DS_Store
-Aborrar.md
 Info.ipynb
-Prueba*
 
+# Testing folder
+Prueba
+Prueba*
+./Prueba/*
+
+# Data folder
+Data
 ./Data/sst.day.mean.2019.nc
 ./Data/6901472/6901472_BRtraj.nc
 ./Data/6901472/profiles/*
-
-Data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
