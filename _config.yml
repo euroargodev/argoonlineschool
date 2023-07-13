@@ -20,7 +20,8 @@ repository :
 # Launch button settings
 launch_buttons:
   notebook_interface: jupyterlab  # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url: "" # The URL of the BinderHub (e.g., https://mybinder.org)
+  binderhub_url: "https://mybinder.org" # The URL of the BinderHub (e.g., https://mybinder.org)
+  # https://mybinder:org/v2/gh/euroargodev/argoonlineschool/master?urlpath=lab/tree/Lessons/L03_UsingArgoData/Chapter24_ArgoDatabyFloat_ArgoPy.ipynb
 
 number_toc_chapters         : true
 
