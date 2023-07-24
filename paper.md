@@ -72,3 +72,52 @@ The AoS has been possible thanks to the collaboration of the Euro-Argo members, 
 The audiovisual work has been recorded and edited by Rafael Méndez Pérez ([http://rafaelmendezp.com/](http://rafaelmendezp.com/)) while proofreading and english coaching support was provided by Agustín Prunell-Friend. The quiz sections are based on John M. Shea [@jmshea2021] software.
 
 # References
+
+
+Argo. 2021. “Argo Float Data and Metadata from Global Data Assembly
+Centre (Argo GDAC).” SEANOE. https://doi.org/10.17882/42182.
+
+Community, Executable Books. 2020. Jupyter Book (version v0.10). Zenodo.
+https://doi.org/10.5281/zenodo.4539666.
+
+Kluyver, Thomas, Benjamin Ragan-Kelley, Fernando Pérez, Brian Granger,
+Matthias Bussonnier, Jonathan Frederic, Kyle Kelley, et al. 2016.
+“Jupyter Notebooks – a Publishing Format for Reproducible Computational
+Workflows.” Edited by F. Loizides and B. Schmidt. IOS Press.
+
+Maze, Guillaume, and Kevin Balem. 2020. “Argopy: A Python Library for
+Argo Ocean Data Analysis.” Journal of Open Source Software 5 (53): 2425.
+https://doi.org/10.21105/joss.02425.
+
+Riser, Stephen C., Howard J. Freeland, Dean Roemmich, Susan Wijffels,
+Ariel Troisi, Mathieu Belbeoch, Denis Gilbert, et al. 2016. “Fifteen
+Years of Ocean Observations with the Global Argo Array.” Nature Clim.
+Change 6 (2): 145–53. https://doi.org/10.1038/nclimate2872.
+
+Roemmich, Dean, Matthew H. Alford, Hervé Claustre, Kenneth Johnson,
+Brian King, James Moum, Peter Oke, et al. 2019. “On the Future of Argo:
+A Global, Full-Depth, Multi-Disciplinary Array.” Frontiers in Marine
+Science 6: 439. https://doi.org/10.3389/fmars.2019.00439.
+
+Ryan Abernathey, Kerry Key, and Tim Crone. 2021. “An Introduction to
+Earth and Environmental Data Science.” GitHub Repository. GitHub.
+https://github.com/earth-env-data-science/earth-env-data-science-book.
+
+Smith, A. M., K. Thaney, and M. Hahnel. 2021. “An Interactive Quiz
+Generator for Jupyter Notebooks and Jupyter Book.” GitHub Repository.
+GitHub. https://github.com/jmshea/jupyterquiz.
+
+Team, Argo Data Management. 2021. “Argo Users Manual.” Argo; Argo Data
+Management Team. https://doi.org/10.13155/29825.
+
+Tucker, Tyler, Donata Giglio, Megan Scanderbeg, and Samuel S. P. Shen.
+2020. “Argovis: A Web Application for Fast Delivery, Visualization, and
+Analysis of Argo Data.” Journal of Atmospheric and Oceanic Technology 37
+(3): 401–16. https://doi.org/10.1175/JTECH-D-19-0041.1.
+
+Wong Annie, Carval Thierry, Keeley Robert. 2022b. “Argo Quality Control
+Manual for CTD and Trajectory Data.” In. Argo; Argo Data Management
+Team. https://doi.org/10.13155/33951.
+
+———. 2022a. “Argo Quality Control Manual for CTD and Trajectory Data.”
+Argo; Argo Data Management Team. https://doi.org/10.13155/33951.
