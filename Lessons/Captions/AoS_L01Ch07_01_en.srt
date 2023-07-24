@@ -1,0 +1,52 @@
+﻿1
+00:00:01,680 --> 00:00:03,720
+Well done!
+through this lesson,
+
+2
+00:00:03,720 --> 00:00:05,920
+you have obtained basic
+and solid information
+
+3
+00:00:05,920 --> 00:00:08,480
+about the international
+Argo program.
+
+4
+00:00:08,480 --> 00:00:11,560
+We have to look at:
+What the Argo network is about
+
+5
+00:00:11,560 --> 00:00:14,160
+its objectives,
+how an Argo float works
+
+6
+00:00:14,160 --> 00:00:16,920
+and how it collects
+information from the ocean. 
+
+7
+00:00:16,920 --> 00:00:19,320
+Although this cocepts
+may seem quite simple,
+
+8
+00:00:19,320 --> 00:00:21,480
+they are essential
+to get the initial approach
+
+9
+00:00:21,480 --> 00:00:24,160
+and to understand
+the Argo program as a whole.
+
+10
+00:00:24,160 --> 00:00:26,160
+Would you like to find out more? 
+
+11
+00:00:26,160 --> 00:00:28,120
+See you in the next lesson.

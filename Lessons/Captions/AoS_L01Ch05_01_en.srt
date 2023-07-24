@@ -1,0 +1,47 @@
+﻿1
+00:00:01,280 --> 00:00:04,880
+Argo represents a revolution
+ in ocean observations,
+
+2
+00:00:04,880 --> 00:00:08,720
+since it provides open and free
+ access to data at a rate
+
+3
+00:00:08,720 --> 00:00:12,200
+which is 20 times higher when
+compared to traditional methods 
+
+4
+00:00:12,200 --> 00:00:15,080
+used on board
+oceanographic vessels.
+
+5
+00:00:15,080 --> 00:00:18,760
+Since 1999, the Argo
+network has recorded
+
+6
+00:00:18,760 --> 00:00:21,200
+more than 2 million
+ oceanographic profiles,
+
+7
+00:00:21,200 --> 00:00:23,400
+a figure equivalent
+to three times that of
+
+8
+00:00:23,400 --> 00:00:25,440
+all the profiles recorded
+
+9
+00:00:25,440 --> 00:00:27,520
+since the beginning
+ of oceanography 
+
+10
+00:00:27,520 --> 00:00:30,120
+in the early 20th century. 

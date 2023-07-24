@@ -1,0 +1,134 @@
+﻿1
+00:00:01,000 --> 00:00:04,040
+Every temperature and salinity
+ set of data measured
+
+2
+00:00:04,040 --> 00:00:07,320
+from a depth of 2000 meters
+ to the surface of the ocean
+
+3
+00:00:07,320 --> 00:00:10,040
+is called an
+oceanographic profile.
+
+4
+00:00:10,040 --> 00:00:11,800
+This is why Argo floats 
+
+5
+00:00:11,800 --> 00:00:15,200
+are also known as
+oceanographic profilers.
+
+6
+00:00:15,200 --> 00:00:17,600
+Taking into account
+that salinity
+
+7
+00:00:17,600 --> 00:00:20,600
+is obtained from measurements
+of conductivity in general,
+
+8
+00:00:20,600 --> 00:00:25,160
+a profile of temperature and
+salinity is called a CTD profile,
+
+9
+00:00:25,160 --> 00:00:27,480
+where C stands for conductivity,
+
+10
+00:00:27,480 --> 00:00:31,120
+T for temperature
+and D for depth,
+
+11
+00:00:31,120 --> 00:00:34,280
+since in a profile, all
+measurements need to show
+
+12
+00:00:34,280 --> 00:00:36,360
+the depth they were
+collected at.
+
+13
+00:00:36,360 --> 00:00:40,080
+Additionally, the sensors
+ that measure CTD profiles
+
+14
+00:00:40,080 --> 00:00:43,400
+are commonly called
+profiling CTDs
+
+15
+00:00:43,400 --> 00:00:45,880
+or simply CTDs.
+
+16
+00:00:45,880 --> 00:00:48,440
+The easiest way
+to represent this is by
+
+17
+00:00:48,440 --> 00:00:52,720
+plotting the variable of any
+Argo float against its depth
+
+18
+00:00:52,720 --> 00:00:54,040
+in such a way
+
+
+19
+00:00:54,040 --> 00:00:57,440
+that on the X axis we have
+our desired variable
+
+20
+00:00:57,440 --> 00:00:59,480
+and on the Y axis,
+
+21
+00:00:59,480 --> 00:01:03,040
+the depth at which the desired
+variable measurement was taken.
+
+22
+00:01:03,040 --> 00:01:05,560
+When reading the
+oceanographic profiles,
+
+23
+00:01:05,560 --> 00:01:07,800
+we can obtain
+relevant information
+
+24
+00:01:07,800 --> 00:01:09,680
+about the state
+of the water column
+
+25
+00:01:09,680 --> 00:01:11,920
+from identifying masses of water
+
+26
+00:01:11,920 --> 00:01:14,360
+and monitoring
+thermocline development,
+
+27
+00:01:14,360 --> 00:01:18,400
+to identifying ocean variability
+ from seasons to decades
+
+28
+00:01:18,400 --> 00:01:22,040
+and even quantifying
+ the ocean's heat content.

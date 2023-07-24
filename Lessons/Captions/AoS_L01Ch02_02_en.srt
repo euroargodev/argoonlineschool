@@ -1,0 +1,136 @@
+﻿1
+00:00:13,520 --> 00:00:16,880
+It is said that Jason sailed
+the seas on an expedition
+
+2
+00:00:16,880 --> 00:00:19,360
+in search of the Golden Fleece. 
+
+3
+00:00:24,120 --> 00:00:25,720
+And that he was not alone. 
+
+4
+00:00:25,720 --> 00:00:28,520
+He recruited the greatest
+Greek heroes at the time,
+
+5
+00:00:28,520 --> 00:00:30,560
+including Hercules
+from Boeotia,
+
+6
+00:00:30,560 --> 00:00:32,840
+the Dioskouroi twins from Sparta
+
+7
+00:00:32,840 --> 00:00:35,840
+or Kalais and Zetes
+the sons of Boreas,
+
+8
+00:00:35,840 --> 00:00:37,960
+the North Wind. 
+
+9
+00:00:41,320 --> 00:00:43,880
+He was a favorite
+ with the goddess Athena,
+
+10
+00:00:43,880 --> 00:00:47,520
+who had a great craftsman
+ build a strong and fast boat
+
+11
+00:00:47,520 --> 00:00:49,960
+to help them on their quest. 
+
+12
+00:00:49,960 --> 00:00:51,560
+The Argo. 
+
+13
+00:00:57,760 --> 00:01:01,320
+Today, an international program
+ collects information
+
+14
+00:01:01,320 --> 00:01:03,120
+from inside the ocean 
+
+15
+00:01:03,120 --> 00:01:07,000
+using a fleet of robotic
+ instruments called floats
+
+16
+00:01:07,000 --> 00:01:10,680
+that drift with the ocean
+ currents and move up and down
+
+17
+00:01:10,680 --> 00:01:13,920
+between the surface
+ and a mid-water level.
+
+18
+00:01:14,840 --> 00:01:18,160
+The name chosen for
+the program was Argo,
+
+19
+00:01:18,160 --> 00:01:20,960
+as the array of floats
+ works in partnership
+
+20
+00:01:20,960 --> 00:01:23,800
+with the Jason Earth
+ observing satellites
+
+21
+00:01:23,800 --> 00:01:26,920
+that measure the shape
+of the ocean surface.
+
+22
+00:01:28,040 --> 00:01:32,320
+Each instrument spends almost
+all its life below the surface
+
+23
+00:01:32,320 --> 00:01:36,280
+and they measure temperature
+and salinity in the global ocean
+
+24
+00:01:36,280 --> 00:01:40,160
+providing key data
+to detect changes in the ocean.
+
+25
+00:01:40,160 --> 00:01:44,920
+Roughly 4000 Argo floats are
+currently deployed and operational
+
+26
+00:01:44,920 --> 00:01:48,520
+all over the Earth's oceans.
+
+27
+00:01:48,520 --> 00:01:52,000
+Access to data
+ is completely open and free,
+
+28
+00:01:52,000 --> 00:01:55,920
+allowing any country, any public
+ or private organization
+
+29
+00:01:55,920 --> 00:01:59,880
+and even any individual to
+ explore the ocean environment.

@@ -1,0 +1,118 @@
+﻿1
+00:00:01,400 --> 00:00:04,280
+Hello and welcome
+ to the Argo Online School.
+
+2
+00:00:04,280 --> 00:00:06,560
+My name is Alberto
+and In this course,
+
+3
+00:00:06,560 --> 00:00:08,080
+you will learn the basics 
+
+4
+00:00:08,080 --> 00:00:10,320
+of the Argo program
+ for ocean observation.
+
+5
+00:00:10,320 --> 00:00:12,160
+Hi, my name is Pedro. 
+
+6
+00:00:12,160 --> 00:00:14,400
+We assume, since you
+have joined this course
+
+7
+00:00:14,400 --> 00:00:17,440
+that you are somewhat familiar
+ with the program or you have
+
+8
+00:00:17,440 --> 00:00:20,280
+somehow worked with data
+ from some observation system
+
+9
+00:00:20,280 --> 00:00:22,320
+for different
+scientific purposes. 
+
+10
+00:00:22,320 --> 00:00:24,640
+If this is not the case,
+Don't worry.
+
+11
+00:00:24,640 --> 00:00:27,080
+But first of all,
+ let us ask you,
+
+12
+00:00:27,080 --> 00:00:30,320
+why do you think that we need
+marine environment data?
+
+13
+00:00:30,320 --> 00:00:32,920
+Why is it so important
+to study the ocean?
+
+14
+00:00:32,920 --> 00:00:36,080
+Play the next video
+ and find out. 
+
+15
+00:01:37,880 --> 00:01:38,800
+As we have seen, 
+
+16
+00:01:38,800 --> 00:01:41,120
+there's a need to understand
+ how the ocean works
+
+17
+00:01:41,120 --> 00:01:43,280
+as it's a key player
+ in the climate system,
+
+18
+00:01:43,800 --> 00:01:46,600
+but it's setting the oceans
+ can be a challenging task
+
+19
+00:01:46,880 --> 00:01:49,880
+as they cover
+ 70% of the Earth's surface.
+
+20
+00:01:50,440 --> 00:01:52,680
+And not only that, the ocean
+
+21
+00:01:53,280 --> 00:01:56,240
+is about 4000 meters in 1999.
+
+22
+00:01:56,440 --> 00:01:58,760
+And you know, what is it
+ that was taken 
+
+23
+00:01:58,760 --> 00:02:01,840
+by scientists to greatly improve
+ the collection of observation,
+
+24
+00:02:02,240 --> 00:02:05,800
+to increase sampling on average
+ in terms of time area?
+
+25
+00:02:06,720 --> 00:02:08,360
+That step forward with our goal.
