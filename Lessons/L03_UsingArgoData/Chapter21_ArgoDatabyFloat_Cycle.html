@@ -190,7 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter20_ArgoDatabyFloat_Intro.html">Accesing Argo data by float</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Reading an Argo CTD cycle data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter22_ArgoDatabyFloat_Prof.html">Accessing all profiles at once</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter23_ArgoDatabyFloat_Traj.html">Accessing trayectory data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter23_ArgoDatabyFloat_Traj.html">Accessing trajectory data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter24_ArgoDatabyFloat_ArgoPy.html">Accessing Argo data by float using Argopy</a></li>
 </ul>
 </li>
@@ -1161,7 +1161,7 @@ Attributes:
        [[b&#x27;              &#x27;, b&#x27;              &#x27;, b&#x27;              &#x27;]]],
       dtype=object)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-eda634c1-60d6-4785-9777-bbe92900f330' class='xr-section-summary-in' type='checkbox'  checked><label for='section-eda634c1-60d6-4785-9777-bbe92900f330' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>Argo float vertical profile</dd><dt><span>institution :</span></dt><dd>CORIOLIS</dd><dt><span>source :</span></dt><dd>Argo float</dd><dt><span>history :</span></dt><dd>2019-01-15T11:25:18Z creation; 2019-01-15T11:25:24Z last update (coriolis COQC software)</dd><dt><span>references :</span></dt><dd>http://www.argodatamgt.org/Documentation</dd><dt><span>user_manual_version :</span></dt><dd>3.1</dd><dt><span>Conventions :</span></dt><dd>Argo-3.1 CF-1.6</dd><dt><span>featureType :</span></dt><dd>trajectoryProfile</dd><dt><span>decoder_version :</span></dt><dd>CODA_027d</dd></dl></div></li></ul></div></div></div></div>
 </div>
-<p>Check what useful is the <strong>Self-Describing</strong> property of the netCDF format.</p>
+<p>This is an ideal occasion to remember one of the main properties of the netCDF format seen previously: It is a <strong>Self-Describing</strong> format.</p>
 <p>The name for the core observations, temperature, salinity and pressure down to 2000 meters of depth, are TEMP, SALT and PRES. Although we could inspect the previous print-out of the <em>cy1</em> dataset, we can use the data itself:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1199,7 +1199,7 @@ Attributes:
 </div>
 </div>
 </div>
-<p>We note that for for the first cycle there are two profiles (N_PROF=2) and 95 vertical levels… lets plot them:</p>
+<p>We note that for for the first cycle there are two profiles (N_PROF=2) and 97 vertical levels… lets plot them:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>

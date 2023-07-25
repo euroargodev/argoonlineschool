@@ -190,7 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter20_ArgoDatabyFloat_Intro.html">Accesing Argo data by float</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter21_ArgoDatabyFloat_Cycle.html">Reading an Argo CTD cycle data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter22_ArgoDatabyFloat_Prof.html">Accessing all profiles at once</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter23_ArgoDatabyFloat_Traj.html">Accessing trayectory data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter23_ArgoDatabyFloat_Traj.html">Accessing trajectory data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter24_ArgoDatabyFloat_ArgoPy.html">Accessing Argo data by float using Argopy</a></li>
 </ul>
 </li>
@@ -600,7 +600,7 @@ Attributes:
 </div>
 </div>
 <p>And again here it comes the <strong>Self-Describing</strong> property of the netCDF format, with all information about the data it contains. The information provided depends on the particular data set, as we will see for Argo data.</p>
-<p><strong>However xarray has implemented a more user-friendly way of accessing the metadata stored in te Dataset</strong></p>
+<p><strong>However xarray has implemented a more user-friendly way of accessing the metadata stored in the Dataset</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span>
@@ -1037,7 +1037,7 @@ Longitude 1440
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are exlploring&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;dataset_title&#39;</span><span class="p">]</span> <span class="p">,</span><span class="s1">&#39;from &#39;</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span> <span class="s1">&#39;in its version&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;version&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are exploring&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;dataset_title&#39;</span><span class="p">]</span> <span class="p">,</span><span class="s1">&#39;from &#39;</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span> <span class="s1">&#39;in its version&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;version&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -1049,7 +1049,7 @@ Longitude 1440
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are exlploring&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">dataset_title</span> <span class="p">,</span><span class="s1">&#39;from &#39;</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="s1">&#39;in its version&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are exploring&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">dataset_title</span> <span class="p">,</span><span class="s1">&#39;from &#39;</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="s1">&#39;in its version&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

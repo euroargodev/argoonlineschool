@@ -190,7 +190,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="../L03_UsingArgoData/Chapter20_ArgoDatabyFloat_Intro.html">Accesing Argo data by float</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter21_ArgoDatabyFloat_Cycle.html">Reading an Argo CTD cycle data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter22_ArgoDatabyFloat_Prof.html">Accessing all profiles at once</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter23_ArgoDatabyFloat_Traj.html">Accessing trayectory data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter23_ArgoDatabyFloat_Traj.html">Accessing trajectory data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter24_ArgoDatabyFloat_ArgoPy.html">Accessing Argo data by float using Argopy</a></li>
 </ul>
 </li>
@@ -423,7 +423,7 @@ document.write(`
 </center>
 </div></div>
 </div>
-<p>There are numerous reasons why data can be reported abnormally during the Argo profiler’s operating cycles. This might be mainly due to problems related to the CTD sensors, either external interference to the sensor, for instance, due to biodeposition, or intrinsic problems of the sensor itself. commas or etc: In both cases, incorrect data with spikes, biases, sensor drifts, etc., can be reported as bad data or possible bad data.</p>
+<p>There are numerous reasons why data can be reported abnormally during the Argo profiler’s operating cycles. This might be mainly due to problems related to the CTD sensors, either external interference to the sensor, for instance, due to biodeposition, or intrinsic problems of the sensor itself: In both cases, incorrect data with spikes, biases, sensor drifts, etc., can be reported as bad data or possible bad data.</p>
 <center>
     <img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/GIF_Bad_Data.gif" alt="Argo status" width="800"/>
 </center><p>However, detecting problems related to the CTD sensors, sometimes, can sometimes be very difficult. Even more so when we take into account the concept of “natural variability”. Natural variability is just the natural change of the properties of the ocean and it may happen in periods ranging from seconds to millennia. For instance, changes occur daily, such as the tides; sporadically, such as storm surges or tsunamis; and seasonally, such as the simple warming of coastal waters in summer. In addition to the uncertainty associated with sensor errors, natural systems have an uncertainty associated with the range of natural variability itself. In such cases, it is very difficult to distinguish between the natural variability observed and the errors.</p>
