@@ -9,11 +9,11 @@ As indicated in the introduction, the third component of the Argo Online School 
 
 ## The hands-on component of the Argo Online School
 
-You can access the hands-on content as here, in a web-page, build using [JubyterBook](https://euroargodev.github.io/argoonlineschool), or download the Jupyter Notebooks and use them in your local machine. 
+You can access the hands-on content as here, in a web-page, built using [JubyterBook](https://euroargodev.github.io/argoonlineschool), or download the Jupyter Notebooks and use them in your local machine. 
 
 The hands-on component of the Argo Online School was developed using JupyterLab, since it contains a complete environment for interactive scientific computing which runs in your web browser. Jupyter is an open-source python project, and as a very useful first approach to python and JupyterLab, you can use [An Introduction to Earth and Environmental Data Science](https://earth-env-data-science.github.io/intro) and [Research computing in earth Sciences](https://rabernat.github.io/research_computing/) developed by [Ryan Abernathey](https://ocean-transport.github.io/) and [Kerry Key](https://emlab.ldeo.columbia.edu/index.php/team/kerry-key/).
 
-In the case that you decide to download and run the python Jupyter Notebooks in your local machine, you should create a python environment. Since using some of the packages may give problems due to compatibility issues between conda-forge packages and packages contained in the default conda channels, we will recommend to set up `channel_priority: strict` and give priority to the `conda-forge` channel over the default channels when installing stuff. There are two ways of doing it. Either you always specify `conda install -c conda-forge` or you create a .condarc file in your home with this content:
+In case that you decide to download and run the python Jupyter Notebooks in your local machine, you should create a python environment. Since using some of the packages may give problems due to compatibility issues between conda-forge packages and packages contained in the default conda channels, we will recommend to set up `channel_priority: strict` and give priority to the `conda-forge` channel over the default channels when installing stuff. There are two ways of doing it. Either you always specify `conda install -c conda-forge` or you create a .condarc file in your home with this content:
 ```
 channels:
   - conda-forge
