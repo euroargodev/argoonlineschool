@@ -1,0 +1,132 @@
+﻿1
+00:00:05,520 --> 00:00:07,280
+At this point,
+you probably wonder
+
+2
+00:00:07,280 --> 00:00:09,400
+how the observations are done.
+
+3
+00:00:09,400 --> 00:00:13,680
+Well, the standard Argo float
+ mission is a ten day cycle,
+
+4
+00:00:13,680 --> 00:00:15,160
+with most of the floats time
+
+5
+00:00:15,160 --> 00:00:17,960
+spent drifting along
+with deep ocean currents,
+
+6
+00:00:17,960 --> 00:00:20,160
+followed by taking
+a series of measurements
+
+7
+00:00:20,160 --> 00:00:22,360
+as it moves
+back up (profiles)
+
+8
+00:00:22,360 --> 00:00:24,080
+to the ocean surface.
+
+9
+00:00:24,840 --> 00:00:26,960
+Once the float is on
+ the surface, 
+
+10
+00:00:26,960 --> 00:00:29,960
+it gets its location
+ often through GPS
+
+11
+00:00:29,960 --> 00:00:33,600
+and then communicates with
+ the satellite to send its data
+
+12
+00:00:33,600 --> 00:00:36,320
+and receive any
+new mission instructions.
+
+13
+00:00:37,280 --> 00:00:39,440
+For the majority
+ of the Argo fleet, 
+
+14
+00:00:39,440 --> 00:00:43,560
+this surface interval is between
+15 minutes and one hour.
+
+15
+00:00:44,800 --> 00:00:48,680
+After that, the float sinks
+ to a drift depth of 1000 meters
+
+16
+00:00:48,680 --> 00:00:50,360
+for about nine days, 
+
+17
+00:00:50,360 --> 00:00:54,120
+and then the float sinks to
+ its profile depth of 2000 meters
+
+18
+00:00:54,120 --> 00:00:56,360
+before slowly
+ rising to the surface
+
+19
+00:00:56,360 --> 00:00:59,920
+while measuring conductivity,
+ temperature and pressure.
+
+20
+00:01:02,280 --> 00:01:05,320
+This cycle repeats until
+the float batteries die,
+
+21
+00:01:05,320 --> 00:01:07,920
+usually four or five years later.
+
+22
+00:01:08,480 --> 00:01:12,800
+Associated to the Argo network,
+there is a set of mechanisms,
+
+23
+00:01:12,800 --> 00:01:15,040
+committees and virtual centers 
+
+24
+00:01:15,040 --> 00:01:17,880
+that are in charge of
+all the data reference tasks,
+
+25
+00:01:17,880 --> 00:01:21,800
+from the moment it is acquired
+via satellite to its publication
+
+26
+00:01:21,800 --> 00:01:24,480
+in less than twelve hours
+ on the internet
+
+27
+00:01:24,480 --> 00:01:27,320
+and in the global
+ telecommunications network.
+
+28
+00:01:29,280 --> 00:01:32,320
+All the data is public and free.

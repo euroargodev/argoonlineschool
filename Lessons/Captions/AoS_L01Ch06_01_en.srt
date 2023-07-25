@@ -1,0 +1,53 @@
+﻿1
+00:00:01,440 --> 00:00:04,240
+Argo is constantly
+trying to improve
+
+2
+00:00:04,240 --> 00:00:06,640
+the quality and
+coverage of its data, 
+
+3
+00:00:06,640 --> 00:00:09,360
+which means that
+ some technological challenges
+
+4
+00:00:09,360 --> 00:00:12,080
+need to be addressed
+ in order to have
+
+5
+00:00:12,080 --> 00:00:15,400
+floats operate well in all
+parts of the global ocean.
+
+6
+00:00:15,400 --> 00:00:18,040
+Remember that almost all floats
+
+7
+00:00:18,040 --> 00:00:20,840
+are deployed into the ocean
+and not retrieved.
+
+8
+00:00:20,840 --> 00:00:25,840
+Hence, the floats must be robust,
+long lasting and accurate
+
+9
+00:00:25,840 --> 00:00:28,800
+in a sometimes very harsh
+marine environment.
+
+10
+00:00:28,800 --> 00:00:32,360
+Continuous innovations in
+technology and float design
+
+11
+00:00:32,360 --> 00:00:36,800
+have helped Argo improve
+and expand its coverage.
