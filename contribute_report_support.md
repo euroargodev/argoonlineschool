@@ -14,8 +14,6 @@
   * [Label Issues](#label-issues)
   * [Clean Up Issues and PRs](#clean-up-issues-and-prs)
   * [Review Pull Requests](#review-pull-requests)
-  * [Merge Pull Requests](#merge-pull-requests)
-  * [Tag a Release](#tag-a-release)
   * [Join the Project Team](#join-the-project-team)
 
 ## Introduction
