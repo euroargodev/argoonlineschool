@@ -50,8 +50,6 @@ parts:
 
   - file: Lessons/L03_UsingArgoData/Chapter43_RecapLesson3
     
-- caption: Quizzes
-  chapters:
 
 
 
