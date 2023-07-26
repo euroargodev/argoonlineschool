@@ -30,7 +30,7 @@ The **Argo Online School (AOS)** is a set of videos, animations and hands-on pyt
 
 * Lesson 3 is the AOS hands-on component. It offers a set of instructions to prepare a python environment in case the user wants to run the python Jupyter Notebooks in a local machine. This environment already includes recommended packages. The walkthrough of Lesson 3 shows how to work with the netCDF format, how to access and process Argo data, and how to produce fancy plots for understanding information from Argo data.
 
-The target audience of the AOS are high school or early graduate students, and the programming content included in Lesson 3 provides an ideal opportunity to support students with technical or science curriculum. It is recommended not to skip any lesson in the AOS as the content is carefully connected from less to greater complexity, guaranteeing a progressive learning. The user has the opportunity to self-assess the learning process carried out during their course in the AOS through the proposed quizzes.
+The target audience of the AOS are high school, undergraduate or early graduate students, and the programming content included in Lesson 3 provides an ideal opportunity to support students with technical or science curriculum. It is recommended not to skip any lesson in the AOS as the content is carefully connected from less to greater complexity, guaranteeing a progressive learning. The user has the opportunity to self-assess the learning process carried out during their course in the AOS through the proposed quizzes.
 
 The AOS has been designed to have the possibility to be expanded to follow the implementation of new features in the Argo program.
 
