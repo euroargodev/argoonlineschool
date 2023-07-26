@@ -11,8 +11,7 @@ parts:
     - file: Lessons/L01_TheArgoProgram/Chapter15_OceanographicProfile.ipynb
     - file: Lessons/L01_TheArgoProgram/Chapter16_TechInnovations.ipynb
     - file: Lessons/L01_TheArgoProgram/Chapter17_RecapLesson1.ipynb
-  chapters:
-  - file: Lessons/Quizzes/Quiz10
+    - file: Lessons/Quizzes/Quiz10
 
 - caption: Lesson 2
   chapters:
@@ -24,8 +23,7 @@ parts:
     - file: Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.ipynb
     - file: Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.ipynb
     - file: Lessons/L02_TheArgoData/Chapter17_RecapLesson2.ipynb 
-  chapters:
-  - file: Lessons/Quizzes/Quiz10
+    - file: Lessons/Quizzes/Quiz10
 
 - caption: Lesson 3
   chapters:
