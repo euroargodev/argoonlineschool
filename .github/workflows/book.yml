@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade pip
-        pip install -r requirementsJL.txt
+        pip install -r jupyter-book
     # Build the book
     - name: Build the book
       run: |
