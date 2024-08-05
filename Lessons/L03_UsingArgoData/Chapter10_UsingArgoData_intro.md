@@ -9,7 +9,7 @@ As indicated in the introduction, the third component of the Argo Online School 
 
 ## The hands-on component of the Argo Online School
 
-You can access the hands-on content as here, in a web-page, built using [JubyterBook](https://euroargodev.github.io/argoonlineschool), or download the Jupyter Notebooks and use them in your local machine. 
+You can access the hands-on content as here, in a web-page, built using [JupyterBook](https://euroargodev.github.io/argoonlineschool), or download the Jupyter Notebooks and use them in your local machine. 
 
 The hands-on component of the Argo Online School was developed using JupyterLab, since it contains a complete environment for interactive scientific computing which runs in your web browser. Jupyter is an open-source python project, and as a very useful first approach to python and JupyterLab, you can use [An Introduction to Earth and Environmental Data Science](https://earth-env-data-science.github.io/intro) and [Research computing in earth Sciences](https://rabernat.github.io/research_computing/) developed by [Ryan Abernathey](https://ocean-transport.github.io/) and [Kerry Key](https://emlab.ldeo.columbia.edu/index.php/team/kerry-key/).
 
