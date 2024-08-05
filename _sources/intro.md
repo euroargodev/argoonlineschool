@@ -32,7 +32,7 @@ In this section and using a set of videos you will learn about:
 * [Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter14_RealTimeDelayedMode.html)
 * [What does a quality control flag mean?](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.html)
 * [Where can I get access to data and how is it organized?](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.html) 
-* [Recap Lesson 2](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoData/Chapter17_RecapLesson2.html)
+* [Recap Lesson 2](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter17_RecapLesson2.html)
 
 
 **3. [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**
