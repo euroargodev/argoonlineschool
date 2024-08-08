@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Where can I get access to data and how is it organized?" href="Chapter16_GetAccesOrganized.html" />
+    <link rel="next" title="Where can I get access to Argio data and how is it organized?" href="Chapter16_GetAccesOrganized.html" />
     <link rel="prev" title="Real-Time and Delayed mode data" href="Chapter14_RealTimeDelayedMode.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -174,10 +174,10 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter10_TheArgoData_intro.html">The Argo Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Chapter12_ArgoDataStream.html">The Argo General Data Stream</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter13_WhatArgoDataFormat.html">What are the Argo data and its format?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter13_WhatArgoDataFormat.html">How are the Argo data and its format?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter14_RealTimeDelayedMode.html">Real-Time and Delayed mode data</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">What does a quality control flag mean?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter16_GetAccesOrganized.html">Where can I get access to data and how is it organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter16_GetAccesOrganized.html">Where can I get access to Argio data and how is it organized?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter17_RecapLesson2.html">Recap Lesson 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Quizzes/Quiz20.html">Quiz - Lesson 2</a></li>
 </ul>
@@ -421,13 +421,11 @@ document.write(`
 </div></div>
 </div>
 <p>Each data will have a specific quality flag assigned that indicates its status! Both Real-Time quality control and Delayed - Mode quality control follow a solid quality flag policy. Here are some examples that show how robust this quality flag policy is:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>• The value assigned by a test cannot override a higher value from a previous test. Taking the Real-Time quality control as an example: a QC flag ‘4’ (bad data) set by Test 11 (gradient test) cannot be decreased to QC flag ‘3’ (bad data that is potentially correctable) set by Test 15 (gray list).
-
-• A measurement with QC flag &#39;4&#39; (bad data) or &#39;3&#39; (bad data that are potentially correctable) cannot get a better QC flag in other quality control tests.
-
-• Since salinity (PSAL) is almost always calculated from temperature (TEMP) and conductivity (CNDC), if the temperature is flagged &#39;4&#39; (or &#39;3&#39;), then salinity is also flagged as &#39;4&#39; (or &#39;3&#39;).
-</pre></div>
-</div>
+<ul class="simple">
+<li><p>The value assigned by a test cannot override a higher value from a previous test. Taking the Real-Time quality control as an example: a QC flag ‘4’ (bad data) set by Test 11 (gradient test) cannot be decreased to QC flag ‘3’ (bad data that is potentially correctable) set by Test 15 (gray list).</p></li>
+<li><p>A measurement with QC flag ‘4’ (bad data) or ‘3’ (bad data that are potentially correctable) cannot get a better QC flag in other quality control tests.</p></li>
+<li><p>Since salinity (PSAL) is almost always calculated from temperature (TEMP) and conductivity (CNDC), if the temperature is flagged ‘4’ (or ‘3’), then salinity is also flagged as ‘4’ (or ‘3’).</p></li>
+</ul>
 <center>
     <img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/QC_FLAGs.jpg" alt="Argo status" width="800"/>
 </center></section>
@@ -477,7 +475,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Where can I get access to data and how is it organized?</p>
+        <p class="prev-next-title">Where can I get access to Argio data and how is it organized?</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
