@@ -3,7 +3,7 @@ root: intro
 parts:
 - caption: Lesson 1
   chapters:
-  - file: Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.ipynb    
+  - file: Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.md
     sections:
     - file: Lessons/L01_TheArgoProgram/Chapter12_WhatArgoNetwork.ipynb      
     - file: Lessons/L01_TheArgoProgram/Chapter13_NeedArgo.ipynb             
