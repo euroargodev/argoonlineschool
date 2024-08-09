@@ -9,9 +9,9 @@ Argo is an international program that collects information from inside the ocean
 
 <img src="http://sio-argo.ucsd.edu/statusbig.gif" alt="Argo status" width="800"/>
 
-Given the amount of data gathered by the Argo network of floats, the associated documentation has grown considerably and can be overwhelming. Therefore the goal of the Argo Online school (AOS) is to teach the basic foundations to use and understand the Argo data. The AOS does not attempt to show everything, since the Argo documentation is available for deeper learning.  The AOS is a set of videos and hands-on jupyter notebooks designed to be accessible for high school or graduate students in any discipline, with no prerequisites. 
+Given the amount of data gathered by the Argo network of floats, the associated documentation has grown considerably and can be overwhelming. Therefore the goal of the Argo Online school ([AoS](https://euroargodev.github.io/argoonlineschool/)) is to teach the basic foundations to use and understand the Argo data. The AoS does not attempt to show everything, since the Argo documentation is available for deeper learning.  The AoS is a set of videos and hands-on jupyter notebooks designed to be accessible for high school or graduate students in any discipline, with no prerequisites. 
 
-The AOS is organized into three main sections:
+The AoS is organized into three main sections:
 
 **1. [The Argo Program](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html)**
 
