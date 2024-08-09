@@ -3,7 +3,7 @@ root: intro
 parts:
 - caption: Lesson 1
   chapters:
-  - file: Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro
+  - file: Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.ipynb    
     sections:
     - file: Lessons/L01_TheArgoProgram/Chapter12_WhatArgoNetwork.ipynb      
     - file: Lessons/L01_TheArgoProgram/Chapter13_NeedArgo.ipynb             
@@ -11,7 +11,7 @@ parts:
     - file: Lessons/L01_TheArgoProgram/Chapter15_OceanographicProfile.ipynb
     - file: Lessons/L01_TheArgoProgram/Chapter16_TechInnovations.ipynb
     - file: Lessons/L01_TheArgoProgram/Chapter17_RecapLesson1.ipynb
-    - file: Lessons/Quizzes/Quiz10
+    - file: Lessons/Quizzes/Quiz10.ipynb      
     
 - caption: Lesson 2
   chapters:
@@ -23,32 +23,32 @@ parts:
     - file: Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.ipynb
     - file: Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.ipynb
     - file: Lessons/L02_TheArgoData/Chapter17_RecapLesson2.ipynb 
-    - file: Lessons/Quizzes/Quiz20
+    - file: Lessons/Quizzes/Quiz20.ipynb      
 
 - caption: Lesson 3
   chapters:
-  - file: Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro
+  - file: Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.md
     sections:
-    - file: Lessons/L03_UsingArgoData/Chapter11_TheNetCDFFormat
+    - file: Lessons/L03_UsingArgoData/Chapter11_TheNetCDFFormat.ipynb      
 
-  - file: Lessons/L03_UsingArgoData/Chapter20_ArgoDatabyFloat_Intro
+  - file: Lessons/L03_UsingArgoData/Chapter20_ArgoDatabyFloat_Intro.ipynb      
     sections:
-    - file: Lessons/L03_UsingArgoData/Chapter21_ArgoDatabyFloat_Cycle
-    - file: Lessons/L03_UsingArgoData/Chapter22_ArgoDatabyFloat_Prof
-    - file: Lessons/L03_UsingArgoData/Chapter23_ArgoDatabyFloat_Traj
-    - file: Lessons/L03_UsingArgoData/Chapter24_ArgoDatabyFloat_ArgoPy
+    - file: Lessons/L03_UsingArgoData/Chapter21_ArgoDatabyFloat_Cycle.ipynb      
+    - file: Lessons/L03_UsingArgoData/Chapter22_ArgoDatabyFloat_Prof.ipynb      
+    - file: Lessons/L03_UsingArgoData/Chapter23_ArgoDatabyFloat_Traj.ipynb      
+    - file: Lessons/L03_UsingArgoData/Chapter24_ArgoDatabyFloat_ArgoPy.ipynb      
 
-  - file: Lessons/L03_UsingArgoData/Chapter30_ArgoDatabyDate_Intro
+  - file: Lessons/L03_UsingArgoData/Chapter30_ArgoDatabyDate_Intro.ipynb      
     sections:
-    - file: Lessons/L03_UsingArgoData/Chapter31_ArgoDatabyDate_Day
-    - file: Lessons/L03_UsingArgoData/Chapter32_ArgoDatabyDate_ArgoPy
+    - file: Lessons/L03_UsingArgoData/Chapter31_ArgoDatabyDate_Day.ipynb      
+    - file: Lessons/L03_UsingArgoData/Chapter32_ArgoDatabyDate_ArgoPy.ipynb      
 
-  - file: Lessons/L03_UsingArgoData/Chapter40_RTandDM
+  - file: Lessons/L03_UsingArgoData/Chapter40_RTandDM.ipynb      
     sections:
-    - file: Lessons/L03_UsingArgoData/Chapter41_RTData
-    - file: Lessons/L03_UsingArgoData/Chapter42_DMData
+    - file: Lessons/L03_UsingArgoData/Chapter41_RTData.ipynb      
+    - file: Lessons/L03_UsingArgoData/Chapter42_DMData.ipynb      
 
-  - file: Lessons/L03_UsingArgoData/Chapter43_RecapLesson3
+  - file: Lessons/L03_UsingArgoData/Chapter43_RecapLesson3.ipynb      
     
 
 
