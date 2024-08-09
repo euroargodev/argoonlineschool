@@ -11,7 +11,7 @@ parts:
     - file: Lessons/L01_TheArgoProgram/Chapter15_OceanographicProfile.ipynb
     - file: Lessons/L01_TheArgoProgram/Chapter16_TechInnovations.ipynb
     - file: Lessons/L01_TheArgoProgram/Chapter17_RecapLesson1.ipynb
-    - file: POcultarVideos.ipynb
+    - file: POcultarVideos.md
     - file: Lessons/Quizzes/Quiz10.ipynb      
     
 - caption: Lesson 2
