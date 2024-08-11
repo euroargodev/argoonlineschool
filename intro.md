@@ -16,12 +16,12 @@ The AoS is organized into three main sections:
 **1. [The Argo Program](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html)**
 
 In this section and using a set of videos you will learn about:
-* [What is the Argo network?](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter12_WhatArgoNetwork.html)
-* [Why do we need Argo and what are its objectives?](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter13_NeedArgo.html)
-* [How the observations are done?](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter14_ObservationsDone.html)
-* [What is an oceanographic profile?](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter15_OceanographicProfile.html)
-* [Technological innovations](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter16_TechInnovations.html)
-* [Recap Lesson 1](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter17_RecapLesson1.html)
+* [What is the Argo network?](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter11_WhatArgoNetwork.html)
+* [Why do we need Argo and what are its objectives?](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter12_NeedArgo.html)
+* [How the observations are done?](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter13_ObservationsDone.html)
+* [What is an oceanographic profile?](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter14_OceanographicProfile.html)
+* [Technological innovations](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter15_TechInnovations.html)
+* [Recap Lesson 1](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter16_RecapLesson1.html)
 
 
 **2. [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.html)**
