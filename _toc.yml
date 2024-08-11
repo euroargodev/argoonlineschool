@@ -5,13 +5,12 @@ parts:
   chapters:
   - file: Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.md
     sections:
-    - file: Lessons/L01_TheArgoProgram/Chapter12_WhatArgoNetwork.ipynb      
+    - file: Lessons/L01_TheArgoProgram/Chapter12_WhatArgoNetwork.md      
     - file: Lessons/L01_TheArgoProgram/Chapter13_NeedArgo.ipynb             
     - file: Lessons/L01_TheArgoProgram/Chapter14_ObservationsDone.ipynb     
     - file: Lessons/L01_TheArgoProgram/Chapter15_OceanographicProfile.ipynb
     - file: Lessons/L01_TheArgoProgram/Chapter16_TechInnovations.ipynb
     - file: Lessons/L01_TheArgoProgram/Chapter17_RecapLesson1.ipynb
-    - file: POcultarVideos.md
     - file: Lessons/Quizzes/Quiz10.ipynb      
     
 - caption: Lesson 2
