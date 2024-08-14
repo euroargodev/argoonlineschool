@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>What does a quality control flag mean? &#8212; Argo Online School</title>
+    <title>Quality control &#8212; Argo Online School</title>
   
   
   
@@ -61,12 +61,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Lessons/L02_TheArgoData/Chapter15_QualityFlagMean';</script>
-    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lessons/L02_TheArgoData/Chapter23_QualityControl';</script>
+    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter23_QualityControl.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Where can I get access to the Argo data and how is it organized?" href="Chapter16_GetAccesOrganized.html" />
-    <link rel="prev" title="Real-Time and Delayed mode data" href="Chapter14_RealTimeDelayedMode.html" />
+    <link rel="next" title="What does a quality control flag mean?" href="Chapter24_QualityFlagMean.html" />
+    <link rel="prev" title="What are the Argo data and its format?" href="Chapter22_WhatArgoDataFormat.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -172,13 +172,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 2</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter10_TheArgoData_intro.html">The Argo Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Chapter12_ArgoDataStream.html">The Argo General Data Stream</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter13_WhatArgoDataFormat.html">How are the Argo data and its format?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter14_RealTimeDelayedMode.html">Real-Time and Delayed mode data</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">What does a quality control flag mean?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter16_GetAccesOrganized.html">Where can I get access to the Argo data and how is it organized?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter17_RecapLesson2.html">Recap Lesson 2</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter20_TheArgoData_intro.html">The Argo Data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Chapter21_ArgoDataStream.html">The Argo data flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter22_WhatArgoDataFormat.html">What are the Argo data and its format?</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Quality control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter24_QualityFlagMean.html">What does a quality control flag mean?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter25_GetAccesOrganized.html">Accesing the Argo data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter26_RecapLesson2.html">Recap Lesson 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Quizzes/Quiz20.html">Quiz - Lesson 2</a></li>
 </ul>
 </li>
@@ -279,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L02_TheArgoData/Chapter15_QualityFlagMean.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L02_TheArgoData/Chapter23_QualityControl.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -309,7 +309,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.ipynb" target="_blank"
+      <li><a href="../../_sources/Lessons/L02_TheArgoData/Chapter23_QualityControl.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -319,7 +319,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -378,7 +378,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -389,11 +391,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>What does a quality control flag mean?</h1>
+    <h1>Quality control</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exhaustibe-quality-controls-are-needed">Exhaustibe quality controls are needed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-firtst-quality-control-real-time">The firtst quality control: Real-Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-in-the-sensors-vs-natural-variability">Problems in the sensors vs natural variability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biodeposition">Biodeposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-additional-quality-control-the-delayed-mode">An additional quality control: The Delayed mode</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -403,32 +417,57 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="what-does-a-quality-control-flag-mean">
-<h1>What does a quality control flag mean?<a class="headerlink" href="#what-does-a-quality-control-flag-mean" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_hide_input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
-<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://drive.google.com/file/d/1iX3-8SGGAB95zyDQqxT9bVtH7ediBJJE/preview&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;480&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><center>
-<iframe width="560" height="315" src="https://drive.google.com/file/d/1iX3-8SGGAB95zyDQqxT9bVtH7ediBJJE/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-</div></div>
-</div>
-<p>Each data will have a specific quality flag assigned that indicates its status! Both Real-Time quality control and Delayed - Mode quality control follow a solid quality flag policy. Here are some examples that show how robust this quality flag policy is:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="quality-control">
+<h1>Quality control<a class="headerlink" href="#quality-control" title="Permalink to this heading">#</a></h1>
+<section id="exhaustibe-quality-controls-are-needed">
+<h2>Exhaustibe quality controls are needed<a class="headerlink" href="#exhaustibe-quality-controls-are-needed" title="Permalink to this heading">#</a></h2>
+<p>There are numerous reasons why data can be reported abnormally during the Argo profiler’s operating cycles. It may be due to problems related to the CTD sensors, either external interference to the sensor, for instance, due to biodeposition, or intrinsic problems of the sensor itself. In both cases, incorrect data with spikes, biases, sensor drifts, etc., can be reported as bad data or possible bad data. Therefore Argo needs exhaustibe quality controls.</p>
+<p>  <center><iframe width="800" height="450" src="https://drive.google.com/file/d/1PDwmj7AsbDoy9tLNMdtTc7q_Mey2LvxH/preview" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>  </p>
+</section>
+<section id="the-firtst-quality-control-real-time">
+<h2>The firtst quality control: Real-Time<a class="headerlink" href="#the-firtst-quality-control-real-time" title="Permalink to this heading">#</a></h2>
+<p>In real time, this is less than 24 hours since the data was measured by the Argo floats, a first Quality Control is carried out: the Real time Quality control (RTQC).</p>
+<center><img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/GIF_RT_QualityControl.gif" alt="Argo status" width="800"/></center>
+<p>Let’s summarize this step:</p>
+<p>  <center><iframe width="800" height="450" src="https://drive.google.com/file/d/18NM9vPb1gJ94keeXA50h6-T6zGvfoV6_/preview" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>  </p>
+<p>For instance, test 19 verifies whether the maximum pressure measured by a float is higher than the ocean depth in the location of the float; test 4 verifies if the location reported by the float is actually in the ocean, or if by error it is reporting a position overland; test 18 checks whether the float is sending, again and again, the same data, etc. We don’t expect you to learn what every test is about, but if you are curious about all of them, take a look at the <a class="reference external" href="https://archimer.ifremer.fr/doc/00228/33951/">Argo Quality Control Manual for CTD and Trajectory Data</a>, and here there is a list of the RTQC tests:</p>
+<center><img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/QC_Test.jpg" alt="Argo status" width="800"/></center>
+<p><em>The full set of Argo Quality Control Manuals can be found here <a class="reference external" href="http://www.argodatamgt.org/Documentation">ADMT Documentacion</a></em></p>
+<p>All the data will be distributed in the Global Telecomunication Systrem (GTS), with its corresponding quality flags, that give an indication of the quality of the data. On the other hand, the data and its flags will be also converted to the netCDF format and sent to the Argo Global Data Management Centers (GDAC).</p>
+</section>
+<section id="problems-in-the-sensors-vs-natural-variability">
+<h2>Problems in the sensors vs natural variability<a class="headerlink" href="#problems-in-the-sensors-vs-natural-variability" title="Permalink to this heading">#</a></h2>
+<p>However, detecting problems related to the CTD sensors can sometimes be very difficult. Even more when we take into account the concept of “natural variability”. Natural variability is just the natural change of the properties of the ocean and it may happen in periods ranging from seconds to millennia. For instance, changes occur daily, such as the tides; sporadically, such as storm surges or tsunamis; and seasonally, such as the simple warming of coastal waters in summer. In addition to the uncertainty associated with sensor errors, natural systems have an uncertainty associated with the range of natural variability itself. In such cases, it is very difficult to distinguish between the natural variability observed and the errors.</p>
+<p>Since there is also natural variability in the temperature and salinity that can be mistaken for sensor malfunction, we have to be careful not to treat actual natural variability as sensor malfunction and correct it.</p>
+<p>For instance, a float may drift into saltier waters and we may misinterpret the change as sensor malfunctioning if we do not check out the trajectory of the float. It may also happen that an area of the ocean is becoming saltier than it used to be, and therefore if we compare the data with historical data, we risk losing this natural variability.</p>
+<p>Additionally thre are spikes, this is abrupt short changes in the data and constitute a clear case of anomaly. Spikes are easy to detect and correct. Drifts and offsets can be identified in the trend of ΔS over time, where ΔS is the difference in salinity between float-measured values and statistical recommendations. If ΔS = a + bt, where t is time, then a is the offset and b is the drift rate. Note that these drifts and offsets can be sensor-related, or they can be due to natural variability, as we explained before. To distinguish between sensor errors and natural variability evaluation it is necessary that experts look carefully at the data.</p>
+<p>In the following figure, and video,  we show the most common behaviours found in the salinity data:</p>
+<center><img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/GIF_Bad_Data.gif" alt="Bad data" width="800"/></center>
+<p>  <center><iframe width="800" height="450"  src="https://drive.google.com/file/d/1SJXoCYij8muWN-zQVlD5pViSJKUJVjWJ/preview" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>  </p>
+</section>
+<section id="biodeposition">
+<h2>Biodeposition<a class="headerlink" href="#biodeposition" title="Permalink to this heading">#</a></h2>
+<p>Additionally Biodeposition could modify the shape of a sensor, as indicate in the following figure:</p>
+<center><img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/GIF_Biodeposition.gif" alt="Biodeposition" width="800"/></center>
+<p>Biodeposition is the small accumulations of organic matter, like the algae that grow in the pools in summer. It may affect the measurement’s accuracy by microscopic alterations of the sensor’s shape. It mainly affects the conductivity sensors that allow us to measure salinity, and the effect of biodeposition is very small in most cases, but its effects on the data are approximate of the same order as the natural variations of the ocean in some regions.</p>
+</section>
+<section id="an-additional-quality-control-the-delayed-mode">
+<h2>An additional quality control: The Delayed mode<a class="headerlink" href="#an-additional-quality-control-the-delayed-mode" title="Permalink to this heading">#</a></h2>
+<p>Taking all of this into account, the Argo Comunity realized that RTQC was not enough and developed the Delayed mode Quality Control, when the data is compared with data from neighboring floats.</p>
+<p>  <center><iframe width="800" height="450"  src="https://drive.google.com/file/d/1_EXR0_TfQJKl49QlhigpZTHUSHVOVROT/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>  </p>
+<p>Thus, one of the main obstacles since the start of the Argo Program was providing a technique that allowed us to distinguish between natural variations in salinity and the drift of the conductivity sensor due to biodeposition. The Delayed - Mode quality control is based on a statistical estimation called objective analysis; it provides a solid basis for interpolating irregularly spaced data. During the first years of the Argo era, researchers from the University of Washington and the Woods Hole Oceanographic Institution developed a method based on the comparison of all measurements of each Argo float and historical data at certain depth levels characterized by stability in salinity, but dependent on each zone.</p>
+<p>This method is known as OW (Wong et al, <a class="reference external" href="https://journals.ametsoc.org/view/journals/atot/20/2/1520-0426_2003_020_0308_dmcoac_2_0_co_2.xml">Delayed-Mode Calibration of Autonomous CTD Profiling Float Salinity Data by θ – S Climatology</a>) calibration and is currently used for each of the floats. This type of calibration is repeated, at least, every year to guarantee the accuracy of the measurements. As we said before, this analysis is crucial to keeping measurements that don’t coincide with historical records but that contain natural variability unknown to date. Each data set must be carefully analyzed and, despite good tools such as objective analysis, the final decision on a possible data correction rests in the hands of the expert, what we call the Delayed Mode operator.</p>
+<p>In the following animation we show a real case of a Delayed mode calibration of salinity for float <a class="reference external" href="https://fleetmonitoring.euro-argo.eu/dashboard?WMO=6901268">6901268</a> during its first 80 cycles (x-axis) . The blue line shows the actual measurements of the float at te isotherm 3.7C (around 2000 dbars) while the red line shows the value obtained by the OW method taking into account the nearby observations.</p>
+<center><img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/GIF_DelayedMode.gif" alt="Delayed mode animation" width="800"/></center>
+<p>This is a clear case of sensor drift that was corrected (green line) during the Delayed Mode Quality Control, after the expert decision of the DM operator.</p>
+<p>To keep a record of all the actions performed, the data verified through the DM quality control will be marked with a “D” and those that have only been verified by the RT quality control will be marked with an “R”:</p>
 <ul class="simple">
-<li><p>The value assigned by a test cannot override a higher value from a previous test. Taking the Real-Time quality control as an example: a QC flag ‘4’ (bad data) set by Test 11 (gradient test) cannot be decreased to QC flag ‘3’ (bad data that is potentially correctable) set by Test 15 (gray list).</p></li>
-<li><p>A measurement with QC flag ‘4’ (bad data) or ‘3’ (bad data that are potentially correctable) cannot get a better QC flag in other quality control tests.</p></li>
-<li><p>Since salinity (PSAL) is almost always calculated from temperature (TEMP) and conductivity (CNDC), if the temperature is flagged ‘4’ (or ‘3’), then salinity is also flagged as ‘4’ (or ‘3’).</p></li>
+<li><p>If the DM quality control has been performed after one year of data and the float is still active, both data collected in Real-Time “R” and data verified through DM quality control “D” will be available, being the latter the one with the highest quality.</p></li>
+<li><p>Once a float is declared as inactive, data will be collected in the GDAC as “D” and it will contain both adjusted and unadjusted data.</p></li>
 </ul>
-<center>
-    <img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/QC_FLAGs.jpg" alt="Argo status" width="800"/>
-</center></section>
+<p>Regardless of any changes done during the RT and DM quality controls, all the data is kept and included in the NetCDF files.</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -462,20 +501,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Chapter14_RealTimeDelayedMode.html"
+       href="Chapter22_WhatArgoDataFormat.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Real-Time and Delayed mode data</p>
+        <p class="prev-next-title">What are the Argo data and its format?</p>
       </div>
     </a>
     <a class="right-next"
-       href="Chapter16_GetAccesOrganized.html"
+       href="Chapter24_QualityFlagMean.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Where can I get access to the Argo data and how is it organized?</p>
+        <p class="prev-next-title">What does a quality control flag mean?</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -488,6 +527,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exhaustibe-quality-controls-are-needed">Exhaustibe quality controls are needed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-firtst-quality-control-real-time">The firtst quality control: Real-Time</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-in-the-sensors-vs-natural-variability">Problems in the sensors vs natural variability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biodeposition">Biodeposition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-additional-quality-control-the-delayed-mode">An additional quality control: The Delayed mode</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
