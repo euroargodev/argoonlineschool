@@ -29,9 +29,9 @@ In this section and using a set of videos you will learn about:
 In this section and using a set of videos you will learn about:
 * [The Argo General Data Stream](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter12_ArgoDataStream.html)
 * [What are the Argo data and its format?](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter13_WhatArgoDataFormat.html)
-* [Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter14_RealTimeDelayedMode.html)
+* [QualityControl](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter14_QualityControl.html)
 * [What does a quality control flag mean?](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.html)
-* [Where can I get access to data and how is it organized?](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.html) 
+* [Accesing the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.html) 
 * [Recap Lesson 2](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter17_RecapLesson2.html)
 
 

@@ -15,14 +15,14 @@ parts:
     
 - caption: Lesson 2
   chapters:
-  - file: Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.ipynb
+  - file: Lessons/L02_TheArgoData/Chapter20_TheArgoData_intro.md
     sections:  
-    - file: Lessons/L02_TheArgoData/Chapter12_ArgoDataStream.ipynb
-    - file: Lessons/L02_TheArgoData/Chapter13_WhatArgoDataFormat.ipynb
-    - file: Lessons/L02_TheArgoData/Chapter14_RealTimeDelayedMode.ipynb
-    - file: Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.ipynb
-    - file: Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.ipynb
-    - file: Lessons/L02_TheArgoData/Chapter17_RecapLesson2.ipynb 
+    - file: Lessons/L02_TheArgoData/Chapter21_ArgoDataStream.md
+    - file: Lessons/L02_TheArgoData/Chapter22_WhatArgoDataFormat.md
+    - file: Lessons/L02_TheArgoData/Chapter23_QualityControl.md
+    - file: Lessons/L02_TheArgoData/Chapter24_QualityFlagMean.md
+    - file: Lessons/L02_TheArgoData/Chapter25_GetAccesOrganized.md
+    - file: Lessons/L02_TheArgoData/Chapter26_RecapLesson2.md
     - file: Lessons/Quizzes/Quiz20.ipynb      
 
 - caption: Lesson 3
