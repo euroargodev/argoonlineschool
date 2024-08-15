@@ -1,11 +1,8 @@
 # Using Argo Data
 
-<center>
-    <iframe width="560" height="315" src="https://drive.google.com/file/d/17s5UwuNwyQzjL7EW9DYhWkAYP8nYTYLI/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> 
-    </iframe>
-</center>
+As indicated in the introduction, the second part of the Argo Online School is hands-on, and it is mainly based on Jupyter Notebooks and a few short videos to teach, how to acces the data Argo data and use it.
 
-As indicated in the introduction, the third component of the Argo Online School is  hands-on, and it is based on Jupyter Notebooks:
+<center><iframe width="800" height="450" src="https://drive.google.com/file/d/17s5UwuNwyQzjL7EW9DYhWkAYP8nYTYLI/preview" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 ## The hands-on component of the Argo Online School
 
@@ -37,15 +34,17 @@ conda install xarray
 conda install seawater
 ```
 
+For futher information about [Managing Python Environments](https://earth-env-data-science.github.io/lectures/environment/python_environments.html) we recommend the corresponding section in [An Introduction to Earth and Environmental Data Science](https://earth-env-data-science.github.io/intro)
+
 
 ### Data used in the Argo Online School
 
-If you download the notebooks you should create a ./Data* folder to include the files used for the examples. The files in the Data folder can be downloaded  directly from its source using _wget_, for instance:
+If you download the notebooks you should create a ./Data* folder to include the data files used for the examples. The files in the Data folder can be downloaded directly from its source using _wget_, for instance:
 
-for the *Daily NOAA OI SST V2 High-Resolution Dataset for 2019*:
+for the *Daily NOAA OI SST V2 High-Resolution Dataset for 2020*:
 
 ```
-wget ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.day.mean.2019.nc
+wget ftp://ftp2.psl.noaa.gov/Datasets/noaa.oisst.v2.highres/sst.day.mean.2020.nc
 ```
 
 for the data from float 6901254:
@@ -60,7 +59,7 @@ or for the data in the North Atlantic for the 11th November 2019
 wget ftp://ftp.ifremer.fr/ifremer/argo//geo/indian_ocean/2019/11/20191111_prof.nc`
 ```
 
-However we recomend to download the data from [here](https://drive.google.com/drive/folders/19yMW3sMAFouUb0bPpoyDeZY3-QC63pqi) to use exactly the same dataset and therefore to be able to reproduce precisely the notebooks here. Once you have downloaded the data, the ./Data folder should look like:
+However we recomend to download our version of the data from [here](https://drive.google.com/drive/folders/19yMW3sMAFouUb0bPpoyDeZY3-QC63pqi) to use exactly the same dataset and therefore to be able to reproduce precisely the notebooks here. Once you have downloaded the data, the ./Data folder should look like:
 
 <img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" alt="ArgoCycle" width="800"/>
 

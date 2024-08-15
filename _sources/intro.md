@@ -5,13 +5,16 @@
 [![status](https://jose.theoj.org/papers/b66eaed8751b3adb6f2f4ad146380818/status.svg)](https://jose.theoj.org/papers/b66eaed8751b3adb6f2f4ad146380818)
 
 # The Argo Online School
+
 Argo is an international program that collects information from inside the ocean using a fleet of floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level measuring ocean variables but spend almost all their life below the surface. Argo has been collecting more than 100,000 profiles per year since 2012, and nowadays [Argo](https://argo.ucsd.edu/) is the major component of the Global Ocean Observing System.
 
 <img src="http://sio-argo.ucsd.edu/statusbig.gif" alt="Argo status" width="800"/>
 
-Given the amount of data gathered by the Argo network of floats, the associated documentation has grown considerably and can be overwhelming. Therefore the goal of the Argo Online school ([AoS](https://euroargodev.github.io/argoonlineschool/)) is to teach the basic foundations to use and understand the Argo data. The AoS does not attempt to show everything, since the Argo documentation is available for deeper learning.  The AoS is a set of videos and hands-on jupyter notebooks designed to be accessible for high school or graduate students in any discipline, with no prerequisites. 
+Given the amount of data gathered by the Argo network of floats, the associated documentation has grown considerably and can be overwhelming. 
 
-The AoS is organized into three main sections:
+That's why we developed the Argo Online school ([AoS](https://euroargodev.github.io/argoonlineschool/)), to teach the basic foundations to use and understand the Argo data. The AoS does not attempt to show everything, since the Argo documentation is available for deeper learning. The AoS is a set of short videos and hands-on jupyter notebooks designed to be accessible for high school or graduate students in any discipline, with no prerequisites.
+
+The AoS is organized in two parts. The fist one, organized in two lessons and devoted to teach what is the [The Argo Program](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html)** and the [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.html)** with a set of short videos. The second part includes only one lesson: [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**, with jupyter notebooks and short videos to teach, hands-on, how to acces the data Argo data and use it.
 
 **1. [The Argo Program](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html)**
 
@@ -23,7 +26,6 @@ In this section and using a set of videos you will learn about:
 * [Technological innovations](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter15_TechInnovations.html)
 * [Recap Lesson 1](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter16_RecapLesson1.html)
 
-
 **2. [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.html)**
 
 In this section and using a set of videos you will learn about:
@@ -34,6 +36,7 @@ In this section and using a set of videos you will learn about:
 * [Accesing the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.html) 
 * [Recap Lesson 2](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter17_RecapLesson2.html)
 
+Additonally we have included Quizzes for the [first](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) and [second](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz20.html) lessons if you want to challenge yourself! 
 
 **3. [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**
 
@@ -44,17 +47,14 @@ In this section and using hands-on jupyter notebooks you will learn about:
 * [Aceesing Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter40_RTandDM.html)
 * [Recap Lesson 3](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter43_RecapLesson3.html)
 
-Additonally we have included Quizzes for the [first](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) and [second](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz20.html) lessons if you want to challenge yourself! 
-
 ## Further reading
-More information can be found in the [Argo Steering Team web page](http://www.argo.ucsd.edu/) or the [Argo Data Management team documentation](http://www.argodatamgt.org/Documentation)
+More information about the Argo network an be found in the [Argo Steering Team web page](http://www.argo.ucsd.edu/), the [Argo Data Management team documentation](http://www.argodatamgt.org/Documentation) or the European contribution to Argo: [Euro-Argo](https://www.euro-argo.eu/)
 
 ## Acknowledging Argo data
-Since data are freely available without restriction, to track uptake and impact, we ask that where Argo data are used in a publication or product, an acknowledgement be given. 
 
-The Argo Data Management Team assigns Digital Object Identifiers (DOIs) to Argo documents and datasets. These can easily be included in publications and keep a direct and permanent link to the Argo document or datasets used in publications (to ensure reproducibility). Datasets are archived in [monthly snapshots each with its own DOI](https://www.seanoe.org/data/00311/42182/). To acknowledge Argo, please use the following sentence and the appropriate Argo DOI afterward as described below.
+Since Argo data are freely available without restriction, to track uptake and impact, we ask all users to acknowledge it in the following way:*“These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.  (https://argo.ucsd.edu,  https://www.ocean-ops.org).  The Argo Program is part of the Global Ocean Observing System“*
 
-*“These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.  (https://argo.ucsd.edu,  https://www.ocean-ops.org).  The Argo Program is part of the Global Ocean Observing System“*
+Additionally, the Argo Data Management Team assigns Digital Object Identifiers (DOIs) to Argo documents and datasets. These can easily be included in publications and keep a direct and permanent link to the Argo document or datasets used in publications (to ensure reproducibility). Datasets are archived in [monthly snapshots each with its own DOI](https://www.seanoe.org/data/00311/42182/).
 
 Refer to [How to cite Argo data](https://argo.ucsd.edu/data/acknowledging-argo/) for further information.
 
