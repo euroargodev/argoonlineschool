@@ -27,7 +27,7 @@ parts:
 
 - caption: Lesson 3
   chapters:
-  - file: Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.md
+  - file: Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.ipynb
     sections:
     - file: Lessons/L03_UsingArgoData/Chapter11_TheNetCDFFormat.ipynb      
 
