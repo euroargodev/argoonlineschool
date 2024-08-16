@@ -401,16 +401,26 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-netcdf">What is NetCDF?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-is-the-netcdf-format">How is the netCDF format?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-a-netcdf-file">Exploring a netCDF File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-netcdf-file">Open the netCDF file</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-a-netcdf-file-with-xarray">Exploring a netCDF File with xarray</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-netcdf-file-with-xarray">Open the netCDF file with xarray</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-a-netcdf-data-variable">Accessing a netCDF data variable</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-data">Using the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-netcdf">What is NetCDF?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-is-the-netcdf-format">How is the netCDF format?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-a-netcdf-file">Exploring a netCDF File</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-netcdf-file">Open the netCDF file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-a-netcdf-file-with-xarray">Exploring a netCDF File with xarray</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-netcdf-file-with-xarray">Open the netCDF file with xarray</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-information">Meta-information</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#to-list-of-all-the-data-variables-in-the-netcdf-file">To list of all the data variables in the netCDF file</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#to-list-some-attributes-of-the-variables-and-coordinates-in-the-data-set">To list some attributes of the variables and coordinates in the data set:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#or-to-use-the-general-information-of-the-data-set">Or to use the general information of the data set:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-see-how-to-accessing-the-data">Let’s see how to accessing the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-data">Using the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-your-netcdf-file">Closing your netCDF file</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-data-access-via-opendap">Remote data access via openDAP</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-your-netcdf-file">Closing your netCDF file</a></li>
 </ul>
             </nav>
         </div>
@@ -424,44 +434,19 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-netcdf-format">
 <h1>The netCDF format<a class="headerlink" href="#the-netcdf-format" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_hide_input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
-<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://drive.google.com/file/d/1rm_6tH2wuJnvqcXSUYiYRNyLcPTBtcRk/preview&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;480&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><center>
-<iframe width="560" height="315" src="https://drive.google.com/file/d/1rm_6tH2wuJnvqcXSUYiYRNyLcPTBtcRk/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-</div></div>
-</div>
 <section id="what-is-netcdf">
 <h2>What is NetCDF?<a class="headerlink" href="#what-is-netcdf" title="Permalink to this heading">#</a></h2>
-<p><img alt="NetCDFLogo" src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/31f69cb6e66d4d6681ccc41001fa8df9f94ca6c0/images/logoNetcdf.png" /> netCDF stands for <strong>Network Common Data Form</strong> and it is a set of software libraries and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. It is also a community standard for sharing scientific data.</p>
+<p>The Argo Online School 311 -  Using Argo Data.  Using Argo data: What is netCDF format?</p>
+<center>
+<iframe width="800" height="450" src="https://drive.google.com/file/d/1rm_6tH2wuJnvqcXSUYiYRNyLcPTBtcRk/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center><p><img alt="NetCDFLogo" src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/31f69cb6e66d4d6681ccc41001fa8df9f94ca6c0/images/logoNetcdf.png" /> netCDF stands for <strong>Network Common Data Form</strong> and it is a set of software libraries and machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data. It is also a community standard for sharing scientific data.</p>
 <p><a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/"><strong>NetCDF</strong></a> is maintained by <a class="reference external" href="https://www.unidata.ucar.edu/"><strong>Unidata</strong></a>, one of the University Corporation for Atmospheric Research (UCAR)’s Community Programs (UCP). Unidata also supports and maintains netCDF programming interfaces for C, C++, Java, and Fortran. Programming interfaces are also available for Python, IDL, MATLAB, R, Ruby, and Perl. Thanks <a class="reference external" href="https://www.ucar.edu/"><strong>UCAR</strong></a>!</p>
-<div class="cell tag_hide_input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
-<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://drive.google.com/file/d/19jrboTjYKxSjQ9Ry15xKEAf0yxPS34WA/preview&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;480&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><center>
-<iframe width="560" height="315" src="https://drive.google.com/file/d/19jrboTjYKxSjQ9Ry15xKEAf0yxPS34WA/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-</div></div>
-</div>
-</section>
 <section id="how-is-the-netcdf-format">
-<h2>How is the netCDF format?<a class="headerlink" href="#how-is-the-netcdf-format" title="Permalink to this heading">#</a></h2>
-<p>The properties that make netCDF so useful are the following ones:</p>
+<h3>How is the netCDF format?<a class="headerlink" href="#how-is-the-netcdf-format" title="Permalink to this heading">#</a></h3>
+<p>The Argo Online School 312 -  Using Argo Data.  Using Argo data: How is the netCDF format?</p>
+<center>
+<iframe width="800" height="450" src="https://drive.google.com/file/d/19jrboTjYKxSjQ9Ry15xKEAf0yxPS34WA/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center><p>The properties that make netCDF so useful are the following ones:</p>
 <p><strong>Self-Describing</strong> A netCDF file includes information about the data it contains.</p>
 <p><strong>Portable</strong> A netCDF file can be accessed by computers with different ways of storing integers, characters, and floating-point numbers.</p>
 <p><strong>Sharable</strong> One writer and multiple readers may simultaneously access the same netCDF file.</p>
@@ -469,10 +454,11 @@ document.write(`
 <p><strong>Appendable</strong> Data may be appended to a properly structured netCDF file without copying the dataset or redefining its structure.</p>
 <p><strong>Archivable</strong> Access to all earlier forms of netCDF data will be supported by current and future versions of the software.</p>
 </section>
+</section>
 <section id="exploring-a-netcdf-file">
 <h2>Exploring a netCDF File<a class="headerlink" href="#exploring-a-netcdf-file" title="Permalink to this heading">#</a></h2>
 <p>Let’s see most of these properties of a <strong>netCDF</strong> file by using actual data from the high-resolution Blended Analysis of daily Sea Surface Temperature, <a class="reference external" href="https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html#detail"><strong>NOAA OI SST V2 High-Resolution Dataset</strong></a> Thanks <a class="reference external" href="https://www.noaa.gov/"><strong>NOAA</strong></a>!!</p>
-<p>I have pre-downloaded the daily data from 2019 and it is in the ./Data folder.  Refer to the section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html#data-used-in-the-argo-online-school">Data used in the Argo Online School</a> to learn how to download the data, if you have not done it yet.</p>
+<p>I have pre-downloaded the daily data from 2020 and it is in the ./Data folder.  Refer to the section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html#data-used-in-the-argo-online-school">Data used in the Argo Online School</a> to learn how to download the data, if you have not done it yet.</p>
 <p>Although there are several methods to read netCDF data in python, we will begin with <a class="reference external" href="https://unidata.github.io/netcdf4-python/netCDF4/">netcdf4-python</a>, the unidata Python interface to the netCDF C library.</p>
 <p>Let’s import the libraries.</p>
 <div class="cell docutils container">
@@ -490,10 +476,9 @@ document.write(`
 </div>
 </div>
 </div>
-</section>
 <section id="open-the-netcdf-file">
-<h2>Open the netCDF file<a class="headerlink" href="#open-the-netcdf-file" title="Permalink to this heading">#</a></h2>
-<p>We will create <strong><code class="docutils literal notranslate"><span class="pre">SST</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data actually is not read yet (just have a reference to the variable object with metadata).</p>
+<h3>Open the netCDF file<a class="headerlink" href="#open-the-netcdf-file" title="Permalink to this heading">#</a></h3>
+<p>We will create <strong><code class="docutils literal notranslate"><span class="pre">SST</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data actually is not read yet, just have a reference to the variable object with metadata).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ncDS</span> <span class="o">=</span> <span class="n">netCDF4</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="n">fileExampleNC</span><span class="p">)</span>
@@ -507,8 +492,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>And here it comes the <strong>Self-Describing</strong> property of the netCDF format, with all information about the data it contains. The information provided depends on the particular data set, as we will see for Argo data.</p>
-<p>Printing the object gives you summary information.</p>
+<p>And here it comes the <strong>Self-Describing</strong> property of the netCDF format, with all information about the data it contains. The information provided depends on the particular data set, as we will see for Argo data. Printing the object gives you a summary of the netCDF metadata.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ncDS</span><span class="p">)</span>
@@ -535,15 +519,14 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 </section>
 <section id="exploring-a-netcdf-file-with-xarray">
-<h2>Exploring a netCDF File with xarray<a class="headerlink" href="#exploring-a-netcdf-file-with-xarray" title="Permalink to this heading">#</a></h2>
-<p><img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoXarray.png" alt="xarray logo" width="200"/> Before continuing with the descrption of the netCDF format, we would swtich to <strong>xarray</strong>.</p>
-<p>Although <strong>netCDF4-python</strong> provides a lower-level interface for working with netCDF in Python, xarray uses netCDF4-python internally, it is more user-friendly than netCDF4. Additionally, xarray is used by <a class="reference external" href="https://github.com/euroargodev/argopy"><em>argopy</em></a>, the Argo data python library that aims to ease Argo data access, and that is used in te Argo Online School.  xarray does not yet support all of netCDF4-python’s features, such as modifying files on-disk, but this is beyond the objective of this school.</p>
-<p>A brief introduction for xarray <a class="reference external" href="https://rabernat.github.io/research_computing/xarray.html">here</a></p>
+<h3>Exploring a netCDF File with xarray<a class="headerlink" href="#exploring-a-netcdf-file-with-xarray" title="Permalink to this heading">#</a></h3>
+<p><img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/logoXarray.png" alt="xarray logo" width="200"/> Before continuing with the descrption of the netCDF format, we would swtich to <strong>xarray</strong>, since is easier and designed specifically to deal with netCDF files!</p>
+<p>Although <strong>netCDF4-python</strong> provides a lower-level interface for working with netCDF in Python, xarray uses netCDF4-python internally, it is more user-friendly than netCDF4. Additionally, xarray is used by <a class="reference external" href="https://github.com/euroargodev/argopy"><em>argopy</em></a>, the Argo data python library that aims to ease Argo data access, and that is also used in te Argo Online School.  xarray does not yet support all of netCDF4-python’s features, such as modifying files on-disk, but this is beyond the objective of this school.</p>
+<p>A brief introduction for xarray could be found <a class="reference external" href="https://rabernat.github.io/research_computing/xarray.html">here</a></p>
 </section>
 <section id="open-the-netcdf-file-with-xarray">
-<h2>Open the netCDF file with xarray<a class="headerlink" href="#open-the-netcdf-file-with-xarray" title="Permalink to this heading">#</a></h2>
-<p>We will create <strong><code class="docutils literal notranslate"><span class="pre">xrDS</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data is not read yet, it just has a reference to the variable object with metadata.</p>
-<p>First, we have to import the xarray library, and netcdf4 and matplotlib, since both are used internally by xarray.</p>
+<h3>Open the netCDF file with xarray<a class="headerlink" href="#open-the-netcdf-file-with-xarray" title="Permalink to this heading">#</a></h3>
+<p>First, we have to import the xarray library, and netcdf4 matplotlib, since both are used internally by xarray.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">netCDF4</span>
@@ -554,10 +537,17 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 </div>
 </div>
+<p>Opening the netCDF fils is straightforward, we create <strong><code class="docutils literal notranslate"><span class="pre">xrDS</span></code></strong>, a <code class="docutils literal notranslate"><span class="pre">Dataset</span></code> object, representing an open netCDF file. The data is not read yet, it just has a reference to the variable object with metadata.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">fileExampleNC</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">xrDS</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">xrDS</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -567,7 +557,7 @@ root group (NETCDF4_CLASSIC data model, file format HDF5):
 </div>
 </div>
 </div>
-<p><strong>Printing the object gives you summary information</strong></p>
+<p>Once again printing the object gives you information about the data:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">xrDS</span><span class="p">)</span>
@@ -596,8 +586,11 @@ Attributes:
 </div>
 </div>
 </div>
-<p>And again here it comes the <strong>Self-Describing</strong> property of the netCDF format, with all information about the data it contains. The information provided depends on the particular data set, as we will see for Argo data.</p>
-<p><strong>However xarray has implemented a more user-friendly way of accessing the metadata stored in the Dataset</strong></p>
+<p>And here it comes the <strong>Self-Describing</strong> property of the netCDF format, with all information about the data it contains. The information provided depends on the particular data set, as we will see for Argo data.</p>
+</section>
+<section id="meta-information">
+<h3>Meta-information<a class="headerlink" href="#meta-information" title="Permalink to this heading">#</a></h3>
+<p>However xarray has implemented a more user-friendly way of accessing the metadata stored in the Dataset, just typing the variable:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span>
@@ -984,34 +977,33 @@ Attributes:
     References:     https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2....
     dataset_title:  NOAA Daily Optimum Interpolation Sea Surface Temperature
     version:        Version 2.1
-    comment:        Reynolds, et al.(2007) Daily High-Resolution-Blended Anal...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-daaf9479-0450-4b05-91c9-ae4dc8cef182' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-daaf9479-0450-4b05-91c9-ae4dc8cef182' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 366</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-f70ede6e-e4ff-4a0f-be0c-4acb909c7ce3' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f70ede6e-e4ff-4a0f-be0c-4acb909c7ce3' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2020-01-01 ... 2020-12-31</div><input id='attrs-4199af6b-0e1e-461d-a55b-1dd8808e0799' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4199af6b-0e1e-461d-a55b-1dd8808e0799' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d35aaede-f7b8-44e0-ae4e-289deaa22b1b' class='xr-var-data-in' type='checkbox'><label for='data-d35aaede-f7b8-44e0-ae4e-289deaa22b1b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time</dd><dt><span>delta_t :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>avg_period :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>actual_range :</span></dt><dd>[80353. 80718.]</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2020-01-01T00:00:00.000000000&#x27;, &#x27;2020-01-02T00:00:00.000000000&#x27;,
+    comment:        Reynolds, et al.(2007) Daily High-Resolution-Blended Anal...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-9cf0f97d-e0da-44df-ad97-7067241843f0' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-9cf0f97d-e0da-44df-ad97-7067241843f0' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 366</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-cf4b571d-5a12-4f2f-8ed2-c5fd4e8f337f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-cf4b571d-5a12-4f2f-8ed2-c5fd4e8f337f' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2020-01-01 ... 2020-12-31</div><input id='attrs-fa0117b5-1ccf-40aa-bc7d-bc4d9d071053' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-fa0117b5-1ccf-40aa-bc7d-bc4d9d071053' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0d5a8353-3293-4dfc-8024-ad7287f4c3b2' class='xr-var-data-in' type='checkbox'><label for='data-0d5a8353-3293-4dfc-8024-ad7287f4c3b2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time</dd><dt><span>delta_t :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>avg_period :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>actual_range :</span></dt><dd>[80353. 80718.]</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2020-01-01T00:00:00.000000000&#x27;, &#x27;2020-01-02T00:00:00.000000000&#x27;,
        &#x27;2020-01-03T00:00:00.000000000&#x27;, ..., &#x27;2020-12-29T00:00:00.000000000&#x27;,
        &#x27;2020-12-30T00:00:00.000000000&#x27;, &#x27;2020-12-31T00:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-de5f0de6-bde3-4715-a96c-f69623538775' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-de5f0de6-bde3-4715-a96c-f69623538775' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0bec3f4a-cbba-4180-9b23-807a4aa9b152' class='xr-var-data-in' type='checkbox'><label for='data-0bec3f4a-cbba-4180-9b23-807a4aa9b152' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-64f8ad2e-e00c-437e-90c1-f9cba88006b9' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-64f8ad2e-e00c-437e-90c1-f9cba88006b9' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-091602a8-adcb-40f0-be5d-1321ea9189d0' class='xr-var-data-in' type='checkbox'><label for='data-091602a8-adcb-40f0-be5d-1321ea9189d0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
-       3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-793e4a67-fcea-4172-95fe-f3d389dd4fbb' class='xr-section-summary-in' type='checkbox'  checked><label for='section-793e4a67-fcea-4172-95fe-f3d389dd4fbb' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>sst</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-291d0cdb-ac0b-4a1e-9762-4649f491f242' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-291d0cdb-ac0b-4a1e-9762-4649f491f242' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6b08899c-eba2-4aec-a472-4e46024b3a9c' class='xr-var-data-in' type='checkbox'><label for='data-6b08899c-eba2-4aec-a472-4e46024b3a9c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Daily Sea Surface Temperature</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>valid_range :</span></dt><dd>[-3. 45.]</dd><dt><span>precision :</span></dt><dd>2.0</dd><dt><span>dataset :</span></dt><dd>NOAA High-resolution Blended Analysis</dd><dt><span>var_desc :</span></dt><dd>Sea Surface Temperature</dd><dt><span>level_desc :</span></dt><dd>Surface</dd><dt><span>statistic :</span></dt><dd>Mean</dd><dt><span>parent_stat :</span></dt><dd>Individual Observations</dd><dt><span>actual_range :</span></dt><dd>[-1.8      35.059998]</dd></dl></div><div class='xr-var-data'><pre>[379468800 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-324413d4-19c4-435b-905f-6bd63b6a1eee' class='xr-section-summary-in' type='checkbox'  ><label for='section-324413d4-19c4-435b-905f-6bd63b6a1eee' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-d712e542-e7aa-479a-8af3-5490e484c3ca' class='xr-index-data-in' type='checkbox'/><label for='index-d712e542-e7aa-479a-8af3-5490e484c3ca' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2020-01-01&#x27;, &#x27;2020-01-02&#x27;, &#x27;2020-01-03&#x27;, &#x27;2020-01-04&#x27;,
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-2c62948c-24a2-4786-9cc7-ab845aed657c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2c62948c-24a2-4786-9cc7-ab845aed657c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9445094c-b8ef-4c5e-a5e9-f2ac5f24bf94' class='xr-var-data-in' type='checkbox'><label for='data-9445094c-b8ef-4c5e-a5e9-f2ac5f24bf94' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875],
+      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-9651faf2-db6b-4107-aee4-25c02eec121a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9651faf2-db6b-4107-aee4-25c02eec121a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6ed5794a-46d8-4f00-a0b5-6cdca56e7228' class='xr-var-data-in' type='checkbox'><label for='data-6ed5794a-46d8-4f00-a0b5-6cdca56e7228' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
+       3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-e7e77057-3ce2-47d6-bb23-ddaa16cdcbc1' class='xr-section-summary-in' type='checkbox'  checked><label for='section-e7e77057-3ce2-47d6-bb23-ddaa16cdcbc1' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>sst</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f4f41fc8-6c47-41c6-a26f-51cda095fce0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f4f41fc8-6c47-41c6-a26f-51cda095fce0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-062ba9c4-49fc-4593-b015-cdfcc93d3dbd' class='xr-var-data-in' type='checkbox'><label for='data-062ba9c4-49fc-4593-b015-cdfcc93d3dbd' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Daily Sea Surface Temperature</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>valid_range :</span></dt><dd>[-3. 45.]</dd><dt><span>precision :</span></dt><dd>2.0</dd><dt><span>dataset :</span></dt><dd>NOAA High-resolution Blended Analysis</dd><dt><span>var_desc :</span></dt><dd>Sea Surface Temperature</dd><dt><span>level_desc :</span></dt><dd>Surface</dd><dt><span>statistic :</span></dt><dd>Mean</dd><dt><span>parent_stat :</span></dt><dd>Individual Observations</dd><dt><span>actual_range :</span></dt><dd>[-1.8      35.059998]</dd></dl></div><div class='xr-var-data'><pre>[379468800 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-186e2a54-84be-44d3-bcf7-fbd484042898' class='xr-section-summary-in' type='checkbox'  ><label for='section-186e2a54-84be-44d3-bcf7-fbd484042898' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-78c8b23b-4dd6-497f-b098-ebdc4ba7f73c' class='xr-index-data-in' type='checkbox'/><label for='index-78c8b23b-4dd6-497f-b098-ebdc4ba7f73c' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2020-01-01&#x27;, &#x27;2020-01-02&#x27;, &#x27;2020-01-03&#x27;, &#x27;2020-01-04&#x27;,
                &#x27;2020-01-05&#x27;, &#x27;2020-01-06&#x27;, &#x27;2020-01-07&#x27;, &#x27;2020-01-08&#x27;,
                &#x27;2020-01-09&#x27;, &#x27;2020-01-10&#x27;,
                ...
                &#x27;2020-12-22&#x27;, &#x27;2020-12-23&#x27;, &#x27;2020-12-24&#x27;, &#x27;2020-12-25&#x27;,
                &#x27;2020-12-26&#x27;, &#x27;2020-12-27&#x27;, &#x27;2020-12-28&#x27;, &#x27;2020-12-29&#x27;,
                &#x27;2020-12-30&#x27;, &#x27;2020-12-31&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=366, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-21a9987d-0a99-42de-8f5b-86f77b42b8cb' class='xr-index-data-in' type='checkbox'/><label for='index-21a9987d-0a99-42de-8f5b-86f77b42b8cb' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.875, -89.625, -89.375, -89.125, -88.875, -88.625, -88.375, -88.125,
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=366, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-18e27cbf-f07a-42fa-9b6f-febd6de63985' class='xr-index-data-in' type='checkbox'/><label for='index-18e27cbf-f07a-42fa-9b6f-febd6de63985' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.875, -89.625, -89.375, -89.125, -88.875, -88.625, -88.375, -88.125,
        -87.875, -87.625,
        ...
         87.625,  87.875,  88.125,  88.375,  88.625,  88.875,  89.125,  89.375,
         89.625,  89.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=720))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-b0fb9ea8-59fc-4a28-b412-0c65310d7d03' class='xr-index-data-in' type='checkbox'/><label for='index-b0fb9ea8-59fc-4a28-b412-0c65310d7d03' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.125,   0.375,   0.625,   0.875,   1.125,   1.375,   1.625,   1.875,
+      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=720))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-49105e1d-014b-4ff4-b09c-56d6cda35767' class='xr-index-data-in' type='checkbox'/><label for='index-49105e1d-014b-4ff4-b09c-56d6cda35767' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.125,   0.375,   0.625,   0.875,   1.125,   1.375,   1.625,   1.875,
          2.125,   2.375,
        ...
        357.625, 357.875, 358.125, 358.375, 358.625, 358.875, 359.125, 359.375,
        359.625, 359.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d76e50cf-3956-4192-ab29-c8829c9055ae' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d76e50cf-3956-4192-ab29-c8829c9055ae' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.5</dd><dt><span>title :</span></dt><dd>NOAA/NCEI 1/4 Degree Daily Optimum Interpolation Sea Surface Temperature (OISST) Analysis, Version 2.1</dd><dt><span>institution :</span></dt><dd>NOAA/National Centers for Environmental Information</dd><dt><span>source :</span></dt><dd>NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/</dd><dt><span>References :</span></dt><dd>https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html</dd><dt><span>dataset_title :</span></dt><dd>NOAA Daily Optimum Interpolation Sea Surface Temperature</dd><dt><span>version :</span></dt><dd>Version 2.1</dd><dt><span>comment :</span></dt><dd>Reynolds, et al.(2007) Daily High-Resolution-Blended Analyses for Sea Surface Temperature (available at https://doi.org/10.1175/2007JCLI1824.1). Banzon, et al.(2016) A long-term record of blended satellite and in situ sea-surface temperature for climate monitoring, modeling and environmental studies (available at https://doi.org/10.5194/essd-8-165-2016). Huang et al. (2020) Improvements of the Daily Optimum Interpolation Sea Surface Temperature (DOISST) Version v02r01, submitted.Climatology is based on 1971-2000 OI.v2 SST. Satellite data: Pathfinder AVHRR SST and Navy AVHRR SST. Ice data: NCEP Ice and GSFC Ice. Data less than 15 days old may be subject to revision.</dd></dl></div></li></ul></div></div></div></div>
+      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-f93fafce-74de-4449-9496-fb71131463fb' class='xr-section-summary-in' type='checkbox'  checked><label for='section-f93fafce-74de-4449-9496-fb71131463fb' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.5</dd><dt><span>title :</span></dt><dd>NOAA/NCEI 1/4 Degree Daily Optimum Interpolation Sea Surface Temperature (OISST) Analysis, Version 2.1</dd><dt><span>institution :</span></dt><dd>NOAA/National Centers for Environmental Information</dd><dt><span>source :</span></dt><dd>NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/</dd><dt><span>References :</span></dt><dd>https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html</dd><dt><span>dataset_title :</span></dt><dd>NOAA Daily Optimum Interpolation Sea Surface Temperature</dd><dt><span>version :</span></dt><dd>Version 2.1</dd><dt><span>comment :</span></dt><dd>Reynolds, et al.(2007) Daily High-Resolution-Blended Analyses for Sea Surface Temperature (available at https://doi.org/10.1175/2007JCLI1824.1). Banzon, et al.(2016) A long-term record of blended satellite and in situ sea-surface temperature for climate monitoring, modeling and environmental studies (available at https://doi.org/10.5194/essd-8-165-2016). Huang et al. (2020) Improvements of the Daily Optimum Interpolation Sea Surface Temperature (DOISST) Version v02r01, submitted.Climatology is based on 1971-2000 OI.v2 SST. Satellite data: Pathfinder AVHRR SST and Navy AVHRR SST. Ice data: NCEP Ice and GSFC Ice. Data less than 15 days old may be subject to revision.</dd></dl></div></li></ul></div></div></div></div>
 </div>
-<p><strong>All these meta information can be used for any purpose</strong></p>
-<ul class="simple">
-<li><p>A list of all the data variables in the netCDF file</p></li>
-</ul>
+<p>and all these meta information can be used for any purpose, for instance to:</p>
+<section id="to-list-of-all-the-data-variables-in-the-netcdf-file">
+<h4>To list of all the data variables in the netCDF file<a class="headerlink" href="#to-list-of-all-the-data-variables-in-the-netcdf-file" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span>
@@ -1025,9 +1017,9 @@ Attributes:
 </div>
 </div>
 </div>
-<ul class="simple">
-<li><p>A list of some attributes for all the variables and coordinates in the data set:</p></li>
-</ul>
+</section>
+<section id="to-list-some-attributes-of-the-variables-and-coordinates-in-the-data-set">
+<h4>To list some attributes of the variables and coordinates in the data set:<a class="headerlink" href="#to-list-some-attributes-of-the-variables-and-coordinates-in-the-data-set" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span><span class="p">:</span>
@@ -1058,9 +1050,9 @@ Longitude 1440
 </div>
 </div>
 </div>
-<ul class="simple">
-<li><p>Use of the general attributes of the Dataset [in two ways]</p></li>
-</ul>
+</section>
+<section id="or-to-use-the-general-information-of-the-data-set">
+<h4>Or to use the general information of the data set:<a class="headerlink" href="#or-to-use-the-general-information-of-the-data-set" title="Permalink to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are exploring&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;dataset_title&#39;</span><span class="p">]</span> <span class="p">,</span><span class="s1">&#39;from &#39;</span><span class="p">,</span><span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;source&#39;</span><span class="p">],</span> <span class="s1">&#39;in its version&#39;</span><span class="p">,</span> <span class="n">xrDS</span><span class="o">.</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;version&#39;</span><span class="p">])</span>
@@ -1086,12 +1078,10 @@ Longitude 1440
 </div>
 </div>
 </section>
-<section id="accessing-a-netcdf-data-variable">
-<h2>Accessing a netCDF data variable<a class="headerlink" href="#accessing-a-netcdf-data-variable" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>data variable objects stored by name in <strong><code class="docutils literal notranslate"><span class="pre">data_vars</span></code></strong> dict.</p></li>
-<li><p>print the variable yields summary info: range, long_name for the variable, dimensions, fillvalue, etc. All the information necessary used to use the variable</p></li>
-</ul>
+</section>
+<section id="let-s-see-how-to-accessing-the-data">
+<h3>Let’s see how to accessing the data<a class="headerlink" href="#let-s-see-how-to-accessing-the-data" title="Permalink to this heading">#</a></h3>
+<p>the data variable objects are stored by name in <strong><code class="docutils literal notranslate"><span class="pre">data_vars</span></code></strong> dict  and printing the variable yields summary info as: range, long_name for the variable, dimensions, fillvalue, etc. All the information necessary used to use the variable</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">data_vars</span><span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">]</span>
@@ -1478,32 +1468,31 @@ Attributes:
     level_desc:    Surface
     statistic:     Mean
     parent_stat:   Individual Observations
-    actual_range:  [-1.8      35.059998]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'sst'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 366</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-d28177fb-38ad-41d8-abaa-38fdc6f4ba8d' class='xr-array-in' type='checkbox' checked><label for='section-d28177fb-38ad-41d8-abaa-38fdc6f4ba8d' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[379468800 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-8028a62c-270d-4621-b2ae-e678c6c91535' class='xr-section-summary-in' type='checkbox'  checked><label for='section-8028a62c-270d-4621-b2ae-e678c6c91535' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2020-01-01 ... 2020-12-31</div><input id='attrs-8464c6ef-5c66-4fca-8e6a-d78387237573' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8464c6ef-5c66-4fca-8e6a-d78387237573' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ebd6115a-6c81-41af-aae6-e6fcb991ae50' class='xr-var-data-in' type='checkbox'><label for='data-ebd6115a-6c81-41af-aae6-e6fcb991ae50' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time</dd><dt><span>delta_t :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>avg_period :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>actual_range :</span></dt><dd>[80353. 80718.]</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2020-01-01T00:00:00.000000000&#x27;, &#x27;2020-01-02T00:00:00.000000000&#x27;,
+    actual_range:  [-1.8      35.059998]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'sst'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 366</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-6c6ea051-4095-47ba-8f6a-48aad438aca4' class='xr-array-in' type='checkbox' checked><label for='section-6c6ea051-4095-47ba-8f6a-48aad438aca4' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[379468800 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-215afb5d-d716-49d8-bc13-1b7f34ff3545' class='xr-section-summary-in' type='checkbox'  checked><label for='section-215afb5d-d716-49d8-bc13-1b7f34ff3545' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2020-01-01 ... 2020-12-31</div><input id='attrs-f1f555c9-295e-429f-b4b0-f446a37e1991' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f1f555c9-295e-429f-b4b0-f446a37e1991' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-94f6ddef-49c9-4a96-879b-3cde77f2b4ce' class='xr-var-data-in' type='checkbox'><label for='data-94f6ddef-49c9-4a96-879b-3cde77f2b4ce' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time</dd><dt><span>delta_t :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>avg_period :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>actual_range :</span></dt><dd>[80353. 80718.]</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2020-01-01T00:00:00.000000000&#x27;, &#x27;2020-01-02T00:00:00.000000000&#x27;,
        &#x27;2020-01-03T00:00:00.000000000&#x27;, ..., &#x27;2020-12-29T00:00:00.000000000&#x27;,
        &#x27;2020-12-30T00:00:00.000000000&#x27;, &#x27;2020-12-31T00:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-9267d76d-2f56-4ed7-b456-17e7bc21b611' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-9267d76d-2f56-4ed7-b456-17e7bc21b611' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-889d94f3-2eec-4812-9a13-d5d42e4d8791' class='xr-var-data-in' type='checkbox'><label for='data-889d94f3-2eec-4812-9a13-d5d42e4d8791' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-d6ee360e-81aa-4065-9acf-b42591fabc31' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d6ee360e-81aa-4065-9acf-b42591fabc31' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9853460d-4f0d-44c3-980b-3f697bb86158' class='xr-var-data-in' type='checkbox'><label for='data-9853460d-4f0d-44c3-980b-3f697bb86158' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
-       3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-7a7c1f7a-ada8-4975-8da3-a16735452b1a' class='xr-section-summary-in' type='checkbox'  ><label for='section-7a7c1f7a-ada8-4975-8da3-a16735452b1a' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-0f4ca7cd-db3d-4e23-bd57-29fe217ad60b' class='xr-index-data-in' type='checkbox'/><label for='index-0f4ca7cd-db3d-4e23-bd57-29fe217ad60b' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2020-01-01&#x27;, &#x27;2020-01-02&#x27;, &#x27;2020-01-03&#x27;, &#x27;2020-01-04&#x27;,
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-17ef3573-3438-433a-9b7c-3b4e3ae03f7b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-17ef3573-3438-433a-9b7c-3b4e3ae03f7b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6c0d4821-b45c-4265-b02a-4487e8c14bff' class='xr-var-data-in' type='checkbox'><label for='data-6c0d4821-b45c-4265-b02a-4487e8c14bff' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875],
+      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-a35b44c3-e1f2-4fae-af1b-1ded86e01444' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a35b44c3-e1f2-4fae-af1b-1ded86e01444' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-04cd6c8a-676f-40ee-b60a-971f8c5286a2' class='xr-var-data-in' type='checkbox'><label for='data-04cd6c8a-676f-40ee-b60a-971f8c5286a2' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
+       3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-8bf29ad1-cd06-4e6b-8e58-f0677b949bf6' class='xr-section-summary-in' type='checkbox'  ><label for='section-8bf29ad1-cd06-4e6b-8e58-f0677b949bf6' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-885ef2b2-355e-4082-b0e0-8cc30afd0383' class='xr-index-data-in' type='checkbox'/><label for='index-885ef2b2-355e-4082-b0e0-8cc30afd0383' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2020-01-01&#x27;, &#x27;2020-01-02&#x27;, &#x27;2020-01-03&#x27;, &#x27;2020-01-04&#x27;,
                &#x27;2020-01-05&#x27;, &#x27;2020-01-06&#x27;, &#x27;2020-01-07&#x27;, &#x27;2020-01-08&#x27;,
                &#x27;2020-01-09&#x27;, &#x27;2020-01-10&#x27;,
                ...
                &#x27;2020-12-22&#x27;, &#x27;2020-12-23&#x27;, &#x27;2020-12-24&#x27;, &#x27;2020-12-25&#x27;,
                &#x27;2020-12-26&#x27;, &#x27;2020-12-27&#x27;, &#x27;2020-12-28&#x27;, &#x27;2020-12-29&#x27;,
                &#x27;2020-12-30&#x27;, &#x27;2020-12-31&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=366, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-549605ba-73eb-4a06-b445-3aecf17c703a' class='xr-index-data-in' type='checkbox'/><label for='index-549605ba-73eb-4a06-b445-3aecf17c703a' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.875, -89.625, -89.375, -89.125, -88.875, -88.625, -88.375, -88.125,
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=366, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-26e8cb45-33f7-4730-8bac-cb5af0cef8b0' class='xr-index-data-in' type='checkbox'/><label for='index-26e8cb45-33f7-4730-8bac-cb5af0cef8b0' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.875, -89.625, -89.375, -89.125, -88.875, -88.625, -88.375, -88.125,
        -87.875, -87.625,
        ...
         87.625,  87.875,  88.125,  88.375,  88.625,  88.875,  89.125,  89.375,
         89.625,  89.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=720))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-5bfd7ce2-8b84-4958-842b-f964f94d013e' class='xr-index-data-in' type='checkbox'/><label for='index-5bfd7ce2-8b84-4958-842b-f964f94d013e' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.125,   0.375,   0.625,   0.875,   1.125,   1.375,   1.625,   1.875,
+      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=720))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-8c616025-a943-4756-865b-b380adb4f1b7' class='xr-index-data-in' type='checkbox'/><label for='index-8c616025-a943-4756-865b-b380adb4f1b7' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.125,   0.375,   0.625,   0.875,   1.125,   1.375,   1.625,   1.875,
          2.125,   2.375,
        ...
        357.625, 357.875, 358.125, 358.375, 358.625, 358.875, 359.125, 359.375,
        359.625, 359.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-db763aec-8acf-4509-b300-93761da8816f' class='xr-section-summary-in' type='checkbox'  ><label for='section-db763aec-8acf-4509-b300-93761da8816f' class='xr-section-summary' >Attributes: <span>(10)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Daily Sea Surface Temperature</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>valid_range :</span></dt><dd>[-3. 45.]</dd><dt><span>precision :</span></dt><dd>2.0</dd><dt><span>dataset :</span></dt><dd>NOAA High-resolution Blended Analysis</dd><dt><span>var_desc :</span></dt><dd>Sea Surface Temperature</dd><dt><span>level_desc :</span></dt><dd>Surface</dd><dt><span>statistic :</span></dt><dd>Mean</dd><dt><span>parent_stat :</span></dt><dd>Individual Observations</dd><dt><span>actual_range :</span></dt><dd>[-1.8      35.059998]</dd></dl></div></li></ul></div></div></div></div>
+      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-cf8eb927-9b33-454d-962b-ca9904465d61' class='xr-section-summary-in' type='checkbox'  ><label for='section-cf8eb927-9b33-454d-962b-ca9904465d61' class='xr-section-summary' >Attributes: <span>(10)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Daily Sea Surface Temperature</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>valid_range :</span></dt><dd>[-3. 45.]</dd><dt><span>precision :</span></dt><dd>2.0</dd><dt><span>dataset :</span></dt><dd>NOAA High-resolution Blended Analysis</dd><dt><span>var_desc :</span></dt><dd>Sea Surface Temperature</dd><dt><span>level_desc :</span></dt><dd>Surface</dd><dt><span>statistic :</span></dt><dd>Mean</dd><dt><span>parent_stat :</span></dt><dd>Individual Observations</dd><dt><span>actual_range :</span></dt><dd>[-1.8      35.059998]</dd></dl></div></li></ul></div></div></div></div>
 </div>
-<p><strong>We can just extract one single Data variable.</strong>
-In the case of the NOAA Daily Optimum Interpolation Sea Surface Temperature, there is only one Data variable, SST, but it is useful for later when we use the Argo data</p>
+<p>We can extract just one single Data variable. In the case of the NOAA Daily Optimum Interpolation Sea Surface Temperature, there is only one Data variable, SST, but it is useful for later when we use the Argo data:</p>
 <ul class="simple">
 <li><p>print the variable yields summary info: range, long_name for the variable, dimensions, fillvalue, etc. All the information necessary is used to use the variable.</p></li>
 <li><p>xarray is so clever that it will maintain its coordinates, time, lat and lon, in this case.</p></li>
@@ -1896,29 +1885,29 @@ Attributes:
     level_desc:    Surface
     statistic:     Mean
     parent_stat:   Individual Observations
-    actual_range:  [-1.8      35.059998]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'sst'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 366</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-5d88143c-b209-4a61-90e7-f486928aaaa8' class='xr-array-in' type='checkbox' checked><label for='section-5d88143c-b209-4a61-90e7-f486928aaaa8' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[379468800 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-16e06042-5e86-45d3-b066-9bbeac50a4f7' class='xr-section-summary-in' type='checkbox'  checked><label for='section-16e06042-5e86-45d3-b066-9bbeac50a4f7' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2020-01-01 ... 2020-12-31</div><input id='attrs-018c2cd9-90cb-46f8-a469-4dc71d0606ab' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-018c2cd9-90cb-46f8-a469-4dc71d0606ab' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d3d07351-fef1-45fc-8510-8ffb5d19946d' class='xr-var-data-in' type='checkbox'><label for='data-d3d07351-fef1-45fc-8510-8ffb5d19946d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time</dd><dt><span>delta_t :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>avg_period :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>actual_range :</span></dt><dd>[80353. 80718.]</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2020-01-01T00:00:00.000000000&#x27;, &#x27;2020-01-02T00:00:00.000000000&#x27;,
+    actual_range:  [-1.8      35.059998]</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'sst'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 366</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-15408cb3-7d78-484d-a455-2137737ba881' class='xr-array-in' type='checkbox' checked><label for='section-15408cb3-7d78-484d-a455-2137737ba881' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[379468800 values with dtype=float32]</pre></div></div></li><li class='xr-section-item'><input id='section-00ce7a63-a40f-4b67-a82e-95903a261e68' class='xr-section-summary-in' type='checkbox'  checked><label for='section-00ce7a63-a40f-4b67-a82e-95903a261e68' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2020-01-01 ... 2020-12-31</div><input id='attrs-f9de1e1e-42d9-49b2-ad46-002c9df3db3d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f9de1e1e-42d9-49b2-ad46-002c9df3db3d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0eb5b998-e271-44a8-ac22-eccc1542c5c4' class='xr-var-data-in' type='checkbox'><label for='data-0eb5b998-e271-44a8-ac22-eccc1542c5c4' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time</dd><dt><span>delta_t :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>avg_period :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>actual_range :</span></dt><dd>[80353. 80718.]</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2020-01-01T00:00:00.000000000&#x27;, &#x27;2020-01-02T00:00:00.000000000&#x27;,
        &#x27;2020-01-03T00:00:00.000000000&#x27;, ..., &#x27;2020-12-29T00:00:00.000000000&#x27;,
        &#x27;2020-12-30T00:00:00.000000000&#x27;, &#x27;2020-12-31T00:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-240fa16e-d29a-4757-abcd-47bad89fc9ca' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-240fa16e-d29a-4757-abcd-47bad89fc9ca' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-dea9da01-46a6-46f0-8fa5-2580a17cf9e9' class='xr-var-data-in' type='checkbox'><label for='data-dea9da01-46a6-46f0-8fa5-2580a17cf9e9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-e029e2f4-402a-449f-bc99-bd71d2f5acdb' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e029e2f4-402a-449f-bc99-bd71d2f5acdb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a89cc0dd-086d-4059-ba64-fbff164c95d3' class='xr-var-data-in' type='checkbox'><label for='data-a89cc0dd-086d-4059-ba64-fbff164c95d3' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
-       3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-978e6bf6-d27b-4da2-9eb5-98c4c4234e42' class='xr-section-summary-in' type='checkbox'  ><label for='section-978e6bf6-d27b-4da2-9eb5-98c4c4234e42' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-419293d3-0127-4f1e-b6c5-ca56c842aa0b' class='xr-index-data-in' type='checkbox'/><label for='index-419293d3-0127-4f1e-b6c5-ca56c842aa0b' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2020-01-01&#x27;, &#x27;2020-01-02&#x27;, &#x27;2020-01-03&#x27;, &#x27;2020-01-04&#x27;,
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-717234e3-ff77-48fe-969d-04c9500997d3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-717234e3-ff77-48fe-969d-04c9500997d3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-96147423-37d0-475d-a071-c51284fc938a' class='xr-var-data-in' type='checkbox'><label for='data-96147423-37d0-475d-a071-c51284fc938a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875],
+      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-7894f47b-8442-4a79-ac2f-e4fe8214c378' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7894f47b-8442-4a79-ac2f-e4fe8214c378' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b65095eb-73a7-4549-aa2c-c4b5d3097c45' class='xr-var-data-in' type='checkbox'><label for='data-b65095eb-73a7-4549-aa2c-c4b5d3097c45' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
+       3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-b220024f-0704-4bef-93fd-6410e24726c0' class='xr-section-summary-in' type='checkbox'  ><label for='section-b220024f-0704-4bef-93fd-6410e24726c0' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-03641b10-b679-4dc2-a06e-997b3d7b9a87' class='xr-index-data-in' type='checkbox'/><label for='index-03641b10-b679-4dc2-a06e-997b3d7b9a87' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2020-01-01&#x27;, &#x27;2020-01-02&#x27;, &#x27;2020-01-03&#x27;, &#x27;2020-01-04&#x27;,
                &#x27;2020-01-05&#x27;, &#x27;2020-01-06&#x27;, &#x27;2020-01-07&#x27;, &#x27;2020-01-08&#x27;,
                &#x27;2020-01-09&#x27;, &#x27;2020-01-10&#x27;,
                ...
                &#x27;2020-12-22&#x27;, &#x27;2020-12-23&#x27;, &#x27;2020-12-24&#x27;, &#x27;2020-12-25&#x27;,
                &#x27;2020-12-26&#x27;, &#x27;2020-12-27&#x27;, &#x27;2020-12-28&#x27;, &#x27;2020-12-29&#x27;,
                &#x27;2020-12-30&#x27;, &#x27;2020-12-31&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=366, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-c44084f6-c16e-4b2f-bda7-1476469ad68b' class='xr-index-data-in' type='checkbox'/><label for='index-c44084f6-c16e-4b2f-bda7-1476469ad68b' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.875, -89.625, -89.375, -89.125, -88.875, -88.625, -88.375, -88.125,
+              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=366, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-278725ed-f846-4e44-bf62-9eac4737bc6e' class='xr-index-data-in' type='checkbox'/><label for='index-278725ed-f846-4e44-bf62-9eac4737bc6e' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.875, -89.625, -89.375, -89.125, -88.875, -88.625, -88.375, -88.125,
        -87.875, -87.625,
        ...
         87.625,  87.875,  88.125,  88.375,  88.625,  88.875,  89.125,  89.375,
         89.625,  89.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=720))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-9df5968d-3a1c-4699-99cf-7e269a71b178' class='xr-index-data-in' type='checkbox'/><label for='index-9df5968d-3a1c-4699-99cf-7e269a71b178' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.125,   0.375,   0.625,   0.875,   1.125,   1.375,   1.625,   1.875,
+      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=720))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-96e07b98-b68e-449f-a8cb-5a317961273b' class='xr-index-data-in' type='checkbox'/><label for='index-96e07b98-b68e-449f-a8cb-5a317961273b' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.125,   0.375,   0.625,   0.875,   1.125,   1.375,   1.625,   1.875,
          2.125,   2.375,
        ...
        357.625, 357.875, 358.125, 358.375, 358.625, 358.875, 359.125, 359.375,
        359.625, 359.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2563c629-097b-457c-a2bd-73aa24323390' class='xr-section-summary-in' type='checkbox'  ><label for='section-2563c629-097b-457c-a2bd-73aa24323390' class='xr-section-summary' >Attributes: <span>(10)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Daily Sea Surface Temperature</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>valid_range :</span></dt><dd>[-3. 45.]</dd><dt><span>precision :</span></dt><dd>2.0</dd><dt><span>dataset :</span></dt><dd>NOAA High-resolution Blended Analysis</dd><dt><span>var_desc :</span></dt><dd>Sea Surface Temperature</dd><dt><span>level_desc :</span></dt><dd>Surface</dd><dt><span>statistic :</span></dt><dd>Mean</dd><dt><span>parent_stat :</span></dt><dd>Individual Observations</dd><dt><span>actual_range :</span></dt><dd>[-1.8      35.059998]</dd></dl></div></li></ul></div></div></div></div>
+      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-b935232a-42c2-40a6-aa02-7a6b877a08c9' class='xr-section-summary-in' type='checkbox'  ><label for='section-b935232a-42c2-40a6-aa02-7a6b877a08c9' class='xr-section-summary' >Attributes: <span>(10)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Daily Sea Surface Temperature</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>valid_range :</span></dt><dd>[-3. 45.]</dd><dt><span>precision :</span></dt><dd>2.0</dd><dt><span>dataset :</span></dt><dd>NOAA High-resolution Blended Analysis</dd><dt><span>var_desc :</span></dt><dd>Sea Surface Temperature</dd><dt><span>level_desc :</span></dt><dd>Surface</dd><dt><span>statistic :</span></dt><dd>Mean</dd><dt><span>parent_stat :</span></dt><dd>Individual Observations</dd><dt><span>actual_range :</span></dt><dd>[-1.8      35.059998]</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>It is also possible to use the attributes of a data variable.</p>
 <div class="cell docutils container">
@@ -1933,9 +1922,10 @@ Attributes:
 </div>
 </div>
 </div>
+<p>And we can show the mean value of sst, at given latitude. We use ‘nearset’ to tell xarray to select the data close to 28N and 18W(=342), sice the data is not at every degree. We could interpolate at 28N, but this is beyond the purpose of the AoS, we are just teaching how easy is to read a netCDF file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">),</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="p">(</span><span class="mi">28</span><span class="p">),</span><span class="n">lon</span><span class="o">=</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">18</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -2303,867 +2293,88 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;sst&#x27; (lon: 1440)&gt; Size: 6kB
-array([nan, nan, nan, ..., nan, nan, nan], dtype=float32)
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;sst&#x27; ()&gt; Size: 4B
+array(21.915901, dtype=float32)
 Coordinates:
     lat      float32 4B 28.12
-  * lon      (lon) float32 6kB 0.125 0.375 0.625 0.875 ... 359.4 359.6 359.9</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'sst'</div><ul class='xr-dim-list'><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-36f25ecb-8b3e-4a78-9fec-d4f65a3472f2' class='xr-array-in' type='checkbox' checked><label for='section-36f25ecb-8b3e-4a78-9fec-d4f65a3472f2' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>nan nan nan nan nan nan nan nan ... nan nan nan nan nan nan nan nan</span></div><div class='xr-array-data'><pre>array([nan, nan, nan, ..., nan, nan, nan], dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-360fac62-5c0a-496e-95f8-f065fa5d0fd6' class='xr-section-summary-in' type='checkbox'  checked><label for='section-360fac62-5c0a-496e-95f8-f065fa5d0fd6' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>lat</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>28.12</div><input id='attrs-2acabfba-c807-4a33-a334-9aa5cf8380f7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2acabfba-c807-4a33-a334-9aa5cf8380f7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6458738d-9a50-47ca-9a68-5df13aa1febf' class='xr-var-data-in' type='checkbox'><label for='data-6458738d-9a50-47ca-9a68-5df13aa1febf' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array(28.125, dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-2678d003-adca-4bbd-ad0b-98867762e310' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2678d003-adca-4bbd-ad0b-98867762e310' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-70c44ed2-3926-492d-b2d7-c9f5cd15c23e' class='xr-var-data-in' type='checkbox'><label for='data-70c44ed2-3926-492d-b2d7-c9f5cd15c23e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
-       3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2caaad6e-0d38-4c86-8f0f-ffe209f56708' class='xr-section-summary-in' type='checkbox'  ><label for='section-2caaad6e-0d38-4c86-8f0f-ffe209f56708' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-07b7a98d-1711-4c6f-8107-80c5b3c2e2ae' class='xr-index-data-in' type='checkbox'/><label for='index-07b7a98d-1711-4c6f-8107-80c5b3c2e2ae' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.125,   0.375,   0.625,   0.875,   1.125,   1.375,   1.625,   1.875,
-         2.125,   2.375,
-       ...
-       357.625, 357.875, 358.125, 358.375, 358.625, 358.875, 359.125, 359.375,
-       359.625, 359.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-5e908dc8-7025-4a74-95d7-3739d94bcc0b' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-5e908dc8-7025-4a74-95d7-3739d94bcc0b' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+    lon      float32 4B 342.1</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'sst'</div></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-17f2c618-18ed-4f2d-922f-fba448069321' class='xr-array-in' type='checkbox' checked><label for='section-17f2c618-18ed-4f2d-922f-fba448069321' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>21.92</span></div><div class='xr-array-data'><pre>array(21.915901, dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-355bd923-55fc-49d7-b3ed-1e33e31b4a06' class='xr-section-summary-in' type='checkbox'  checked><label for='section-355bd923-55fc-49d7-b3ed-1e33e31b4a06' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>lat</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>28.12</div><input id='attrs-e6a46079-41fe-4c4a-911f-af8b6f237e43' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e6a46079-41fe-4c4a-911f-af8b6f237e43' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9f54b995-bc07-4fac-911b-9696a7727364' class='xr-var-data-in' type='checkbox'><label for='data-9f54b995-bc07-4fac-911b-9696a7727364' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array(28.125, dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>lon</span></div><div class='xr-var-dims'>()</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>342.1</div><input id='attrs-f424dcf1-f7dd-4bfe-aeba-be3fb4447352' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f424dcf1-f7dd-4bfe-aeba-be3fb4447352' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-436ab3c8-c02c-4507-897b-1ad8bcdd3724' class='xr-var-data-in' type='checkbox'><label for='data-436ab3c8-c02c-4507-897b-1ad8bcdd3724' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array(342.125, dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-564f12ea-f0f3-4403-8b9f-c2e5cc2ed62a' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-564f12ea-f0f3-4403-8b9f-c2e5cc2ed62a' class='xr-section-summary'  title='Expand/collapse section'>Indexes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-fdd0a2e7-22ff-4626-8b0d-7717ecc41216' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-fdd0a2e7-22ff-4626-8b0d-7717ecc41216' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 <section id="using-the-data">
-<h2>Using the data<a class="headerlink" href="#using-the-data" title="Permalink to this heading">#</a></h2>
-<p>Let’s use the data. First, to see the time series of SST near the beautiful Canary Islands, and after that, the mean global SST.</p>
+<h3>Using the data<a class="headerlink" href="#using-the-data" title="Permalink to this heading">#</a></h3>
+<p>Let’s use the data!. First, let’s plot the time series of SST, for 2020, near the beautiful Canary Islands (28N 18W). Once again we use the ‘nearest’ value:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#In the metadata there is no reference for the grid resolution</span>
-<span class="n">sst</span><span class="o">.</span><span class="n">lon</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="n">sst</span><span class="o">.</span><span class="n">lon</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">18</span><span class="p">),</span> <span class="n">lat</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
-<defs>
-<symbol id="icon-database" viewBox="0 0 32 32">
-<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
-<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-</symbol>
-<symbol id="icon-file-text2" viewBox="0 0 32 32">
-<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
-<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-</symbol>
-</defs>
-</svg>
-<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
- *
- */
-
-:root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
-}
-
-html[theme=dark],
-body[data-theme=dark],
-body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
-}
-
-.xr-wrap {
-  display: block !important;
-  min-width: 300px;
-  max-width: 700px;
-}
-
-.xr-text-repr-fallback {
-  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
-  display: none;
-}
-
-.xr-header {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-bottom: 4px;
-  border-bottom: solid 1px var(--xr-border-color);
-}
-
-.xr-header > div,
-.xr-header > ul {
-  display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.xr-obj-type,
-.xr-array-name {
-  margin-left: 2px;
-  margin-right: 10px;
-}
-
-.xr-obj-type {
-  color: var(--xr-font-color2);
-}
-
-.xr-sections {
-  padding-left: 0 !important;
-  display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
-}
-
-.xr-section-item {
-  display: contents;
-}
-
-.xr-section-item input {
-  display: none;
-}
-
-.xr-section-item input + label {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-item input:enabled + label {
-  cursor: pointer;
-  color: var(--xr-font-color2);
-}
-
-.xr-section-item input:enabled + label:hover {
-  color: var(--xr-font-color0);
-}
-
-.xr-section-summary {
-  grid-column: 1;
-  color: var(--xr-font-color2);
-  font-weight: 500;
-}
-
-.xr-section-summary > span {
-  display: inline-block;
-  padding-left: 0.5em;
-}
-
-.xr-section-summary-in:disabled + label {
-  color: var(--xr-font-color2);
-}
-
-.xr-section-summary-in + label:before {
-  display: inline-block;
-  content: '►';
-  font-size: 11px;
-  width: 15px;
-  text-align: center;
-}
-
-.xr-section-summary-in:disabled + label:before {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-summary-in:checked + label:before {
-  content: '▼';
-}
-
-.xr-section-summary-in:checked + label > span {
-  display: none;
-}
-
-.xr-section-summary,
-.xr-section-inline-details {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.xr-section-inline-details {
-  grid-column: 2 / -1;
-}
-
-.xr-section-details {
-  display: none;
-  grid-column: 1 / -1;
-  margin-bottom: 5px;
-}
-
-.xr-section-summary-in:checked ~ .xr-section-details {
-  display: contents;
-}
-
-.xr-array-wrap {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 20px auto;
-}
-
-.xr-array-wrap > label {
-  grid-column: 1;
-  vertical-align: top;
-}
-
-.xr-preview {
-  color: var(--xr-font-color3);
-}
-
-.xr-array-preview,
-.xr-array-data {
-  padding: 0 5px !important;
-  grid-column: 2;
-}
-
-.xr-array-data,
-.xr-array-in:checked ~ .xr-array-preview {
-  display: none;
-}
-
-.xr-array-in:checked ~ .xr-array-data,
-.xr-array-preview {
-  display: inline-block;
-}
-
-.xr-dim-list {
-  display: inline-block !important;
-  list-style: none;
-  padding: 0 !important;
-  margin: 0;
-}
-
-.xr-dim-list li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-.xr-dim-list:before {
-  content: '(';
-}
-
-.xr-dim-list:after {
-  content: ')';
-}
-
-.xr-dim-list li:not(:last-child):after {
-  content: ',';
-  padding-right: 5px;
-}
-
-.xr-has-index {
-  font-weight: bold;
-}
-
-.xr-var-list,
-.xr-var-item {
-  display: contents;
-}
-
-.xr-var-item > div,
-.xr-var-item label,
-.xr-var-item > .xr-var-name span {
-  background-color: var(--xr-background-color-row-even);
-  margin-bottom: 0;
-}
-
-.xr-var-item > .xr-var-name:hover span {
-  padding-right: 5px;
-}
-
-.xr-var-list > li:nth-child(odd) > div,
-.xr-var-list > li:nth-child(odd) > label,
-.xr-var-list > li:nth-child(odd) > .xr-var-name span {
-  background-color: var(--xr-background-color-row-odd);
-}
-
-.xr-var-name {
-  grid-column: 1;
-}
-
-.xr-var-dims {
-  grid-column: 2;
-}
-
-.xr-var-dtype {
-  grid-column: 3;
-  text-align: right;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-preview {
-  grid-column: 4;
-}
-
-.xr-index-preview {
-  grid-column: 2 / 5;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-name,
-.xr-var-dims,
-.xr-var-dtype,
-.xr-preview,
-.xr-attrs dt {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 10px;
-}
-
-.xr-var-name:hover,
-.xr-var-dims:hover,
-.xr-var-dtype:hover,
-.xr-attrs dt:hover {
-  overflow: visible;
-  width: auto;
-  z-index: 1;
-}
-
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
-}
-
-.xr-var-attrs-in:checked ~ .xr-var-attrs,
-.xr-var-data-in:checked ~ .xr-var-data,
-.xr-index-data-in:checked ~ .xr-index-data {
-  display: block;
-}
-
-.xr-var-data > table {
-  float: right;
-}
-
-.xr-var-name span,
-.xr-var-data,
-.xr-index-name div,
-.xr-index-data,
-.xr-attrs {
-  padding-left: 25px !important;
-}
-
-.xr-attrs,
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  grid-column: 1 / -1;
-}
-
-dl.xr-attrs {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 125px auto;
-}
-
-.xr-attrs dt,
-.xr-attrs dd {
-  padding: 0;
-  margin: 0;
-  float: left;
-  padding-right: 10px;
-  width: auto;
-}
-
-.xr-attrs dt {
-  font-weight: normal;
-  grid-column: 1;
-}
-
-.xr-attrs dt:hover span {
-  display: inline-block;
-  background: var(--xr-background-color);
-  padding-right: 10px;
-}
-
-.xr-attrs dd {
-  grid-column: 2;
-  white-space: pre-wrap;
-  word-break: break-all;
-}
-
-.xr-icon-database,
-.xr-icon-file-text2,
-.xr-no-icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 1em;
-  height: 1.5em !important;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;lon&#x27; ()&gt; Size: 4B
-array(-0.25, dtype=float32)</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'lon'</div></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-1379e004-1fd8-406d-bfdc-7a8758e038af' class='xr-array-in' type='checkbox' checked><label for='section-1379e004-1fd8-406d-bfdc-7a8758e038af' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-0.25</span></div><div class='xr-array-data'><pre>array(-0.25, dtype=float32)</pre></div></div></li><li class='xr-section-item'><input id='section-966d7824-9ec7-49d0-8d54-8c7f3a8c8d00' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-966d7824-9ec7-49d0-8d54-8c7f3a8c8d00' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-68cd1d05-8ee0-4f91-9a9a-5212aebab568' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-68cd1d05-8ee0-4f91-9a9a-5212aebab568' class='xr-section-summary'  title='Expand/collapse section'>Indexes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-a0af6684-a6b3-47a9-b01e-e4920e459a28' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-a0af6684-a6b3-47a9-b01e-e4920e459a28' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">18</span><span class="p">),</span> <span class="n">lat</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-</pre></div>
+<img alt="../../_images/7385c16bbb292c9b8ae8fc9f0281f9fec61dbdf9733f5b643b523754927d8861.png" src="../../_images/7385c16bbb292c9b8ae8fc9f0281f9fec61dbdf9733f5b643b523754927d8861.png" />
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x17bf81290&gt;]
-</pre></div>
-</div>
-<img alt="../../_images/dd7698545761d8edfaf8663fb4443bf99982c2a56e55d954cb9c4c530a8b9234.png" src="../../_images/dd7698545761d8edfaf8663fb4443bf99982c2a56e55d954cb9c4c530a8b9234.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#28N 18W</span>
-<span class="n">sst</span><span class="p">[:,(</span><span class="mi">90</span><span class="o">+</span><span class="mi">28</span><span class="p">),(</span><span class="mi">360</span><span class="o">-</span><span class="mi">18</span><span class="p">)]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x17ef32010&gt;]
-</pre></div>
-</div>
-<img alt="../../_images/393ecec50382d2dec3a260694945ebe83e07be0a6b09daca07d02dd89021521f.png" src="../../_images/393ecec50382d2dec3a260694945ebe83e07be0a6b09daca07d02dd89021521f.png" />
-</div>
-</div>
+<p>Or, we can just plot the sst mean field during 2020, for the whole ocean:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-<span class="n">sst</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vmin</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">sst</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vmin</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span> <span class="c1">#vmin and vmax is for the colobar range</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">();</span> <span class="c1">#adding a geographical grid</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/01eb8994698b436e135f87caa6f4f9cac49f019c50504d1165f83b696fd7a4e7.png" src="../../_images/01eb8994698b436e135f87caa6f4f9cac49f019c50504d1165f83b696fd7a4e7.png" />
+<img alt="../../_images/fad5578944710f31bf084e899ebd82f6b87c4e5304edb788b3e8af1d3037e405.png" src="../../_images/fad5578944710f31bf084e899ebd82f6b87c4e5304edb788b3e8af1d3037e405.png" />
 </div>
 </div>
+<p>and how is the mean variation along the latitude:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-<span class="n">sst</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">sst</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x17f24b990&gt;]
-</pre></div>
-</div>
-<img alt="../../_images/2319187f828500bcb46933c609764afbf749c7d11579072e1db9f94b8d4930d4.png" src="../../_images/2319187f828500bcb46933c609764afbf749c7d11579072e1db9f94b8d4930d4.png" />
+<img alt="../../_images/c516957699a3216bf2087647f8697585ed01c4c12f26fb689ad60de4bec418ad.png" src="../../_images/c516957699a3216bf2087647f8697585ed01c4c12f26fb689ad60de4bec418ad.png" />
 </div>
 </div>
 </section>
-<section id="remote-data-access-via-opendap">
-<h2>Remote data access via openDAP<a class="headerlink" href="#remote-data-access-via-opendap" title="Permalink to this heading">#</a></h2>
-<p>With OPeNDAP, you can access data using an URL rather than a local path. For xarray it is like having the file locally, the only difference is that you provide a different path.</p>
-<p>OPeNDAP stand for <em>Open-source Project for a Network Data Access Protocol</em> <a class="reference external" href="https://earthdata.nasa.gov/collaborate/open-data-services-and-software/api/opendap">More information here</a></p>
-<p><a class="reference external" href="https://www.psl.noaa.gov/data/gridded_help/using_dods.html">https://www.psl.noaa.gov/data/gridded_help/using_dods.html</a></p>
+<section id="closing-your-netcdf-file">
+<h3>Closing your netCDF file<a class="headerlink" href="#closing-your-netcdf-file" title="Permalink to this heading">#</a></h3>
+<p>It’s good to close netCDF files:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dap_url</span><span class="o">=</span><span class="s2">&quot;http://psl.noaa.gov/thredds/dodsC/Datasets/noaa.oisst.v2.highres/sst.day.mean.2020.nc&quot;</span>
-<span class="n">dataOP</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">dap_url</span><span class="p">)</span>
-<span class="n">dataOP</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
-<defs>
-<symbol id="icon-database" viewBox="0 0 32 32">
-<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
-<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
-</symbol>
-<symbol id="icon-file-text2" viewBox="0 0 32 32">
-<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
-<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
-</symbol>
-</defs>
-</svg>
-<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
- *
- */
-
-:root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
-}
-
-html[theme=dark],
-body[data-theme=dark],
-body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
-}
-
-.xr-wrap {
-  display: block !important;
-  min-width: 300px;
-  max-width: 700px;
-}
-
-.xr-text-repr-fallback {
-  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
-  display: none;
-}
-
-.xr-header {
-  padding-top: 6px;
-  padding-bottom: 6px;
-  margin-bottom: 4px;
-  border-bottom: solid 1px var(--xr-border-color);
-}
-
-.xr-header > div,
-.xr-header > ul {
-  display: inline;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.xr-obj-type,
-.xr-array-name {
-  margin-left: 2px;
-  margin-right: 10px;
-}
-
-.xr-obj-type {
-  color: var(--xr-font-color2);
-}
-
-.xr-sections {
-  padding-left: 0 !important;
-  display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
-}
-
-.xr-section-item {
-  display: contents;
-}
-
-.xr-section-item input {
-  display: none;
-}
-
-.xr-section-item input + label {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-item input:enabled + label {
-  cursor: pointer;
-  color: var(--xr-font-color2);
-}
-
-.xr-section-item input:enabled + label:hover {
-  color: var(--xr-font-color0);
-}
-
-.xr-section-summary {
-  grid-column: 1;
-  color: var(--xr-font-color2);
-  font-weight: 500;
-}
-
-.xr-section-summary > span {
-  display: inline-block;
-  padding-left: 0.5em;
-}
-
-.xr-section-summary-in:disabled + label {
-  color: var(--xr-font-color2);
-}
-
-.xr-section-summary-in + label:before {
-  display: inline-block;
-  content: '►';
-  font-size: 11px;
-  width: 15px;
-  text-align: center;
-}
-
-.xr-section-summary-in:disabled + label:before {
-  color: var(--xr-disabled-color);
-}
-
-.xr-section-summary-in:checked + label:before {
-  content: '▼';
-}
-
-.xr-section-summary-in:checked + label > span {
-  display: none;
-}
-
-.xr-section-summary,
-.xr-section-inline-details {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-.xr-section-inline-details {
-  grid-column: 2 / -1;
-}
-
-.xr-section-details {
-  display: none;
-  grid-column: 1 / -1;
-  margin-bottom: 5px;
-}
-
-.xr-section-summary-in:checked ~ .xr-section-details {
-  display: contents;
-}
-
-.xr-array-wrap {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 20px auto;
-}
-
-.xr-array-wrap > label {
-  grid-column: 1;
-  vertical-align: top;
-}
-
-.xr-preview {
-  color: var(--xr-font-color3);
-}
-
-.xr-array-preview,
-.xr-array-data {
-  padding: 0 5px !important;
-  grid-column: 2;
-}
-
-.xr-array-data,
-.xr-array-in:checked ~ .xr-array-preview {
-  display: none;
-}
-
-.xr-array-in:checked ~ .xr-array-data,
-.xr-array-preview {
-  display: inline-block;
-}
-
-.xr-dim-list {
-  display: inline-block !important;
-  list-style: none;
-  padding: 0 !important;
-  margin: 0;
-}
-
-.xr-dim-list li {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-}
-
-.xr-dim-list:before {
-  content: '(';
-}
-
-.xr-dim-list:after {
-  content: ')';
-}
-
-.xr-dim-list li:not(:last-child):after {
-  content: ',';
-  padding-right: 5px;
-}
-
-.xr-has-index {
-  font-weight: bold;
-}
-
-.xr-var-list,
-.xr-var-item {
-  display: contents;
-}
-
-.xr-var-item > div,
-.xr-var-item label,
-.xr-var-item > .xr-var-name span {
-  background-color: var(--xr-background-color-row-even);
-  margin-bottom: 0;
-}
-
-.xr-var-item > .xr-var-name:hover span {
-  padding-right: 5px;
-}
-
-.xr-var-list > li:nth-child(odd) > div,
-.xr-var-list > li:nth-child(odd) > label,
-.xr-var-list > li:nth-child(odd) > .xr-var-name span {
-  background-color: var(--xr-background-color-row-odd);
-}
-
-.xr-var-name {
-  grid-column: 1;
-}
-
-.xr-var-dims {
-  grid-column: 2;
-}
-
-.xr-var-dtype {
-  grid-column: 3;
-  text-align: right;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-preview {
-  grid-column: 4;
-}
-
-.xr-index-preview {
-  grid-column: 2 / 5;
-  color: var(--xr-font-color2);
-}
-
-.xr-var-name,
-.xr-var-dims,
-.xr-var-dtype,
-.xr-preview,
-.xr-attrs dt {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 10px;
-}
-
-.xr-var-name:hover,
-.xr-var-dims:hover,
-.xr-var-dtype:hover,
-.xr-attrs dt:hover {
-  overflow: visible;
-  width: auto;
-  z-index: 1;
-}
-
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
-}
-
-.xr-var-attrs-in:checked ~ .xr-var-attrs,
-.xr-var-data-in:checked ~ .xr-var-data,
-.xr-index-data-in:checked ~ .xr-index-data {
-  display: block;
-}
-
-.xr-var-data > table {
-  float: right;
-}
-
-.xr-var-name span,
-.xr-var-data,
-.xr-index-name div,
-.xr-index-data,
-.xr-attrs {
-  padding-left: 25px !important;
-}
-
-.xr-attrs,
-.xr-var-attrs,
-.xr-var-data,
-.xr-index-data {
-  grid-column: 1 / -1;
-}
-
-dl.xr-attrs {
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: 125px auto;
-}
-
-.xr-attrs dt,
-.xr-attrs dd {
-  padding: 0;
-  margin: 0;
-  float: left;
-  padding-right: 10px;
-  width: auto;
-}
-
-.xr-attrs dt {
-  font-weight: normal;
-  grid-column: 1;
-}
-
-.xr-attrs dt:hover span {
-  display: inline-block;
-  background: var(--xr-background-color);
-  padding-right: 10px;
-}
-
-.xr-attrs dd {
-  grid-column: 2;
-  white-space: pre-wrap;
-  word-break: break-all;
-}
-
-.xr-icon-database,
-.xr-icon-file-text2,
-.xr-no-icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: 1em;
-  height: 1.5em !important;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
-</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt; Size: 2GB
-Dimensions:  (time: 366, lat: 720, lon: 1440)
-Coordinates:
-  * time     (time) datetime64[ns] 3kB 2020-01-01 2020-01-02 ... 2020-12-31
-  * lat      (lat) float32 3kB -89.88 -89.62 -89.38 -89.12 ... 89.38 89.62 89.88
-  * lon      (lon) float32 6kB 0.125 0.375 0.625 0.875 ... 359.4 359.6 359.9
-Data variables:
-    sst      (time, lat, lon) float32 2GB ...
-Attributes:
-    Conventions:                     CF-1.5
-    title:                           NOAA/NCEI 1/4 Degree Daily Optimum Inter...
-    institution:                     NOAA/National Centers for Environmental ...
-    source:                          NOAA/NCEI https://www.ncei.noaa.gov/data...
-    References:                      https://www.psl.noaa.gov/data/gridded/da...
-    dataset_title:                   NOAA Daily Optimum Interpolation Sea Sur...
-    version:                         Version 2.1
-    comment:                         Reynolds, et al.(2007) Daily High-Resolu...
-    DODS_EXTRA.Unlimited_Dimension:  time</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-923c1955-8bef-43ac-b50a-5da0c078405d' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-923c1955-8bef-43ac-b50a-5da0c078405d' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 366</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-9a7dbd8d-7684-4a5d-b4a4-d193a2ad7662' class='xr-section-summary-in' type='checkbox'  checked><label for='section-9a7dbd8d-7684-4a5d-b4a4-d193a2ad7662' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>2020-01-01 ... 2020-12-31</div><input id='attrs-a7d2e652-7b28-4341-91cf-77998fdac82c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a7d2e652-7b28-4341-91cf-77998fdac82c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-a4752d48-b34d-47fc-be48-233d5eac2dd6' class='xr-var-data-in' type='checkbox'><label for='data-a4752d48-b34d-47fc-be48-233d5eac2dd6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time</dd><dt><span>delta_t :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>avg_period :</span></dt><dd>0000-00-01 00:00:00</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>actual_range :</span></dt><dd>[80353. 80718.]</dd><dt><span>_ChunkSizes :</span></dt><dd>1</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;2020-01-01T00:00:00.000000000&#x27;, &#x27;2020-01-02T00:00:00.000000000&#x27;,
-       &#x27;2020-01-03T00:00:00.000000000&#x27;, ..., &#x27;2020-12-29T00:00:00.000000000&#x27;,
-       &#x27;2020-12-30T00:00:00.000000000&#x27;, &#x27;2020-12-31T00:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-3f7e3cf8-5d30-4e4a-8ede-979a451c532b' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-3f7e3cf8-5d30-4e4a-8ede-979a451c532b' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-33cfcfcf-3dbf-473c-a4a0-89994f226a9d' class='xr-var-data-in' type='checkbox'><label for='data-33cfcfcf-3dbf-473c-a4a0-89994f226a9d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>Latitude</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-2acf3bb6-a974-4b5d-83e2-b28822e525ff' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-2acf3bb6-a974-4b5d-83e2-b28822e525ff' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3f83a4ea-9c6d-4b0d-82c0-4c8ee3113769' class='xr-var-data-in' type='checkbox'><label for='data-3f83a4ea-9c6d-4b0d-82c0-4c8ee3113769' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>axis :</span></dt><dd>X</dd><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
-       3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4ff4851b-6c88-492e-b384-55c4bae84bce' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4ff4851b-6c88-492e-b384-55c4bae84bce' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>sst</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-dc2638e3-c804-4931-8327-9beaa6624450' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-dc2638e3-c804-4931-8327-9beaa6624450' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-1193cd45-37e1-4926-a53d-578c2559682e' class='xr-var-data-in' type='checkbox'><label for='data-1193cd45-37e1-4926-a53d-578c2559682e' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Daily Sea Surface Temperature</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>valid_range :</span></dt><dd>[-3. 45.]</dd><dt><span>precision :</span></dt><dd>2.0</dd><dt><span>dataset :</span></dt><dd>NOAA High-resolution Blended Analysis</dd><dt><span>var_desc :</span></dt><dd>Sea Surface Temperature</dd><dt><span>level_desc :</span></dt><dd>Surface</dd><dt><span>statistic :</span></dt><dd>Mean</dd><dt><span>parent_stat :</span></dt><dd>Individual Observations</dd><dt><span>actual_range :</span></dt><dd>[-1.8      35.059998]</dd><dt><span>_ChunkSizes :</span></dt><dd>[   1  720 1440]</dd></dl></div><div class='xr-var-data'><pre>[379468800 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-3384e5ea-9d2b-44f9-8d72-9c8c470904b0' class='xr-section-summary-in' type='checkbox'  ><label for='section-3384e5ea-9d2b-44f9-8d72-9c8c470904b0' class='xr-section-summary' >Indexes: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>time</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-a33f406f-cb1c-458c-a6af-c8e9e0e15eab' class='xr-index-data-in' type='checkbox'/><label for='index-a33f406f-cb1c-458c-a6af-c8e9e0e15eab' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(DatetimeIndex([&#x27;2020-01-01&#x27;, &#x27;2020-01-02&#x27;, &#x27;2020-01-03&#x27;, &#x27;2020-01-04&#x27;,
-               &#x27;2020-01-05&#x27;, &#x27;2020-01-06&#x27;, &#x27;2020-01-07&#x27;, &#x27;2020-01-08&#x27;,
-               &#x27;2020-01-09&#x27;, &#x27;2020-01-10&#x27;,
-               ...
-               &#x27;2020-12-22&#x27;, &#x27;2020-12-23&#x27;, &#x27;2020-12-24&#x27;, &#x27;2020-12-25&#x27;,
-               &#x27;2020-12-26&#x27;, &#x27;2020-12-27&#x27;, &#x27;2020-12-28&#x27;, &#x27;2020-12-29&#x27;,
-               &#x27;2020-12-30&#x27;, &#x27;2020-12-31&#x27;],
-              dtype=&#x27;datetime64[ns]&#x27;, name=&#x27;time&#x27;, length=366, freq=None))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lat</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-fbe0323f-d00f-4eaf-9250-478b911aacc7' class='xr-index-data-in' type='checkbox'/><label for='index-fbe0323f-d00f-4eaf-9250-478b911aacc7' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([-89.875, -89.625, -89.375, -89.125, -88.875, -88.625, -88.375, -88.125,
-       -87.875, -87.625,
-       ...
-        87.625,  87.875,  88.125,  88.375,  88.625,  88.875,  89.125,  89.375,
-        89.625,  89.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lat&#x27;, length=720))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>lon</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-be30cd82-e00a-4ec0-9fcc-f9fba3b8ffbe' class='xr-index-data-in' type='checkbox'/><label for='index-be30cd82-e00a-4ec0-9fcc-f9fba3b8ffbe' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([  0.125,   0.375,   0.625,   0.875,   1.125,   1.375,   1.625,   1.875,
-         2.125,   2.375,
-       ...
-       357.625, 357.875, 358.125, 358.375, 358.625, 358.875, 359.125, 359.375,
-       359.625, 359.875],
-      dtype=&#x27;float32&#x27;, name=&#x27;lon&#x27;, length=1440))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-fe7c0764-7dd6-47ff-98bb-9c249658a5cd' class='xr-section-summary-in' type='checkbox'  checked><label for='section-fe7c0764-7dd6-47ff-98bb-9c249658a5cd' class='xr-section-summary' >Attributes: <span>(9)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.5</dd><dt><span>title :</span></dt><dd>NOAA/NCEI 1/4 Degree Daily Optimum Interpolation Sea Surface Temperature (OISST) Analysis, Version 2.1</dd><dt><span>institution :</span></dt><dd>NOAA/National Centers for Environmental Information</dd><dt><span>source :</span></dt><dd>NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/</dd><dt><span>References :</span></dt><dd>https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html</dd><dt><span>dataset_title :</span></dt><dd>NOAA Daily Optimum Interpolation Sea Surface Temperature</dd><dt><span>version :</span></dt><dd>Version 2.1</dd><dt><span>comment :</span></dt><dd>Reynolds, et al.(2007) Daily High-Resolution-Blended Analyses for Sea Surface Temperature (available at https://doi.org/10.1175/2007JCLI1824.1). Banzon, et al.(2016) A long-term record of blended satellite and in situ sea-surface temperature for climate monitoring, modeling and environmental studies (available at https://doi.org/10.5194/essd-8-165-2016). Huang, B., C. Liu, V. Banzon, E. Freeman, G. Graham, B. Hankins, T. Smith, and H.-M. Zhang, 2021: Improvements of the Daily Optimum Interpolation Sea Surface Temperature (DOISST) Version 2.1 (available at https://doi.org/10.1175/JCLI-D-20-0166.1). Anomaly is based on 1971-2000 OI.v2 SST. Satellite data: multi-satellite sensor (AVHRR+VIIRS) data. Ice data: NCEP Ice and GSFC Ice. Data less than 15 days old may be subject to revision.</dd><dt><span>DODS_EXTRA.Unlimited_Dimension :</span></dt><dd>time</dd></dl></div></li></ul></div></div></div></div>
+</div>
+</section>
+</section>
+<section id="remote-data-access-via-opendap">
+<h2>Remote data access via openDAP<a class="headerlink" href="#remote-data-access-via-opendap" title="Permalink to this heading">#</a></h2>
+<p>With OPeNDAP, you can access the data only, using an URL rather than a local path. OPeNDAP stand for <a class="reference external" href="https://earthdata.nasa.gov/collaborate/open-data-services-and-software/api/opendap">Open-source Project for a Network Data Access Protocol</a></p>
+<p>For xarray it is like having the file locally, the only difference is that you provide a different path, and xarray does its magic. <em>However, be aware that sometimes remote access could be very slowly or even fail</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dap_url</span><span class="o">=</span><span class="s2">&quot;http://psl.noaa.gov/thredds/dodsC/Datasets/noaa.oisst.v2.highres/sst.day.mean.2020.nc&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataOP</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">dap_url</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dataOP</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3191,17 +2402,6 @@ Attributes:
 </div>
 <p>The only difference in accesing the data via OPeNDAP is that you can not plot it explicitily, i.e., something like:</p>
 <p><code class="docutils literal notranslate"><span class="pre">dataOP.sel(lon=(360-18),</span> <span class="pre">lat=28,</span> <span class="pre">method='nearest').plot()</span></code></p>
-</section>
-<section id="closing-your-netcdf-file">
-<h2>Closing your netCDF file<a class="headerlink" href="#closing-your-netcdf-file" title="Permalink to this heading">#</a></h2>
-<p>It’s good to close netCDF files, but not necessary when Dataset is open for reading access only.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrDS</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 </section>
 
@@ -3272,16 +2472,26 @@ Attributes:
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-netcdf">What is NetCDF?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-is-the-netcdf-format">How is the netCDF format?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-a-netcdf-file">Exploring a netCDF File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-netcdf-file">Open the netCDF file</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-a-netcdf-file-with-xarray">Exploring a netCDF File with xarray</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-netcdf-file-with-xarray">Open the netCDF file with xarray</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessing-a-netcdf-data-variable">Accessing a netCDF data variable</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-data">Using the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-netcdf">What is NetCDF?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-is-the-netcdf-format">How is the netCDF format?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-a-netcdf-file">Exploring a netCDF File</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-netcdf-file">Open the netCDF file</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-a-netcdf-file-with-xarray">Exploring a netCDF File with xarray</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#open-the-netcdf-file-with-xarray">Open the netCDF file with xarray</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#meta-information">Meta-information</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#to-list-of-all-the-data-variables-in-the-netcdf-file">To list of all the data variables in the netCDF file</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#to-list-some-attributes-of-the-variables-and-coordinates-in-the-data-set">To list some attributes of the variables and coordinates in the data set:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#or-to-use-the-general-information-of-the-data-set">Or to use the general information of the data set:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#let-s-see-how-to-accessing-the-data">Let’s see how to accessing the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-data">Using the data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-your-netcdf-file">Closing your netCDF file</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#remote-data-access-via-opendap">Remote data access via openDAP</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#closing-your-netcdf-file">Closing your netCDF file</a></li>
 </ul>
   </nav></div>
 
