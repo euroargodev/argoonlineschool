@@ -4,21 +4,28 @@
 
 Let's see how the Argo data is organized in different folders in the GDACs:
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://drive.google.com/file/d/1Ld73L9nTlebGpOdepRTDA3e5UwzPwQse/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+&nbsp;&nbsp;
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/jj0wnNDYOuY?si=PnMZLwdaWFVxrji3" title="how is the data organized?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
 
 
 #### What is FTP?
 
 But how we can actually get the data?:
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://drive.google.com/file/d/1Mbfk07QANv4Jm7ZMTWbwNtbBxFcaemRM/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+&nbsp;&nbsp;<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/akZeIJAc9e8?si=I05qI4Y11GCJVA32&amp;start=1" title="What is FTP?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
 
 
 #### Using FTP or HTTPs
 
 To access the data directly from the GDACs we can use the FTP or HTTPs protocols. Although it sound complex is very easy:
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://drive.google.com/file/d/1YV1ZJajaPf0dh4KyvRx70dqTiWPdxVI0/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+&nbsp;&nbsp;<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/GNLrd6Efxk8?si=ssalirN3YdL-FDK7" title="Using FTP or HTTPs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
 
 This are the address:
 
@@ -40,7 +47,8 @@ Take a look at this simple example on how to get access to Argo data through Cor
 3. You are now connected to the Coriolis GDAC!
 
 &nbsp;&nbsp;<center>
-<iframe width="800" height="450" src="https://drive.google.com/file/d/1Ct71C4wFOTvaL-J_oEUXa2-_rbYJmRKi/preview" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-GeLrhZnHo4?si=j0QvV7m6t6Q_8NgZ" title="A FTP hands-one example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
 
 Each data will have a specific quality flag assigned that indicates its status! Both Real-Time quality control and Delayed - Mode quality control follow a solid quality flag policy. Here are some examples that show how robust this quality flag policy is:
 
@@ -54,7 +62,9 @@ Each data will have a specific quality flag assigned that indicates its status! 
 
 Although HTTPs sounds very technical, we are used to it:
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://drive.google.com/file/d/1qATH7z-qrCQ4FrzFfG_gSeuqypneiqys/preview" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+&nbsp;&nbsp;<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/XJkj7fHya40?si=swuv1AVtyZ1f3Unz&amp;start=1" title="HTTPs is easy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
 
 
 #### Others ways to access the data
@@ -64,7 +74,9 @@ Additionally to the HTTP and FTP ways of accessing the data, there are resources
 There are almost ten Argo data viewers, some with more features than others. In the next video we will quickly check how the [Euro - Argo data viewer](https://fleetmonitoring.euro-argo.eu/) works 
 
 
-&nbsp;&nbsp;<center><iframe width="800" height="450"  src="https://drive.google.com/file/d/1zFAYzYkMlH50DR1RfLfmacVAU4I8_Cpm/preview" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+&nbsp;&nbsp;<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/zaqAVBIZEYs?si=r26bz4I3kO2BZZKO&amp;start=1" title="Others ways to access the data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
 
 
 #### The data selection tool
@@ -73,10 +85,12 @@ Nowadays, some data viewers have added extremely useful technical developments t
 
 
 &nbsp;&nbsp;<center>
-<iframe width="800" height="450"  src="https://drive.google.com/file/d/135pKPNA8PLb9UOsucJWRdE4762ha_x4W/preview" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/q1v-XPacMO8?si=I3IEhOdj9AAuXc4b" title="The data selection tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
 
 
 The [Argo data selector](dataselection.euro-argo.eu) is user friendly and developped focused in a interactive selection:
 
 &nbsp;&nbsp;<center>
-<iframe width="800" height="450" src="https://drive.google.com/file/d/13uquh52TEOF2jO6PF_9EsocKD83odbJr/preview" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/X62F4rNa4sw?si=wobQr3B59NG9twmw" title="The data selection tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
