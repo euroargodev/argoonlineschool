@@ -405,26 +405,14 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="accesing-argo-data-by-float">
 <h1>Accesing Argo data by float<a class="headerlink" href="#accesing-argo-data-by-float" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_hide_input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
-<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://drive.google.com/file/d/1q--dDjv5aK74u3YUpgVMce5Ng8hnM5bd/preview&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;480&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><center>
+<p>The Argo Online School 301 -  Using Argo Data.  Using Argo data: Accesing Argo data by float</p>
+<center>
 <iframe width="560" height="315" src="https://drive.google.com/file/d/1q--dDjv5aK74u3YUpgVMce5Ng8hnM5bd/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-</div></div>
-</div>
-<p><strong>Real-Time and Calibrated data</strong></p>
+</center><p><strong>Real-Time and Calibrated data</strong></p>
 <p>Since the target of the Argo program is to have the Argo data available within 12 hours of its transmission from the float, this data is called the <em>Real-Time</em> (RT) data. One year after the data were observed, it is adjusted if necessary, and made public. This calibrated data is called <em>Delayed Mode</em> (DM) data.  In section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter40_RTandDM.html">Real-Time and Delayed mode data</a> we will describe in detail the differences between both kinds of data, and what are the quality control flags. However, to keep it simple, we will begin by focusing on the Real-Time (RT) data.</p>
 <p><strong>Data files organized by float</strong></p>
-<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/dac.png" alt="xarray logo" width="650"/><p>When accessing the <strong>dac</strong> folder, via the <em>FTP</em> or <em>HTTP</em> protocols, of any of the two GDACs you will find several (11) folders, one for each of the DACs.  Within each one of these, folders there is one folder for each of the floats processed by this particular <em>DAC</em>.</p>
-<p>In the example here, we will use data from float with <strong>WMO</strong> number 6901254, which is processed by Coriolis (later we will see how to find the DAC for each float), therefore within the folder <code class="docutils literal notranslate"><span class="pre">./6901254</span></code>, we find the following files and folder:</p>
+<p>When accessing the <strong>dac</strong> folder, via the <em>FTP</em> or <em>HTTP</em> protocols, of any of the two GDACs you will find several (11) folders, one for each of the DACs.  Within each one of these, folders there is one folder for each of the floats processed by this particular <em>DAC</em>.</p>
+<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/dac.png" alt="xarray logo" width="650"/><p>In the example here, we will use data from float with <strong>WMO</strong> number 6901254, which is processed by Coriolis (later we will see how to find the DAC for each float), therefore within the folder <code class="docutils literal notranslate"><span class="pre">./6901254</span></code>, we find the following files and folder:</p>
 <ul class="simple">
 <li><p>6901254_Rtraj.nc</p></li>
 <li><p>6901254_meta.nc</p></li>
