@@ -61,7 +61,7 @@ wget ftp://ftp.ifremer.fr/ifremer/argo//geo/indian_ocean/2019/11/20191111_prof.n
 
 However we recomend to download our version of the data from [here](https://drive.google.com/drive/folders/19yMW3sMAFouUb0bPpoyDeZY3-QC63pqi) to use exactly the same dataset and therefore to be able to reproduce precisely the notebooks here. Once you have downloaded the data, the ./Data folder should look like:
 
-<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" alt="ArgoCycle" width="800"/>
+<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" alt="DataFolder" width="800"/>
 
 ### Further reading
 
