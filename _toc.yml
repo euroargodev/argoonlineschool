@@ -1,31 +1,29 @@
 format: jb-book
 root: intro
 parts:
-- caption: Lesson 1
+- caption: Lesson 1 - The Argo Program
   chapters:
   - file: Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.md
-    sections:
-    - file: Lessons/L01_TheArgoProgram/Chapter11_WhatArgoNetwork.md      
-    - file: Lessons/L01_TheArgoProgram/Chapter12_NeedArgo.md             
-    - file: Lessons/L01_TheArgoProgram/Chapter13_ObservationsDone.md     
-    - file: Lessons/L01_TheArgoProgram/Chapter14_OceanographicProfile.md
-    - file: Lessons/L01_TheArgoProgram/Chapter15_TechInnovations.md
-    - file: Lessons/L01_TheArgoProgram/Chapter16_RecapLesson1.md
-    - file: Lessons/Quizzes/Quiz10.ipynb      
+  - file: Lessons/L01_TheArgoProgram/Chapter11_WhatArgoNetwork.md      
+  - file: Lessons/L01_TheArgoProgram/Chapter12_NeedArgo.md             
+  - file: Lessons/L01_TheArgoProgram/Chapter13_ObservationsDone.md     
+  - file: Lessons/L01_TheArgoProgram/Chapter14_OceanographicProfile.md
+  - file: Lessons/L01_TheArgoProgram/Chapter15_TechInnovations.md
+  - file: Lessons/L01_TheArgoProgram/Chapter16_RecapLesson1.md
+  - file: Lessons/Quizzes/Quiz10.ipynb      
     
-- caption: Lesson 2
+- caption: Lesson 2 - The Argo data 
   chapters:
   - file: Lessons/L02_TheArgoData/Chapter20_TheArgoData_intro.md
-    sections:  
-    - file: Lessons/L02_TheArgoData/Chapter21_ArgoDataStream.md
-    - file: Lessons/L02_TheArgoData/Chapter22_WhatArgoDataFormat.md
-    - file: Lessons/L02_TheArgoData/Chapter23_QualityControl.md
-    - file: Lessons/L02_TheArgoData/Chapter24_QualityFlagMean.md
-    - file: Lessons/L02_TheArgoData/Chapter25_GetAccesOrganized.md
-    - file: Lessons/L02_TheArgoData/Chapter26_RecapLesson2.md
-    - file: Lessons/Quizzes/Quiz20.ipynb      
+  - file: Lessons/L02_TheArgoData/Chapter21_ArgoDataStream.md
+  - file: Lessons/L02_TheArgoData/Chapter22_WhatArgoDataFormat.md
+  - file: Lessons/L02_TheArgoData/Chapter23_QualityControl.md
+  - file: Lessons/L02_TheArgoData/Chapter24_QualityFlagMean.md
+  - file: Lessons/L02_TheArgoData/Chapter25_GetAccesOrganized.md
+  - file: Lessons/L02_TheArgoData/Chapter26_RecapLesson2.md
+  - file: Lessons/Quizzes/Quiz20.ipynb      
 
-- caption: Lesson 3
+- caption: Lesson 3 - Using Argo data
   chapters:
   - file: Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.ipynb
     sections:

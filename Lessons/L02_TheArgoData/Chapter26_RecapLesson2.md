@@ -1,4 +1,4 @@
-# Recap Lesson 2
+# Recap
 
 Let's summarize what you have learned from this lesson a about the Argo Data
 

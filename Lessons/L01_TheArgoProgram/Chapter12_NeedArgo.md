@@ -1,4 +1,4 @@
-## Why do we need Argo and what are its objectives?
+## Why Argo
 
 
 The lack of sustained observations of the atmosphere, oceans, and land have hindered the development and validation of climate models
@@ -6,7 +6,9 @@ The lack of sustained observations of the atmosphere, oceans, and land have hind
 &nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/_t3CTpDI3PA?si=ry47LKgkpSVk8A_0" title="Why do we need Argo and what are its objectives?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>&nbsp;&nbsp;
 
 
-#### Argo's general objectives :
+### Objectives
+
+The Argo's general objectives are:
 
 - To provide a quantitative description of the changing state of the ocean's surface layer and the patterns of sea climate variability from months to decades, including the storage and transportation of heat and freshwater.
 - Provide data that will also be used to initialize ocean prediction and the coupled atmosphere-ocean data assimilation models and model testing.
@@ -23,7 +25,7 @@ OceanOPS is a Support Centre for the Marine Meteorology and Oceanography Observa
 
 Thus, OceanOPS offers a formal profiling float deployment notification process and some countries have given formal concurrence for the operation of Argo floats within their Exclusive Economic Zone (EEZ). The framework now in place allows Argo to grow while complying with IOC rules.
 
-#### Argo missions:
+### Argo missions:
 
 Within the Argo program, there are several different misions:
 
