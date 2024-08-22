@@ -42,11 +42,11 @@ Additonally we have included Quizzes for the [first](https://euroargodev.github.
 **3. [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**
 
 In this section and using hands-on jupyter notebooks you will learn about:
-* [The netCDF format](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter11_TheNetCDFFormat.html)
-* [Accesing Argo data by float](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter20_ArgoDatabyFloat_Intro.html)
-* [Accesing Argo data by date](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter30_ArgoDatabyDate_Intro.html)
-* [Aceesing Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter40_RTandDM.html)
-* [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter43_RecapLesson3.html)
+* [The netCDF format](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter31_TheNetCDFFormat.html)
+* [Accesing Argo data by float](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter32_ArgoDatabyFloat_Intro.html)
+* [Accesing Argo data by date](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter33_ArgoDatabyDate_Intro.html)
+* [Aceesing Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter34_RTandDM.html)
+* [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter35_RecapLesson3.html)
 
 ## Further reading
 
