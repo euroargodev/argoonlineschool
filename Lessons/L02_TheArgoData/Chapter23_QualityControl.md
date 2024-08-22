@@ -1,16 +1,18 @@
-# Quality control
+## Quality control
 
 
-#### Exhaustibe quality controls are needed
+### Exhaustibe quality controls are needed
 
 There are numerous reasons why data can be reported abnormally during the Argo profiler's operating cycles. It may be due to problems related to the CTD sensors, either external interference to the sensor, for instance, due to biodeposition, or intrinsic problems of the sensor itself. In both cases, incorrect data with spikes, biases, sensor drifts, etc., can be reported as bad data or possible bad data. Therefore Argo needs exhaustibe quality controls.
 
 &nbsp;&nbsp;<center>
-<iframe width="800" height="450" src="https://www.youtube.com/embed/pvJN-6OXtDw?si=0Br4TKIy4JNEkI-R&amp;start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</center>&nbsp;&nbsp;
+<iframe width="800" height="450" src="https://www.youtube.com/embed/pvJN-6OXtDw?si=0Br4TKIy4JNEkI-R&amp;start=1" title="The Argo Online School 231 - The Argo data.  Quality control: Exhaustibe quality controls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+_The Argo Online School 231 - The Argo data. Quality control: Exhaustibe quality controls_
+&nbsp;&nbsp;
 
 
-#### The firtst quality control: Real-Time 
+### The firtst quality control: Real-Time 
 
 In real time, this is less than 24 hours since the data was measured by the Argo floats, a first Quality Control is carried out: the Real time Quality control (RTQC).
 
@@ -18,7 +20,10 @@ In real time, this is less than 24 hours since the data was measured by the Argo
 
 Let's summarize this step:
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/6GHUPfFHSNo?si=1fZfiZMBnJiQPYu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>&nbsp;&nbsp;
+&nbsp;&nbsp;
+<center><iframe width="800" height="450" src="https://www.youtube.com/embed/6GHUPfFHSNo?si=1fZfiZMBnJiQPYu0" title="The Argo Online School 232 - The Argo data.  Quality control: The firtst quality control: Real-Time " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+_The Argo Online School 232 - The Argo data.  Quality control: The firtst quality control: Real-Time _
+&nbsp;&nbsp;
 
 For instance, test 19 verifies whether the maximum pressure measured by a float is higher than the ocean depth in the location of the float; test 4 verifies if the location reported by the float is actually in the ocean, or if by error it is reporting a position overland; test 18 checks whether the float is sending, again and again, the same data, etc. We don’t expect you to learn what every test is about, but if you are curious about all of them, take a look at the [Argo Quality Control Manual for CTD and Trajectory Data](https://archimer.ifremer.fr/doc/00228/33951/), and here there is a list of the RTQC tests:
 
@@ -42,7 +47,10 @@ In the following figure, and video,  we show the most common behaviours found in
 
 <center><img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/GIF_Bad_Data.gif" alt="Bad data" width="800"/></center>
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/Ysq8G6JAESQ?si=xntH3TFHD-Nm6gGS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>&nbsp;&nbsp;
+&nbsp;&nbsp;
+<center><iframe width="800" height="450" src="https://www.youtube.com/embed/Ysq8G6JAESQ?si=xntH3TFHD-Nm6gGS" title="The Argo Online School 233 - The Argo data.  Quality control: Problems in the sensors vs natural variability" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+_The Argo Online School 233 - The Argo data. Quality control: Problems in the sensors vs natural variability_
+&nbsp;&nbsp;
 
 
 #### Biodeposition
@@ -54,11 +62,16 @@ Additionally Biodeposition could modify the shape of a sensor, as indicate in th
 
 Biodeposition is the small accumulations of organic matter, like the algae that grow in the pools in summer. It may affect the measurement’s accuracy by microscopic alterations of the sensor's shape. It mainly affects the conductivity sensors that allow us to measure salinity, and the effect of biodeposition is very small in most cases, but its effects on the data are approximate of the same order as the natural variations of the ocean in some regions. 
 
-#### An additional quality control: The Delayed mode
+### An additional quality control: The Delayed mode
 
 Taking all of this into account, the Argo Comunity realized that RTQC was not enough and developed the Delayed mode Quality Control, when the data is compared with data from neighboring floats.  
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/2AtB6ttgfBw?si=dVHzp5Kqq5Zj7H03" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>&nbsp;&nbsp;
+&nbsp;&nbsp;
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/2AtB6ttgfBw?si=dVHzp5Kqq5Zj7H03" title="The Argo Online School 234 - The Argo data.  Quality control: An additional quality control: The Delayed mode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+_The Argo Online School 234 - The Argo data. Quality control: An additional quality control: The Delayed mode_
+&nbsp;&nbsp;
 
 Thus, one of the main obstacles since the start of the Argo Program was providing a technique that allowed us to distinguish between natural variations in salinity and the drift of the conductivity sensor due to biodeposition. The Delayed - Mode quality control is based on a statistical estimation called objective analysis; it provides a solid basis for interpolating irregularly spaced data. During the first years of the Argo era, researchers from the University of Washington and the Woods Hole Oceanographic Institution developed a method based on the comparison of all measurements of each Argo float and historical data at certain depth levels characterized by stability in salinity, but dependent on each zone. 
 

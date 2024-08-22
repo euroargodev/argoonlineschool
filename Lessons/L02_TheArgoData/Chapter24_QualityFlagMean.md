@@ -1,10 +1,13 @@
-# What does a quality control flag mean?
+## What does a quality control flag mean?
 
 Each data will have a specific quality flag assigned that indicates its status! Both Real-Time quality control and Delayed - Mode quality control follow a solid quality flag policy. Here we explain it, briefly:
 
-&nbsp;&nbsp;<center>
-<iframe width="800" height="450" src="https://www.youtube.com/embed/KEfgHYIcCo4?si=FMwLghCknsWOSvvS&amp;start=2" title="What does a quality control flag mean?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</center>&nbsp;&nbsp;
+&nbsp;&nbsp;
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/KEfgHYIcCo4?si=FMwLghCknsWOSvvS&amp;start=2" title="The Argo Online School 241 - The Argo data.  What does a quality control flag mean?: how is the data organized?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+_The Argo Online School 241 - The Argo data. What does a quality control flag mean?: how is the data organized?_
+&nbsp;&nbsp;
 
 And here there are some examples that show how robust this quality flag policy is:
 

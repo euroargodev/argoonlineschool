@@ -2,17 +2,18 @@
 
 But, how are actually done the observations from the Argo floats?
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/BERBfx056fQ?si=4WA9GVNEqjD5uDKn&amp;start=3" title="How the observations are done?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>&nbsp;&nbsp;
+&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/BERBfx056fQ?si=4WA9GVNEqjD5uDKn&amp;start=3" title="How the observations are done?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+_The Argo Online School 131 - The Argo Program. How the observations are done._
+&nbsp;&nbsp;
 
 ### What’s inside an ARGO float?
 
 The standard Argo floats are devices of about 20 kg weight and roughly 2 meters height. They dive vertically by changing their buoyancy via an inflatable external bladder, so it can surface and dive. There is no propulsion system at all, so its horizontal displacements are performed by letting itself be carried by the currents. It consists of three subsystems.
  
 &nbsp;&nbsp;<center>
-
-<iframe width="800" height="450" src="https://www.youtube.com/embed/IL-zc3hJVOQ?si=DEUPObrTMUjstpaD&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
-</center>&nbsp;&nbsp;
+<iframe width="800" height="450" src="https://www.youtube.com/embed/IL-zc3hJVOQ?si=DEUPObrTMUjstpaD&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+_The Argo Online School 132 - The Argo Program. How the observations are done: What’s inside an ARGO float?_
+&nbsp;&nbsp;
 
 #### Hydraulic System 
 controls the buoyancy through an external inflatable bladder so that the profiler can resurface and submerge. An Argo float's critical capacity is its ability to rise and sink in the ocean in the scheduled time. Profilers do this by changing their effective density. Density is the mass of an object divided by its volume. The Argo float keeps its mass constant but, by altering its volume, it changes its density. To do this, mineral oil is forced out of the float's pressure case and expands a rubber bladder at the bottom end of the float. As the bladder expands, the float becomes less dense than seawater and rises to the surface. Upon finishing its tasks at the surface, the float withdraws the oil and descends again. 
