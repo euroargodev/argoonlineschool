@@ -37,7 +37,7 @@ In this section and using a set of videos you will learn about:
 * [Accesing the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.html) 
 * [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter17_RecapLesson2.html)
 
-Additonally we have included Quizzes for the [first](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) and [second](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz20.html) lessons if you want to challenge yourself! 
+Additonally we have included Quizzes for the [first](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) and [second](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz20.html) lessons if you want to challenge yourself!
 
 **3. [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**
 
