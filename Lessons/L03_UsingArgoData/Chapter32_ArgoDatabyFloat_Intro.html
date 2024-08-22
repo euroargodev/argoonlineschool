@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Accesing Argo data by date &#8212; Argo Online School</title>
+    <title>Accessing Argo data by float &#8212; Argo Online School</title>
   
   
   
@@ -61,12 +61,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Lessons/L03_UsingArgoData/Chapter30_ArgoDatabyDate_Intro';</script>
-    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter30_ArgoDatabyDate_Intro.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lessons/L03_UsingArgoData/Chapter32_ArgoDatabyFloat_Intro';</script>
+    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter32_ArgoDatabyFloat_Intro.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Reading Argo data by date" href="Chapter31_ArgoDatabyDate_Day.html" />
-    <link rel="prev" title="Accessing Argo data by float using Argopy" href="Chapter24_ArgoDatabyFloat_ArgoPy.html" />
+    <link rel="next" title="Reading an Argo cycle" href="Chapter32b_ArgoDatabyFloat_Cycle.html" />
+    <link rel="prev" title="The netCDF format" href="Chapter31_TheNetCDFFormat.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,30 +181,30 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 3 - Using Argo data</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter10_UsingArgoData_intro.html">Using Argo Data</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Chapter11_TheNetCDFFormat.html">The netCDF format</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter30_UsingArgoData_intro.html">Using Argo Data</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chapter31_TheNetCDFFormat.html">The netCDF format</a></li>
 
 
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter20_ArgoDatabyFloat_Intro.html">Accesing Argo data by float</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Chapter21_ArgoDatabyFloat_Cycle.html">Reading an Argo cycle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter22_ArgoDatabyFloat_Prof.html">Accessing all profiles at once</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter23_ArgoDatabyFloat_Traj.html">Accessing trajectory data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter24_ArgoDatabyFloat_ArgoPy.html">Accessing Argo data by float using Argopy</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Accessing Argo data by float</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chapter32b_ArgoDatabyFloat_Cycle.html">Reading an Argo cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter32c_ArgoDatabyFloat_Prof.html">Accessing all profiles at once</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter32d_ArgoDatabyFloat_Traj.html">Accessing trajectory data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter32e_ArgoDatabyFloat_ArgoPy.html">Accessing Argo data by float using Argopy</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Accesing Argo data by date</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Chapter31_ArgoDatabyDate_Day.html">Reading Argo data by date</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter32_ArgoDatabyDate_ArgoPy.html">Accessing Argo data by date using Argopy</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter33_ArgoDatabyDate_Intro.html">Accessing Argo data by date</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chapter33b_ArgoDatabyDate_Day.html">Reading Argo data by date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter33c_ArgoDatabyDate_ArgoPy.html">Accessing Argo data by date using Argopy</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter40_RTandDM.html">Real-Time and Delayed mode data</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="Chapter41_RTData.html">Real Time data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter42_DMData.html">Delayed mode data</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter34_RTandDM.html">Real-Time and Delayed mode data</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chapter34b_RTData.html">Real Time data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter34c_DMData.html">Delayed mode data</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Chapter43_RecapLesson3.html">Recap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter35_RecapLesson3.html">Recap</a></li>
 </ul>
 
     </div>
@@ -276,7 +276,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L03_UsingArgoData/Chapter30_ArgoDatabyDate_Intro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L03_UsingArgoData/Chapter32_ArgoDatabyFloat_Intro.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -306,7 +306,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/Lessons/L03_UsingArgoData/Chapter30_ArgoDatabyDate_Intro.ipynb" target="_blank"
+      <li><a href="../../_sources/Lessons/L03_UsingArgoData/Chapter32_ArgoDatabyFloat_Intro.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -386,7 +386,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Accesing Argo data by date</h1>
+    <h1>Accessing Argo data by float</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -400,21 +400,38 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="accesing-argo-data-by-date">
-<h1>Accesing Argo data by date<a class="headerlink" href="#accesing-argo-data-by-date" title="Permalink to this heading">#</a></h1>
-<p>The Argo Online School 301 -  Using Argo Data.  Accesing Argo data by date.</p>
+  <section id="accessing-argo-data-by-float">
+<h1>Accessing Argo data by float<a class="headerlink" href="#accessing-argo-data-by-float" title="Permalink to this heading">#</a></h1>
+<p>  </p>
 <center>
-<iframe width="560" height="315" src="https://drive.google.com/file/d/1YHldthHqlfWZU0dxjFNMtLmElJkf3btO/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center><p><strong>Data files organized by date</strong></p>
-<p>When accessing the <strong>geo</strong> folder, via the <em>FTP</em> or <em>HTTP</em> protocols, of any of the two GDACs you will find several (3) folders, one for each of the basins:</p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/mgfN9PQE6WY?si=WTrQXhhyrFwI6Kii" title="The Argo Online School 321 -  Using Argo Data.  Accesing Argo data by float." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+<p><em>The Argo Online School 321 -  Using Argo Data.  Accesing Argo data by float.</em></p>
+<p><strong>Real-Time and Calibrated data</strong></p>
+<p>Since the target of the Argo program is to have the Argo data available within 12 hours of its transmission from the float, this data is called the <em>Real-Time</em> (RT) data. One year after the data were observed, it is adjusted if necessary, and made public. This calibrated data is called <em>Delayed Mode</em> (DM) data.</p>
+<p>In section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter40_RTandDM.html">Real-Time and Delayed mode data</a> we will describe in detail the differences between both kinds of data, and what are the quality control flags. However, to keep it simple, we will begin by focusing on the Real-Time (RT) data.</p>
+<p><strong>Data files organized by float</strong></p>
+<p>When accessing the <strong>dac</strong> folder, via the <em>FTP</em> or <em>HTTP</em> protocols, of any of the two GDACs you will find several (11) folders, one for each of the DACs.  Within each one of these, folders there is one folder for each of the floats processed by this particular <em>DAC</em>.</p>
+<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/dac.png" alt="xarray logo" width="650"/><p>In the example here, we will use data from float with <strong>WMO</strong> number 6901254, which is processed by Coriolis (later we will see how to find the DAC for each float), therefore within the folder <code class="docutils literal notranslate"><span class="pre">./6901254</span></code>, we find the following files and folder:</p>
 <ul class="simple">
-<li><p>The Pacific/Atlantic, limited at 70°W.</p></li>
-<li><p>The Pacific/Indian, limited at 145°E.</p></li>
-<li><p>The Atlantic/Indian, limited at 20°E.</p></li>
+<li><p>6901254_Rtraj.nc</p></li>
+<li><p>6901254_meta.nc</p></li>
+<li><p>6901254_prof.nc</p></li>
+<li><p>6901254_tech.nc</p></li>
+<li><p>./profiles</p></li>
 </ul>
-<p>In each directory the data is organized by <strong>year</strong>, <strong>month</strong> and <strong>day</strong>, according to the date of the rofile.</p>
-<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/geo.png" alt="geo organization" width="650"/>
-<p>In the following notebook we explore how to accese the data under the <em>geo</em> folder.</p>
+<p>We will describe the content of each of these files later, but let’s focus on the folder <code class="docutils literal notranslate"><span class="pre">./profiles/</span></code> since it contains one file for each one of the hydrographic cycles carried out by the float. <strong>R6901254_001.nc</strong> is the file that contains the data from the first cycle. It begins with a <em>R</em> since it is the Real-Time data and if it begins with an <em>D</em> it would be adjusted data, or Delayed Mode data; we will see an example in section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter40_RTandDM.html">Real-Time and Delayed mode data¶</a>.</p>
+<p>Additionally, some Argo floats as 6901254, also made observations in the first descent from the surface to the parking depth. In this case, the name of the files with this data would be <strong>R6901254_001D.nc</strong>.</p>
+<p>In general, the format of the file names for individual profiles are <code class="docutils literal notranslate"><span class="pre">&lt;R/D&gt;&lt;FloatWmoID&gt;_&lt;XXX&gt;&lt;D&gt;.nc</span></code> where :</p>
+<ul class="simple">
+<li><p>The initial <em>R</em> indicates Real-Time data, the initial <em>D</em> indicates Delayed-Mode data</p></li>
+<li><p><em>XXX</em> is the cycle number</p></li>
+<li><p>The second <em>D</em> indicates a descending profile, if exists, while profiles without this D are collected during ascent.</p></li>
+</ul>
+<p>Note that it may happen that, in the future, you try to download the files from float 6901254 and there is no <code class="docutils literal notranslate"><span class="pre">R6901254_001.nc</span></code> and <code class="docutils literal notranslate"><span class="pre">R6901254_001D.nc</span></code> files, but you find only <code class="docutils literal notranslate"><span class="pre">D6901254_001.nc</span></code> and <code class="docutils literal notranslate"><span class="pre">D6901254_001D.nc</span></code> since the R-files are substituted by the D-files once the data is adjusted. We will describe that in detail in section <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter40_RTandDM.html">Real-Time and Delayed mode data¶</a></p>
+<blockquote>
+<div><p>The data from the float is pre-downloaded in the <em>./Data</em> folder, but you can download it from the Coriolis GDAC. See the <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html#data-used-in-the-argo-online-school">Data</a> section for instructions on how to download the data.</p>
+</div></blockquote>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -451,20 +468,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Chapter24_ArgoDatabyFloat_ArgoPy.html"
+       href="Chapter31_TheNetCDFFormat.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Accessing Argo data by float using Argopy</p>
+        <p class="prev-next-title">The netCDF format</p>
       </div>
     </a>
     <a class="right-next"
-       href="Chapter31_ArgoDatabyDate_Day.html"
+       href="Chapter32b_ArgoDatabyFloat_Cycle.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Reading Argo data by date</p>
+        <p class="prev-next-title">Reading an Argo cycle</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
