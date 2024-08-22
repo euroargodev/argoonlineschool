@@ -306,7 +306,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/Lessons/L03_UsingArgoData/Chapter30_UsingArgoData_intro.md" target="_blank"
+      <li><a href="../../_sources/Lessons/L03_UsingArgoData/Chapter30_UsingArgoData_intro.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -316,7 +316,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -398,12 +398,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hands-on-component-of-the-argo-online-school">The hands-on component of the Argo Online School</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-used-in-the-argo-online-school">Data used in the Argo Online School</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hands-on-component-of-the-argo-online-school">The hands-on component of the Argo Online School</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-jupyter-notebooks-locally">Run the Jupyter notebooks locally</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-used-in-the-argo-online-school">Data used in the Argo Online School</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monthly-snapshots-of-the-argo-global-data-assembly-centre">Monthly snapshots of the Argo Global Data Assembly Centre</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license-for-this-book">License for this book</a></li>
 </ul>
             </nav>
         </div>
@@ -415,14 +415,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="using-argo-data">
+  <section id="using-argo-data">
 <h1>Using Argo Data<a class="headerlink" href="#using-argo-data" title="Permalink to this heading">#</a></h1>
 <p>As indicated in the introduction, the second part of the Argo Online School is hands-on, and it is mainly based on Jupyter Notebooks and a few short videos to teach, how to acces the data Argo data and use it.</p>
-<center><iframe width="800" height="450" src="https://drive.google.com/file/d/17s5UwuNwyQzjL7EW9DYhWkAYP8nYTYLI/preview" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<p>  </p>
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/A_D-BLW2Gvo?si=z6W3TrPJl_1gU6bI" title="The Argo Online School 301 -  Using Argo Data.  Introduction: Hands-on!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+<p><em>The Argo Online School 301 -  Using Argo Data.  Introduction: Hands-on!</em></p>
 <section id="the-hands-on-component-of-the-argo-online-school">
 <h2>The hands-on component of the Argo Online School<a class="headerlink" href="#the-hands-on-component-of-the-argo-online-school" title="Permalink to this heading">#</a></h2>
-<p>You can access the hands-on content as here, in a web-page, built using <a class="reference external" href="https://euroargodev.github.io/argoonlineschool">JupyterBook</a>, or download the Jupyter Notebooks and use them in your local machine.</p>
+<p>You can access the hands-on content as <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/intro.html">here</a>, in a web-page, built using <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">JupyterBook</a>, or download the Jupyter Notebooks and use them in your local machine.</p>
 <p>The hands-on component of the Argo Online School was developed using JupyterLab, since it contains a complete environment for interactive scientific computing which runs in your web browser. Jupyter is an open-source python project, and as a very useful first approach to python and JupyterLab, you can use <a class="reference external" href="https://earth-env-data-science.github.io/intro">An Introduction to Earth and Environmental Data Science</a> and <a class="reference external" href="https://rabernat.github.io/research_computing/">Research computing in earth Sciences</a> developed by <a class="reference external" href="https://ocean-transport.github.io/">Ryan Abernathey</a> and <a class="reference external" href="https://emlab.ldeo.columbia.edu/index.php/team/kerry-key/">Kerry Key</a>.</p>
+</section>
+<section id="run-the-jupyter-notebooks-locally">
+<h2>Run the Jupyter notebooks locally<a class="headerlink" href="#run-the-jupyter-notebooks-locally" title="Permalink to this heading">#</a></h2>
 <p>In case that you decide to download and run the python Jupyter Notebooks in your local machine, you should create a python environment. Since using some of the packages may give problems due to compatibility issues between conda-forge packages and packages contained in the default conda channels, we recommend to set up <code class="docutils literal notranslate"><span class="pre">channel_priority:</span> <span class="pre">strict</span></code> and give priority to the <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> channel over the default channels when installing stuff. There are two ways of doing it. Either you always specify <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span></code> or you create a .condarc file in your home with this content:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">channels</span><span class="p">:</span>
   <span class="o">-</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
@@ -430,12 +437,13 @@ document.write(`
 <span class="n">channel_priority</span><span class="p">:</span> <span class="n">strict</span>
 </pre></div>
 </div>
-<p>An environment should either use conda-forge or not, from creation to destruction. Do not mix and match. If you created it without using the conda-forge channel, then do not add it to the mix halfway. In practice, we always create an environment with conda-forge unless in very specific cases where we found incompatibilities.</p>
-<p>To create and activate the AOS environment, that already includes the last stable version of <a class="reference external" href="https://argopy.readthedocs.io/en/latest/">argopy</a>, the python library for Argo data, you should:</p>
+<p>An environment should either use conda-forge or not, from creation to destruction. However, do not mix and match. If you created it without using the conda-forge channel, then do not add it to the mix halfway. In practice, we always create an environment with conda-forge unless in very specific cases where we found incompatibilities.</p>
+<p>To create and activate the AoS environment, that already includes the last stable version of <a class="reference external" href="https://argopy.readthedocs.io/en/latest/">argopy</a>, the python library for Argo data, you should:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">AOS</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span> 
 <span class="n">conda</span> <span class="n">activate</span> <span class="n">AOS</span>
 </pre></div>
 </div>
+<p>where environment.yml is in the <a class="reference external" href="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/environment.yml">GitHub repository of the Argo online School</a></p>
 <p>If by any chance, a library is not included in the environment.yml file, you should install it using, for instance:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">netcdf4</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="n">xarray</span>
@@ -443,35 +451,38 @@ document.write(`
 </pre></div>
 </div>
 <p>For futher information about <a class="reference external" href="https://earth-env-data-science.github.io/lectures/environment/python_environments.html">Managing Python Environments</a> we recommend the corresponding section in <a class="reference external" href="https://earth-env-data-science.github.io/intro">An Introduction to Earth and Environmental Data Science</a></p>
+</section>
 <section id="data-used-in-the-argo-online-school">
-<h3>Data used in the Argo Online School<a class="headerlink" href="#data-used-in-the-argo-online-school" title="Permalink to this heading">#</a></h3>
+<h2>Data used in the Argo Online School<a class="headerlink" href="#data-used-in-the-argo-online-school" title="Permalink to this heading">#</a></h2>
 <p>If you download the notebooks you should create a ./Data* folder to include the data files used for the examples. The files in the Data folder can be downloaded directly from its source using <em>wget</em>, for instance:</p>
 <p>for the <em>Daily NOAA OI SST V2 High-Resolution Dataset for 2020</em>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp2</span><span class="o">.</span><span class="n">psl</span><span class="o">.</span><span class="n">noaa</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">Datasets</span><span class="o">/</span><span class="n">noaa</span><span class="o">.</span><span class="n">oisst</span><span class="o">.</span><span class="n">v2</span><span class="o">.</span><span class="n">highres</span><span class="o">/</span><span class="n">sst</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">mean</span><span class="mf">.2020</span><span class="o">.</span><span class="n">nc</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">--</span><span class="n">directory</span><span class="o">-</span><span class="n">prefix</span><span class="o">=</span><span class="n">Data</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp2</span><span class="o">.</span><span class="n">psl</span><span class="o">.</span><span class="n">noaa</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">Datasets</span><span class="o">/</span><span class="n">noaa</span><span class="o">.</span><span class="n">oisst</span><span class="o">.</span><span class="n">v2</span><span class="o">.</span><span class="n">highres</span><span class="o">/</span><span class="n">sst</span><span class="o">.</span><span class="n">day</span><span class="o">.</span><span class="n">mean</span><span class="mf">.2020</span><span class="o">.</span><span class="n">nc</span>
 </pre></div>
 </div>
 <p>for the data from float 6901254:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>wget ftp://ftp.ifremer.fr/ifremer/argo/dac/coriolis/6901254/*`
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">host</span> <span class="o">--</span><span class="n">cut</span><span class="o">-</span><span class="n">dirs</span><span class="o">=</span><span class="mi">4</span> <span class="o">--</span><span class="n">directory</span><span class="o">-</span><span class="n">prefix</span><span class="o">=</span><span class="n">Data</span> <span class="o">--</span><span class="n">recursive</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ifremer</span><span class="o">.</span><span class="n">fr</span><span class="o">/</span><span class="n">ifremer</span><span class="o">/</span><span class="n">argo</span><span class="o">/</span><span class="n">dac</span><span class="o">/</span><span class="n">coriolis</span><span class="o">/</span><span class="mi">6901254</span>
 </pre></div>
 </div>
-<p>or for the data in the North Atlantic for the 11th November 2019</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>wget ftp://ftp.ifremer.fr/ifremer/argo//geo/indian_ocean/2019/11/20191111_prof.nc`
+<p>for the data from float 6901472:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">host</span> <span class="o">--</span><span class="n">cut</span><span class="o">-</span><span class="n">dirs</span><span class="o">=</span><span class="mi">4</span> <span class="o">--</span><span class="n">directory</span><span class="o">-</span><span class="n">prefix</span><span class="o">=</span><span class="n">Data</span> <span class="o">--</span><span class="n">recursive</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ifremer</span><span class="o">.</span><span class="n">fr</span><span class="o">/</span><span class="n">ifremer</span><span class="o">/</span><span class="n">argo</span><span class="o">/</span><span class="n">dac</span><span class="o">/</span><span class="n">coriolis</span><span class="o">/</span><span class="mi">6901472</span>
 </pre></div>
 </div>
-<p>However we recomend to download our version of the data from <a class="reference external" href="https://drive.google.com/drive/folders/19yMW3sMAFouUb0bPpoyDeZY3-QC63pqi">here</a> to use exactly the same dataset and therefore to be able to reproduce precisely the notebooks here. Once you have downloaded the data, the ./Data folder should look like:</p>
-<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" alt="DataFolder" width="800"/>
+<p>or for the data in all the oceans for the November 2020</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">host</span> <span class="o">--</span><span class="n">cut</span><span class="o">-</span><span class="n">dirs</span><span class="o">=</span><span class="mi">4</span> <span class="o">--</span><span class="n">directory</span><span class="o">-</span><span class="n">prefix</span><span class="o">=</span><span class="n">Data</span> <span class="o">--</span><span class="n">recursive</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ifremer</span><span class="o">.</span><span class="n">fr</span><span class="o">/</span><span class="n">ifremer</span><span class="o">/</span><span class="n">argo</span><span class="o">//</span><span class="n">geo</span><span class="o">/</span><span class="n">indian_ocean</span><span class="o">/</span><span class="mi">2020</span><span class="o">/</span><span class="mi">11</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">host</span> <span class="o">--</span><span class="n">cut</span><span class="o">-</span><span class="n">dirs</span><span class="o">=</span><span class="mi">4</span> <span class="o">--</span><span class="n">directory</span><span class="o">-</span><span class="n">prefix</span><span class="o">=</span><span class="n">Data</span> <span class="o">--</span><span class="n">recursive</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ifremer</span><span class="o">.</span><span class="n">fr</span><span class="o">/</span><span class="n">ifremer</span><span class="o">/</span><span class="n">argo</span><span class="o">//</span><span class="n">geo</span><span class="o">/</span><span class="n">atlantic_ocean</span><span class="o">/</span><span class="mi">2020</span><span class="o">/</span><span class="mi">11</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">host</span> <span class="o">--</span><span class="n">cut</span><span class="o">-</span><span class="n">dirs</span><span class="o">=</span><span class="mi">4</span> <span class="o">--</span><span class="n">directory</span><span class="o">-</span><span class="n">prefix</span><span class="o">=</span><span class="n">Data</span> <span class="o">--</span><span class="n">recursive</span> <span class="n">ftp</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">ifremer</span><span class="o">.</span><span class="n">fr</span><span class="o">/</span><span class="n">ifremer</span><span class="o">/</span><span class="n">argo</span><span class="o">//</span><span class="n">geo</span><span class="o">/</span><span class="n">pacific_ocean</span><span class="o">/</span><span class="mi">2020</span><span class="o">/</span><span class="mi">11</span>
+</pre></div>
+</div>
+<p>However we recommend to download our version of the data from <a class="reference external" href="https://drive.google.com/drive/folders/19yMW3sMAFouUb0bPpoyDeZY3-QC63pqi">here</a> to use exactly the same dataset and therefore to be able to reproduce precisely the notebooks here.</p>
+<p>Once you have downloaded the data, the ./Data folder should look like:</p>
+<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" alt="DataFolder" width="800"/><section id="monthly-snapshots-of-the-argo-global-data-assembly-centre">
+<h3>Monthly snapshots of the Argo Global Data Assembly Centre<a class="headerlink" href="#monthly-snapshots-of-the-argo-global-data-assembly-centre" title="Permalink to this heading">#</a></h3>
+<p>Additionally, you can download a snapshot of the Argo Global Data Assembly Centre (Argo GDAC) <a class="reference external" href="https://www.seanoe.org/data/00311/42182/">here</a>. Although it is a very large file (&gt;50Gb) the advantages is that the dataset is always available with the same content and each month have a differente DOI, for isntance <a class="reference external" href="https://www.seanoe.org/data/00311/42182/#78698">DOI 10.17882/42182</a> for november 2020, and therefore is very convinient for reproducible science.</p>
 </section>
-<section id="further-reading">
-<h3>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h3>
-<p>For the full description of the formats and files produced by the Argo Data Assembly Centres (DACs), see the <a class="reference external" href="https://archimer.ifremer.fr/doc/00187/29825/">Argo user’s manual</a>, the <a class="reference external" href="https://archimer.ifremer.fr/doc/00228/33951/">Argo Quality Control Manual for CTD and Trajectory Data</a> or the <a class="reference external" href="http://www.argodatamgt.org/content/download/340/2645/file/argo_data_management_handbook.pdf">The Argo data management handbook</a>.</p>
-<p>More information can be found in the <a class="reference external" href="http://www.argo.ucsd.edu/">Argo Steering Team web page</a> or the <a class="reference external" href="http://www.argodatamgt.org/Documentation">Argo Data Management team documentation</a>.</p>
-</section>
-</section>
-<section id="license-for-this-book">
-<h2>License for this book<a class="headerlink" href="#license-for-this-book" title="Permalink to this heading">#</a></h2>
-<p>All content in this book (ie, any files and content in the <code class="docutils literal notranslate"><span class="pre">content/</span></code> folder)
-is licensed under the <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>
-(CC BY-SA 4.0) license.</p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -544,12 +555,12 @@ is licensed under the <a class="reference external" href="https://creativecommon
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hands-on-component-of-the-argo-online-school">The hands-on component of the Argo Online School</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-used-in-the-argo-online-school">Data used in the Argo Online School</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further reading</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hands-on-component-of-the-argo-online-school">The hands-on component of the Argo Online School</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-the-jupyter-notebooks-locally">Run the Jupyter notebooks locally</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-used-in-the-argo-online-school">Data used in the Argo Online School</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#monthly-snapshots-of-the-argo-global-data-assembly-centre">Monthly snapshots of the Argo Global Data Assembly Centre</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license-for-this-book">License for this book</a></li>
 </ul>
   </nav></div>
 
