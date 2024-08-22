@@ -202,7 +202,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter40_RTandDM.html">Real-Time and Delayed mode data</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter41_RTData.html">Real Time data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter42_DMData.html">Delayed mode data</a></li>
-
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter43_RecapLesson3.html">Recap</a></li>
@@ -440,7 +439,7 @@ document.write(`
 <p>Let’s read the data from the first cycle of float 6901254. Note taht at the time we dowloaded the data there were only Real-Time observations, that is the reason the file name begins with and “R”</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy1</span>  <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../../Data/6901254/profiles/R6901254_001.nc&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy1</span>  <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../../Data/dac/coriolis/6901254/profiles/R6901254_001.nc&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -939,7 +938,7 @@ Attributes:
 <p>As mentioned before, some floats also make measurements in the first descending phase of the first cycle. The data is in the &lt;R/D&gt;<FloatWmoID>_001D.nc file</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy1D</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../../Data/6901254/profiles/R6901254_001D.nc&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy1D</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../../Data/dac/coriolis/6901254/profiles/R6901254_001D.nc&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1106,7 +1105,7 @@ N_CALIB 1
 <p>There is a lot of additional meta information in the <code class="docutils literal notranslate"><span class="pre">&lt;FloatWmoID&gt;_meta.nc</span></code> file</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Mdata</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../../Data/6901254/6901254_meta.nc&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Mdata</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../../Data/dac/coriolis/6901254/6901254_meta.nc&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

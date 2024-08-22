@@ -202,7 +202,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter40_RTandDM.html">Real-Time and Delayed mode data</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter41_RTData.html">Real Time data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter42_DMData.html">Delayed mode data</a></li>
-
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter43_RecapLesson3.html">Recap</a></li>
@@ -399,6 +398,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ts-diagram">TS-diagram</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">Metadata</a></li>
 </ul>
             </nav>
@@ -411,7 +411,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="accessing-all-profiles-at-once">
+  <section id="accessing-all-profiles-at-once">
 <h1>Accessing all profiles at once<a class="headerlink" href="#accessing-all-profiles-at-once" title="Permalink to this heading">#</a></h1>
 <p>Conveniently, all the core mision profiles are compated in a single file, named: <code class="docutils literal notranslate"><span class="pre">&lt;FloatWmoID&gt;_prof.nc</span></code>. However, some information is only in the individual profile files, but we will see it.</p>
 <p>Let’s start loading the neccesary python modules and the netCDF file <strong>6901254/6901254_prof.nc</strong></p>
@@ -428,7 +428,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prof</span>  <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../../Data/6901254/6901254_prof.nc&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prof</span>  <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../../Data/dac/coriolis/6901254/6901254_prof.nc&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -2802,7 +2802,9 @@ Attributes:
 <img alt="../../_images/d4d909081a0a0a1c560678319843cdc7d47303e445d4825573cfc4616a2fc139.png" src="../../_images/d4d909081a0a0a1c560678319843cdc7d47303e445d4825573cfc4616a2fc139.png" />
 </div>
 </div>
-<p>In oceanography, temperature-salinity diagrams, sometimes called T-S diagrams, are used to identify water masses. In a T-S diagram, rather than plotting plotting temperatute and salinity as a separate “profile,” with pressure or depth as the vertical coordinate, potential temperature (on the vertical axis) is plotted versus salinity (on the horizontal axis).</p>
+<section id="ts-diagram">
+<h2>TS-diagram<a class="headerlink" href="#ts-diagram" title="Permalink to this heading">#</a></h2>
+<p>In oceanography, temperature-salinity diagrams, sometimes called T-S diagrams, are used to identify water masses. In a <strong>T-S diagram</strong>, rather than plotting plotting temperatute and salinity as a separate “profile,” with pressure or depth as the vertical coordinate, potential temperature (on the vertical axis) is plotted versus salinity (on the horizontal axis).</p>
 <p>This diagrams area very useful since as long as it remains isolated from the surface, where heat or fresh water can be gained or lost, and in the absence of mixing with other water masses, a water parcel’s potential temperature and salinity are conserved. Deep water masses thus retain their T-S characteristics for long periods of time, and can be identified readily on a T-S plot.</p>
 <p>In this case we add a colobar bar to show the pressure of each data point.</p>
 <div class="cell docutils container">
@@ -2845,6 +2847,7 @@ Attributes:
 <img alt="../../_images/72dcc1062a29a118eb37d6b8c7abc41c80b5ca0a35c57fb4b82bd5de6527f738.png" src="../../_images/72dcc1062a29a118eb37d6b8c7abc41c80b5ca0a35c57fb4b82bd5de6527f738.png" />
 </div>
 </div>
+</section>
 <section id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this heading">#</a></h2>
 <p>And of course, all the metadata information for each profile is included in the netCDF file:</p>
@@ -2942,6 +2945,7 @@ Cycle 61 Direction A WMO 6901254  Data Center IF Project ARGO SPAIN
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ts-diagram">TS-diagram</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">Metadata</a></li>
 </ul>
   </nav></div>

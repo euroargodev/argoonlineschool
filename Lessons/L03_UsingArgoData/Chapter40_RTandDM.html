@@ -61,6 +61,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Lessons/L03_UsingArgoData/Chapter40_RTandDM';</script>
     <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter40_RTandDM.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -202,7 +204,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Real-Time and Delayed mode data</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter41_RTData.html">Real Time data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter42_DMData.html">Delayed mode data</a></li>
-
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter43_RecapLesson3.html">Recap</a></li>
@@ -401,27 +402,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="real-time-and-delayed-mode-data">
+  <section id="real-time-and-delayed-mode-data">
 <h1>Real-Time and Delayed mode data<a class="headerlink" href="#real-time-and-delayed-mode-data" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_hide_input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%HTML</span>
-<span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;560&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;315&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://drive.google.com/file/d/1vLRNVq93G7rj9W16Vfe8DKa22ogvoHnk/preview&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;640&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;480&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;The Argo Data&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="na">allow</span><span class="o">=</span><span class="s">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="na">allowfullscreen</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">center</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><center>
+<p>The Argo Online School 301 -  Using Argo Data.  Using Argo data: Real-Time and Delayed mode data</p>
+<center>
 <iframe width="560" height="315" src="https://drive.google.com/file/d/1vLRNVq93G7rj9W16Vfe8DKa22ogvoHnk/preview" width="640" height="480" title="The Argo Data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</center>
-</div></div>
-</div>
-<p>The Argo program guarantees free and quality data distribution to the entire scientific &amp; operational community and the general public. Before that, data needs to be checked out through different controls to guarantee their homogeneity and quality within the established accuracy ranges (+/- 0.005ºC temperature and +/- 0.01 for salinity).</p>
-<p>The first control stage is the <strong>Real-Time (RT) quality control</strong> and the last stage is called the <strong>Delayed - Mode (DM) quality control</strong>. Therefore, the data that has gone through the RT quality control is called <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter41_RTData.html"><strong>RT data</strong></a> and the data that has gone through, both, the RT and DM quality controls is called <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter42_DMData.html"><strong>DM data</strong></a>; although some times we also refer to this data as <strong>calibrated data</strong></p>
-<p>For both, RT and DM data, there are quality control (QC) flags and errors that the Argo network provides to help users decide to use the data or not. There are flags</p>
-<p>So far we have accessed only the RT data and without paying attention to its quality. In this chapter, we will describe how to use the quality control information stored in the netcdf files.</p>
+</center><p>The Argo program guarantees free and quality data distribution to the entire scientific &amp; operational community and the general public. Before that, data needs to be checked out through different controls to guarantee their homogeneity and quality within the established accuracy ranges, <span class="math notranslate nohighlight">\(\pm\)</span> 0.005ºC for temperature and  <span class="math notranslate nohighlight">\(\pm\)</span> 0.01 for salinity.</p>
+<p>The first control is the <strong>Real-Time (RT) quality control</strong> and the second the <strong>Delayed - Mode (DM) quality control</strong>. Therefore, the data that has gone through the RT quality control is called <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter41_RTData.html"><strong>RT data</strong></a> and the data that has gone through, both, the RT and DM quality controls is called <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter42_DMData.html"><strong>DM data</strong></a>; although some times we also refer to this data as <strong>calibrated data</strong></p>
+<p>For both, RT and DM data, there are quality control (QC) flags and errors that the Argo network provides to help users decide to use the data or not. So far we have accessed only the RT data and without paying attention to its quality. In the follwoing lessons, we will describe how to use the quality control information stored in the netcdf files.</p>
 <div class="toctree-wrapper compound">
 </div>
 </section>
