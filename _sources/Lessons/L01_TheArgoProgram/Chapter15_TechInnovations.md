@@ -3,7 +3,11 @@
 Argo is constantly trying to improve the quality and coverage of its data, which means that some technological challenges need to be addressed in order to have floats operate well in all parts of the global ocean. Remember that almost all floats are deployed into the ocean and not retrieved and thus the floats must be robust, long-lasting and accurate in a sometimes very harsh marine environment. Read through the different innovations below that have helped Argo improve and expand its coverage.
 
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/UVUkdOgFafU?si=XGC59V7C9Yhbao-M" title="Technological innovations" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>&nbsp;&nbsp;
+&nbsp;&nbsp;<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/UVUkdOgFafU?si=XGC59V7C9Yhbao-M" title="The Argo Online School 151 - The Argo Program.  Technological innovations." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+_The Argo Online School 151 - The Argo Program. Technological innovations_
+&nbsp;&nbsp;
 
 
 #### Improving float lifetime

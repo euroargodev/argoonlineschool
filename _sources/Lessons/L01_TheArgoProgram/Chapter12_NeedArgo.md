@@ -3,7 +3,9 @@
 
 The lack of sustained observations of the atmosphere, oceans, and land have hindered the development and validation of climate models
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/_t3CTpDI3PA?si=ry47LKgkpSVk8A_0" title="Why do we need Argo and what are its objectives?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>&nbsp;&nbsp;
+&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/_t3CTpDI3PA?si=ry47LKgkpSVk8A_0" title="Why do we need Argo and what are its objectives?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+_The Argo Online School 121 - The Argo Program. Why do we need Argo and what are its objectives?._
+&nbsp;&nbsp;
 
 
 ### Objectives
@@ -15,7 +17,9 @@ The Argo's general objectives are:
 - Document climate variability from seasons to decades, thus helping to understand its predictability.
 - Provide data collected or the calibration of satellite Jason's altimetric observations by means of measuring the subsurface temperature, salinity and speed of currents. Jason is a series of satellite that provide global sea surface height observations for climate monitoring and ocean and seasonal forecasts. More information could be found [here](https://www.eumetsat.int/our-satellites/jason-series)
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/lpAE2WtMt-E?si=NgmGn3pBDWsLJyxk" title=" Argo's general objectives " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>&nbsp;&nbsp;
+&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/lpAE2WtMt-E?si=NgmGn3pBDWsLJyxk" title=" Argo's general objectives " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+_The Argo Online School 122 - The Argo Program. Why do we need Argo and what are its objectives?: Argo's general objectives_
+&nbsp;&nbsp;
 
 The data is provided free via the Global Data Assembly Centres (GDAC) located In Brest, France, and Monterey, California, after having gone through automated quality control (QC).
 
@@ -34,4 +38,6 @@ Within the Argo program, there are several different misions:
 - BGC-Argo Mission:  floats that measure temperature, salinity, pressure and oxygen, pH, nitrate, chlorophyll, backscatter, irradiance down to 2000m
 - Polar Argo Mission:  floats that measure temperature, salinity, pressure down to 2000m in the polar regions
 
-&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/P1_3PXKKkQo?si=mO6LflBRCZDQCss_" title="Argo missions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>&nbsp;&nbsp;
+&nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/P1_3PXKKkQo?si=mO6LflBRCZDQCss_" title="Argo missions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+_The Argo Online School 123 - The Argo Program. Why do we need Argo and what are its objectives?: Argo missions_
+&nbsp;&nbsp;

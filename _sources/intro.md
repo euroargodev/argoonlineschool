@@ -14,7 +14,7 @@ Given the amount of data gathered by the Argo network of floats, the associated 
 
 That's why we developed the Argo Online school ([AoS](https://euroargodev.github.io/argoonlineschool/)), to teach the basic foundations to use and understand the Argo data. The AoS does not attempt to show everything, since the Argo documentation is available for deeper learning. The AoS is a set of short videos and hands-on jupyter notebooks designed to be accessible for high school or graduate students in any discipline, with no prerequisites.
 
-The AoS is organized in two parts. The fist one, organized in two lessons, is devoted to teach what is the [The Argo Program](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html)** and the [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.html)** , with a set of short videos. The first part, this is Lessons 1-2 are itself a closed module and could be used by a learner without using lesson 3, assuming the goal is simply to learn about Argo. The second part includes only one lesson: [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**, with jupyter notebooks and short videos to teach, hands-on, how to acces the data Argo data and use it.
+The AoS is organized in two parts. The fist one, organized in two lessons, is devoted to teach what is the [The Argo Program](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html) and the [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.html) , with a set of short videos. The first part, this is Lessons 1-2 are itself a closed module and could be used by a learner without using lesson 3, assuming the goal is simply to learn about Argo. The second part includes only one lesson: [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**, with jupyter notebooks and short videos to teach, hands-on, how to acces the data Argo data and use it.
  
 
 **1. [The Argo Program](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html)**
@@ -47,6 +47,8 @@ In this section and using hands-on jupyter notebooks you will learn about:
 * [Accesing Argo data by date](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter33_ArgoDatabyDate_Intro.html)
 * [Aceesing Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter34_RTandDM.html)
 * [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter35_RecapLesson3.html)
+
+
 
 ## Further reading
 
