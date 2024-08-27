@@ -6,18 +6,19 @@
 
 # The Argo Online School
 
-Argo is an international program that collects information from inside the ocean using a fleet of floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level measuring ocean variables but spend almost all their life below the surface. Argo has been collecting more than 100,000 profiles per year since 2012, and nowadays [Argo](https://argo.ucsd.edu/) is the major component of the Global Ocean Observing System.
+[Argo](https://argo.ucsd.edu/) is an international program that collects information from inside the ocean using a fleet of floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level, measuring ocean variables, but spend almost all their life below the surface. Argo has been collecting more than 100,000 profiles per year since 2012, and nowadays Argo is the major component of the [Global Ocean Observing System](https://goosocean.org/).
 
 <img src="http://sio-argo.ucsd.edu/statusbig.gif" alt="Argo status" width="800"/>
+&nbsp;&nbsp;
 
-Given the amount of data gathered by the Argo network of floats, the associated documentation has grown considerably and can be overwhelming. 
-
-That's why we developed the Argo Online school ([AoS](https://euroargodev.github.io/argoonlineschool/)), to teach the basic foundations to use and understand the Argo data. The AoS does not attempt to show everything, since the Argo documentation is available for deeper learning. The AoS is a set of short videos and hands-on jupyter notebooks designed to be accessible for high school or graduate students in any discipline, with no prerequisites.
-
-The AoS is organized in two parts. The fist one, organized in two lessons, is devoted to teach what is the [The Argo Program](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html) and the [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.html) , with a set of short videos. The first part, this is Lessons 1-2 are itself a closed module and could be used by a learner without using lesson 3, assuming the goal is simply to learn about Argo. The second part includes only one lesson: [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**, with jupyter notebooks and short videos to teach, hands-on, how to acces the data Argo data and use it.
+Given the amount of data gathered by the Argo network of floats, the associated documentation has grown considerably and can be overwhelming. That's why we developed the Argo Online school (AoS), to teach the basic foundations to use and understand the Argo data. The AoS is a set of guided-short videos and hands-on jupyter notebooks designed to for high school or graduate students in any discipline.
  
+The AoS is organized in two parts. The fist one, wth two lessons, is devoted to teach what is the The Argo Program and The Argo Dataset, with a set of 32 short videos and 14 chapters. These two lessons are itself a closed module, assuming the goal is simply to learn about Argo. The second part includes only one lesson: Using the Argo data, with jupyter notebooks and 8 short videos to teach, hands-on in 14 chapters, how to acces the data Argo data and use it.  Lessons 1 and 2 require about 5 hours to be completed, while lesson 3 requires 10 hours to be completed, assuming basic knowledge of python.
 
-**1. [The Argo Program](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html)**
+These are the chapters in each lesson:
+
+## Part 1
+**Lesson 1. [The Argo Program](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html)**
 
 In this section and using a set of videos you will learn about:
 * [What is the Argo network?](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter11_WhatArgoNetwork.html)
@@ -27,7 +28,7 @@ In this section and using a set of videos you will learn about:
 * [Technological innovations](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter15_TechInnovations.html)
 * [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter16_RecapLesson1.html)
  
-**2. [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.html)**
+**Lesson 2. [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.html)**
 
 In this section and using a set of videos you will learn about:
 * [The Argo General Data Stream](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter12_ArgoDataStream.html)
@@ -39,7 +40,8 @@ In this section and using a set of videos you will learn about:
 
 Additonally we have included Quizzes for the [first](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) and [second](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz20.html) lessons if you want to challenge yourself!
 
-**3. [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**
+## Part 2
+**Lesson 3. [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**
 
 In this section and using hands-on jupyter notebooks you will learn about:
 * [The netCDF format](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter31_TheNetCDFFormat.html)
@@ -49,15 +51,14 @@ In this section and using hands-on jupyter notebooks you will learn about:
 * [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter35_RecapLesson3.html)
 
 
-
 ## Further reading
 
-More information about the Argo network an be found in the [Argo Steering Team web page](http://www.argo.ucsd.edu/), the [Argo Data Management team documentation](http://www.argodatamgt.org/Documentation) or the European contribution to Argo: [Euro-Argo](https://www.euro-argo.eu/)
+The AoS does not attempt to show everything about Argo, since the Argo documentation is available for deeper learning. More information about the Argo network can be found in the [Argo Steering Team web page](http://www.argo.ucsd.edu/), the [Argo Data Management team documentation](http://www.argodatamgt.org/Documentation) or the European contribution to Argo: [Euro-Argo](https://www.euro-argo.eu/). Specifically the [Argo user’s manual](https://archimer.ifremer.fr/doc/00187/29825/) and the [Argo Quality Control Manual for CTD and Trajectory Data](https://archimer.ifremer.fr/doc/00228/33951/) are the nexts steps to go deeper in the advance use of Argo data.
 
 ## Acknowledging Argo data
 
 Since Argo data are freely available without restriction, to track uptake and impact, we ask all users to acknowledge it in the following way:*“These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.  (https://argo.ucsd.edu,  https://www.ocean-ops.org).  The Argo Program is part of the Global Ocean Observing System“*
-
+s
 Additionally, the Argo Data Management Team assigns Digital Object Identifiers (DOIs) to Argo documents and datasets. These can easily be included in publications and keep a direct and permanent link to the Argo document or datasets used in publications (to ensure reproducibility). Datasets are archived in [monthly snapshots each with its own DOI](https://www.seanoe.org/data/00311/42182/).
 
 Refer to [How to cite Argo data](https://argo.ucsd.edu/data/acknowledging-argo/) for further information.
@@ -65,6 +66,10 @@ Refer to [How to cite Argo data](https://argo.ucsd.edu/data/acknowledging-argo/)
 ## License for this book
 
 All the content in the Argo Online School is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0) license.
+
+## How to contribute
+
+As long as the Argo program continues to grow, the AoS will, too. This first version contains the basic content of Argo, subsequent versions will show the newest aspects of the Argo network, as biochemical measurements, deep observations, etc. Since all the content that builds the Argo online school is hosted in a public github repository: [https://github.com/euroargodev/argoonlineschool](https://github.com/euroargodev/argoonlineschool), anybody interested in helping to further develop the AoS may open and [issue on the public github repository](https://github.com/euroargodev/argoonlineschool/issues) to begin to organize the update.
 
 ## Credits
 
