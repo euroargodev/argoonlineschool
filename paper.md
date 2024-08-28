@@ -14,7 +14,7 @@ authors:
    orcid: 0000-0003-2404-5679
    affiliation: 1
 affiliations:
-- name: Centro Oceanográfico de Canaarias, Instituto Español de Oceanografía (IEO - CSIC)
+- name: Centro Oceanográfico de Canarias, Instituto Español de Oceanografía (IEO - CSIC)
   index: 1
 date: 1 April 2022
 bibliography: paper.bib
@@ -40,7 +40,7 @@ Argo [@roemmich-2019; @riser-2016] is an international program that collects inf
 
 Although data from Argo [@Argo2021] is publicly and freely available, it is a huge dataset, with thousands of files and the free documentation is rather complex since it has to cope with the many different models of floats and sensors, and the traceability of the quality control of all the measurements. The Argo community has always been aware of the difficulties of early users to manage the complex and large datasets from the network. In that sense, the Argo Online School addresses an existing need for the Argo community to communicate on the Argo programme and how its invaluable dataset can be used for various applications.
 
-The potential of e-learning platforms is used in the Argo Online School to offer all kinds of resources to users and thus promote and improve the access and use of the Argo data. In this way, the AoS is defined as an e-learning tool based on an interactive environment similar to other already established educational platforms. It is a tool with great educational potential that not only seeks to show the basic steps to use Argo data, but also to empower users so that they face future _programming_ scenarios in their academic and professional stage. 
+The potential of e-learning platforms is used in the Argo Online School to offer all kinds of resources to users and thus promote and improve the access and use of the Argo data. In this way, the AoS is defined as an e-learning tool based on an interactive environment similar to other already established educational platforms. It is a tool with great educational potential that not only seeks to show the basic steps to use Argo data, but also to empower users so that they face future _programming_ scenarios in their academic and professional stage.
 
 The AoS was presented at the [2nd Ocean Observers Workshop](https://bit.ly/3pUChmJ) on November 20th, 2021  and at the [22nd Argo Data Management Team meeting](https://bit.ly/3e39rLL) on December 10, 2021.
 
@@ -59,11 +59,11 @@ The AoS is a set of videos and hands-on python driven jupyter notebooks, designe
 
 All content is divided into three lessons: 1. The Argo Program, that describes the basic concepts of this ocean observing network; 2. The Argo Data, that describes how the data is organized; and 3. Using the Argo data, that uses the knowledge of the previous sections and python driven jupyter notebooks to teach how to use the data. Finally, a quiz section is included for self-appraisal. Lessons 1 and 2 are aimed at users with minimal or no knowledge of the Argo network, therefore no prerequisites are needed, and itself are a closed module and could be used by a learner without using lesson 3, assuming the goal is simply to learn about Argo. Lessons 1 and 2 contain 32 short videos and 14 chapters and require about 5 hours to be completed. Lesson 3 is intended for advanced users, as it requires basic programming skills in python. However, lesson 3 is duly explained step by step, to facilitate the transition of users coming from lessons 1 and 2. The basic recommendations and instructions for configuring the hands-on section of the AoS are also provided, whether the users want to work online or if they want to work on their local computer. Specific libraries and packages are recommended to guarantee the correct functioning of the AoS. Lessons 3 contains 8 short videos and 14 chapters and require about 10 hours to be completed, assuming basic knowledge of python.
 
-AQUI incluir como se puede adaptar a su suso.  potential uses.Does the documentation explain how someone would adopt the module, and include examples of how to use it?_
-
 The AoS has been developed using markdown, python driven Jupyter notebooks [@Kluyver2016jupyter] and jupyter-book [@JupyterBook2020], open source projects that allow editing control in a clear and easy way, and also permits web-based interactive development environments that contain code, visualizations, and texts. It is widely used for data science, and inspired by the course _[An Introduction to Earth and Environmental Data Science](https://earth-env-data-science.github.io/intro.html) [@Abernathey2021].  
 
 The AoS is accessible through the web page of Euro-Argo [https://www.euro-argo.eu/argo-online-school](https://www.euro-argo.eu/argo-online-school), but all the content that builds it is hosted in a public github repository: [https://github.com/euroargodev/argoonlineschool](https://github.com/euroargodev/argoonlineschool). As long as the Argo program continues to grow, the AoS will, too. This first version contains the basic content of Argo, subsequent versions will show the newest aspects of the Argo network, as biochemical measurements, deep observations, etc. Anybody interested in helping to further develop the AoS may open and issue on the public github repository to begin to organize the update.
+
+Given the structure of the AoS, it could be used for educational purposes. For high school students, lessons 1 and 2 could be used as a project with the aim of finding questions that ocean observations, such as Argo,  may help to understand, and how.  For students with a technical or science curriculum, that includes programming in python, other projects could be to find the seasonal change in temperature at the surface at a given ocean, and compare it with the changes at 1000 m or 2000 m, or explain - sometimes is very hard- the trajectory of a given float.  Teachers are welcome to open an issue in the github repository to get help in how develop more projects.
 
 As part of the Argo community, the AoS follows the same philosophy in terms of data access, and to guarantee barrier-free learning, the information and data provided in the AoS is available in open access to the public free of charge and therefore, no subscription is required.
 

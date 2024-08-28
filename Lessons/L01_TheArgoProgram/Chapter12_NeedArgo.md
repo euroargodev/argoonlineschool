@@ -1,6 +1,5 @@
 ## Why Argo
 
-
 The lack of sustained observations of the atmosphere, oceans, and land have hindered the development and validation of climate models
 
 &nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/_t3CTpDI3PA?si=ry47LKgkpSVk8A_0" title="Why do we need Argo and what are its objectives?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
@@ -15,7 +14,7 @@ The Argo's general objectives are:
 - To provide a quantitative description of the changing state of the ocean's surface layer and the patterns of sea climate variability from months to decades, including the storage and transportation of heat and freshwater.
 - Provide data that will also be used to initialize ocean prediction and the coupled atmosphere-ocean data assimilation models and model testing.
 - Document climate variability from seasons to decades, thus helping to understand its predictability.
-- Provide data collected or the calibration of satellite Jason's altimetric observations by means of measuring the subsurface temperature, salinity and speed of currents. Jason is a series of satellite that provide global sea surface height observations for climate monitoring and ocean and seasonal forecasts. More information could be found [here](https://www.eumetsat.int/our-satellites/jason-series)
+- Provide data collected or the calibration of satellite Jason's altimetric observations by means of measuring the subsurface temperature, salinity and speed of currents. Jason is a series of satellite that provide global sea surface height observations for climate monitoring and ocean forecasts. More information could be found [here](https://www.eumetsat.int/our-satellites/jason-series)
 
 &nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/lpAE2WtMt-E?si=NgmGn3pBDWsLJyxk" title=" Argo's general objectives " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
 _The Argo Online School 122 - The Argo Program. Why do we need Argo and what are its objectives?: Argo's general objectives_

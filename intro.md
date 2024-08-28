@@ -50,6 +50,7 @@ In this section and using hands-on jupyter notebooks you will learn about:
 * [Aceesing Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter34_RTandDM.html)
 * [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter35_RecapLesson3.html)
 
+Given the structure of the AoS, it could be used for educational purposes. For high school students, lessons 1 and 2 could be used as a project with the aim of finding questions that ocean observations, such as Argo,  may help to understand, and how.  For students with a technical or science curriculum, that includes programming in python, other projects could be to find the seasonal change in temperature at the surface at a given ocean, and compare it with the changes at 1000 m or 2000 m, or explain - sometimes is very hard- the trajectory of a given float.  Teachers are welcome to open an [issue on the public github repository](https://github.com/euroargodev/argoonlineschool/issues) to get help in how develop more projects.
 
 ## Further reading
 
@@ -69,7 +70,7 @@ All the content in the Argo Online School is licensed under the [Creative Common
 
 ## How to contribute
 
-As long as the Argo program continues to grow, the AoS will, too. This first version contains the basic content of Argo, subsequent versions will show the newest aspects of the Argo network, as biochemical measurements, deep observations, etc. Since all the content that builds the Argo online school is hosted in a public github repository: [https://github.com/euroargodev/argoonlineschool](https://github.com/euroargodev/argoonlineschool), anybody interested in helping to further develop the AoS may open and [issue on the public github repository](https://github.com/euroargodev/argoonlineschool/issues) to begin to organize the update.
+As long as the Argo program continues to grow, the AoS will, too. This first version contains the basic content of Argo, subsequent versions will show the newest aspects of the Argo network, as biochemical measurements, deep observations, etc. Since all the content that builds the Argo online school is hosted in a public github repository: [https://github.com/euroargodev/argoonlineschool](https://github.com/euroargodev/argoonlineschool), anybody interested in helping to further develop the AoS may open an [issue on the public github repository](https://github.com/euroargodev/argoonlineschool/issues) to begin to organize the update.
 
 ## Credits
 
