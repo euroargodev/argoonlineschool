@@ -1,4 +1,4 @@
-name: AOS
+name: AoS
 channels:
   - conda-forge
   - defaults
