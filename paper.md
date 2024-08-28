@@ -46,7 +46,7 @@ The AoS was presented at the [2nd Ocean Observers Workshop](https://bit.ly/3pUCh
 
 # Notes on instructional design
 
-The AoS aims to teach the basic foundations to understand and use the Argo data. The AoS does not attempt to show everything about the Argo program, since the Argo documentation is available from the Argo Data Managment Team ([http://www.argodatamgt.org/Documentation](http://www.argodatamgt.org/Documentation)) [@ArgoManual2022] for deeper learning. The AoS does not pretend to be a library or Application Programming Interface to ease Argo data access, since there are other initiatives with that purpose; among others, Argopy, a python library for Argo data beginners and experts [@Maze2020] or  ArgoVis, a web application for fast delivery, visualization, and analysis of argo Data [@Argovis].
+The AoS aims to teach the basic foundations to understand and use the Argo data. The AoS does not attempt to show everything about the Argo program, since the Argo documentation is available from the Argo Data Managment Team ([http://www.argodatamgt.org/Documentation](http://www.argodatamgt.org/Documentation)) [@ArgoManual2022, @ArgoQCManual2022] for deeper learning. The AoS does not pretend to be a library or Application Programming Interface to ease Argo data access, since there are other initiatives with that purpose; among others, Argopy, a python library for Argo data beginners and experts [@Maze2020] or  ArgoVis, a web application for fast delivery, visualization, and analysis of argo Data [@Argovis].
 
 The AoS is a set of videos and hands-on python driven jupyter notebooks, designed to for high school or graduate students in any discipline, with no prerequisites, and it offers:
 
@@ -98,5 +98,3 @@ Team, Argo Data Management. 2021. “Argo Users Manual.” Argo; Argo Data Manag
 Tucker, Tyler, Donata Giglio, Megan Scanderbeg, and Samuel S. P. Shen. 2020. “Argovis: A Web Application for Fast Delivery, Visualization, and Analysis of Argo Data.” Journal of Atmospheric and Oceanic Technology 37 (3): 401–16. https://doi.org/10.1175/JTECH-D-19-0041.1.
 
 Wong Annie, Carval Thierry, Keeley Robert. 2022b. “Argo Quality Control Manual for CTD and Trajectory Data.” In. Argo; Argo Data Management Team. https://doi.org/10.13155/33951.
-
-———. 2022a. “Argo Quality Control Manual for CTD and Trajectory Data.” Argo; Argo Data Management Team. https://doi.org/10.13155/33951.
