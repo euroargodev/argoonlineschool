@@ -47,7 +47,11 @@ parts:
     - file: Lessons/L03_UsingArgoData/Chapter34c_DMData.ipynb      
 
   - file: Lessons/L03_UsingArgoData/Chapter35_RecapLesson3.ipynb      
-    
+
+  - file: Lessons/L03_UsingArgoData/Chapter36_Examples.ipynb      
+    sections:
+    - file: Lessons/L03_UsingArgoData/Chapter36a_Status.ipynb      
+    - file: Lessons/L03_UsingArgoData/Chapter36b_TrayectoriasArea.ipynb      
 
 
 
