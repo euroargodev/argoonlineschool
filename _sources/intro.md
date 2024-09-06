@@ -8,8 +8,10 @@
 
 [Argo](https://argo.ucsd.edu/) is an international program that collects information from inside the ocean using a fleet of aproximately 4000 floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level, measuring ocean variables, but spend almost all their life below the surface. The following figure shows the actual configuration of the Argo fleet:
 
+<figure>
 <img src="http://sio-argo.ucsd.edu/statusbig.gif" alt="Argo status" width="800"/>
-&nbsp;&nbsp;&nbsp;&nbsp;
+<figcaption>Actual status of the Argo fleet</figcaption>
+</figure>
 
 Argo has been collecting more than 100,000 profiles per year since 2012, and nowadays Argo is the major component of the [Global Ocean Observing System](https://goosocean.org/).
 

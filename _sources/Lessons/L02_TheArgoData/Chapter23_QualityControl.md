@@ -8,6 +8,7 @@ There are numerous reasons why data can be reported abnormally during the Argo p
 &nbsp;&nbsp;<center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/pvJN-6OXtDw?si=0Br4TKIy4JNEkI-R&amp;start=1" title="The Argo Online School 231 - The Argo data.  Quality control: Exhaustibe quality controls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
+
 _The Argo Online School 231 - The Argo data. Quality control: Exhaustibe quality controls_
 &nbsp;&nbsp;
 
@@ -22,7 +23,8 @@ Let's summarize this step:
 
 &nbsp;&nbsp;
 <center><iframe width="800" height="450" src="https://www.youtube.com/embed/6GHUPfFHSNo?si=1fZfiZMBnJiQPYu0" title="The Argo Online School 232 - The Argo data.  Quality control: The firtst quality control: Real-Time " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
-_The Argo Online School 232 - The Argo data.  Quality control: The firtst quality control: Real-Time _
+
+_The Argo Online School 232 - The Argo data.  Quality control: The firtst quality control: Real-Time_
 &nbsp;&nbsp;
 
 For instance, test 19 verifies whether the maximum pressure measured by a float is higher than the ocean depth in the location of the float; test 4 verifies if the location reported by the float is actually in the ocean, or if by error it is reporting a position overland; test 18 checks whether the float is sending, again and again, the same data, etc. We don’t expect you to learn what every test is about, but if you are curious about all of them, take a look at the [Argo Quality Control Manual for CTD and Trajectory Data](https://archimer.ifremer.fr/doc/00228/33951/), and here there is a list of the RTQC tests:
@@ -49,6 +51,7 @@ In the following figure, and video,  we show the most common behaviours found in
 
 &nbsp;&nbsp;
 <center><iframe width="800" height="450" src="https://www.youtube.com/embed/Ysq8G6JAESQ?si=xntH3TFHD-Nm6gGS" title="The Argo Online School 233 - The Argo data.  Quality control: Problems in the sensors vs natural variability" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+
 _The Argo Online School 233 - The Argo data. Quality control: Problems in the sensors vs natural variability_
 &nbsp;&nbsp;
 
@@ -90,4 +93,3 @@ To keep a record of all the actions performed, the data verified through the DM 
 - Once a float is declared as inactive, data will be collected in the GDAC as "D" and it will contain both adjusted and unadjusted data. 
 
 Regardless of any changes done during the RT and DM quality controls, all the data is kept and included in the NetCDF files.
-

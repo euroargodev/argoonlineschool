@@ -17,7 +17,7 @@ _The Argo Online School 112 - The Argo Program. What is the Argo network?: Why i
 ### A fundamental piece of Global Ocean Observation System
 
 &nbsp;&nbsp;<center><iframe width="800" height="450" src="https://www.youtube.com/embed/D6iAsqsdSx0?si=IF9QbGKfLPCWR3_n" title="The Argo Online School 113 - The Argo Program.  What is the Argo network?: A fundamental piece of Global Ocean Observation System " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
-_The Argo Online School 113 - The Argo Program. What is the Argo network?: A fundamental piece of Global Ocean Observation System _
+_The Argo Online School 113 - The Argo Program. What is the Argo network?: A fundamental piece of Global Ocean Observation System_
 &nbsp;&nbsp;
 
 The Argo Program is managed by teams of scientists and data experts who ensure that the program is run as efficiently and effectively as possible and that standards are maintained at the highest possible level. The total annual cost of Argo is estimated at $40million each year.
