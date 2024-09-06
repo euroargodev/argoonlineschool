@@ -2,13 +2,11 @@
 Info.ipynb
 
 # Testing folder
-Prueba
 Prueba*
-./Prueba/*
+Prueba/
 
 # Data folder
-*ArgoData
-Data
+Data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
