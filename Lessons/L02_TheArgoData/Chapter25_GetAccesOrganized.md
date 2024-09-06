@@ -8,6 +8,7 @@ Let's see how the Argo data is organized in different folders in the GDACs:
 <center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/jj0wnNDYOuY?si=PnMZLwdaWFVxrji3" title="The Argo Online School 251 - The Argo data.  Accesing the Argo data: What is FTP?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
+
 _The Argo Online School 251 - The Argo data. Accesing the Argo data: What is FTP?_
 &nbsp;&nbsp;
 
@@ -19,6 +20,7 @@ But how we can actually get the data?:
 <center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/akZeIJAc9e8?si=I05qI4Y11GCJVA32&amp;start=1" title="The Argo Online School 252 - The Argo data.  Accesing the Argo data: What is FTP?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
+
 _The Argo Online School 252 - The Argo data. Accesing the Argo data: What is FTP?_
 &nbsp;&nbsp;
 
@@ -30,6 +32,7 @@ To access the data directly from the GDACs we can use the FTP or HTTPs protocols
 <center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/GNLrd6Efxk8?si=ssalirN3YdL-FDK7" title="The Argo Online School 253 - The Argo data.  Accesing the Argo data: Using FTP or HTTPs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
+
 _The Argo Online School 253 - The Argo data. Accesing the Argo data: Using FTP or HTTPs_
 &nbsp;&nbsp;
 
@@ -56,6 +59,7 @@ Take a look at this simple example on how to get access to Argo data through Cor
 <center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-GeLrhZnHo4?si=j0QvV7m6t6Q_8NgZ" title="The Argo Online School 254 - The Argo data.  Accesing the Argo data: A FTP hands-on example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
+
 _The Argo Online School 254 - The Argo data. Accesing the Argo data: A FTP hands-on example_
 &nbsp;&nbsp;
 
@@ -75,6 +79,7 @@ Although HTTPs sounds very technical, we are used to it:
 <center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/XJkj7fHya40?si=swuv1AVtyZ1f3Unz&amp;start=1" title="The Argo Online School 255 - The Argo data.  Accesing the Argo data: HTTPs is easy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
+
 _The Argo Online School 255 - The Argo data. Accesing the Argo data: HTTPs is easy_
 &nbsp;&nbsp;
 
@@ -100,6 +105,7 @@ Nowadays, some data viewers have added extremely useful technical developments t
 <center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/q1v-XPacMO8?si=I3IEhOdj9AAuXc4b" title="The Argo Online School 257 - The Argo data.  Accesing the Argo data: The data selection tool I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
+
 _The Argo Online School 257 - The Argo data. Accesing the Argo data: The data selection tool I_
 &nbsp;&nbsp;
 
@@ -109,5 +115,6 @@ The [Argo data selector](dataselection.euro-argo.eu) is user friendly and develo
 <center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/X62F4rNa4sw?si=wobQr3B59NG9twmw" title="The Argo Online School 258 - The Argo data.  Accesing the Argo data: The data selection tool II" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
+
 _The Argo Online School 258 - The Argo data. Accesing the Argo data: The data selection tool II_
 &nbsp;&nbsp;
