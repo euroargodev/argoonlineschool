@@ -46,7 +46,8 @@ In this section and using hands-on jupyter notebooks you will learn about:
 * [The netCDF format](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter31_TheNetCDFFormat.html)
 * [Accesing Argo data by float](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter32_ArgoDatabyFloat_Intro.html)
 * [Accesing Argo data by date](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter33_ArgoDatabyDate_Intro.html)
-* [Aceesing Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter34_RTandDM.html)
+* [Accesing Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter34_RTandDM.html)
+* [AdditionalExamples](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter36_Examples.html)
 * [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter35_RecapLesson3.html)
 
 Given the structure of the AoS, it could be used for educational purposes. For high school students, lessons 1 and 2 could be used as a project with the aim of finding questions that ocean observations, such as Argo,  may help to understand, and how.  For students with a technical or science curriculum, that includes programming in python, other projects could be to find the seasonal change in temperature at the surface at a given ocean, and compare it with the changes at 1000 m or 2000 m, or explain - sometimes is very hard- the trajectory of a given float.  Teachers are welcome to open an [issue on the public github repository](https://github.com/euroargodev/argoonlineschool/issues) to get help in how to develop more projects.
