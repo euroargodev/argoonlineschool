@@ -6,10 +6,12 @@
 
 # The Argo Online School
 
-[Argo](https://argo.ucsd.edu/) is an international program that collects information from inside the ocean using a fleet of floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level, measuring ocean variables, but spend almost all their life below the surface. Argo has been collecting more than 100,000 profiles per year since 2012, and nowadays Argo is the major component of the [Global Ocean Observing System](https://goosocean.org/).
+[Argo](https://argo.ucsd.edu/) is an international program that collects information from inside the ocean using a fleet of aproximately 4000 floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level, measuring ocean variables, but spend almost all their life below the surface. The following figure shows the actual configuration of the Argo fleet:
 
 <img src="http://sio-argo.ucsd.edu/statusbig.gif" alt="Argo status" width="800"/>
-&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Argo has been collecting more than 100,000 profiles per year since 2012, and nowadays Argo is the major component of the [Global Ocean Observing System](https://goosocean.org/).
 
 Given the amount of data gathered by the Argo network of floats, the associated documentation has grown considerably and can be overwhelming. That's why we developed the Argo Online school **AoS**, to teach the basic foundations to use and understand the Argo data. The AoS is a set of guided-short videos and hands-on jupyter notebooks designed for high school or graduate students in any discipline.
 The AoS is organized in two parts. The fist one, with two lessons, is devoted to teaching what is the The Argo Program and The Argo Dataset, with a set of 32 short videos and 14 chapters. Lessons 1 and 2 have been designed for students with knowledge similar to those acquired to get into high school, this is, basic knowledge about the relationships between the Earth’s processes, weather and climate; and basic skills in interpreting maps, charts, and tables to organize and analyze data. These two lessons are themselves a closed module, assuming the goal is simply to learn about Argo.
@@ -28,6 +30,7 @@ In this section and using a set of videos you will learn about:
 * [What is an oceanographic profile?](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter14_OceanographicProfile.html)
 * [Technological innovations](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter15_TechInnovations.html)
 * [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter16_RecapLesson1.html)
+
 **Lesson 2. [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.html)**
 
 In this section and using a set of videos you will learn about:
