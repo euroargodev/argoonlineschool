@@ -1,22 +1,22 @@
 ---
 title: 'The Argo Online School: An e-learning tool to get started with Argo'
 tags:
-- Jupyter Notebooks
-- Oceanography
-- Operational oceanography
-- Observing systems
-- Robotics
+  - Jupyter Notebooks
+  - Oceanography
+  - Operational oceanography
+  - Observing systems
+  - Robotics
 authors:
-- name: Alberto González-Santana^[co-first author]
-  orcid: 0000-0001-5781-9330
-  affiliation: 1
-- name: Pedro Vélez-Belchí^[co-first author]
-  orcid: 0000-0003-2404-5679
-  affiliation: 1
+  - name: Alberto González-Santana^[co-first author]
+    orcid: 0000-0001-5781-9330
+    affiliation: 1
+  - name: Pedro Vélez-Belchí^[co-first author]
+    orcid: 0000-0003-2404-5679
+    affiliation: 1
 affiliations:
-- name: Centro Oceanográfico de Canarias, Instituto Español de Oceanografía (IEO - CSIC)
+  - name: Centro Oceanográfico de Canarias, Instituto Español de Oceanografía (IEO - CSIC)
  index: 1
-date: 1 April 2022
+date: 7 October 2024
 bibliography: paper.bib
 ---
 
