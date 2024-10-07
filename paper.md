@@ -7,17 +7,18 @@ tags:
   - Observing systems
   - Robotics
 authors:
-  - name: Alberto González-Santana^[co-first author]
+  - name: Alberto González-Santana
     orcid: 0000-0001-5781-9330
     affiliation: 1
-  - name: Pedro Vélez-Belchí^[co-first author]
+  - name: Pedro Vélez-Belchí
     orcid: 0000-0003-2404-5679
     affiliation: 1
 affiliations:
-  - name: Centro Oceanográfico de Canarias, Instituto Español de Oceanografía (IEO - CSIC)
-    index: 1
+ - name: Centro Oceanográfico de Canarias, Instituto Español de Oceanografía (IEO - CSIC)
+   index: 1
 date: 7 October 2024
 bibliography: paper.bib
+
 ---
 
 # Summary
