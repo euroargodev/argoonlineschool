@@ -15,7 +15,7 @@ authors:
     affiliation: 1
 affiliations:
   - name: Centro Oceanográfico de Canarias, Instituto Español de Oceanografía (IEO - CSIC)
- index: 1
+    index: 1
 date: 7 October 2024
 bibliography: paper.bib
 ---
