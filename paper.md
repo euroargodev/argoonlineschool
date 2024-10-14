@@ -16,19 +16,19 @@ authors:
 affiliations:
 - name: Centro Oceanográfico de Canarias, Instituto Español de Oceanografía (IEO - CSIC)
   index: 1
-date: 7 October 2024
+date: 14 October 2024
 bibliography: paper.bib
 ---
 
 # Summary
 
-The **Argo Online School (AoS)** is a collection of videos, animations and hands-on python-driven jupyter notebooks designed to make the data accessible from more than 4000 profiling floats that constitute the Argo program. The Argo program samples, in near real-time, the upper 2000 meters of the ocean using a fleet of floats that drift with the ocean currents. The AoS is integrated by 28 chapters about the Argo program and its data, organized into a total of 3 lessons and 2 self-assessment sections:
+The **Argo Online School (AoS)** is a collection of videos, animations and hands-on python-driven jupyter notebooks designed to make the data accessible from more than 4,000 profiling floats that constitute the Argo program. The Argo program samples, in near real-time, the upper 2,000 meters of the ocean using a fleet of floats that drift with the ocean currents. The AoS consists of 28 chapters about the Argo program and its data, organized into a total of 3 lessons and 2 self-assessment sections:
 
 * Lesson 1 is intended to introduce the basics of Argo, its objectives and key elements, such as the structure of the Argo floats and their operation in the open ocean.
 
 * Lesson 2 focuses on the data coming from the Argo network, from its organization to its accessibility. Data quality control is also addressed through its two main modes: Real-Time and Delayed-Mode.
 
-* Lesson 3 is the AoS hands-on component, and it requires basic knowledge of python. It provides a set of instructions forpreparing a python environment in case the user wants to run the python Jupyter Notebooks in a local machine. This environment already includes recommended packages. The walkthrough of Lesson 3 shows how to work with the netCDF format, how to access and process Argo data, and create visualizations to enhance understanding of the information derived from Argo data.
+* Lesson 3 is the AoS hands-on component, and it requires basic knowledge of python. It provides a set of instructions for preparing a python environment in case the user wants to run the python Jupyter Notebooks on a local machine. This environment already includes recommended packages. The walkthrough of Lesson 3 shows how to work with the netCDF format, how to access and process Argo data, and create visualizations to enhance understanding of the information derived from Argo data.
 
 The target audience of the AoS is high school, undergraduate or early graduate students. The programming content in Lesson 3 offers an ideal opportunity to support students pursuing a technical or science curriculum. Lessons 1 and 2 form a closed module and can be used independently by learners who wish to focus solely on Argo. It is recommended not to skip any lesson in the AoS, as the content is carefully structured from simpler to more complex concepts, ensuring progressive learning. Users have the opportunity to self-assess their learning progress through the proposed quizzes in the AoS.
 
