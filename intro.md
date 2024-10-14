@@ -71,7 +71,7 @@ Refer to [How to cite Argo data](https://argo.ucsd.edu/data/acknowledging-argo/)
 
 ## License for this book
 
-All the content in the Argo Online School is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0) license.
+All the content in the Argo Online School is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) (CC BY-NC-SA 4.0) license.
 
 ## How to contribute
 
