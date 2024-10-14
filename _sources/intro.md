@@ -6,7 +6,7 @@
 
 # The Argo Online School
 
-[Argo](https://argo.ucsd.edu/) is an international program that collects information from inside the ocean using a fleet of aproximately 4000 floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level, measuring ocean variables, but spend almost all their life below the surface. The following figure shows the actual configuration of the Argo fleet:
+[Argo](https://argo.ucsd.edu/) is an international program that collects information from inside the ocean using a fleet of aproximately 4,000 floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level, measuring ocean variables, but spend almost all their life below the surface. The following figure shows the actual configuration of the Argo fleet:
 
 <figure>
 <img src="http://sio-argo.ucsd.edu/statusbig.gif" alt="Argo status" width="800"/>
@@ -17,7 +17,7 @@ Argo has been collecting more than 100,000 profiles per year since 2012, and now
 
 Given the amount of data gathered by the Argo network of floats, the associated documentation has grown considerably and can be overwhelming. That's why we developed the Argo Online school **AoS**, to teach the basic foundations to use and understand the Argo data. The AoS is a set of guided-short videos and hands-on jupyter notebooks designed for high school or graduate students in any discipline.
 The AoS is organized in two parts. The fist one, with two lessons, is devoted to teaching what is the The Argo Program and The Argo Dataset, with a set of 32 short videos and 14 chapters. Lessons 1 and 2 have been designed for students with knowledge similar to those acquired to get into high school, this is, basic knowledge about the relationships between the Earth’s processes, weather and climate; and basic skills in interpreting maps, charts, and tables to organize and analyze data. These two lessons are themselves a closed module, assuming the goal is simply to learn about Argo.
-The second part includes only one lesson: Using the Argo data, with jupyter notebooks and 8 short videos to teach, hands-on in 14 chapters, how to access the Argo data and use it. This lesson has been designed for students with knowledge similar to those neceesary for lesson 1 and 2 and basic knowledge of the programming language python.
+The second part includes only one lesson: Using the Argo data, with jupyter notebooks and 8 short videos to teach, hands-on in 14 chapters, how to access the Argo data and use it. This lesson has been designed for students with knowledge similar to those necessary for lesson 1 and 2 and basic knowledge of the programming language python.
 
 Lessons 1 and 2 require about 5 hours to be completed, while lesson 3 requires 10 hours to be completed, assuming basic knowledge of python.
 
