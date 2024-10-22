@@ -3,10 +3,11 @@
 </p>
 
 [![status](https://jose.theoj.org/papers/b66eaed8751b3adb6f2f4ad146380818/status.svg)](https://jose.theoj.org/papers/b66eaed8751b3adb6f2f4ad146380818)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13929139.svg)](https://doi.org/10.5281/zenodo.13929139)
 
 # The Argo Online School
 
-[Argo](https://argo.ucsd.edu/) is an international program that collects information from inside the ocean using a fleet of aproximately 4,000 floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level, measuring ocean variables, but spend almost all their life below the surface. The following figure shows the actual configuration of the Argo fleet:
+[Argo](https://argo.ucsd.edu/) is an international program that collects information from inside the ocean using a fleet of approximately 4,000 floats that drift with the ocean currents. The floats move up and down between the surface and a mid-water level, measuring ocean variables, but spend almost all their life below the surface. The following figure shows the actual configuration of the Argo fleet:
 
 <figure>
 <img src="http://sio-argo.ucsd.edu/statusbig.gif" alt="Argo status" width="800"/>
