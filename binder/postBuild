@@ -1,0 +1,10 @@
+#!/bin/bash
+
+jupyter serverextension enable --py nbgitpuller --sys-prefix
+
+jupyter labextension install --clean \
+                            @jupyter-widgets/jupyterlab-manager \
+                            dask-labextension \
+                            @pyviz/jupyterlab_pyviz
+
+#EOF
