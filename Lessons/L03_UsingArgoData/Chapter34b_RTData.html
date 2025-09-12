@@ -1089,13 +1089,13 @@ Attributes:
 <td><p>75% &lt;= N &lt; 100%</p></td>
 </tr>
 <tr class="row-even"><td><p>C</p></td>
-<td><p>75% &lt;= N &lt; 100%</p></td>
+<td><p>50% &lt;= N &lt;  75%</p></td>
 </tr>
 <tr class="row-odd"><td><p>D</p></td>
-<td><p>75% &lt;= N &lt; 100%</p></td>
+<td><p>25% &lt;= N &lt;  50%</p></td>
 </tr>
 <tr class="row-even"><td><p>E</p></td>
-<td><p>75% &lt;= N &lt; 100%</p></td>
+<td><p>0% &lt;= N &lt;  25%</p></td>
 </tr>
 <tr class="row-odd"><td><p>F</p></td>
 <td><p>N = 0%, no profile levels have good data</p></td>
@@ -1115,12 +1115,13 @@ Attributes:
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PROFILE_PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">),</span> 
         <span class="n">dayADS</span><span class="o">.</span><span class="n">LATITUDE</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PROFILE_PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span><span class="p">),</span>
         <span class="s1">&#39;ob&#39;</span><span class="p">)</span>
-
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PROFILE_PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">),</span> 
         <span class="n">dayADS</span><span class="o">.</span><span class="n">LATITUDE</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PROFILE_PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">),</span>
         <span class="s1">&#39;or&#39;</span><span class="p">)</span>
-
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PROFILE_PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">),</span> 
+        <span class="n">dayADS</span><span class="o">.</span><span class="n">LATITUDE</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PROFILE_PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span><span class="p">),</span>
+        <span class="s1">&#39;or&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PROFILE_PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span><span class="p">),</span> 
         <span class="n">dayADS</span><span class="o">.</span><span class="n">LATITUDE</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PROFILE_PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span><span class="p">),</span>
         <span class="s1">&#39;or&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">dayADS</span><span class="o">.</span><span class="n">PROFILE_PSAL_QC</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;E&#39;</span><span class="p">),</span> 

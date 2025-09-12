@@ -428,7 +428,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exhaustibe-quality-controls-are-needed">Exhaustibe quality controls are needed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exhaustive-quality-controls-are-needed">Exhaustive quality controls are needed</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-firtst-quality-control-real-time">The firtst quality control: Real-Time</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-in-the-sensors-vs-natural-variability">Problems in the sensors vs natural variability</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biodeposition">Biodeposition</a></li>
@@ -448,13 +448,13 @@ document.write(`
                   
   <section id="quality-control">
 <h1>Quality control<a class="headerlink" href="#quality-control" title="Link to this heading">#</a></h1>
-<section id="exhaustibe-quality-controls-are-needed">
-<h2>Exhaustibe quality controls are needed<a class="headerlink" href="#exhaustibe-quality-controls-are-needed" title="Link to this heading">#</a></h2>
-<p>There are numerous reasons why data can be reported abnormally during the Argo profiler’s operating cycles. It may be due to problems related to the CTD sensors, either external interference to the sensor, for instance, due to biodeposition, or intrinsic problems of the sensor itself. In both cases, incorrect data with spikes, biases, sensor drifts, etc., can be reported as bad data or possible bad data. Therefore Argo needs exhaustibe quality controls.</p>
+<section id="exhaustive-quality-controls-are-needed">
+<h2>Exhaustive quality controls are needed<a class="headerlink" href="#exhaustive-quality-controls-are-needed" title="Link to this heading">#</a></h2>
+<p>There are numerous reasons why data can be reported abnormally during the Argo profiler’s operating cycles. It may be due to problems related to the CTD sensors, either external interference to the sensor, for instance, due to biodeposition, or intrinsic problems of the sensor itself. In both cases, incorrect data with spikes, biases, sensor drifts, etc., can be reported as bad data or possible bad data. Therefore Argo needs exhaustive quality controls.</p>
 <p>  <center></p>
-<iframe width="800" height="450" src="https://www.youtube.com/embed/pvJN-6OXtDw?si=0Br4TKIy4JNEkI-R&amp;start=1" title="The Argo Online School 231 - The Argo data.  Quality control: Exhaustibe quality controls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/pvJN-6OXtDw?si=0Br4TKIy4JNEkI-R&amp;start=1" title="The Argo Online School 231 - The Argo data.  Quality control: Exhaustive quality controls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
-<p><em>The Argo Online School 231 - The Argo data. Quality control: Exhaustibe quality controls</em>
+<p><em>The Argo Online School 231 - The Argo data. Quality control: Exhaustive quality controls</em>
   </p>
 </section>
 <section id="the-firtst-quality-control-real-time">
@@ -475,7 +475,7 @@ document.write(`
 <p>However, detecting problems related to the CTD sensors can sometimes be very difficult. Even more when we take into account the concept of “natural variability”. Natural variability is just the natural change of the properties of the ocean and it may happen in periods ranging from seconds to millennia. For instance, changes occur daily, such as the tides; sporadically, such as storm surges or tsunamis; and seasonally, such as the simple warming of coastal waters in summer. In addition to the uncertainty associated with sensor errors, natural systems have an uncertainty associated with the range of natural variability itself. In such cases, it is very difficult to distinguish between the natural variability observed and the errors.</p>
 <p>Since there is also natural variability in the temperature and salinity that can be mistaken for sensor malfunction, we have to be careful not to treat actual natural variability as sensor malfunction and correct it.</p>
 <p>For instance, a float may drift into saltier waters and we may misinterpret the change as sensor malfunctioning if we do not check out the trajectory of the float. It may also happen that an area of the ocean is becoming saltier than it used to be, and therefore if we compare the data with historical data, we risk losing this natural variability.</p>
-<p>Additionally thre are spikes, this is abrupt short changes in the data and constitute a clear case of anomaly. Spikes are easy to detect and correct. Drifts and offsets can be identified in the trend of ΔS over time, where ΔS is the difference in salinity between float-measured values and statistical recommendations. If ΔS = a + bt, where t is time, then a is the offset and b is the drift rate. Note that these drifts and offsets can be sensor-related, or they can be due to natural variability, as we explained before. To distinguish between sensor errors and natural variability evaluation it is necessary that experts look carefully at the data.</p>
+<p>Additionally there are spikes, this is abrupt short changes in the data and constitute a clear case of anomaly. Spikes are easy to detect and correct. Drifts and offsets can be identified in the trend of ΔS over time, where ΔS is the difference in salinity between float-measured values and statistical recommendations. If ΔS = a + bt, where t is time, then a is the offset and b is the drift rate. Note that these drifts and offsets can be sensor-related, or they can be due to natural variability, as we explained before. To distinguish between sensor errors and natural variability evaluation it is necessary that experts look carefully at the data.</p>
 <p>In the following figure, and video,  we show the most common behaviours found in the salinity data:</p>
 <center><img src="https://raw.githubusercontent.com/euroargodev/argoonlineschool/master/images/GIF_Bad_Data.gif" alt="Bad data" width="800"/></center>
 <p>  </p>
@@ -497,8 +497,7 @@ document.write(`
 <center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/2AtB6ttgfBw?si=dVHzp5Kqq5Zj7H03" title="The Argo Online School 234 - The Argo data.  Quality control: An additional quality control: The Delayed mode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
-_The Argo Online School 234 - The Argo data. Quality control: An additional quality control: The Delayed mode_
-&nbsp;&nbsp;
+<p><em>The Argo Online School 234 - The Argo data. Quality control: An additional quality control: The Delayed mode</em>   </p>
 <p>Thus, one of the main obstacles since the start of the Argo Program was providing a technique that allowed us to distinguish between natural variations in salinity and the drift of the conductivity sensor due to biodeposition. The Delayed - Mode quality control is based on a statistical estimation called objective analysis; it provides a solid basis for interpolating irregularly spaced data. During the first years of the Argo era, researchers from the University of Washington and the Woods Hole Oceanographic Institution developed a method based on the comparison of all measurements of each Argo float and historical data at certain depth levels characterized by stability in salinity, but dependent on each zone.</p>
 <p>This method is known as OW (Wong et al, <a class="reference external" href="https://journals.ametsoc.org/view/journals/atot/20/2/1520-0426_2003_020_0308_dmcoac_2_0_co_2.xml">Delayed-Mode Calibration of Autonomous CTD Profiling Float Salinity Data by θ – S Climatology</a>) calibration and is currently used for each of the floats. This type of calibration is repeated, at least, every year to guarantee the accuracy of the measurements. As we said before, this analysis is crucial to keeping measurements that don’t coincide with historical records but that contain natural variability unknown to date. Each data set must be carefully analyzed and, despite good tools such as objective analysis, the final decision on a possible data correction rests in the hands of the expert, what we call the Delayed Mode operator.</p>
 <p>In the following animation we show a real case of a Delayed mode calibration of salinity for float <a class="reference external" href="https://fleetmonitoring.euro-argo.eu/dashboard?WMO=6901268">6901268</a> during its first 80 cycles (x-axis) . The blue line shows the actual measurements of the float at te isotherm 3.7C (around 2000 dbars) while the red line shows the value obtained by the OW method taking into account the nearby observations.</p>
@@ -577,7 +576,7 @@ _The Argo Online School 234 - The Argo data. Quality control: An additional qual
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exhaustibe-quality-controls-are-needed">Exhaustibe quality controls are needed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exhaustive-quality-controls-are-needed">Exhaustive quality controls are needed</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-firtst-quality-control-real-time">The firtst quality control: Real-Time</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problems-in-the-sensors-vs-natural-variability">Problems in the sensors vs natural variability</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#biodeposition">Biodeposition</a></li>
