@@ -1,15 +1,15 @@
 ## Quality control
 
 
-### Exhaustibe quality controls are needed
+### Exhaustive quality controls are needed
 
-There are numerous reasons why data can be reported abnormally during the Argo profiler's operating cycles. It may be due to problems related to the CTD sensors, either external interference to the sensor, for instance, due to biodeposition, or intrinsic problems of the sensor itself. In both cases, incorrect data with spikes, biases, sensor drifts, etc., can be reported as bad data or possible bad data. Therefore Argo needs exhaustibe quality controls.
+There are numerous reasons why data can be reported abnormally during the Argo profiler's operating cycles. It may be due to problems related to the CTD sensors, either external interference to the sensor, for instance, due to biodeposition, or intrinsic problems of the sensor itself. In both cases, incorrect data with spikes, biases, sensor drifts, etc., can be reported as bad data or possible bad data. Therefore Argo needs exhaustive quality controls.
 
 &nbsp;&nbsp;<center>
-<iframe width="800" height="450" src="https://www.youtube.com/embed/pvJN-6OXtDw?si=0Br4TKIy4JNEkI-R&amp;start=1" title="The Argo Online School 231 - The Argo data.  Quality control: Exhaustibe quality controls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/pvJN-6OXtDw?si=0Br4TKIy4JNEkI-R&amp;start=1" title="The Argo Online School 231 - The Argo data.  Quality control: Exhaustive quality controls" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
 
-_The Argo Online School 231 - The Argo data. Quality control: Exhaustibe quality controls_
+_The Argo Online School 231 - The Argo data. Quality control: Exhaustive quality controls_
 &nbsp;&nbsp;
 
 
@@ -43,7 +43,7 @@ Since there is also natural variability in the temperature and salinity that can
 
 For instance, a float may drift into saltier waters and we may misinterpret the change as sensor malfunctioning if we do not check out the trajectory of the float. It may also happen that an area of the ocean is becoming saltier than it used to be, and therefore if we compare the data with historical data, we risk losing this natural variability. 
 
-Additionally thre are spikes, this is abrupt short changes in the data and constitute a clear case of anomaly. Spikes are easy to detect and correct. Drifts and offsets can be identified in the trend of ΔS over time, where ΔS is the difference in salinity between float-measured values and statistical recommendations. If ΔS = a + bt, where t is time, then a is the offset and b is the drift rate. Note that these drifts and offsets can be sensor-related, or they can be due to natural variability, as we explained before. To distinguish between sensor errors and natural variability evaluation it is necessary that experts look carefully at the data.
+Additionally there are spikes, this is abrupt short changes in the data and constitute a clear case of anomaly. Spikes are easy to detect and correct. Drifts and offsets can be identified in the trend of ΔS over time, where ΔS is the difference in salinity between float-measured values and statistical recommendations. If ΔS = a + bt, where t is time, then a is the offset and b is the drift rate. Note that these drifts and offsets can be sensor-related, or they can be due to natural variability, as we explained before. To distinguish between sensor errors and natural variability evaluation it is necessary that experts look carefully at the data.
 
 In the following figure, and video,  we show the most common behaviours found in the salinity data:
 
@@ -73,8 +73,8 @@ Taking all of this into account, the Argo Comunity realized that RTQC was not en
 <center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/2AtB6ttgfBw?si=dVHzp5Kqq5Zj7H03" title="The Argo Online School 234 - The Argo data.  Quality control: An additional quality control: The Delayed mode" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </center>
-_The Argo Online School 234 - The Argo data. Quality control: An additional quality control: The Delayed mode_
-&nbsp;&nbsp;
+
+_The Argo Online School 234 - The Argo data. Quality control: An additional quality control: The Delayed mode_ &nbsp;&nbsp;
 
 Thus, one of the main obstacles since the start of the Argo Program was providing a technique that allowed us to distinguish between natural variations in salinity and the drift of the conductivity sensor due to biodeposition. The Delayed - Mode quality control is based on a statistical estimation called objective analysis; it provides a solid basis for interpolating irregularly spaced data. During the first years of the Argo era, researchers from the University of Washington and the Woods Hole Oceanographic Institution developed a method based on the comparison of all measurements of each Argo float and historical data at certain depth levels characterized by stability in salinity, but dependent on each zone. 
 
