@@ -12,7 +12,8 @@ The standard Argo floats are devices of about 20 kg weight and roughly 2 meters 
  
 &nbsp;&nbsp;<center>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/IL-zc3hJVOQ?si=DEUPObrTMUjstpaD&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
-_The Argo Online School 132 - The Argo Program. How the observations are done: What’s inside an ARGO float?_
+
+_The Argo Online School 132 - The Argo Program. How the observations are done: What’s inside an ARGO float?_ 
 &nbsp;&nbsp;
 
 #### Hydraulic System 
