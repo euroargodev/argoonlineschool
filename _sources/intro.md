@@ -16,11 +16,11 @@
 
 Argo has been collecting more than 100,000 profiles per year since 2012, and nowadays Argo is the major component of the [Global Ocean Observing System](https://goosocean.org/).
 
-Given the amount of data gathered by the Argo network of floats, the associated documentation has grown considerably and can be overwhelming. That's why we developed the Argo Online school **AoS**, to teach the basic foundations to use and understand the Argo data. The AoS is a set of guided-short videos and hands-on jupyter notebooks designed for high school or graduate students in any discipline.
-The AoS is organized in two parts. The fist one, with two lessons, is devoted to teaching what is the The Argo Program and The Argo Dataset, with a set of 32 short videos and 14 chapters. Lessons 1 and 2 have been designed for students with knowledge similar to those acquired to get into high school, this is, basic knowledge about the relationships between the Earth’s processes, weather and climate; and basic skills in interpreting maps, charts, and tables to organize and analyze data. These two lessons are themselves a closed module, assuming the goal is simply to learn about Argo.
-The second part includes only one lesson: Using the Argo data, with jupyter notebooks and 8 short videos to teach, hands-on in 14 chapters, how to access the Argo data and use it. This lesson has been designed for students with knowledge similar to those necessary for lesson 1 and 2 and basic knowledge of the programming language python.
+Given the amount of data gathered by the Argo network of floats, the associated documentation has grown considerably and can be overwhelming. That's why we developed the Argo Online school **AoS**, to teach the basic foundations to use and understand the Argo data. 
 
-Lessons 1 and 2 require about 5 hours to be completed, while lesson 3 requires 10 hours to be completed, assuming basic knowledge of python.
+The AoS is a set of guided-short videos and hands-on jupyter notebooks designed for high school or graduate students in any discipline. The AoS is organized in two parts:
+- The fist one, with two lessons, is devoted to teaching what is the The Argo Program and The Argo Dataset, with a set of 32 short videos and 14 chapters. Lessons 1 and 2 have been designed for students with knowledge similar to those acquired to get into high school, this is, basic knowledge about the relationships between the Earth’s processes, weather and climate; and basic skills in interpreting maps, charts, and tables to organize and analyze data. These two lessons are themselves a closed module, assuming the goal is simply to learn about Argo. Lessons 1 and 2 require, in total, about 5 hours to be completed
+- The second part includes only one lesson: Using the Argo data, with jupyter notebooks and 8 short videos to teach, hands-on in 14 chapters, how to access the Argo data and use it. This lesson has been designed for students with knowledge similar to those necessary for lesson 1 and 2 and basic knowledge of the programming language python. Lesson 3 requires 10 hours to be completed, assuming basic knowledge of python.
 
 These are the chapters in each lesson:
 
@@ -55,6 +55,8 @@ In this section and using hands-on jupyter notebooks you will learn about:
 * [Accesing Real-Time and Delayed mode data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter34_RTandDM.html)
 * [Additional examples](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter36_Examples.html)
 * [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter35_RecapLesson3.html)
+
+All the videos could be also accessed in a single playlist: [The Argo Online School playlist](https://youtube.com/playlist?list=PLCkpTvGjY89Jy7g9GxUO1VDlxX6MpcxGp&feature=shared)
 
 Given the structure of the AoS, it could be used for educational purposes. For high school students, lessons 1 and 2 could be used as a project with the aim of finding questions that ocean observations, such as Argo,  may help to understand, and how.  For students with a technical or science curriculum, that includes programming in python, other projects could be to find the seasonal change in temperature at the surface at a given ocean, and compare it with the changes at 1000 m or 2000 m, or explain - sometimes is very hard- the trajectory of a given float.  Teachers are welcome to open an [issue on the public github repository](https://github.com/euroargodev/argoonlineschool/issues) to get help in how to develop more projects.
 
