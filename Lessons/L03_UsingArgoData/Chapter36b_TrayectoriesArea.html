@@ -459,7 +459,7 @@ It is pre-downloaded in the ./Data folder, but you can download it from the Cori
 <span class="n">LONs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 <span class="n">LATs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 <span class="k">for</span> <span class="n">iday</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">31</span><span class="p">):</span>
-    <span class="n">filein</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;./Data/202107-ArgoData/geo/atlantic_ocean/2020/11/202011</span><span class="si">{</span><span class="n">iday</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">_prof.nc&quot;</span>
+    <span class="n">filein</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;../../Data/202107-ArgoData/geo/atlantic_ocean/2020/11/202011</span><span class="si">{</span><span class="n">iday</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">_prof.nc&quot;</span>
     <span class="n">DS</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filein</span><span class="p">)</span>
     <span class="c1">#look for the WMO and DAC for each float</span>
     <span class="n">LONs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">LONs</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
@@ -507,7 +507,8 @@ It is pre-downloaded in the ./Data folder, but you can download it from the Cori
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()})</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">LONs</span><span class="p">[</span><span class="n">indice</span><span class="p">],</span><span class="n">LATs</span><span class="p">[</span><span class="n">indice</span><span class="p">],</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="o">.</span><span class="n">with_scale</span><span class="p">(</span><span class="s1">&#39;110m&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="o">.</span><span class="n">with_scale</span><span class="p">(</span><span class="s1">&#39;10m&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="o">.</span><span class="n">with_scale</span><span class="p">(</span><span class="s1">&#39;10m&#39;</span><span class="p">),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">x_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">y_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
@@ -515,7 +516,7 @@ It is pre-downloaded in the ./Data folder, but you can download it from the Cori
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/5444a1102b16c99df1a09753c1f0d705b26e79cfa3662504c6ac3a45508a4206.png" src="../../_images/5444a1102b16c99df1a09753c1f0d705b26e79cfa3662504c6ac3a45508a4206.png" />
+<img alt="../../_images/f37df3770a0d1af1964a3f142a670cbb4102121cb8b1f3a74005436b1dbfbffb.png" src="../../_images/f37df3770a0d1af1964a3f142a670cbb4102121cb8b1f3a74005436b1dbfbffb.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -533,7 +534,7 @@ It is pre-downloaded in the ./Data folder, but you can download it from the Cori
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()})</span>
 
 <span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">WMOs_area</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
-    <span class="n">filein</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;./Data/202107-ArgoData/dac/</span><span class="si">{</span><span class="n">DACs_area</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">WMOs_area</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">:</span><span class="s2">7.0f</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">WMOs_area</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">:</span><span class="s2">7.0f</span><span class="si">}</span><span class="s2">_prof.nc&quot;</span>
+    <span class="n">filein</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;../../Data/202107-ArgoData/dac/</span><span class="si">{</span><span class="n">DACs_area</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">WMOs_area</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">:</span><span class="s2">7.0f</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">WMOs_area</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">:</span><span class="s2">7.0f</span><span class="si">}</span><span class="s2">_prof.nc&quot;</span>
     <span class="n">DS</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filein</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">DS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">DS</span><span class="o">.</span><span class="n">LATITUDE</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">LATITUDE</span><span class="p">,</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
 
@@ -546,7 +547,7 @@ It is pre-downloaded in the ./Data folder, but you can download it from the Cori
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e7e9c233c404ed0b80f582d1b3b8a4d7dacfb59aacf1dfc892a34916cfb2e348.png" src="../../_images/e7e9c233c404ed0b80f582d1b3b8a4d7dacfb59aacf1dfc892a34916cfb2e348.png" />
+<img alt="../../_images/8eb0da28fe1946a1f7296338d6cb87ab6648ea99b64ae37a1d8fa1c08ba14cde.png" src="../../_images/8eb0da28fe1946a1f7296338d6cb87ab6648ea99b64ae37a1d8fa1c08ba14cde.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -576,27 +577,76 @@ It is pre-downloaded in the ./Data folder, but you can download it from the Cori
  */
 
 :root {
-  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
-  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
-  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
-  --xr-border-color: var(--jp-border-color2, #e0e0e0);
-  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
-  --xr-background-color: var(--jp-layout-color0, white);
-  --xr-background-color-row-even: var(--jp-layout-color1, white);
-  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
 }
 
-html[theme=dark],
-body[data-theme=dark],
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
 body.vscode-dark {
-  --xr-font-color0: rgba(255, 255, 255, 1);
-  --xr-font-color2: rgba(255, 255, 255, 0.54);
-  --xr-font-color3: rgba(255, 255, 255, 0.38);
-  --xr-border-color: #1F1F1F;
-  --xr-disabled-color: #515151;
-  --xr-background-color: #111111;
-  --xr-background-color-row-even: #111111;
-  --xr-background-color-row-odd: #313131;
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
 }
 
 .xr-wrap {
@@ -637,7 +687,7 @@ body.vscode-dark {
 .xr-sections {
   padding-left: 0 !important;
   display: grid;
-  grid-template-columns: 150px auto auto 1fr 20px 20px;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
 }
 
 .xr-section-item {
@@ -645,16 +695,23 @@ body.vscode-dark {
 }
 
 .xr-section-item input {
-  display: none;
+  display: inline-block;
+  opacity: 0;
+  height: 0;
 }
 
 .xr-section-item input + label {
   color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
 }
 
 .xr-section-item input:enabled + label {
   cursor: pointer;
   color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
 }
 
 .xr-section-item input:enabled + label:hover {
@@ -678,7 +735,7 @@ body.vscode-dark {
 
 .xr-section-summary-in + label:before {
   display: inline-block;
-  content: '►';
+  content: "►";
   font-size: 11px;
   width: 15px;
   text-align: center;
@@ -689,7 +746,7 @@ body.vscode-dark {
 }
 
 .xr-section-summary-in:checked + label:before {
-  content: '▼';
+  content: "▼";
 }
 
 .xr-section-summary-in:checked + label > span {
@@ -761,15 +818,15 @@ body.vscode-dark {
 }
 
 .xr-dim-list:before {
-  content: '(';
+  content: "(";
 }
 
 .xr-dim-list:after {
-  content: ')';
+  content: ")";
 }
 
 .xr-dim-list li:not(:last-child):after {
-  content: ',';
+  content: ",";
   padding-right: 5px;
 }
 
@@ -786,7 +843,9 @@ body.vscode-dark {
 .xr-var-item label,
 .xr-var-item > .xr-var-name span {
   background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
   margin-bottom: 0;
+  padding-top: 2px;
 }
 
 .xr-var-item > .xr-var-name:hover span {
@@ -797,6 +856,7 @@ body.vscode-dark {
 .xr-var-list > li:nth-child(odd) > label,
 .xr-var-list > li:nth-child(odd) > .xr-var-name span {
   background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
 }
 
 .xr-var-name {
@@ -846,8 +906,15 @@ body.vscode-dark {
 .xr-var-data,
 .xr-index-data {
   display: none;
-  background-color: var(--xr-background-color) !important;
-  padding-bottom: 5px !important;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
 }
 
 .xr-var-attrs-in:checked ~ .xr-var-attrs,
@@ -858,6 +925,12 @@ body.vscode-dark {
 
 .xr-var-data > table {
   float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
 }
 
 .xr-var-name span,
@@ -919,8 +992,37 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.DataArray &#x27;LONGITUDE&#x27; (N_PROF: 129)&gt; Size: 1kB
-[129 values with dtype=float64]
+array([-20.61163, -20.66951, -20.68956, -20.71941, -20.73801, -20.74973,
+       -20.76856, -20.77793, -20.78967, -20.78469, -20.77624, -20.77541,
+       -20.7688 , -20.7536 , -20.73522, -20.74639, -20.74856, -20.7441 ,
+       -20.7615 , -20.76061, -20.6256 , -20.63442, -20.70745, -20.90999,
+       -20.95829, -20.93501, -20.92692, -20.90833, -20.87885, -20.88607,
+       -20.86528, -20.92509, -21.12049, -21.41657, -21.59917, -21.56384,
+       -21.53024, -21.46493, -21.30885, -21.12225, -20.96885, -20.82432,
+       -20.69381, -20.6051 , -20.54216, -20.51323, -20.49283, -20.51701,
+       -20.54049, -20.56988, -20.61866, -20.66153, -20.7072 , -20.7341 ,
+       -20.77096, -20.77777, -20.73383, -20.68994, -20.6538 , -20.6079 ,
+       -20.59322, -20.58997, -20.57064, -20.53162, -20.46047, -20.4076 ,
+       -20.35645, -20.30816, -20.28188, -20.19829, -20.11332, -20.0684 ,
+       -20.0046 , -19.9053 , -19.79671, -19.65404, -19.45421, -19.24356,
+       -19.00721, -18.80023, -18.65796, -18.59489, -18.53118, -18.52991,
+       -18.50901, -18.50963, -18.49753, -18.47526, -18.48959, -18.50653,
+       -18.57326, -18.6666 , -18.77218, -18.91723, -19.06612, -19.20573,
+       -19.32956, -19.44489, -19.5743 , -19.69033, -19.7972 , -19.86926,
+       -19.90829, -19.90235, -19.86124, -19.84219, -19.85175, -19.90715,
+       -20.00296, -20.13929, -20.32244, -20.52506, -20.74644, -20.98122,
+       -21.16637, -21.35281, -21.51241, -21.63025, -21.77267, -21.84874,
+       -21.83408, -21.79906, -21.72426, -21.64634, -21.5686 , -21.48585,
+       -21.43502, -21.42082, -21.40333])
 Dimensions without coordinates: N_PROF
 Attributes:
     long_name:      Longitude of the station, best estimate
@@ -928,7 +1030,28 @@ Attributes:
     units:          degree_east
     valid_min:      -180.0
     valid_max:      180.0
-    axis:           X</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'LONGITUDE'</div><ul class='xr-dim-list'><li><span>N_PROF</span>: 129</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-fe0cc008-8610-41c3-8d7a-264aa9fb7e88' class='xr-array-in' type='checkbox' checked><label for='section-fe0cc008-8610-41c3-8d7a-264aa9fb7e88' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>...</span></div><div class='xr-array-data'><pre>[129 values with dtype=float64]</pre></div></div></li><li class='xr-section-item'><input id='section-4fd10d2c-c04b-4af2-b80c-40cf6c7e5f7f' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-4fd10d2c-c04b-4af2-b80c-40cf6c7e5f7f' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-4d8faa74-89f6-4172-9396-fc65b985b108' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-4d8faa74-89f6-4172-9396-fc65b985b108' class='xr-section-summary'  title='Expand/collapse section'>Indexes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-5f649412-6245-417f-a302-9228224334e9' class='xr-section-summary-in' type='checkbox'  checked><label for='section-5f649412-6245-417f-a302-9228224334e9' class='xr-section-summary' >Attributes: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude of the station, best estimate</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degree_east</dd><dt><span>valid_min :</span></dt><dd>-180.0</dd><dt><span>valid_max :</span></dt><dd>180.0</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div></li></ul></div></div></div></div>
+    axis:           X</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.DataArray</div><div class='xr-array-name'>'LONGITUDE'</div><ul class='xr-dim-list'><li><span>N_PROF</span>: 129</li></ul></div><ul class='xr-sections'><li class='xr-section-item'><div class='xr-array-wrap'><input id='section-5ec4f822-8328-41b0-975a-0bd4c4a8fd41' class='xr-array-in' type='checkbox' checked><label for='section-5ec4f822-8328-41b0-975a-0bd4c4a8fd41' title='Show/hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-array-preview xr-preview'><span>-20.61 -20.67 -20.69 -20.72 -20.74 ... -21.49 -21.44 -21.42 -21.4</span></div><div class='xr-array-data'><pre>array([-20.61163, -20.66951, -20.68956, -20.71941, -20.73801, -20.74973,
+       -20.76856, -20.77793, -20.78967, -20.78469, -20.77624, -20.77541,
+       -20.7688 , -20.7536 , -20.73522, -20.74639, -20.74856, -20.7441 ,
+       -20.7615 , -20.76061, -20.6256 , -20.63442, -20.70745, -20.90999,
+       -20.95829, -20.93501, -20.92692, -20.90833, -20.87885, -20.88607,
+       -20.86528, -20.92509, -21.12049, -21.41657, -21.59917, -21.56384,
+       -21.53024, -21.46493, -21.30885, -21.12225, -20.96885, -20.82432,
+       -20.69381, -20.6051 , -20.54216, -20.51323, -20.49283, -20.51701,
+       -20.54049, -20.56988, -20.61866, -20.66153, -20.7072 , -20.7341 ,
+       -20.77096, -20.77777, -20.73383, -20.68994, -20.6538 , -20.6079 ,
+       -20.59322, -20.58997, -20.57064, -20.53162, -20.46047, -20.4076 ,
+       -20.35645, -20.30816, -20.28188, -20.19829, -20.11332, -20.0684 ,
+       -20.0046 , -19.9053 , -19.79671, -19.65404, -19.45421, -19.24356,
+       -19.00721, -18.80023, -18.65796, -18.59489, -18.53118, -18.52991,
+       -18.50901, -18.50963, -18.49753, -18.47526, -18.48959, -18.50653,
+       -18.57326, -18.6666 , -18.77218, -18.91723, -19.06612, -19.20573,
+       -19.32956, -19.44489, -19.5743 , -19.69033, -19.7972 , -19.86926,
+       -19.90829, -19.90235, -19.86124, -19.84219, -19.85175, -19.90715,
+       -20.00296, -20.13929, -20.32244, -20.52506, -20.74644, -20.98122,
+       -21.16637, -21.35281, -21.51241, -21.63025, -21.77267, -21.84874,
+       -21.83408, -21.79906, -21.72426, -21.64634, -21.5686 , -21.48585,
+       -21.43502, -21.42082, -21.40333])</pre></div></div></li><li class='xr-section-item'><input id='section-d8f00ad8-8ee5-4d12-9370-235a4a5ac8ed' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-d8f00ad8-8ee5-4d12-9370-235a4a5ac8ed' class='xr-section-summary'  title='Expand/collapse section'>Coordinates: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-96f772cb-2e26-4355-863e-3c800f6f836d' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-96f772cb-2e26-4355-863e-3c800f6f836d' class='xr-section-summary'  title='Expand/collapse section'>Indexes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'></ul></div></li><li class='xr-section-item'><input id='section-84ee002d-0123-4026-a316-6dc4f4951665' class='xr-section-summary-in' type='checkbox'  checked><label for='section-84ee002d-0123-4026-a316-6dc4f4951665' class='xr-section-summary' >Attributes: <span>(6)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude of the station, best estimate</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degree_east</dd><dt><span>valid_min :</span></dt><dd>-180.0</dd><dt><span>valid_max :</span></dt><dd>180.0</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 
