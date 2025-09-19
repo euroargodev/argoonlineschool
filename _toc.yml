@@ -32,6 +32,7 @@ parts:
   - file: Lessons/L03_UsingArgoData/Chapter32_ArgoDatabyFloat_Intro.ipynb      
     sections:
     - file: Lessons/L03_UsingArgoData/Chapter32b_ArgoDatabyFloat_Cycle.ipynb      
+    - file: Lessons/L03_UsingArgoData/Chapter32b_ArgoDatabyFloat_CycleAWS.ipynb      
     - file: Lessons/L03_UsingArgoData/Chapter32c_ArgoDatabyFloat_Prof.ipynb      
     - file: Lessons/L03_UsingArgoData/Chapter32d_ArgoDatabyFloat_Traj.ipynb      
     - file: Lessons/L03_UsingArgoData/Chapter32e_ArgoDatabyFloat_ArgoPy.ipynb      
