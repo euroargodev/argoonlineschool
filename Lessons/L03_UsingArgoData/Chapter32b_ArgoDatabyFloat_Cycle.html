@@ -230,7 +230,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Chapter35_RecapLesson3.html">Recap</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter36_Examples.html">Additional examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter36a_Status.html">Argo status</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter36a_StatusAWS.html">Argo status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter36a_StatusAWS.html">Argo status with AWS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter36b_TrayectoriesArea.html">Argo floats in an area</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HandsOn_Creta_Example01.html">Hands-on Creta 01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HandsOn_Creta_Example02.html">Hands-on Creta 02</a></li>
@@ -469,7 +469,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>Let’s read the data from the first cycle of float 6901254. Note taht at the time we dowloaded the data there were only Real-Time observations, that is the reason the file name begins with and “R”</p>
+<p>Let’s read the data from the Real-Time observation of the first cycle of float 6901254, that is the reason the file name begins with and “R”</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cy1</span>  <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;../../Data/202107-ArgoData/dac/coriolis/6901254/profiles/R6901254_001.nc&#39;</span><span class="p">)</span>
@@ -477,6 +477,7 @@ document.write(`
 </div>
 </div>
 </div>
+<p><em>In case you do not have the data downloaded please take a look to this notebook: <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter32b_ArgoDatabyFloat_CycleAWS.html">Reading an Argo cycle with AWS</a>, the only difference is the path to the file</em></p>
 <p>Printing the object gives you summary information.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
