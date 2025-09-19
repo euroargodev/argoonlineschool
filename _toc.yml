@@ -51,6 +51,7 @@ parts:
   - file: Lessons/L03_UsingArgoData/Chapter36_Examples.ipynb      
     sections:
     - file: Lessons/L03_UsingArgoData/Chapter36a_Status.ipynb      
+    - file: Lessons/L03_UsingArgoData/Chapter36a_StatusAWS.ipynb      
     - file: Lessons/L03_UsingArgoData/Chapter36b_TrayectoriesArea.ipynb      
     - file: Lessons/L03_UsingArgoData/HandsOn_Creta_Example01.ipynb
     - file: Lessons/L03_UsingArgoData/HandsOn_Creta_Example02.ipynb

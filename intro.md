@@ -34,19 +34,19 @@ In this section and using a set of videos you will learn about:
 * [Technological innovations](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter15_TechInnovations.html)
 * [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L01_TheArgoProgram/Chapter16_RecapLesson1.html)
 
-**Lesson 2. [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter10_TheArgoData_intro.html)**
+**Lesson 2. [The Argo Data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter20_TheArgoData_intro.html)**
 
 In this section and using a set of videos you will learn about:
-* [The Argo General Data Stream](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter12_ArgoDataStream.html)
-* [What are the Argo data and its format?](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter13_WhatArgoDataFormat.html)
-* [QualityControl](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter14_QualityControl.html)
-* [What does a quality control flag mean?](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter15_QualityFlagMean.html)
-* [Accesing the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter16_GetAccesOrganized.html)
-* [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter17_RecapLesson2.html)
+* [The Argo General Data Stream](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter21_ArgoDataStream.html)
+* [What are the Argo data and its format?](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter22_WhatArgoDataFormat.html)
+* [QualityControl](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter23_QualityControl.html)
+* [What does a quality control flag mean?](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter24_QualityFlagMean.html)
+* [Accesing the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter25_GetAccesOrganized.html)
+* [Recap](https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter26_RecapLesson2.html)
 
 Additonally we have included Quizzes for the [first](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz10.html) and [second](https://euroargodev.github.io/argoonlineschool/Lessons/Quizzes/Quiz20.html) lessons if you want to challenge yourself!
 
-**Lesson 3. [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter10_UsingArgoData_intro.html)**
+**Lesson 3. [Using the Argo data](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter30_UsingArgoData_intro.html)**
 
 In this section and using hands-on jupyter notebooks you will learn about:
 * [The netCDF format](https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter31_TheNetCDFFormat.html)
