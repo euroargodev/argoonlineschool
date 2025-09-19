@@ -57,12 +57,12 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Lessons/L03_UsingArgoData/Chapter36a_Status';</script>
-    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter36a_Status.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lessons/L03_UsingArgoData/Chapter36a_StatusAWS';</script>
+    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter36a_StatusAWS.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Argo status" href="Chapter36a_StatusAWS.html" />
-    <link rel="prev" title="Additional examples" href="Chapter36_Examples.html" />
+    <link rel="next" title="Argo floats in an area" href="Chapter36b_TrayectoriesArea.html" />
+    <link rel="prev" title="Argo status" href="Chapter36a_Status.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -229,8 +229,8 @@
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="Chapter35_RecapLesson3.html">Recap</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter36_Examples.html">Additional examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Chapter36a_Status.html">Argo status</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Argo status</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter36a_StatusAWS.html">Argo status</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter36b_TrayectoriesArea.html">Argo floats in an area</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HandsOn_Creta_Example01.html">Hands-on Creta 01</a></li>
 <li class="toctree-l2"><a class="reference internal" href="HandsOn_Creta_Example02.html">Hands-on Creta 02</a></li>
@@ -307,7 +307,7 @@
       
       
       
-      <li><a href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L03_UsingArgoData/Chapter36a_Status.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L03_UsingArgoData/Chapter36a_StatusAWS.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -337,7 +337,7 @@
       
       
       
-      <li><a href="../../_sources/Lessons/L03_UsingArgoData/Chapter36a_Status.ipynb" target="_blank"
+      <li><a href="../../_sources/Lessons/L03_UsingArgoData/Chapter36a_StatusAWS.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -435,7 +435,7 @@ document.write(`
                   
   <section id="argo-status">
 <h1>Argo status<a class="headerlink" href="#argo-status" title="Link to this heading">#</a></h1>
-<p>For this example it is requires to have downloaded the full version of the Argo Global Data Assembly Centre (Argo GDAC) snapshot from july 2021 <a class="reference external" href="https://www.seanoe.org/data/00311/42182/#86141">DOI 10.17882/42182</a></p>
+<p>In this example we use a new feature!, the Argo data is uploaded to <a class="reference external" href="https://registry.opendata.aws/argo-gdac-marinedata/">Amazon Web Services, AWS</a> and here we use this advantage to access the Argo data in the cloud!</p>
 <p>Let’s use, reproduce the figure of the status of the Argo network that is found on the AST web page:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -452,17 +452,18 @@ document.write(`
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.cm</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cm</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">s3fs</span> 
 </pre></div>
 </div>
 </div>
 </div>
-<p>The correspondence for the DATA_CENTRE code and the name is in the <em>Reference table 4: data centres and institutions codes of the <a class="reference external" href="https://archimer.ifremer.fr/doc/00187/29825/">Argo user’s manual</a></em></p>
-<p>and it is possible to get the WMO of all the platforms that measured during this month, together with its data acquisition center. Hence, we can download the netCDF files for each cycle if necessary:</p>
+<p>Let’s use today’s date:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span><span class="o">=</span><span class="mi">7</span>
-<span class="n">month</span><span class="o">=</span><span class="mi">7</span>
-<span class="n">year</span><span class="o">=</span><span class="mi">2021</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span><span class="o">=</span><span class="mi">18</span>
+<span class="n">month</span><span class="o">=</span><span class="mi">9</span>
+<span class="n">year</span><span class="o">=</span><span class="mi">2025</span>
 </pre></div>
 </div>
 </div>
@@ -489,10 +490,15 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">basin</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;atlantic_ocean&#39;</span><span class="p">,</span><span class="s1">&#39;pacific_ocean&#39;</span><span class="p">,</span><span class="s1">&#39;indian_ocean&#39;</span><span class="p">]:</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span>  <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span>  <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">):</span>
         <span class="n">day</span> <span class="o">=</span> <span class="n">status_date</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
-        <span class="n">filein</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;../../Data/202107-ArgoData/geo/</span><span class="si">{</span><span class="n">basin</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">day</span><span class="o">.</span><span class="n">year</span><span class="si">:</span><span class="s2">04d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">day</span><span class="o">.</span><span class="n">month</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">day</span><span class="o">.</span><span class="n">year</span><span class="si">:</span><span class="s2">04d</span><span class="si">}{</span><span class="n">day</span><span class="o">.</span><span class="n">month</span><span class="si">:</span><span class="s2">02d</span><span class="si">}{</span><span class="n">day</span><span class="o">.</span><span class="n">day</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">_prof.nc&quot;</span>
-        <span class="n">DS</span><span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">filein</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">, &quot;</span> <span class="o">%</span> <span class="n">day</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> 
+        
+        <span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">filein</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;s3://argo-gdac-sandbox/pub/geo/</span><span class="si">{</span><span class="n">basin</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">day</span><span class="o">.</span><span class="n">year</span><span class="si">:</span><span class="s2">04d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">day</span><span class="o">.</span><span class="n">month</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">day</span><span class="o">.</span><span class="n">year</span><span class="si">:</span><span class="s2">04d</span><span class="si">}{</span><span class="n">day</span><span class="o">.</span><span class="n">month</span><span class="si">:</span><span class="s2">02d</span><span class="si">}{</span><span class="n">day</span><span class="o">.</span><span class="n">day</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2">_prof.nc&quot;</span>
+        <span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">filein</span><span class="p">)</span> <span class="k">as</span> <span class="n">fileObj</span><span class="p">:</span>
+            <span class="n">DS</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">fileObj</span><span class="p">)</span>
+    
 
         <span class="n">DACs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">DACs</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">DATA_CENTRE</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
         <span class="n">PROJECT_NAMEs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PROJECT_NAMEs</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">PROJECT_NAME</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
@@ -500,12 +506,16 @@ document.write(`
         <span class="n">LONs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">LONs</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
         <span class="n">LATs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">LATs</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">LATITUDE</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
         
-
         <span class="n">tempi</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">DS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
         <span class="n">tempi</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
             <span class="n">tempi</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">PRES</span><span class="p">[</span><span class="n">ip</span><span class="p">,:],</span><span class="n">DS</span><span class="o">.</span><span class="n">TEMP</span><span class="p">[</span><span class="n">ip</span><span class="p">,:])</span>
         <span class="n">TEMPs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TEMPs</span><span class="p">,</span><span class="n">tempi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2025-09-18, 2025-09-17, 2025-09-16, 2025-09-15, 2025-09-14, 2025-09-13, 2025-09-12, 2025-09-11, 2025-09-10, 2025-09-09, 2025-09-08, 2025-09-07, 2025-09-06, 2025-09-05, 2025-09-04, 2025-09-18, 2025-09-17, 2025-09-16, 2025-09-15, 2025-09-14, 2025-09-13, 2025-09-12, 2025-09-11, 2025-09-10, 2025-09-09, 2025-09-08, 2025-09-07, 2025-09-06, 2025-09-05, 2025-09-04, 2025-09-18, 2025-09-17, 2025-09-16, 2025-09-15, 2025-09-14, 2025-09-13, 2025-09-12, 2025-09-11, 2025-09-10, 2025-09-09, 2025-09-08, 2025-09-07, 2025-09-06, 2025-09-05, 2025-09-04, 
 </pre></div>
 </div>
 </div>
@@ -536,21 +546,32 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> Argo floats where active:&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">500</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s2"> WMO </span><span class="si">{</span><span class="n">WMOs</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">}</span><span class="s2"> DAC </span><span class="si">{</span><span class="n">DACs</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">200</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ip</span><span class="si">:</span><span class="s2">04d</span><span class="si">}</span><span class="s2"> WMO </span><span class="si">{</span><span class="n">WMOs</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">:</span><span class="s2">07.0f</span><span class="si">}</span><span class="s2"> DAC </span><span class="si">{</span><span class="n">DACs</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">}</span><span class="s2">, ...&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3772 Argo floats where active:
-0 WMO 1901302.0 DAC bodc
-500 WMO 2903342.0 DAC jma
-1000 WMO 3901975.0 DAC coriolis
-1500 WMO 4903194.0 DAC aoml
-2000 WMO 5904733.0 DAC aoml
-2500 WMO 5905664.0 DAC aoml
-3000 WMO 5906409.0 DAC aoml
-3500 WMO 6903573.0 DAC coriolis
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3748 Argo floats where active:
+0000 WMO 1901514 DAC aoml, ...
+0200 WMO 1902374 DAC aoml, ...
+0400 WMO 1902726 DAC aoml, ...
+0600 WMO 2903729 DAC jma, ...
+0800 WMO 3901789 DAC aoml, ...
+1000 WMO 3902374 DAC aoml, ...
+1200 WMO 4902542 DAC meds, ...
+1400 WMO 4903209 DAC aoml, ...
+1600 WMO 4903575 DAC aoml, ...
+1800 WMO 5904773 DAC aoml, ...
+2000 WMO 5905481 DAC csiro, ...
+2200 WMO 5905778 DAC aoml, ...
+2400 WMO 5906289 DAC aoml, ...
+2600 WMO 5906609 DAC jma, ...
+2800 WMO 5906917 DAC aoml, ...
+3000 WMO 6902862 DAC coriolis, ...
+3200 WMO 6904104 DAC coriolis, ...
+3400 WMO 7900542 DAC coriolis, ...
+3600 WMO 7902051 DAC aoml, ...
 </pre></div>
 </div>
 </div>
@@ -564,18 +585,17 @@ document.write(`
 <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> Argo floats </span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">status_date</span><span class="si">:</span><span class="s2">%Y-%m-%d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
         <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span><span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">2.0</span><span class="p">))</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">x_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">y_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="o">.</span><span class="n">with_scale</span><span class="p">(</span><span class="s1">&#39;110m&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="o">.</span><span class="n">with_scale</span><span class="p">(</span><span class="s1">&#39;110m&#39;</span><span class="p">),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">x_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">y_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
 
 <span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span><span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span><span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span><span class="n">shrink</span><span class="o">=</span><span class="mf">.8</span><span class="p">,</span><span class="n">aspect</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/31f55f489ba251991d28c11c49d333e4f3c7d11252e856eb004bfbefca8dc13d.png" src="../../_images/31f55f489ba251991d28c11c49d333e4f3c7d11252e856eb004bfbefca8dc13d.png" />
+<img alt="../../_images/6bc6398f5a942c967582ef3ae7037ccdb7ebfeb60fc435c62787a6a3be0110ef.png" src="../../_images/6bc6398f5a942c967582ef3ae7037ccdb7ebfeb60fc435c62787a6a3be0110ef.png" />
 </div>
 </div>
 </section>
@@ -611,20 +631,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Chapter36_Examples.html"
+       href="Chapter36a_Status.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Additional examples</p>
+        <p class="prev-next-title">Argo status</p>
       </div>
     </a>
     <a class="right-next"
-       href="Chapter36a_StatusAWS.html"
+       href="Chapter36b_TrayectoriesArea.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Argo status</p>
+        <p class="prev-next-title">Argo floats in an area</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
