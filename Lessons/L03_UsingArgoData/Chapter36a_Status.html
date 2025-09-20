@@ -212,7 +212,7 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="Chapter32_ArgoDatabyFloat_Intro.html">Accessing Argo data by float</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Chapter32b_ArgoDatabyFloat_Cycle.html">Reading an Argo cycle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Chapter32b_ArgoDatabyFloat_CycleAWS.html">Reading an Argo cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter32b_ArgoDatabyFloat_CycleAWS.html">Reading an Argo cycle (AWS data)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter32c_ArgoDatabyFloat_Prof.html">Accessing all profiles at once</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter32d_ArgoDatabyFloat_Traj.html">Accessing trajectory data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Chapter32e_ArgoDatabyFloat_ArgoPy.html">Accessing Argo data by float using Argopy</a></li>
@@ -482,6 +482,7 @@ document.write(`
 <span class="n">LONs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 <span class="n">LATs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 <span class="n">TEMPs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">PSALs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 <span class="n">PROJECT_NAMEs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 </pre></div>
 </div>
@@ -504,9 +505,16 @@ document.write(`
 
         <span class="n">tempi</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">DS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
         <span class="n">tempi</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+        <span class="n">psali</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">DS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">psali</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
         <span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
             <span class="n">tempi</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">PRES</span><span class="p">[</span><span class="n">ip</span><span class="p">,:],</span><span class="n">DS</span><span class="o">.</span><span class="n">TEMP</span><span class="p">[</span><span class="n">ip</span><span class="p">,:])</span>
+            <span class="n">psali</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="n">DS</span><span class="o">.</span><span class="n">PRES</span><span class="p">[</span><span class="n">ip</span><span class="p">,:],</span><span class="n">DS</span><span class="o">.</span><span class="n">PSAL</span><span class="p">[</span><span class="n">ip</span><span class="p">,:])</span>
+        
         <span class="n">TEMPs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">TEMPs</span><span class="p">,</span><span class="n">tempi</span><span class="p">)</span>
+        <span class="n">PSALs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">PSALs</span><span class="p">,</span><span class="n">psali</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -520,6 +528,7 @@ document.write(`
 <span class="n">LATs</span><span class="o">=</span><span class="n">LATs</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
 <span class="n">PROJECT_NAMEs</span><span class="o">=</span><span class="n">PROJECT_NAMEs</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
 <span class="n">TEMPs</span><span class="o">=</span><span class="n">TEMPs</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
+<span class="n">PSALs</span><span class="o">=</span><span class="n">PSALs</span><span class="p">[</span><span class="n">indices</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -537,21 +546,32 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> Argo floats where active:&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">500</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s2"> WMO </span><span class="si">{</span><span class="n">WMOs</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">}</span><span class="s2"> DAC </span><span class="si">{</span><span class="n">DACs</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">200</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ip</span><span class="si">}</span><span class="s2"> WMO </span><span class="si">{</span><span class="n">WMOs</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">:</span><span class="s2">07.0f</span><span class="si">}</span><span class="s2"> DAC </span><span class="si">{</span><span class="n">DACs</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3772 Argo floats where active:
-0 WMO 1901302.0 DAC bodc
-500 WMO 2903342.0 DAC jma
-1000 WMO 3901975.0 DAC coriolis
-1500 WMO 4903194.0 DAC aoml
-2000 WMO 5904733.0 DAC aoml
-2500 WMO 5905664.0 DAC aoml
-3000 WMO 5906409.0 DAC aoml
-3500 WMO 6903573.0 DAC coriolis
+0 WMO 1901302 DAC bodc
+200 WMO 1902062 DAC aoml
+400 WMO 2902392 DAC aoml
+600 WMO 3901043 DAC aoml
+800 WMO 3901610 DAC coriolis
+1000 WMO 3901975 DAC coriolis
+1200 WMO 4902103 DAC aoml
+1400 WMO 4902914 DAC aoml
+1600 WMO 4903330 DAC aoml
+1800 WMO 5902529 DAC aoml
+2000 WMO 5904733 DAC aoml
+2200 WMO 5905130 DAC aoml
+2400 WMO 5905388 DAC csiro
+2600 WMO 5905781 DAC aoml
+2800 WMO 5906163 DAC aoml
+3000 WMO 5906409 DAC aoml
+3200 WMO 6902753 DAC coriolis
+3400 WMO 6903046 DAC coriolis
+3600 WMO 6904120 DAC coriolis
 </pre></div>
 </div>
 </div>
@@ -562,6 +582,7 @@ document.write(`
 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_global</span><span class="p">()</span>
 <span class="n">cs</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">LONs</span><span class="p">,</span><span class="n">LATs</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">TEMPs</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdBu_r&quot;</span><span class="p">,</span><span class="n">vmin</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> Argo floats </span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">status_date</span><span class="si">:</span><span class="s2">%Y-%m-%d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
         <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span><span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">2.0</span><span class="p">))</span>
 
@@ -577,6 +598,29 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/31f55f489ba251991d28c11c49d333e4f3c7d11252e856eb004bfbefca8dc13d.png" src="../../_images/31f55f489ba251991d28c11c49d333e4f3c7d11252e856eb004bfbefca8dc13d.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()})</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_global</span><span class="p">()</span>
+<span class="n">cs</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">LONs</span><span class="p">,</span><span class="n">LATs</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">PSALs</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;RdBu_r&quot;</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mf">33.5</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">38</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> Argo floats </span><span class="se">\n</span><span class="s2"> </span><span class="si">{</span><span class="n">status_date</span><span class="si">:</span><span class="s2">%Y-%m-%d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span>
+        <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">,</span><span class="n">bbox</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">2.0</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">x_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">y_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="o">.</span><span class="n">with_scale</span><span class="p">(</span><span class="s1">&#39;110m&#39;</span><span class="p">))</span>
+
+<span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span><span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span><span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;horizontal&#39;</span><span class="p">,</span><span class="n">shrink</span><span class="o">=</span><span class="mf">.8</span><span class="p">,</span><span class="n">aspect</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/3ba9e2ad437c3446e491c2efef40f8b635b066cdb17475392634bb73b2c310c6.png" src="../../_images/3ba9e2ad437c3446e491c2efef40f8b635b066cdb17475392634bb73b2c310c6.png" />
 </div>
 </div>
 </section>
