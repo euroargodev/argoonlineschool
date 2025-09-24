@@ -467,7 +467,7 @@ document.write(`
 </div>
 </div>
 </div>
-<p>load all the platforms in the fist of september</p>
+<p>load all the platforms that transmited in august 2025</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">WMOs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
@@ -494,14 +494,14 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;In all the ocean during september 1st 2025 </span><span class="si">{</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> Argo floats where active:&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;In the Atlantic, during august 2025, </span><span class="si">{</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> Argo floats where active:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">WMOs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">100</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ip</span><span class="si">:</span><span class="s2">03d</span><span class="si">}</span><span class="s2"> WMO </span><span class="si">{</span><span class="n">WMOs</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">:</span><span class="s2">7.0f</span><span class="si">}</span><span class="s2"> DAC </span><span class="si">{</span><span class="n">DACs</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">}</span><span class="s2"> ...&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In all the ocean during september 1st 2025 1264 Argo floats where active:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>In the Atlantic, during august 2025, 1264 Argo floats where active:
 000 WMO 1901814 DAC AO ...
 100 WMO 1902404 DAC AO ...
 200 WMO 1902790 DAC AO ...
@@ -531,14 +531,14 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;During november 2020 </span><span class="si">{</span><span class="n">WMOs_area</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> Argo floats where active in the selected area:&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">WMOs_area</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> Argo floats where active in the selected area:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">WMOs_area</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="mi">1</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ip</span><span class="si">:</span><span class="s2">02d</span><span class="si">}</span><span class="s2"> WMO </span><span class="si">{</span><span class="n">WMOs_area</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">:</span><span class="s2">7.0f</span><span class="si">}</span><span class="s2"> DAC </span><span class="si">{</span><span class="n">DACs_area</span><span class="p">[</span><span class="n">ip</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>During november 2020 41 Argo floats where active in the selected area:
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 41 Argo floats where active in the selected area:
 00 WMO 1902575 DAC IF
 01 WMO 1902582 DAC IF
 02 WMO 2903797 DAC IF
@@ -600,7 +600,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/999c256b52740454e8dbcef5cf808a419b9450070105bdc57a6f243d38d9973d.png" src="../../_images/999c256b52740454e8dbcef5cf808a419b9450070105bdc57a6f243d38d9973d.png" />
+<img alt="../../_images/73741ce52d25c9ccc750c62ce3c919adc379ee44819da7a2f6f2ed4b6b6b0da2.png" src="../../_images/73741ce52d25c9ccc750c62ce3c919adc379ee44819da7a2f6f2ed4b6b6b0da2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -632,7 +632,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b6b9d0bcc261c2cd25b410ee9006f1f4b295392183ac61c9ab0ff62346502a64.png" src="../../_images/b6b9d0bcc261c2cd25b410ee9006f1f4b295392183ac61c9ab0ff62346502a64.png" />
+<img alt="../../_images/f3ba6b3f59d596550bf747c2bc5b27a3668cb30904b525217b168122903cfe58.png" src="../../_images/f3ba6b3f59d596550bf747c2bc5b27a3668cb30904b525217b168122903cfe58.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -720,7 +720,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d689fcbc77682db9bdf0dc075761b94a1c8df3af6d91b4fdb747954d6f170b2f.png" src="../../_images/d689fcbc77682db9bdf0dc075761b94a1c8df3af6d91b4fdb747954d6f170b2f.png" />
+<img alt="../../_images/30a94e16d7a9a5633d6c2790026ebbf3642cd6512feeb9bc017bed130790f4db.png" src="../../_images/30a94e16d7a9a5633d6c2790026ebbf3642cd6512feeb9bc017bed130790f4db.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -752,7 +752,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b6b9d0bcc261c2cd25b410ee9006f1f4b295392183ac61c9ab0ff62346502a64.png" src="../../_images/b6b9d0bcc261c2cd25b410ee9006f1f4b295392183ac61c9ab0ff62346502a64.png" />
+<img alt="../../_images/f3ba6b3f59d596550bf747c2bc5b27a3668cb30904b525217b168122903cfe58.png" src="../../_images/f3ba6b3f59d596550bf747c2bc5b27a3668cb30904b525217b168122903cfe58.png" />
 </div>
 </div>
 </section>
