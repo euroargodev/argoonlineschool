@@ -47,7 +47,13 @@ parts:
     - file: Lessons/L03_UsingArgoData/Chapter34b_RTData.ipynb      
     - file: Lessons/L03_UsingArgoData/Chapter34c_DMData.ipynb      
 
-  - file: Lessons/L03_UsingArgoData/Chapter35_RecapLesson3.ipynb      
+  - file: Lessons/L03_UsingArgoData/Chapter35_Extensions.ipynb      
+    sections:
+    - file: Lessons/L03_UsingArgoData/Chapter35a_BGC.ipynb      
+    - file: Lessons/L03_UsingArgoData/Chapter35b_Deep.ipynb      
+
+
+  - file: Lessons/L03_UsingArgoData/Chapter39_RecapLesson3.ipynb      
 
   - file: Lessons/L03_UsingArgoData/ChapterExamples.ipynb      
     sections:
