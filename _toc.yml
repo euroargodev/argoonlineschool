@@ -52,7 +52,6 @@ parts:
     - file: Lessons/L03_UsingArgoData/Chapter35a_BGC.ipynb      
     - file: Lessons/L03_UsingArgoData/Chapter35b_Deep.ipynb      
 
-
   - file: Lessons/L03_UsingArgoData/Chapter39_RecapLesson3.ipynb      
 
   - file: Lessons/L03_UsingArgoData/ChapterExamples.ipynb      
