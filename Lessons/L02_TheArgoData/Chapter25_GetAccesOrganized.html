@@ -1,0 +1,697 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Accesing the Argo data &#8212; Argo Online School</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lessons/L02_TheArgoData/Chapter25_GetAccesOrganized';</script>
+    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L02_TheArgoData/Chapter25_GetAccesOrganized.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Recap" href="Chapter26_RecapLesson2.html" />
+    <link rel="prev" title="What does a quality control flag mean?" href="Chapter24_QualityFlagMean.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logoAoS.png" class="logo__image only-light" alt="Argo Online School - Home"/>
+    <script>document.write(`<img src="../../_static/logoAoS.png" class="logo__image only-dark" alt="Argo Online School - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    The Argo Online School
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 1 - The Argo Program</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html">The Argo Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter11_WhatArgoNetwork.html">What is the Argo network?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter12_NeedArgo.html">Why Argo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter13_ObservationsDone.html">How the observations are done?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter14_OceanographicProfile.html">What is an oceanographic profile?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter15_TechInnovations.html">Technological innovations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter16_RecapLesson1.html">Recap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quizzes/Quiz10.html">Quiz - Lesson 1</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 2 - The Argo data</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Chapter20_TheArgoData_intro.html">The Argo Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter21_ArgoDataStream.html">The Argo data flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter22_WhatArgoDataFormat.html">What are the Argo data and its format?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter23_QualityControl.html">Quality control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter24_QualityFlagMean.html">What does a quality control flag mean?</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Accesing the Argo data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter26_RecapLesson2.html">Recap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quizzes/Quiz20.html">Quiz - Lesson 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 3 - Using Argo data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../L03_UsingArgoData/Chapter30_UsingArgoData_intro.html">Using Argo Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter31_TheNetCDFFormat.html">The netCDF format</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../L03_UsingArgoData/Chapter32_ArgoDatabyFloat_Intro.html">Accessing Argo data by float</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter32b_ArgoDatabyFloat_Cycle.html">Reading an Argo cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter32b_ArgoDatabyFloat_CycleAWS.html">Reading an Argo cycle (AWS data)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter32c_ArgoDatabyFloat_Prof.html">Accessing all profiles at once</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter32d_ArgoDatabyFloat_Traj.html">Accessing trajectory data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter32e_ArgoDatabyFloat_ArgoPy.html">Accessing Argo data by float using Argopy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../L03_UsingArgoData/Chapter33_ArgoDatabyDate_Intro.html">Accessing Argo data by date</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter33b_ArgoDatabyDate_Day.html">Reading Argo data by date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter33c_ArgoDatabyDate_ArgoPy.html">Accessing Argo data by date using Argopy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../L03_UsingArgoData/Chapter34_RTandDM.html">Real-Time and Delayed mode data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter34b_RTData.html">Real Time data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter34c_DMData.html">Delayed mode data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../L03_UsingArgoData/Chapter35_Extensions.html">Argo extensions. Argo’s design after 2020: OneArgo</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter35a_BGC.html">Using biogeochemical Argo Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/Chapter35b_Deep.html">Using biogeochemical Argo Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../L03_UsingArgoData/Chapter39_RecapLesson3.html">Recap</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../L03_UsingArgoData/ChapterExamples.html">Additional examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/ChapterExamples_01_Status.html">Argo status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/ChapterExamples_02_StatusAWS.html">Argo status with AWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/ChapterExamples_03_TrayectoriesArea.html">Argo floats in an area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/HandsOn_Creta_Example01.html">Hands-on Creta 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../L03_UsingArgoData/HandsOn_Creta_Example02.html">Hands-on Creta 02</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/euroargodev/argoonlineschool" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L02_TheArgoData/Chapter25_GetAccesOrganized.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Lessons/L02_TheArgoData/Chapter25_GetAccesOrganized.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Accesing the Argo data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-is-the-data-organized">how is the data organized?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ftp">What is FTP?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-ftp-or-https">Using FTP or HTTPs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ftp">FTP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#https">HTTPs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-ftp-hands-one-example">A FTP hands-one example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#https-is-easy">HTTPs is easy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#others-ways-to-access-the-data">Others ways to access the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-data-selection-tool">The data selection tool</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="accesing-the-argo-data">
+<h1>Accesing the Argo data<a class="headerlink" href="#accesing-the-argo-data" title="Link to this heading">#</a></h1>
+<section id="how-is-the-data-organized">
+<h2>how is the data organized?<a class="headerlink" href="#how-is-the-data-organized" title="Link to this heading">#</a></h2>
+<p>Let’s see how the Argo data is organized in different folders in the GDACs:</p>
+<p>  </p>
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/jj0wnNDYOuY?si=PnMZLwdaWFVxrji3" title="The Argo Online School 251 - The Argo data.  Accesing the Argo data: What is FTP?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+<p><em>The Argo Online School 251 - The Argo data. Accesing the Argo data: What is FTP?</em>
+  </p>
+</section>
+<section id="what-is-ftp">
+<h2>What is FTP?<a class="headerlink" href="#what-is-ftp" title="Link to this heading">#</a></h2>
+<p>But how we can actually get the data?:</p>
+<p>  </p>
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/akZeIJAc9e8?si=I05qI4Y11GCJVA32&amp;start=1" title="The Argo Online School 252 - The Argo data.  Accesing the Argo data: What is FTP?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+<p><em>The Argo Online School 252 - The Argo data. Accesing the Argo data: What is FTP?</em>
+  </p>
+</section>
+<section id="using-ftp-or-https">
+<h2>Using FTP or HTTPs<a class="headerlink" href="#using-ftp-or-https" title="Link to this heading">#</a></h2>
+<p>To access the data directly from the GDACs we can use the FTP or HTTPs protocols. Although it sound complex is very easy:</p>
+<p>  </p>
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/GNLrd6Efxk8?si=ssalirN3YdL-FDK7" title="The Argo Online School 253 - The Argo data.  Accesing the Argo data: Using FTP or HTTPs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+<p><em>The Argo Online School 253 - The Argo data. Accesing the Argo data: Using FTP or HTTPs</em>
+  </p>
+<p>These are the address:</p>
+<section id="ftp">
+<h3>FTP<a class="headerlink" href="#ftp" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ftp://usgodae.org/pub/outgoing/argo"><span class="xref myst">US GDAC ftp://usgodae.org/pub/outgoing/argo</span></a></p></li>
+<li><p><a class="reference internal" href="#ftp://ftp.ifremer.fr/ifremer/argo"><span class="xref myst">EU GDAC ftp://ftp.ifremer.fr/ifremer/argo</span></a></p></li>
+</ul>
+</section>
+<section id="https">
+<h3>HTTPs<a class="headerlink" href="#https" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://data-argo.ifremer.fr">US GDAC https://data-argo.ifremer.fr</a></p></li>
+<li><p><a class="reference external" href="https://usgodae.org/pub/outgoing/argo">US GDAC https://usgodae.org/pub/outgoing/argo)</a></p></li>
+</ul>
+</section>
+</section>
+<section id="a-ftp-hands-one-example">
+<h2>A FTP hands-one example<a class="headerlink" href="#a-ftp-hands-one-example" title="Link to this heading">#</a></h2>
+<p>Take a look at this simple example on how to get access to Argo data through Coriolis GDAC FTP. Let’s go for it!</p>
+<ol class="arabic simple">
+<li><p>Before opening the FTP client, make sure where the files are allocated. In this case, the files are located in <a class="reference external" href="http://ftp.ifremer.fr/ifremer/argo">ftp.ifremer.fr/ifremer/argo</a>.</p></li>
+<li><p>Open the FTP client and fill in the box with the host provided <a class="reference external" href="http://ftp.ifremer.fr/ifremer/argo">ftp.ifremer.fr/ifremer/argo</a> in the host.</p></li>
+<li><p>You are now connected to the Coriolis GDAC!</p></li>
+</ol>
+<p>  </p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-GeLrhZnHo4?si=j0QvV7m6t6Q_8NgZ" title="The Argo Online School 254 - The Argo data.  Accesing the Argo data: A FTP hands-on example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+<p><em>The Argo Online School 254 - The Argo data. Accesing the Argo data: A FTP hands-on example</em>
+  </p>
+<p>Each data will have a specific quality flag assigned that indicates its status! Both Real-Time quality control and Delayed - Mode quality control follow a solid quality flag policy. Here are some examples that show how robust this quality flag policy is:</p>
+<p>• The value assigned by a test cannot override a higher value from a previous test. Taking the Real-Time quality control as an example: a QC flag ‘4’ (bad data) set by Test 11 (gradient test) cannot be decreased to QC flag ‘3’ (bad data that is potentially correctable) set by Test 15 (gray list).</p>
+<p>• A measurement with QC flag ‘4’ (bad data) or ‘3’ (bad data that are potentially correctable) cannot get a better QC flag in other quality control tests.</p>
+<p>• Since salinity (PSAL) is almost always calculated from temperature (TEMP) and conductivity (CNDC), if the temperature is flagged ‘4’ (or ‘3’), then salinity is also flagged as ‘4’ (or ‘3’).</p>
+</section>
+<section id="https-is-easy">
+<h2>HTTPs is easy<a class="headerlink" href="#https-is-easy" title="Link to this heading">#</a></h2>
+<p>Although HTTPs sounds very technical, we are used to it:</p>
+<p>  </p>
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/XJkj7fHya40?si=swuv1AVtyZ1f3Unz&amp;start=1" title="The Argo Online School 255 - The Argo data.  Accesing the Argo data: HTTPs is easy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+<p><em>The Argo Online School 255 - The Argo data. Accesing the Argo data: HTTPs is easy</em>
+  </p>
+</section>
+<section id="others-ways-to-access-the-data">
+<h2>Others ways to access the data<a class="headerlink" href="#others-ways-to-access-the-data" title="Link to this heading">#</a></h2>
+<p>Additionally to the HTTP and FTP ways of accessing the data, there are resources such as “data viewers” which allow us to obtain useful information from the data in an easy way.</p>
+<p>There are almost ten Argo data viewers, some with more features than others. In the next video we will quickly check how the <a class="reference external" href="https://fleetmonitoring.euro-argo.eu/">Euro - Argo data viewer</a> works</p>
+<p>  </p>
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/zaqAVBIZEYs?si=r26bz4I3kO2BZZKO&amp;start=1" title="The Argo Online School 256 - The Argo data.  Accesing the Argo data: Others ways to access the data" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+_The Argo Online School 256 - The Argo data. Accesing the Argo data: Others ways to access the data_
+&nbsp;&nbsp;
+</section>
+<section id="the-data-selection-tool">
+<h2>The data selection tool<a class="headerlink" href="#the-data-selection-tool" title="Link to this heading">#</a></h2>
+<p>Nowadays, some data viewers have added extremely useful technical developments to fine-tune users’ searching for Argo data. This is the case of the new <a class="reference internal" href="#dataselection.euro-argo.eu"><span class="xref myst">Argo data selector</span></a> developed under the framework of the Euro Argo RISE project (EARISE) . As you can check, its interface is very similar to the previous <a class="reference external" href="https://fleetmonitoring.euro-argo.eu/">Euro - Argo data viewer</a> but it includes some new features.</p>
+<p>  </p>
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/q1v-XPacMO8?si=I3IEhOdj9AAuXc4b" title="The Argo Online School 257 - The Argo data.  Accesing the Argo data: The data selection tool I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+<p><em>The Argo Online School 257 - The Argo data. Accesing the Argo data: The data selection tool I</em>
+  </p>
+<p>The <a class="reference internal" href="#dataselection.euro-argo.eu"><span class="xref myst">Argo data selector</span></a> is user friendly and developped focused in a interactive selection:</p>
+<p>  </p>
+<center>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/X62F4rNa4sw?si=wobQr3B59NG9twmw" title="The Argo Online School 258 - The Argo data.  Accesing the Argo data: The data selection tool II" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</center>
+<p><em>The Argo Online School 258 - The Argo data. Accesing the Argo data: The data selection tool II</em>
+  </p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Lessons/L02_TheArgoData"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chapter24_QualityFlagMean.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">What does a quality control flag mean?</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Chapter26_RecapLesson2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Recap</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-is-the-data-organized">how is the data organized?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-ftp">What is FTP?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-ftp-or-https">Using FTP or HTTPs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ftp">FTP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#https">HTTPs</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-ftp-hands-one-example">A FTP hands-one example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#https-is-easy">HTTPs is easy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#others-ways-to-access-the-data">Others ways to access the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-data-selection-tool">The data selection tool</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Euro Argo (Alberto González-Santana and Pedro Vélez-Belchí)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2020-2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
