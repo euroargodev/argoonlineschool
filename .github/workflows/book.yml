@@ -2,10 +2,16 @@ name: deploy-book
 
 # Only run this when the master branch changes
 on:
+  # Se activa automáticamente al subir cambios a master
   push:
     branches:
     - master
+  # Se activa manualmente desde la pestaña "Actions"
+  workflow_dispatch:    
 
+permissions:
+  contents: write
+  
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
@@ -33,4 +39,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.5.9
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html        
+        publish_dir: ./_build/html
+        force_orphan: true
