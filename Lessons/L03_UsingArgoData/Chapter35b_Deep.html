@@ -1,0 +1,1060 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Using biogeochemical Argo Data &#8212; Argo Online School</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Lessons/L03_UsingArgoData/Chapter35b_Deep';</script>
+    <link rel="canonical" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter35b_Deep.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Recap" href="Chapter39_RecapLesson3.html" />
+    <link rel="prev" title="Using biogeochemical Argo Data" href="Chapter35a_BGC.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logoAoS.png" class="logo__image only-light" alt="Argo Online School - Home"/>
+    <script>document.write(`<img src="../../_static/logoAoS.png" class="logo__image only-dark" alt="Argo Online School - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    The Argo Online School
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 1 - The Argo Program</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter10_TheArgoProgram_intro.html">The Argo Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter11_WhatArgoNetwork.html">What is the Argo network?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter12_NeedArgo.html">Why Argo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter13_ObservationsDone.html">How the observations are done?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter14_OceanographicProfile.html">What is an oceanographic profile?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter15_TechInnovations.html">Technological innovations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L01_TheArgoProgram/Chapter16_RecapLesson1.html">Recap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quizzes/Quiz10.html">Quiz - Lesson 1</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 2 - The Argo data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../L02_TheArgoData/Chapter20_TheArgoData_intro.html">The Argo Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L02_TheArgoData/Chapter21_ArgoDataStream.html">The Argo data flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L02_TheArgoData/Chapter22_WhatArgoDataFormat.html">What are the Argo data and its format?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L02_TheArgoData/Chapter23_QualityControl.html">Quality control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L02_TheArgoData/Chapter24_QualityFlagMean.html">What does a quality control flag mean?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L02_TheArgoData/Chapter25_GetAccesOrganized.html">Accesing the Argo data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L02_TheArgoData/Chapter26_RecapLesson2.html">Recap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Quizzes/Quiz20.html">Quiz - Lesson 2</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lesson 3 - Using Argo data</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter30_UsingArgoData_intro.html">Using Argo Data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chapter31_TheNetCDFFormat.html">The netCDF format</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter32_ArgoDatabyFloat_Intro.html">Accessing Argo data by float</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chapter32b_ArgoDatabyFloat_Cycle.html">Reading an Argo cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter32b_ArgoDatabyFloat_CycleAWS.html">Reading an Argo cycle (AWS data)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter32c_ArgoDatabyFloat_Prof.html">Accessing all profiles at once</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter32d_ArgoDatabyFloat_Traj.html">Accessing trajectory data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter32e_ArgoDatabyFloat_ArgoPy.html">Accessing Argo data by float using Argopy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter33_ArgoDatabyDate_Intro.html">Accessing Argo data by date</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chapter33b_ArgoDatabyDate_Day.html">Reading Argo data by date</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter33c_ArgoDatabyDate_ArgoPy.html">Accessing Argo data by date using Argopy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Chapter34_RTandDM.html">Real-Time and Delayed mode data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Chapter34b_RTData.html">Real Time data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Chapter34c_DMData.html">Delayed mode data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Chapter35_Extensions.html">Argo extensions. Argo’s design after 2020: OneArgo</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Chapter35a_BGC.html">Using biogeochemical Argo Data</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Using biogeochemical Argo Data</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="Chapter39_RecapLesson3.html">Recap</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ChapterExamples.html">Additional examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ChapterExamples_01_Status.html">Argo status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ChapterExamples_02_StatusAWS.html">Argo status with AWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ChapterExamples_03_TrayectoriesArea.html">Argo floats in an area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HandsOn_Creta_Example01.html">Hands-on Creta 01</a></li>
+<li class="toctree-l2"><a class="reference internal" href="HandsOn_Creta_Example02.html">Hands-on Creta 02</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/euroargodev/argoonlineschool" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/euroargodev/argoonlineschool/issues/new?title=Issue%20on%20page%20%2FLessons/L03_UsingArgoData/Chapter35b_Deep.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Lessons/L03_UsingArgoData/Chapter35b_Deep.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Using biogeochemical Argo Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biogeochemical-argo-floats">Biogeochemical Argo Floats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-files-organized-by-float-and-file-access">Data files organized by float and file access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biogeochemical-data">Biogeochemical data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#float-trajectory">Float trajectory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-the-biogeochemical-data">Visualization of the biogeochemical data</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="using-biogeochemical-argo-data">
+<h1>Using biogeochemical Argo Data<a class="headerlink" href="#using-biogeochemical-argo-data" title="Link to this heading">#</a></h1>
+<section id="biogeochemical-argo-floats">
+<h2>Biogeochemical Argo Floats<a class="headerlink" href="#biogeochemical-argo-floats" title="Link to this heading">#</a></h2>
+<p>Biogeochemical Argo floats are floats equiped with sensors that measure biogeochemical variables. In oceanography, biogeochemical variables are fundamental for topics such as carbon uptake and the biological carbon pump, ocean acidification, oxygen minimum zones (OMZs), phytoplankton communities, respiration, and other living resources, among others. This information can be expanded with <a class="reference external" href="https://biogeochemical-argo.org/index.php">Biogeochemical Argo</a> The biogeochemical Argo floats measure the Esential Ocean Variables (EOVs): oxygen concentration, chlorophyll-a concentration, nitrate concentration, pH, backscatter (suspended particles), and irradiance. More information on the EOVs can be found at <a class="reference external" href="https://goosocean.org/what-we-do/framework/essential-ocean-variables/">GOOS: Essential Ocean Variables</a>. Floats have usually 5-6 of these sensors.</p>
+<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/EOVs.png" width="650"/>
+<p>IMAGEN TABLA EOVs.</p>
+<p>The BGC Argo program started in 2016 and aims to deploy 1000 measuring floats in the ocean. It is the largest source of BGC data in the ocean interior. Some of the applications of the BGC Argo program include monitoring the state of plankton in the ocean using chlorophyll, studying fish species distribution, observing acidification processes, investigating Oxygen Minimum Zones (OMZs), assessing carbon uptake, and contributing to more accurate model predictions and ocean data products.</p>
+</section>
+<section id="data-files-organized-by-float-and-file-access">
+<h2>Data files organized by float and file access<a class="headerlink" href="#data-files-organized-by-float-and-file-access" title="Link to this heading">#</a></h2>
+<p>The biogeochemical floats data can be accesed through the same channels as the core floats data. We will access through the <em>Argo data by Float</em> to use the biogeochemical floats.</p>
+<p>The file organization is similar to what is shown in <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter32_ArgoDatabyFloat_Intro.html">Lesson 3.2 - Accesing Argo data by float</a>. The <em>dac</em> folder contains 11 folders corresponding to each of the DACs. In the particular DAC folders, there is a folder for each of the float processed by the DAC indicated by the <em>WMO</em> number.</p>
+<p>If the float is a biogeochemical float, inside the float folder we can find the following files:</p>
+<ul class="simple">
+<li><p>6901773_meta.nc</p></li>
+<li><p>6901773_prof.nc</p></li>
+<li><p>6901773_Rtraj.nc</p></li>
+<li><p>6901773_Sprof.nc</p></li>
+<li><p>6901773_tech.nc</p></li>
+<li><p>profiles/</p></li>
+</ul>
+<p>The files <em>meta</em>, <em>prof</em>, <em>Rtraj</em> and <em>tech</em> are common with the core Argo data. The file <em>6901773_Sprof.nc</em> contains the same core variables and the added biogeochemical variables in one single file, corresponding to the synthetic profiles. Inside the <em>Profiles</em> folder, are all the corresponding profiles of this float.</p>
+<ul class="simple">
+<li><p>BD6901773_001.nc</p></li>
+<li><p>D6901773_001.nc</p></li>
+<li><p>SD6901773_001.nc</p></li>
+</ul>
+<img src="https://github.com/euroargodev/argoonlineschool/raw/master/images/DataFolder.png" width="650"/><p>The files are named <code class="docutils literal notranslate"><span class="pre">&lt;D/BD/S&gt;&lt;FloatWmoID&gt;_&lt;XXX&gt;.nc</span></code>, with the initial letters indicating the type of profile, the float ID, and <em>XXX</em> as the cycle number. The file <em>D6901773_001.nc</em> belongs to core Argo, and is the Delayed-Mode profile, indicated by the initial <em>D</em>. The file <em>BD6901773_001.nc</em> contains the b-profile for the core and biogeochemical variables, and the file <em>SD6901773_001.nc</em> the synthetic profile for the core and biogeochemical variables. Synthetic profiles have the standarized relevant biogeochemical variables, already adjusted.</p>
+<p>The Biogeochemical Argo program also offers an <a class="reference external" href="https://maps.biogeochemical-argo.com/bgcargo/">interactive map</a> that displays all the active and inactive biogeochemical floats and gives access to their data.</p>
+</section>
+<section id="biogeochemical-data">
+<h2>Biogeochemical data<a class="headerlink" href="#biogeochemical-data" title="Link to this heading">#</a></h2>
+<p>First, let’s import the necessary libraries for this notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">xarray</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">xr</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">cartopy.crs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ccrs</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">cartopy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, we read the previolusly downloaded data from the float <em>6901773</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;/home/ihg/ArgoOnlineSchool/BGCfloat/ejemplo_bgc_float/&quot;</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">file_path</span> <span class="o">+</span> <span class="s1">&#39;datos_downloadftp/6901773/6901773_Sprof.nc&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Variables</strong></p>
+<p>The biogeochemical variables in this float are shown as follows, with the variable name, the long name, and the units. The pH variable was not measured in this float. For more information on this subject, go to the <a class="reference external" href="https://www.argodatamgt.org/Documentation">Argo documentation</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;The biogeochemical variables are:</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot; DOXY </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">DOXY</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">DOXY</span><span class="o">.</span><span class="n">units</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot; CHLA </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">CHLA</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">CHLA</span><span class="o">.</span><span class="n">units</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot; CHLA_FLUORESCENCE </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">CHLA_FLUORESCENCE</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">CHLA_FLUORESCENCE</span><span class="o">.</span><span class="n">units</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot; NITRATE </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">NITRATE</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">NITRATE</span><span class="o">.</span><span class="n">units</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot; BBP700 </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">BBP700</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">BBP700</span><span class="o">.</span><span class="n">units</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot; CDOM </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">CDOM</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">CDOM</span><span class="o">.</span><span class="n">units</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot; DOWN_IRRADIANCE380 </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">DOWN_IRRADIANCE380</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">DOWN_IRRADIANCE380</span><span class="o">.</span><span class="n">units</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot; DOWN_IRRADIANCE412 </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">DOWN_IRRADIANCE412</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">DOWN_IRRADIANCE412</span><span class="o">.</span><span class="n">units</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot; DOWN_IRRADIANCE490 </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">DOWN_IRRADIANCE490</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">DOWN_IRRADIANCE490</span><span class="o">.</span><span class="n">units</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+    <span class="sa">f</span><span class="s2">&quot; DOWNWELLING_PAR </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">DOWNWELLING_PAR</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">DOWNWELLING_PAR</span><span class="o">.</span><span class="n">units</span><span class="si">}</span><span class="s2">)&quot;</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The biogeochemical variables are:
+ DOXY Dissolved oxygen (micromole/kg)
+ CHLA Chlorophyll-A (mg/m3)
+ CHLA_FLUORESCENCE Chlorophyll fluorescence with factory calibration (ru)
+ NITRATE Nitrate (micromole/kg)
+ BBP700 Particle backscattering at 700 nanometers (m-1)
+ CDOM Concentration of coloured dissolved organic matter in sea water (ppb)
+ DOWN_IRRADIANCE380 Downwelling irradiance at 380 nanometers (W/m^2/nm)
+ DOWN_IRRADIANCE412 Downwelling irradiance at 412 nanometers (W/m^2/nm)
+ DOWN_IRRADIANCE490 Downwelling irradiance at 490 nanometers (W/m^2/nm)
+ DOWNWELLING_PAR Downwelling photosynthetic available radiation (microMoleQuanta/m^2/sec)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Data structure</strong></p>
+<p>Printing the structure of the data, we can observe that the float performed 295 profiles and 1342 vertical levels, with 13 parameters (3 core + 10 biogeochemical, shown in the previous cell).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">sizes</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;N_PROF&#39;: 295, &#39;N_PARAM&#39;: 13, &#39;N_CALIB&#39;: 1, &#39;N_LEVELS&#39;: 1342}
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also look at the data mode (Real-Time (R), Real-Time with adjusted variables (A), Delayed (D)) of the parameters. This table shows the data mode corresponding to each parameter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">PARAMETER</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">modes</span>  <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">PARAMETER_DATA_MODE</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">params</span><span class="p">)):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">modes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s2">25s</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PRES                      D
+TEMP                      D
+PSAL                      D
+DOXY                      D
+DOWN_IRRADIANCE380        R
+DOWN_IRRADIANCE412        R
+DOWN_IRRADIANCE490        R
+DOWNWELLING_PAR           R
+CHLA                      D
+CHLA_FLUORESCENCE         R
+BBP700                    A
+CDOM                      R
+NITRATE                   D
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Quality control</strong></p>
+<p>Raw BGC-Argo data is tipically not suited for scientific use. The user manual recommends using the parameters adjusted, with mode “A” and quality flag  “1”. The quality control flags are assigned with the same values as core Argo, that were shown previously in <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter34b_RTData.html">Lesson 3.4 - Real Time data</a>. Like in the core Argo data, the adjusted parameters have the following variables.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;PARAM&gt;</span></code>: parameter without adjusting</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;PARAM&gt;_QC</span></code>: quality control flag</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PROFILE_&lt;PARAM&gt;_QC</span></code>: quality control flag of the profile</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;PARAM&gt;_ADJUSTED</span></code>: adjusted parameter</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;PARAM&gt;_ADJUSTED_QC</span></code>: quality control flag of the adjusted parameter</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;PARAM&gt;_ADJUSTED_ERROR</span></code>: error of the adjusted parameter</p></li>
+</ul>
+</section>
+<section id="float-trajectory">
+<h2>Float trajectory<a class="headerlink" href="#float-trajectory" title="Link to this heading">#</a></h2>
+<p>Now, let’s plot the float’s position using <em>cartopy</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lon</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">LATITUDE</span><span class="p">)]</span>
+<span class="n">lat</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">LATITUDE</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">LONGITUDE</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">LATITUDE</span><span class="p">)]</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span><span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">()})</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span><span class="n">lat</span><span class="p">,</span><span class="s1">&#39;-bo&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Float surfacing&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lon</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">lat</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;ok&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Deployment&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lon</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">lat</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;sk&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;Last surfacing&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">LAND</span><span class="o">.</span><span class="n">with_scale</span><span class="p">(</span><span class="s1">&#39;10m&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cartopy</span><span class="o">.</span><span class="n">feature</span><span class="o">.</span><span class="n">COASTLINE</span><span class="o">.</span><span class="n">with_scale</span><span class="p">(</span><span class="s1">&#39;10m&#39;</span><span class="p">),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data from </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PLATFORM_NUMBER</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">gridlines</span><span class="p">(</span><span class="n">draw_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dms</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">x_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">y_inline</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/4bcac724f35725a60091ed60f352c48869a676373c6d72b5d507bcd86f111b7f.png" src="../../_images/4bcac724f35725a60091ed60f352c48869a676373c6d72b5d507bcd86f111b7f.png" />
+</div>
+</div>
+</section>
+<section id="visualization-of-the-biogeochemical-data">
+<h2>Visualization of the biogeochemical data<a class="headerlink" href="#visualization-of-the-biogeochemical-data" title="Link to this heading">#</a></h2>
+<p>For the vertical sections we will interpolate the data in depth first, using the same method as <a class="reference external" href="https://euroargodev.github.io/argoonlineschool/Lessons/L03_UsingArgoData/Chapter32c_ArgoDatabyFloat_Prof.html">Lesson 3.2 - Accesing Argo data by float - Accesing all profiles at once</a>. Biogeochemical proccessed data has a higher amount of Not A Number (NaN) data points, so we need to take the NaN values into account to obtain a good interpolation.</p>
+<p>First, we will create the variables that will be interpolated.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prei</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">1030</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="n">juld</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">values</span>
+<span class="n">pres</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">PRES_ADJUSTED</span><span class="o">.</span><span class="n">values</span>
+
+<span class="n">doxy</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">DOXY</span><span class="o">.</span><span class="n">values</span>
+<span class="n">doxya</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">DOXY_ADJUSTED</span><span class="o">.</span><span class="n">values</span>
+<span class="n">chla</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">CHLA_ADJUSTED</span><span class="o">.</span><span class="n">values</span>
+<span class="n">nitr</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">NITRATE</span><span class="o">.</span><span class="n">values</span>
+<span class="n">nitra</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">NITRATE_ADJUSTED</span><span class="o">.</span><span class="n">values</span>
+<span class="n">bbp</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">BBP700_ADJUSTED</span><span class="o">.</span><span class="n">values</span>
+<span class="n">cdom</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">CDOM_ADJUSTED</span><span class="o">.</span><span class="n">values</span>
+<span class="n">downpar</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">DOWNWELLING_PAR_ADJUSTED</span><span class="o">.</span><span class="n">values</span>
+<span class="n">irr380</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">DOWN_IRRADIANCE380_ADJUSTED</span><span class="o">.</span><span class="n">values</span>
+<span class="n">irr412</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">DOWN_IRRADIANCE412_ADJUSTED</span><span class="o">.</span><span class="n">values</span>
+<span class="n">irr490</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">DOWN_IRRADIANCE490_ADJUSTED</span><span class="o">.</span><span class="n">values</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The interpolated vectors must be created previously and filled with NaN values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doxyi</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">doxyi</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">doxyai</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">doxyai</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">chlai</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">chlai</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">nitri</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">nitri</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">nitrai</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">nitrai</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">bbpi</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">bbpi</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">cdomi</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">cdomi</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">downpari</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">downpari</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">irr380i</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">irr380i</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">irr412i</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">irr412i</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+
+<span class="n">irr490i</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">juld</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">prei</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">irr490i</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For the interpolation, this code will not interpolate if the number of NaNs is too high and will create false data or propagate.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">doxy</span><span class="p">,</span> <span class="n">doxya</span><span class="p">,</span> <span class="n">chla</span><span class="p">,</span> <span class="n">nitr</span><span class="p">,</span> <span class="n">bbp</span><span class="p">,</span> <span class="n">cdom</span><span class="p">,</span> <span class="n">downpar</span><span class="p">,</span> <span class="n">irr380</span><span class="p">,</span> <span class="n">irr412</span><span class="p">,</span> <span class="n">irr490</span><span class="p">]</span>
+<span class="n">outs</span>   <span class="o">=</span> <span class="p">[</span><span class="n">doxyi</span><span class="p">,</span> <span class="n">doxyai</span><span class="p">,</span> <span class="n">chlai</span><span class="p">,</span> <span class="n">nitri</span><span class="p">,</span> <span class="n">bbpi</span><span class="p">,</span> <span class="n">cdomi</span><span class="p">,</span> <span class="n">downpari</span><span class="p">,</span> <span class="n">irr380i</span><span class="p">,</span> <span class="n">irr412i</span><span class="p">,</span> <span class="n">irr490i</span><span class="p">]</span>
+
+<span class="c1"># Interpolation loop</span>
+<span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">var_i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">vars</span><span class="p">,</span> <span class="n">outs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">pres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+        <span class="c1"># Mask to filter the valid profiles</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">pres</span><span class="p">[</span><span class="n">ip</span><span class="p">,</span> <span class="p">:])</span> <span class="o">&amp;</span> <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">var</span><span class="p">[</span><span class="n">ip</span><span class="p">,</span> <span class="p">:])</span>
+        
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">continue</span>
+        
+        <span class="n">pres_valid</span> <span class="o">=</span> <span class="n">pres</span><span class="p">[</span><span class="n">ip</span><span class="p">,</span> <span class="n">mask</span><span class="p">]</span>
+        <span class="n">var_valid</span>  <span class="o">=</span> <span class="n">var</span><span class="p">[</span><span class="n">ip</span><span class="p">,</span> <span class="n">mask</span><span class="p">]</span>
+        
+        <span class="n">order</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">pres_valid</span><span class="p">)</span>
+        
+        <span class="c1"># Interpolation</span>
+        <span class="n">var_i</span><span class="p">[</span><span class="n">ip</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">prei</span><span class="p">,</span> <span class="n">pres_valid</span><span class="p">[</span><span class="n">order</span><span class="p">],</span> <span class="n">var_valid</span><span class="p">[</span><span class="n">order</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Oxygen, nitrate and chlorophyll figures</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">cs</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">doxyai</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">)</span> <span class="c1">#, vmin = 140, vmax = 260)</span>
+<span class="n">cs2</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">doxyai</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">),</span> <span class="n">levels</span><span class="o">=</span><span class="n">cs</span><span class="o">.</span><span class="n">levels</span><span class="p">[::</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs2</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%2.1f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vertical Adjusted Dissolved Oxygen interpolated section for float </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PLATFORM_NUMBER</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">standard_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/a1905273043c4abab72cb83acd50653a5681a6382d5f62fb954673ae57de1b47.png" src="../../_images/a1905273043c4abab72cb83acd50653a5681a6382d5f62fb954673ae57de1b47.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">cs</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">doxyi</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">)</span> <span class="c1">#, vmin = 140, vmax = 260)</span>
+<span class="n">cs2</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">doxyi</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">),</span> <span class="n">levels</span><span class="o">=</span><span class="n">cs</span><span class="o">.</span><span class="n">levels</span><span class="p">[::</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs2</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%2.1f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vertical Raw Dissolved Oxygen interpolated section for float </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PLATFORM_NUMBER</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">standard_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/6980b70bde7c7e522a603f8023a7d4f57b3ddb6006187fafaef5e85f8a43820f.png" src="../../_images/6980b70bde7c7e522a603f8023a7d4f57b3ddb6006187fafaef5e85f8a43820f.png" />
+</div>
+</div>
+<p>The vertical oxygen profile shows strong seasonal stratification with oxygen-rich surface waters up to 100m (&gt;200 μmol/kg), a prominent oxygen minimum zone at 200-400m depth (~165-185 μmol/kg), and relatively stable deep-water oxygen levels (~185-195 μmol/kg) from 2015-2020. There is also a strong seasonal cycle in the upper 200m.</p>
+<p>DIFERENCIAS ENTRE AJUSTADO Y NO</p>
+<p>If we watch this data with a different plot style (scatter), without the interpolation, we can observe that the columns with no data disappear. When the interpolation is done, the profiles that have a high number of NaN (Not a Number) are discarded and left blank.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">cs</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">chlai</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">,</span> <span class="n">vmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="n">cs2</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">chlai</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">),</span> <span class="n">levels</span><span class="o">=</span><span class="n">cs</span><span class="o">.</span><span class="n">levels</span><span class="p">[::</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs2</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%2.1f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vertical Chlorophyll-A interpolated section for float </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PLATFORM_NUMBER</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">standard_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/7e6ba07eb3f7b84bb1bb5143f22aba077ab1bec1f33e9c711f8050d6c14d6e82.png" src="../../_images/7e6ba07eb3f7b84bb1bb5143f22aba077ab1bec1f33e9c711f8050d6c14d6e82.png" />
+</div>
+</div>
+<p>The chlorophyll is concentrated in the upper 200m with strong seasonal spring blooms (0.2-0.42 mg/m³) in late winter/spring, a persistent deep chlorophyll maximum (DCM) at 50-150m depth, and near-zero values below 200m, characteristic of the nutrient-limited Mediterranean Sea.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">cs</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">nitri</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">,</span> <span class="n">vmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">cs2</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">nitri</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">),</span> <span class="n">levels</span><span class="o">=</span><span class="n">cs</span><span class="o">.</span><span class="n">levels</span><span class="p">[::</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs2</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%2.1f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vertical Nitrate interpolated section for float </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PLATFORM_NUMBER</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">standard_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/3f9d8dc4e56564e4e46d525dc33030aada4b0de1fed82dec226de9f8534e9d77.png" src="../../_images/3f9d8dc4e56564e4e46d525dc33030aada4b0de1fed82dec226de9f8534e9d77.png" />
+</div>
+</div>
+<p>The nitrate concentration is low on the upper layer (up to 200m), and increases with depth, forming a permanent nutricline. The upper 300m show a strong seasonal variability.</p>
+<p>EXPLICAR EN DETALLE: NITRATO POR DESCOMPOSICIÓN.</p>
+<p><strong>Suspended particles</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span><span class="o">.</span><span class="n">BBP700_ADJUSTED</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x71b652cdfed0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/010ecfc615d0eae66bbf6639a2ffa98ffe382225c2a179655e8897f18dc75f3e.png" src="../../_images/010ecfc615d0eae66bbf6639a2ffa98ffe382225c2a179655e8897f18dc75f3e.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">cs</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">bbpi</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">)</span><span class="c1">#, vmin = 0.0002, vmax = 0.001)</span>
+<span class="n">cs2</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">bbpi</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">),</span> <span class="n">levels</span><span class="o">=</span><span class="n">cs</span><span class="o">.</span><span class="n">levels</span><span class="p">[::</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs2</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%2.1f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vertical Backscattering interpolated section for float </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PLATFORM_NUMBER</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">standard_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/5f78cb1c5426bf2aabdd0f69410d96d59fd9e8d3c179ed828776d2179826bf7a.png" src="../../_images/5f78cb1c5426bf2aabdd0f69410d96d59fd9e8d3c179ed828776d2179826bf7a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">cs</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">cdomi</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">,</span> <span class="n">vmin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">cs2</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">cdomi</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">),</span> <span class="n">levels</span><span class="o">=</span><span class="n">cs</span><span class="o">.</span><span class="n">levels</span><span class="p">[::</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs2</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%2.1f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vertical Coloured Dissolved Organic Matter interpolated section for float </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PLATFORM_NUMBER</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">standard_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/466295d4e81b23e19a67fbb02abfc3cde7ff26924f629a387c1b5e9ef19a7681.png" src="../../_images/466295d4e81b23e19a67fbb02abfc3cde7ff26924f629a387c1b5e9ef19a7681.png" />
+</div>
+</div>
+<p>The backscattering shows a high concentration of suspended particles in the upper 150m, indicating phytoplankton mass and detritus, and possible dust episodic inputs. In the deeper layers there is a lower backscattering value, meaning a particle attenuation, due to sinking, remineralization, and aggregation. There are some episodic high backscattering events, some penetrating deeper.</p>
+<p>The CDOM results show a higher value below 200-300m, due to biological consumption and photobleaching on the surface. This is typical for oligotrophic basins. Both parameters show a clear seasonal cycle in the upper ocean, althoug it is stronger in the backscattering result.</p>
+<p>Deberían dar esto (lo que me salia en el scatter)</p>
+<p><img alt="image.png" src="Lessons/L03_UsingArgoData/attachment:image.png" />
+<img alt="image-2.png" src="Lessons/L03_UsingArgoData/attachment:image-2.png" /></p>
+<p><strong>Irradiance</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">cs</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">downpari</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">)</span><span class="c1">#, vmin = 0, vmax = 600)</span>
+<span class="n">cs2</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">downpari</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">),</span> <span class="n">levels</span><span class="o">=</span><span class="n">cs</span><span class="o">.</span><span class="n">levels</span><span class="p">[::</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs2</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%2.1f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vertical  Downwelling photosynthetic available radiation interpolated section for float </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PLATFORM_NUMBER</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">standard_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/513ad81db73bf604b6edb1f412cba39976e1b7d41d16bda8c2598594e1a8e8fa.png" src="../../_images/513ad81db73bf604b6edb1f412cba39976e1b7d41d16bda8c2598594e1a8e8fa.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">cs</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">irr490i</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="mi">40</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;jet&#39;</span><span class="p">)</span><span class="c1">#, vmin = 0, vmax = 1.8)</span>
+
+<span class="n">cs2</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">juld</span><span class="p">,</span><span class="n">prei</span><span class="p">,</span><span class="n">irr490i</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span><span class="n">colors</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;k&#39;</span><span class="p">),</span> <span class="n">levels</span><span class="o">=</span><span class="n">cs</span><span class="o">.</span><span class="n">levels</span><span class="p">[::</span><span class="mi">4</span><span class="p">])</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs2</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%2.1f</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Vertical Downwelling irradiance at 490 nanometers interpolated section for float </span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PLATFORM_NUMBER</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">JULD</span><span class="o">.</span><span class="n">standard_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ds</span><span class="o">.</span><span class="n">PRES</span><span class="o">.</span><span class="n">long_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">cbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/e547ccfb8e59de12c9019ce0378e727dfec45c841dec29decdf96689d98f32dc.png" src="../../_images/e547ccfb8e59de12c9019ce0378e727dfec45c841dec29decdf96689d98f32dc.png" />
+</div>
+</div>
+<p>The figures show a rapid attenuation of the irradiance with depth. Light is confined to the upper 50-80m, corresponding to a relatively shallow euphotic zone. There is a clear seasonal cycle.</p>
+<p>These plots only have data up to 250m. We only represented the downwelling irradiance of 490nm and PAR, since the information of all the plots is similar.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Lessons/L03_UsingArgoData"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Chapter35a_BGC.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Using biogeochemical Argo Data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Chapter39_RecapLesson3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Recap</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biogeochemical-argo-floats">Biogeochemical Argo Floats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-files-organized-by-float-and-file-access">Data files organized by float and file access</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biogeochemical-data">Biogeochemical data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#float-trajectory">Float trajectory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-of-the-biogeochemical-data">Visualization of the biogeochemical data</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Euro Argo (Alberto González-Santana and Pedro Vélez-Belchí)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2020-2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
